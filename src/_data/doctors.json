@@ -3,157 +3,157 @@
     {
       "name": "Dr Stephen Chung Soon Hee",
       "credentials": "MBBS, MS (Ophthal)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-stephen-chung-soon-hee.webp",
       "color": "violet"
     },
     {
       "name": "Dr Chuah Kay Leong",
       "credentials": "MB BAO BCh (UK), FRCOphth (London)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-chuah-kay-leong.webp",
       "color": "yellow"
     },
     {
       "name": "Dr Lee Seow Yeang",
       "credentials": "MD (UKM), M Surg (Ophth) (UKM), M.Med (Ophth) S'pore, FRCSEd",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-lee-seow-yeang.webp",
       "color": "coral"
     },
     {
       "name": "Dr Nor Zainura Zainal",
       "credentials": "LRCP & SI, MBBCh BAO (Ireland), MS (Ophthal) (UKM)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-nor-zainura-zainal.webp",
       "color": "sky"
     },
     {
       "name": "Dr Ngo Chek Tung",
       "credentials": "MBBS (Malaya), M.Med Ophth (NUS), MRCSEd, FRCOphth, CertLRS",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-ngo-chek-tung.webp",
       "color": "mint"
     },
     {
       "name": "Dr Chang Khai Meng",
       "credentials": "MD (USM), MMed (Ophthalmology)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-chang-khai-meng.webp",
       "color": "violet"
     },
     {
       "name": "Dr Lam Hee Hong",
       "credentials": "MBBS (UM), ICO (Cambridge), Master of Surgery (UM)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-lam-hee-hong.webp",
       "color": "yellow"
     },
     {
       "name": "Dr Ngim You Siang",
       "credentials": "MBBS (UM), M.S. Ophthal (UM)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-ngim-you-siang.webp",
       "color": "coral"
     },
     {
       "name": "Dr Adeline Sia Sien Bing",
       "credentials": "MBBS (UM), MOphth (UM)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-adeline-sia-sien-bing.webp",
       "color": "sky"
     },
     {
       "name": "Dr Marcus Ng Kang Kok",
       "credentials": "MBBS (Taiwan), M.S. Ophthal (UKM)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-marcus-ng-kang-kok.webp",
       "color": "mint"
     },
     {
       "name": "Dr Leow Sue Ngein",
       "credentials": "MD (UKM), M.S Ophthalmology (UKM), CMIA (Malaysia)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-leow-sue-ngein.webp",
       "color": "violet"
     },
     {
       "name": "Dr Ang Ee Ling",
       "credentials": "MBBS, MSOphthal (UM), Fellowship in Vitreoretinal Surgery Malaysia and Sydney",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-ang-ee-ling.webp",
       "color": "yellow"
     },
     {
       "name": "Dr Edwin Ooi Inn Loon",
       "credentials": "MD (UKM), M.S Ophthal (UKM)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-edwin-ooi-inn-loon.webp",
       "color": "coral"
     },
     {
       "name": "Dr Faith Ho Fui Li",
       "credentials": "MD (UKM), Dr.Ophth (UKM)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-faith-ho-fui-li.webp",
       "color": "sky"
     },
     {
       "name": "Dr Tang Seng Fai",
       "credentials": "MD (UKM), Dr Ophthal (UKM), Fellowship in Glaucoma (UKM)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-tang-seng-fai.webp",
       "color": "mint"
     },
     {
       "name": "Dr Siuw Chin Pei",
       "credentials": "MBBS (IMU), Doctor of Ophthalmology (UKM)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-siuw-chin-pei.webp",
       "color": "violet"
     },
     {
       "name": "Dr Gan Say Seong",
       "credentials": "MBBS (UM), MS (Ophth) UKM",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-gan-say-seong.webp",
       "color": "yellow"
     },
     {
       "name": "Dr Anhar Hafiz Bin Silim",
       "credentials": "MBBS (Jordan), Doctor of Ophthalmology (UKM), Fellowship in Vitreoretinal Surgery (CCFT, M'sia)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-anhar-hafiz-bin-silim.webp",
       "color": "coral"
     },
     {
       "name": "Dr Mohd Syafiq Bin Azman",
       "credentials": "MBBS (UIAM), Doctor of Ophthalmology (UKM)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-mohd-syafiq-bin-azman.webp",
       "color": "sky"
     },
     {
       "name": "Dr Cassandra Lo Yee Lin",
       "credentials": "MD (KSMU), MS Ophthal (UKM)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-cassandra-lo-yee-lin.webp",
       "color": "mint"
     },
     {
       "name": "Dr Ng Chun Wai",
       "credentials": "MD (UCSI), Doctor of Ophthalmology (UKM), CMIA (NIOSH)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-ng-chun-wai.webp",
       "color": "violet"
     },
     {
       "name": "Dr Miswan Muiz Mahyudin",
       "credentials": "MOphthal (Malaya), MBChB (Otago, NZ)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-miswan-muiz-mahyudin.webp",
       "color": "yellow"
     },
     {
       "name": "Dr Ivan Chong Jia Cherng",
       "credentials": "MBBS (IMU), MOphthal (UM)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-ivan-chong-jia-cherng.webp",
       "color": "coral"
     },
     {
       "name": "Dr Chong Ka Lung",
       "credentials": "MBBS (IMU), MOphthal (UM), Vitreoretinal Fellowship (Australia)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-chong-ka-lung.webp",
       "color": "sky"
     },
     {
       "name": "Dr Teo Shee Kiang",
       "credentials": "MD (UKM), Doctor of Ophthalmology (UKM)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-teo-shee-kiang.webp",
       "color": "mint"
     },
     {
       "name": "Dr Alex Yee Chau Sim",
       "credentials": "MD (UKM), Doctor of Ophthalmology (UKM)",
-      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "photo": "/assets/uploads/doctors/dr-alex-yee-chau-sim.webp",
       "color": "violet"
     }
   ]
