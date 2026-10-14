@@ -274,7 +274,17 @@ permalink: /index.html
         {%- endfor %}
       </ul>
     </div>
-    {{ logos(h.recognition.panels_title, h.recognition.panels, '') }}
+    <div class="logos reveal">
+      <h3>{{ h.recognition.panels_title }}</h3>
+      <ul class="awards awards--panels">
+        {%- for a in h.recognition.panels %}
+        <li class="award award--panel">
+          <div class="award__logo">{% if a.logo %}<img src="{{ a.logo }}" alt="{{ a.name }}" width="640" height="320" loading="lazy" decoding="async">{% endif %}</div>
+          <p class="award__name">{{ a.name }}</p>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
     <div class="logos reveal">
       <h3>{{ h.recognition.media_title }}</h3>
       <div class="marquee" aria-label="{{ h.recognition.media_title }}">

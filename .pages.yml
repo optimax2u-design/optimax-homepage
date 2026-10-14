@@ -173,7 +173,7 @@ content:
             list: true
             fields: &logo
               - { name: name, type: string }
-              - { name: logo, label: Logo (optional — name shows if empty), type: image }
+              - { name: logo, label: Logo (transparent PNG/WebP/SVG; name shows if empty), type: image }
           - { name: media_title, type: string }
           - { name: media, label: Media mentions, type: object, list: true, fields: *logo }
 

@@ -341,28 +341,36 @@
     "panels_title": "Insurance panel partners",
     "panels": [
       {
-        "name": "Allianz"
+        "name": "Allianz",
+        "logo": "/assets/uploads/insurance/allianz.webp"
       },
       {
-        "name": "Prudential"
+        "name": "Prudential",
+        "logo": "/assets/uploads/insurance/prudential.webp"
       },
       {
-        "name": "PMCare"
+        "name": "Asia Assistance",
+        "logo": "/assets/uploads/insurance/asia-assistance.webp"
       },
       {
-        "name": "MiCare"
+        "name": "Health Metrics",
+        "logo": "/assets/uploads/insurance/health-metrics.webp"
       },
       {
-        "name": "IHM"
+        "name": "IHM",
+        "logo": "/assets/uploads/insurance/ihm.webp"
       },
       {
-        "name": "Health Metrics"
+        "name": "MiCare",
+        "logo": "/assets/uploads/insurance/micare.webp"
       },
       {
-        "name": "Asia Assistance"
+        "name": "MIYA",
+        "logo": "/assets/uploads/insurance/miya.webp"
       },
       {
-        "name": "MIYA"
+        "name": "PMCare",
+        "logo": "/assets/uploads/insurance/pmcare.webp"
       }
     ],
     "media_title": "As featured in",
