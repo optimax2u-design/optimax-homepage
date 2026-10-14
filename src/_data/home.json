@@ -362,28 +362,56 @@
     "media_title": "As featured in",
     "media": [
       {
-        "name": "The Star"
+        "name": "Business Today Malaysia",
+        "logo": "/assets/uploads/media/business-today-malaysia.webp"
       },
       {
-        "name": "New Straits Times"
+        "name": "China Press",
+        "logo": "/assets/uploads/media/china-press.webp"
       },
       {
-        "name": "The Edge Malaysia"
+        "name": "Forbes Asia",
+        "logo": "/assets/uploads/media/forbes-asia.webp"
       },
       {
-        "name": "Forbes Asia"
+        "name": "Healthcare Asia",
+        "logo": "/assets/uploads/media/healthcare-asia.webp"
       },
       {
-        "name": "Sin Chew Daily"
+        "name": "Nanyang Siang Pau",
+        "logo": "/assets/uploads/media/nanyang-siang-pau.webp"
       },
       {
-        "name": "The Malaysian Reserve"
+        "name": "New Straits Times",
+        "logo": "/assets/uploads/media/new-straits-times.webp"
       },
       {
-        "name": "Business Today"
+        "name": "Oriental Daily News",
+        "logo": "/assets/uploads/media/oriental-daily-news.webp"
       },
       {
-        "name": "The PEAK"
+        "name": "Sin Chew Daily",
+        "logo": "/assets/uploads/media/sin-chew-daily.webp"
+      },
+      {
+        "name": "The Edge Malaysia",
+        "logo": "/assets/uploads/media/the-edge-malaysia.webp"
+      },
+      {
+        "name": "The Malaysian Reserve",
+        "logo": "/assets/uploads/media/the-malaysian-reserve.webp"
+      },
+      {
+        "name": "The PEAK",
+        "logo": "/assets/uploads/media/the-peak.webp"
+      },
+      {
+        "name": "The Star",
+        "logo": "/assets/uploads/media/the-star.webp"
+      },
+      {
+        "name": "Yahoo News",
+        "logo": "/assets/uploads/media/yahoo-news.webp"
       }
     ]
   },
