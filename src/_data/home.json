@@ -1,9 +1,9 @@
 {
   "hero": {
-    "eyebrow": "ZEISS SMILE® PRO · 8-second LASIK",
+    "eyebrow": "ZEISS SMILE® Pro 3.0 · 8-second LASIK",
     "headline": "8 seconds.",
     "headline_line2": "A lifetime of clear vision.",
-    "subhead": "Malaysia's first LASIK provider since 1995 now offers ZEISS SMILE® PRO — a gentle, flapless laser treatment for glasses and contact lens wearers.",
+    "subhead": "Malaysia's first LASIK provider since 1995 now offers ZEISS SMILE® Pro 3.0 — a gentle, flapless laser treatment for glasses and contact lens wearers.",
     "badge_number": "8s",
     "badge_label": "per eye*",
     "primary_cta": {
@@ -16,6 +16,8 @@
     },
     "footnote": "*Laser time per eye. Your full visit takes longer. Suitability is confirmed by your eye specialist.",
     "image": "/assets/uploads/hero-model.webp",
+    "image_mobile": "/assets/uploads/hero-model-640.webp",
+    "image_cutout": true,
     "image_alt": "Smiling woman enjoying clear vision",
     "trust_pills": [
       {
@@ -27,19 +29,17 @@
       {
         "text": "ISO 9001 / MHTC"
       }
-    ],
-    "image_mobile": "/assets/uploads/hero-model-640.webp",
-    "image_cutout": true
+    ]
   },
   "stats": [
     {
       "value": "31+",
-      "label": "years caring for Malaysian eyes",
+      "label": "Years caring for Malaysian eyes",
       "color": "violet"
     },
     {
       "value": "25",
-      "label": "centres — 24 in Malaysia, 1 in Cambodia",
+      "label": "Hospital & Clinics — 24 in Malaysia, 1 in Cambodia",
       "color": "yellow"
     },
     {
@@ -49,7 +49,7 @@
     },
     {
       "value": "~8s",
-      "label": "laser time per eye with SMILE® PRO",
+      "label": "Laser time per eye with SMILE® PRO",
       "color": "sky"
     }
   ],
@@ -134,6 +134,7 @@
         "text": "Freedom from glasses and contacts.",
         "color": "sky",
         "image": "/assets/uploads/treatments/laser-vision-correction.webp",
+        "image_alt": "Smiling diver with mask, free from glasses",
         "items": [
           "SMILE® PRO",
           "SMILE",
@@ -142,45 +143,44 @@
           "ASA / TESA",
           "ICL"
         ],
-        "url": "https://optimaxeyespecialist.com/treatments/",
-        "image_alt": "Smiling diver with mask, free from glasses"
+        "url": "https://optimaxeyespecialist.com/treatments/"
       },
       {
         "title": "Presbyopia",
         "text": "Clearer near vision after 40.",
         "color": "violet",
         "image": "/assets/uploads/treatments/presbyopia.webp",
+        "image_alt": "Woman lifting her reading glasses to read her phone",
         "items": [
-          "PRESBYOND®"
+          "PRESBYOND® 2.0"
         ],
-        "url": "https://optimaxeyespecialist.com/treatments/",
-        "image_alt": "Woman lifting her reading glasses to read her phone"
+        "url": "https://optimaxeyespecialist.com/treatments/"
       },
       {
         "title": "Cataract",
         "text": "Brighter, sharper days again.",
         "color": "yellow",
         "image": "/assets/uploads/treatments/cataract.webp",
+        "image_alt": "Happy elderly couple embracing",
         "items": [
           "FLACS",
           "Premium lenses"
         ],
-        "url": "https://optimaxeyespecialist.com/treatments/",
-        "image_alt": "Happy elderly couple embracing"
+        "url": "https://optimaxeyespecialist.com/treatments/"
       },
       {
         "title": "Screening & children's care",
         "text": "Healthy eyes for the whole family.",
         "color": "coral",
         "image": "/assets/uploads/treatments/screening-childrens-care.webp",
+        "image_alt": "Smiling boy holding his glasses",
         "items": [
           "Glaucoma",
           "Myopia control",
           "Ortho-K",
           "RGP"
         ],
-        "url": "https://optimaxeyespecialist.com/treatments/",
-        "image_alt": "Smiling boy holding his glasses"
+        "url": "https://optimaxeyespecialist.com/treatments/"
       }
     ]
   },
@@ -197,14 +197,14 @@
       },
       {
         "title": "Largest eye care network",
-        "text": "25 centres — 24 across Malaysia and 1 in Cambodia — so expert care is never far away.",
+        "text": "25 hospital & clinics — 24 across Malaysia and 1 in Cambodia — so expert care is never far away.",
         "color": "mint",
         "image": "/assets/uploads/why/why-network.webp",
         "image_alt": "Optimax headquarters at Republik TTDI"
       },
       {
         "title": "ZEISS technology",
-        "text": "From ZEISS SMILE® PRO to PRESBYOND®, our specialists work with advanced ZEISS systems.",
+        "text": "From ZEISS SMILE® Pro 3.0 to PRESBYOND® 2.0, our specialists work with advanced ZEISS systems.",
         "color": "sky",
         "image": "/assets/uploads/why/why-zeiss.webp",
         "image_alt": "ZEISS VISUMAX 800 laser system"
@@ -448,13 +448,13 @@
     "consent": "By submitting, you agree to be contacted by Optimax about your appointment.",
     "services": [
       "Not sure yet — help me decide",
-      "ZEISS SMILE® PRO",
+      "ZEISS SMILE® Pro 3.0",
       "SMILE",
       "CLEAR Max",
       "Femto-LASIK",
       "ASA / TESA",
       "ICL",
-      "PRESBYOND®",
+      "PRESBYOND® 2.0",
       "Cataract surgery (FLACS)",
       "Glaucoma screening",
       "Children's eye care / myopia control",
