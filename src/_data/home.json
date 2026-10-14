@@ -251,32 +251,38 @@
       {
         "quote": "Went for Dr. Jason's SMILE Pro. It was very fast, smooth, and painless.",
         "name": "Nassar",
-        "source": "Google review"
+        "photo": "/assets/uploads/reviewers/nassar.webp",
+        "rating": 5
       },
       {
         "quote": "Recently we had our SMILE Pro correction surgery at Optimax TTDI, and the whole experience was excellent.",
         "name": "Rachel A.",
-        "source": "Google review"
+        "photo": "/assets/uploads/reviewers/rachel.webp",
+        "rating": 5
       },
       {
         "quote": "He took the time to explain everything step by step without using complicated terms.",
         "name": "Alqi B.",
-        "source": "Google review"
+        "photo": "/assets/uploads/reviewers/alqi.webp",
+        "rating": 5
       },
       {
         "quote": "Christopher the attending optometrist explained everything in clear and concise way.",
         "name": "Faris T.",
-        "source": "Google review"
+        "photo": "/assets/uploads/reviewers/faris.webp",
+        "rating": 5
       },
       {
         "quote": "Their service has never disappointed me.",
         "name": "Emily",
-        "source": "Google review"
+        "photo": "/assets/uploads/reviewers/emily.webp",
+        "rating": 5
       },
       {
         "quote": "Thank you Ms. Bawani for taking care of me during my lasik surgery.",
         "name": "SoulOasis",
-        "source": "Google review"
+        "photo": "/assets/uploads/reviewers/souloasis.webp",
+        "rating": 5
       }
     ]
   },

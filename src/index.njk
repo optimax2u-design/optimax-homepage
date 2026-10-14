@@ -238,7 +238,7 @@ permalink: /index.html
       {%- for r in h.reviews.items %}
       <figure class="quote reveal" style="--d:{{ loop.index0 % 3 }}">
         <blockquote>“{{ r.quote }}”</blockquote>
-        <figcaption><span class="avatar" aria-hidden="true">{{ r.name | first }}</span><span><strong>{{ r.name }}</strong><small>{{ r.source }}</small></span></figcaption>
+        <figcaption>{% if r.photo %}<img class="avatar avatar--photo" src="{{ r.photo }}" alt="" width="44" height="44" loading="lazy" decoding="async">{% else %}<span class="avatar" aria-hidden="true">{{ r.name | first }}</span>{% endif %}<span><strong>{{ r.name }}</strong>{% set rt = r.rating or 5 %}<span class="rating" role="img" aria-label="Rated {{ rt }} out of 5 stars">{% for i in range(5) %}<svg viewBox="0 0 20 20" aria-hidden="true" class="{{ 'on' if i < rt else 'off' }}"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>{% endfor %}</span></span></figcaption>
       </figure>
       {%- endfor %}
     </div>

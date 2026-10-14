@@ -150,7 +150,8 @@ content:
             fields:
               - { name: quote, type: text }
               - { name: name, type: string }
-              - { name: source, type: string }
+              - { name: photo, label: Reviewer photo (square; initial shows if empty), type: image }
+              - { name: rating, label: Stars given (1–5), type: number, options: { min: 1, max: 5 } }
 
       - name: recognition
         label: Awards, panels & media
