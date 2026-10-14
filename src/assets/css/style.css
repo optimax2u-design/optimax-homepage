@@ -174,10 +174,10 @@ ul,ol{margin:0;padding:0;list-style:none}
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .card{--grad:linear-gradient(135deg,#F3F0FF,#E6DEFC);--deep:var(--violet-deep);--btn:var(--violet);--btn-on:#fff;--ring:rgba(108,76,224,.35);
   position:relative;isolation:isolate;overflow:hidden;min-height:clamp(420px,35vw,490px);border-radius:var(--radius);background:var(--grad);display:flex;flex-direction:column;justify-content:center;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
-.card.c-sky{--focus:62%;--grad:linear-gradient(135deg,#EEF7FF 0%,#D6ECFF 100%);--deep:#1D5C8F;--btn:#4F5BD5;--ring:rgba(79,91,213,.35)}
-.card.c-violet{--focus:78%;--grad:linear-gradient(135deg,#F4F0FF 0%,#E2D9FB 100%);--deep:var(--violet-deep);--btn:var(--violet);--ring:rgba(108,76,224,.35)}
-.card.c-yellow{--focus:60%;--grad:linear-gradient(135deg,#FFF9E6 0%,#FDEDB8 100%);--deep:#7A4E00;--btn:#F5BC3C;--btn-on:var(--ink);--ring:rgba(201,138,11,.4)}
-.card.c-coral{--focus:72%;--grad:linear-gradient(135deg,#FFF3EE 0%,#FFDFD3 100%);--deep:#A63A1E;--btn:var(--coral);--btn-on:var(--ink);--ring:rgba(214,84,52,.35)}
+.card.c-sky{--cx:.71;--focus:62%;--grad:linear-gradient(135deg,#EEF7FF 0%,#D6ECFF 100%);--deep:#1D5C8F;--btn:#4F5BD5;--ring:rgba(79,91,213,.35)}
+.card.c-violet{--cx:.63;--focus:78%;--grad:linear-gradient(135deg,#F4F0FF 0%,#E2D9FB 100%);--deep:var(--violet-deep);--btn:var(--violet);--ring:rgba(108,76,224,.35)}
+.card.c-yellow{--cx:.56;--focus:60%;--grad:linear-gradient(135deg,#FFF9E6 0%,#FDEDB8 100%);--deep:#7A4E00;--btn:#F5BC3C;--btn-on:var(--ink);--ring:rgba(201,138,11,.4)}
+.card.c-coral{--cx:.59;--focus:72%;--grad:linear-gradient(135deg,#FFF3EE 0%,#FFDFD3 100%);--deep:#A63A1E;--btn:var(--coral);--btn-on:var(--ink);--ring:rgba(214,84,52,.35)}
 .card::before{content:"";position:absolute;z-index:-1;width:78%;aspect-ratio:1;right:-14%;top:-12%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.75),rgba(255,255,255,.25) 70%,transparent)}
 .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
 .card__body{position:relative;z-index:2;max-width:52%;padding:clamp(32px,3.6vw,48px) 0 clamp(32px,3.6vw,44px) clamp(28px,3.4vw,44px)}
@@ -198,7 +198,13 @@ ul,ol{margin:0;padding:0;list-style:none}
   .card__media{position:relative;width:100%;height:auto;margin-top:-8px;-webkit-mask-image:none;mask-image:none}
   .card__media img{height:auto;max-height:300px;object-fit:contain;object-position:center bottom}
 }
-@media (max-width:760px){.cards{grid-template-columns:1fr;gap:16px}}
+@media (max-width:760px){
+  .cards{grid-template-columns:1fr;gap:16px}
+  /* Phones: centre the person in each photo (the cut-outs sit right-of-centre in their files) */
+  .card__media{display:flex;justify-content:center;overflow:hidden}
+  .card__media img{width:auto;max-width:none;height:min(300px,76vw);max-height:none;transform:translateX(calc((.5 - var(--cx,.5)) * 100%))}
+  .card:hover .card__media img{transform:translateX(calc((.5 - var(--cx,.5)) * 100%))}
+}
 @media (max-width:760px){.cards{grid-template-columns:1fr}}
 
 /* 7. Why */
