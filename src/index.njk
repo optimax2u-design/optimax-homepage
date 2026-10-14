@@ -26,8 +26,8 @@ permalink: /index.html
 {# 1. Top bar #}
 <div class="topbar">
   <div class="wrap topbar__in">
-    <a href="tel:{{ site.topbar.hotline | replace(' ', '') }}" class="topbar__item"><span aria-hidden="true">☎</span> Hotline <strong>{{ site.topbar.hotline }}</strong></a>
-    <a href="{{ site.topbar.whatsapp_link }}" class="topbar__item" target="_blank" rel="noopener"><span aria-hidden="true">💬</span> WhatsApp <strong>{{ site.topbar.whatsapp }}</strong></a>
+    <a href="tel:{{ site.topbar.hotline | replace(' ', '') }}" class="topbar__item"><span aria-hidden="true">☎</span> <span class="topbar__lbl">Hotline</span> <strong>{{ site.topbar.hotline }}</strong></a>
+    <a href="{{ site.topbar.whatsapp_link }}" class="topbar__item" target="_blank" rel="noopener"><span aria-hidden="true">💬</span> WhatsApp <strong class="topbar__num">{{ site.topbar.whatsapp }}</strong></a>
     <span class="topbar__item topbar__hide-sm">{{ site.topbar.hours }}</span>
     <span class="topbar__item topbar__listing topbar__hide-sm"><span class="dot" aria-hidden="true"></span>{{ site.topbar.listing }}</span>
   </div>
@@ -374,8 +374,8 @@ permalink: /index.html
     <div>
       <h4>Talk to us</h4>
       <ul>
-        <li><a href="tel:{{ site.topbar.hotline | replace(' ', '') }}">Hotline {{ site.topbar.hotline }}</a></li>
-        <li><a href="{{ site.topbar.whatsapp_link }}" target="_blank" rel="noopener">WhatsApp {{ site.topbar.whatsapp }}</a></li>
+        <li><a href="tel:{{ site.topbar.hotline | replace(' ', '') }}">Hotline <span class="nowrap">{{ site.topbar.hotline }}</span></a></li>
+        <li><a href="{{ site.topbar.whatsapp_link }}" target="_blank" rel="noopener">WhatsApp <span class="nowrap">{{ site.topbar.whatsapp }}</span></a></li>
         <li>{{ site.topbar.hours }}</li>
       </ul>
     </div>
