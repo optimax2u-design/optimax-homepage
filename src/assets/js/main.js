@@ -83,4 +83,32 @@
     } catch (_) { /* still confirm; the team follows up by phone */ }
     form.hidden = true; ok.hidden = false; ok.focus();
   });
+
+  // Stat tiles: count up to the number shown, once, when each tile scrolls into view.
+  // The final value is already in the HTML, so search engines, screen readers and
+  // visitors who prefer reduced motion simply see the real number.
+  const tiles = $$('.tile__value');
+  const parse = t => { const m = t.match(/^(\D*?)(\d+(?:\.\d+)?)(.*)$/s); return m && { pre: m[1], num: parseFloat(m[2]), dec: (m[2].split('.')[1] || '').length, post: m[3] }; };
+  const ease = x => 1 - Math.pow(1 - x, 4);
+  const run = el => {
+    const p = parse(el.dataset.final); if (!p) return;
+    const dur = 1600 + Math.min(p.num, 40) * 12; let t0;
+    const step = t => {
+      t0 ??= t; const k = Math.min(1, (t - t0) / dur);
+      el.textContent = p.pre + (p.num * ease(k)).toFixed(p.dec) + p.post;
+      if (k < 1) requestAnimationFrame(step); else el.textContent = el.dataset.final;
+    };
+    requestAnimationFrame(step);
+  };
+  if (!reduce && 'IntersectionObserver' in window) {
+    tiles.forEach(el => {
+      el.dataset.final = el.textContent.trim();
+      el.setAttribute('aria-label', el.dataset.final);
+      const p = parse(el.dataset.final); if (p) el.textContent = p.pre + (0).toFixed(p.dec) + p.post;
+    });
+    const tio = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { tio.unobserve(e.target); run(e.target); }
+    }), { threshold: 0.6 });
+    tiles.forEach(el => tio.observe(el));
+  }
 })();

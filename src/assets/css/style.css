@@ -136,7 +136,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .stats__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .tile{background:var(--c);color:var(--on);border-radius:var(--radius);padding:28px 24px 26px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;transition:transform .5s var(--ease)}
 .tile:hover{transform:translateY(-4px)}
-.tile__value{font:800 clamp(48px,5.4vw,72px)/.9 var(--head);letter-spacing:-.04em}
+.tile__value{font:800 clamp(48px,5.4vw,72px)/.9 var(--head);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
 .tile__label{font-size:15px;font-weight:500;max-width:22ch}
 @media (max-width:860px){.stats__grid{grid-template-columns:repeat(2,1fr);gap:12px}.tile{min-height:150px;padding:22px 18px}}
 
