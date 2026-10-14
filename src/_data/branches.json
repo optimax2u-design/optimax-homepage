@@ -1,0 +1,104 @@
+{
+  "regions": [
+    {
+      "region": "Klang Valley",
+      "branches": [
+        {
+          "name": "Taman Tun Dr. Ismail (HQ)"
+        },
+        {
+          "name": "Sri Petaling"
+        },
+        {
+          "name": "Cheras"
+        },
+        {
+          "name": "Kepong"
+        },
+        {
+          "name": "Melawati"
+        },
+        {
+          "name": "OUG"
+        },
+        {
+          "name": "Damansara Jaya"
+        },
+        {
+          "name": "Bandar Sunway"
+        },
+        {
+          "name": "Elmina"
+        },
+        {
+          "name": "Kota Kemuning"
+        },
+        {
+          "name": "Shah Alam"
+        },
+        {
+          "name": "Klang"
+        }
+      ]
+    },
+    {
+      "region": "Northern",
+      "branches": [
+        {
+          "name": "Penang"
+        },
+        {
+          "name": "Bukit Mertajam"
+        },
+        {
+          "name": "Ipoh"
+        }
+      ]
+    },
+    {
+      "region": "Southern",
+      "branches": [
+        {
+          "name": "Seremban"
+        },
+        {
+          "name": "Bahau"
+        },
+        {
+          "name": "Kluang"
+        },
+        {
+          "name": "Muar"
+        },
+        {
+          "name": "Segamat"
+        },
+        {
+          "name": "Johor Bahru"
+        },
+        {
+          "name": "Sutera Johor Bahru"
+        }
+      ]
+    },
+    {
+      "region": "East Malaysia",
+      "branches": [
+        {
+          "name": "Kuching"
+        },
+        {
+          "name": "Kota Kinabalu"
+        }
+      ]
+    },
+    {
+      "region": "International",
+      "branches": [
+        {
+          "name": "Cambodia"
+        }
+      ]
+    }
+  ]
+}

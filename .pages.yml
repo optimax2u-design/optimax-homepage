@@ -1,0 +1,249 @@
+# Pages CMS configuration — https://pagescms.org
+# Sign in at https://app.pagescms.org with GitHub, pick this repository, and edit
+# the homepage text and images without touching code. Every save is a Git commit,
+# and the GitHub Action rebuilds and republishes the site automatically.
+
+media:
+  input: src/assets/uploads
+  output: /assets/uploads
+  extensions: [jpg, jpeg, png, webp, avif, svg, gif]
+
+content:
+  # ───────────────────────────── Homepage ─────────────────────────────
+  - name: home
+    label: Homepage
+    type: file
+    path: src/_data/home.json
+    format: json
+    fields:
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - { name: headline, label: Headline (line 1), type: string }
+          - { name: headline_line2, label: Headline (line 2), type: string }
+          - { name: subhead, label: Supporting text, type: text }
+          - { name: badge_number, label: Badge number, type: string }
+          - { name: badge_label, label: Badge label, type: string }
+          - name: primary_cta
+            label: Main button
+            type: object
+            fields: &link
+              - { name: label, type: string }
+              - { name: url, label: Link, type: string }
+          - { name: secondary_cta, label: Second button, type: object, fields: *link }
+          - { name: footnote, label: Footnote, type: text }
+          - { name: image, label: Hero photo (portrait, ~1200×1400), type: image }
+          - { name: image_alt, label: Photo description (for screen readers), type: string }
+          - name: trust_pills
+            label: Trust pills
+            type: object
+            list: true
+            fields:
+              - { name: text, type: string }
+
+      - name: stats
+        label: Stat tiles
+        type: object
+        list: { min: 1, max: 8 }
+        fields:
+          - { name: value, label: Big number, type: string }
+          - { name: label, type: string }
+          - &color
+            name: color
+            label: Colour
+            type: select
+            options: { values: [violet, yellow, coral, sky, mint] }
+
+      - name: finder
+        label: Treatment finder
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - { name: title, type: string }
+          - { name: intro, type: text }
+          - { name: note, label: Disclaimer, type: text }
+          - name: options
+            label: Concerns
+            type: object
+            list: true
+            fields:
+              - { name: id, label: ID (lowercase, no spaces), type: string }
+              - { name: concern, label: Button text, type: string }
+              - { name: emoji, type: string }
+              - *color
+              - { name: recommended, label: Recommended treatment, type: string }
+              - { name: summary, type: text }
+              - { name: alternatives, type: string, list: true }
+
+      - name: treatments
+        label: Treatment cards
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - { name: title, type: string }
+          - name: cards
+            type: object
+            list: true
+            fields:
+              - { name: title, type: string }
+              - { name: text, type: string }
+              - *color
+              - { name: image, label: Card image (~800×600), type: image }
+              - { name: items, label: Treatments listed, type: string, list: true }
+              - { name: url, label: Learn more link, type: string }
+
+      - name: why
+        label: Why Optimax
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - { name: title, type: string }
+          - name: items
+            type: object
+            list: true
+            fields:
+              - { name: title, type: string }
+              - { name: text, type: text }
+              - *color
+              - { name: image, label: Image (~800×600), type: image }
+
+      - name: journey
+        label: Your journey
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - { name: title, type: string }
+          - name: steps
+            type: object
+            list: true
+            fields:
+              - { name: title, type: string }
+              - { name: text, type: text }
+
+      - name: doctors
+        label: Doctors section text
+        description: Edit the doctor list itself under "Doctors".
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - { name: title, type: string }
+          - { name: intro, type: text }
+          - { name: link, type: object, fields: *link }
+
+      - name: reviews
+        label: Patient reviews
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - { name: title, type: string }
+          - { name: rating_text, label: Rating line, type: string }
+          - { name: link, type: object, fields: *link }
+          - name: items
+            label: Quotes (keep them short and from real reviews)
+            type: object
+            list: true
+            fields:
+              - { name: quote, type: text }
+              - { name: name, type: string }
+              - { name: source, type: string }
+
+      - name: recognition
+        label: Awards, panels & media
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - { name: title, type: string }
+          - { name: awards_title, type: string }
+          - name: awards
+            type: object
+            list: true
+            fields: &logo
+              - { name: name, type: string }
+              - { name: logo, label: Logo (optional — name shows if empty), type: image }
+          - { name: panels_title, type: string }
+          - { name: panels, label: Insurance panels, type: object, list: true, fields: *logo }
+          - { name: media_title, type: string }
+          - { name: media, label: Media mentions, type: object, list: true, fields: *logo }
+
+      - name: booking
+        label: Booking form
+        type: object
+        fields:
+          - { name: eyebrow, label: Small heading, type: string }
+          - { name: title, type: string }
+          - { name: intro, type: text }
+          - { name: submit_label, label: Button text, type: string }
+          - { name: success_title, label: Success heading, type: string }
+          - { name: success_text, label: Success message, type: text }
+          - { name: consent, label: Consent line, type: text }
+          - { name: services, label: Service options, type: string, list: true }
+
+  # ───────────────────────────── Doctors ─────────────────────────────
+  - name: doctors
+    label: Doctors
+    type: file
+    path: src/_data/doctors.json
+    format: json
+    fields:
+      - name: list
+        label: Doctors
+        type: object
+        list: true
+        fields:
+          - { name: name, type: string }
+          - { name: credentials, type: text }
+          - { name: photo, label: Portrait (4:5, ~600×750), type: image }
+          - *color
+
+  # ───────────────────────────── Branches ─────────────────────────────
+  - name: branches
+    label: Branches (booking form)
+    type: file
+    path: src/_data/branches.json
+    format: json
+    fields:
+      - name: regions
+        type: object
+        list: true
+        fields:
+          - { name: region, type: string }
+          - name: branches
+            type: object
+            list: true
+            fields:
+              - { name: name, type: string }
+
+  # ───────────────────────────── Site settings ─────────────────────────────
+  - name: site
+    label: Site settings (top bar, menu, footer)
+    type: file
+    path: src/_data/site.json
+    format: json
+    fields:
+      - { name: name, label: Site name, type: string }
+      - { name: logo, label: Logo (square SVG/PNG), type: image }
+      - { name: seo_title, label: Browser tab / Google title, type: string }
+      - { name: seo_description, label: Google description, type: text }
+      - name: topbar
+        label: Top bar
+        type: object
+        fields:
+          - { name: hotline, type: string }
+          - { name: whatsapp, label: WhatsApp (display), type: string }
+          - { name: whatsapp_link, label: WhatsApp link (https://wa.me/60…), type: string }
+          - { name: hours, type: string }
+          - { name: listing, label: Listing text, type: string }
+      - { name: nav, label: Menu links, type: object, list: true, fields: *link }
+      - { name: nav_cta, label: Menu button, type: object, fields: *link }
+      - { name: form_endpoint, label: Form endpoint URL (optional — e.g. Formspree, Make, Zapier webhook), type: string }
+      - name: footer
+        type: object
+        fields:
+          - { name: company, type: string }
+          - { name: registration, label: Company registration no., type: string }
+          - { name: address_label, type: string }
+          - { name: address, type: text }
+          - { name: links, type: object, list: true, fields: *link }
+          - { name: legal, label: Small print, type: text }

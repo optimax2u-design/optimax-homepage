@@ -1,0 +1,37 @@
+{
+  "name": "Optimax Eye Specialist",
+  "logo": "/assets/uploads/logo-placeholder.svg",
+  "seo_title": "Optimax Eye Specialist — ZEISS SMILE® PRO 8-second LASIK in Malaysia",
+  "seo_description": "Malaysia's first LASIK provider since 1995. ZEISS SMILE® PRO, PRESBYOND, FLACS cataract surgery and children's eye care across 25 centres. Check if you're suitable — free.",
+  "topbar": {
+    "hotline": "1800 88 1201",
+    "whatsapp": "+6010-909 1201",
+    "whatsapp_link": "https://wa.me/60109091201",
+    "hours": "Mon–Sat 9am–6pm",
+    "listing": "Listed on Bursa Malaysia Main Market"
+  },
+  "nav": [
+    { "label": "Treatments", "url": "#treatments" },
+    { "label": "Doctors", "url": "#doctors" },
+    { "label": "Branches", "url": "#book" },
+    { "label": "About", "url": "#why" },
+    { "label": "Reviews", "url": "#reviews" },
+    { "label": "Blog", "url": "https://optimaxeyespecialist.com/blog/" }
+  ],
+  "nav_cta": { "label": "Book free eye check", "url": "#book" },
+  "form_endpoint": "",
+  "footer": {
+    "company": "Optimax Eye Specialist",
+    "registration": "199501000582 (329776-D)",
+    "address": "Unit 2-2-1, Republik TTDI, Jalan Tun Mohd Fuad 3, Taman Tun Dr. Ismail, 60000 Kuala Lumpur",
+    "address_label": "TTDI Headquarters",
+    "links": [
+      { "label": "Treatments", "url": "#treatments" },
+      { "label": "Our doctors", "url": "#doctors" },
+      { "label": "FAQs", "url": "https://optimaxeyespecialist.com/faqs/" },
+      { "label": "Financing options", "url": "https://optimaxeyespecialist.com/financing-options/" },
+      { "label": "Blog", "url": "https://optimaxeyespecialist.com/blog/" }
+    ],
+    "legal": "Treatment suitability and outcomes vary from person to person and are confirmed by your eye specialist after a full assessment."
+  }
+}

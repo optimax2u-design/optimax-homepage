@@ -1,0 +1,233 @@
+{
+  "hero": {
+    "eyebrow": "ZEISS SMILE® PRO · 8-second LASIK",
+    "headline": "8 seconds.",
+    "headline_line2": "A lifetime of clear vision.",
+    "subhead": "Malaysia's first LASIK provider since 1995 now offers ZEISS SMILE® PRO — a gentle, flapless laser treatment for glasses and contact lens wearers.",
+    "badge_number": "8s",
+    "badge_label": "per eye*",
+    "primary_cta": { "label": "Check if I'm suitable — free", "url": "#book" },
+    "secondary_cta": { "label": "Find my treatment", "url": "#finder" },
+    "footnote": "*Laser time per eye. Your full visit takes longer. Suitability is confirmed by your eye specialist.",
+    "image": "/assets/uploads/hero.svg",
+    "image_alt": "Patient smiling after vision correction (placeholder)",
+    "trust_pills": [
+      { "text": "4.7★ Google from 916 reviews" },
+      { "text": "Since 1995" },
+      { "text": "ISO 9001 / MHTC" }
+    ]
+  },
+  "stats": [
+    { "value": "31+", "label": "years caring for Malaysian eyes", "color": "violet" },
+    { "value": "25", "label": "centres — 24 in Malaysia, 1 in Cambodia", "color": "yellow" },
+    { "value": "4.7★", "label": "Google rating from 916 reviews", "color": "coral" },
+    { "value": "~8s", "label": "laser time per eye with SMILE® PRO", "color": "sky" }
+  ],
+  "finder": {
+    "eyebrow": "Treatment finder",
+    "title": "What brings you in today?",
+    "intro": "Pick the one that sounds most like you. We'll point you to a good place to start.",
+    "note": "This is a guide only. Your eye specialist confirms the right treatment after a full assessment.",
+    "options": [
+      {
+        "id": "glasses",
+        "concern": "I wear glasses or contacts",
+        "emoji": "👓",
+        "color": "violet",
+        "recommended": "ZEISS SMILE® PRO",
+        "summary": "Our newest flapless laser vision correction. The laser works for about 8 seconds per eye, through a tiny opening.",
+        "alternatives": ["SMILE", "CLEAR Max", "Femto-LASIK", "ASA / TESA", "ICL"]
+      },
+      {
+        "id": "reading",
+        "concern": "I'm 40+ and need reading glasses",
+        "emoji": "📖",
+        "color": "yellow",
+        "recommended": "PRESBYOND®",
+        "summary": "Laser blended vision designed to help you see near, middle and far distances with less reliance on reading glasses.",
+        "alternatives": ["Premium lens options", "Eye screening"]
+      },
+      {
+        "id": "cloudy",
+        "concern": "My vision is cloudy or glary",
+        "emoji": "🌫️",
+        "color": "coral",
+        "recommended": "FLACS cataract surgery",
+        "summary": "Femtosecond laser-assisted cataract surgery, with a choice of premium lenses to suit how you live.",
+        "alternatives": ["Premium lenses", "Eye screening"]
+      },
+      {
+        "id": "child",
+        "concern": "It's for my child",
+        "emoji": "🧒",
+        "color": "sky",
+        "recommended": "Children's eye care",
+        "summary": "Friendly check-ups for growing eyes, plus options to help manage short-sightedness as your child grows.",
+        "alternatives": ["Myopia control", "Ortho-K", "RGP lenses"]
+      },
+      {
+        "id": "checkup",
+        "concern": "I just want a check-up",
+        "emoji": "✅",
+        "color": "mint",
+        "recommended": "Comprehensive eye screening",
+        "summary": "A thorough look at your eye health and vision — a good first step whatever your age.",
+        "alternatives": ["Glaucoma screening", "Children's eye care"]
+      }
+    ]
+  },
+  "treatments": {
+    "eyebrow": "Treatments",
+    "title": "Care for every stage of life.",
+    "cards": [
+      {
+        "title": "Laser vision correction",
+        "text": "Freedom from glasses and contacts.",
+        "color": "violet",
+        "image": "/assets/uploads/treatment-laser.svg",
+        "items": ["SMILE® PRO", "SMILE", "CLEAR Max", "Femto-LASIK", "ASA / TESA", "ICL"],
+        "url": "https://optimaxeyespecialist.com/treatments/"
+      },
+      {
+        "title": "Presbyopia",
+        "text": "Clearer near vision after 40.",
+        "color": "yellow",
+        "image": "/assets/uploads/treatment-presbyopia.svg",
+        "items": ["PRESBYOND®"],
+        "url": "https://optimaxeyespecialist.com/treatments/"
+      },
+      {
+        "title": "Cataract",
+        "text": "Brighter, sharper days again.",
+        "color": "coral",
+        "image": "/assets/uploads/treatment-cataract.svg",
+        "items": ["FLACS", "Premium lenses"],
+        "url": "https://optimaxeyespecialist.com/treatments/"
+      },
+      {
+        "title": "Screening & children's care",
+        "text": "Healthy eyes for the whole family.",
+        "color": "sky",
+        "image": "/assets/uploads/treatment-screening.svg",
+        "items": ["Glaucoma", "Myopia control", "Ortho-K", "RGP"],
+        "url": "https://optimaxeyespecialist.com/treatments/"
+      }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why Optimax",
+    "title": "Trusted with Malaysian eyes since 1995.",
+    "items": [
+      {
+        "title": "Malaysia's first LASIK provider",
+        "text": "We've been performing laser vision correction since 1995 — longer than anyone else in the country.",
+        "color": "violet",
+        "image": "/assets/uploads/why-first.svg"
+      },
+      {
+        "title": "Largest eye care network",
+        "text": "25 centres — 24 across Malaysia and 1 in Cambodia — so expert care is never far away.",
+        "color": "mint",
+        "image": "/assets/uploads/why-network.svg"
+      },
+      {
+        "title": "ZEISS technology",
+        "text": "From ZEISS SMILE® PRO to PRESBYOND®, our specialists work with advanced ZEISS systems.",
+        "color": "sky",
+        "image": "/assets/uploads/why-zeiss.svg"
+      }
+    ]
+  },
+  "journey": {
+    "eyebrow": "Your journey",
+    "title": "Four simple steps to clearer vision.",
+    "steps": [
+      { "title": "Book a free eye check", "text": "Choose a branch and time that suits you — online, by phone or WhatsApp." },
+      { "title": "Get assessed", "text": "Our optometrists and specialists run a detailed set of eye tests." },
+      { "title": "Understand your options", "text": "Your doctor explains what suits your eyes, in plain language." },
+      { "title": "Get your personal plan", "text": "Leave with a clear plan, timeline and costs — no pressure." }
+    ]
+  },
+  "doctors": {
+    "eyebrow": "Meet our doctors",
+    "title": "Specialists you can talk to.",
+    "intro": "Our ophthalmologists bring training from Malaysia, Singapore, the UK and beyond.",
+    "link": { "label": "See all doctors", "url": "https://optimaxeyespecialist.com/doctor/" }
+  },
+  "reviews": {
+    "eyebrow": "Patient reviews",
+    "title": "In their own words.",
+    "rating_text": "4.7★ on Google from 916 reviews",
+    "link": { "label": "Read all reviews on Google", "url": "https://optimaxeyespecialist.com/#testimonials" },
+    "items": [
+      { "quote": "Went for Dr. Jason's SMILE Pro. It was very fast, smooth, and painless.", "name": "Nassar", "source": "Google review" },
+      { "quote": "Recently we had our SMILE Pro correction surgery at Optimax TTDI, and the whole experience was excellent.", "name": "Rachel A.", "source": "Google review" },
+      { "quote": "He took the time to explain everything step by step without using complicated terms.", "name": "Alqi B.", "source": "Google review" },
+      { "quote": "Christopher the attending optometrist explained everything in clear and concise way.", "name": "Faris T.", "source": "Google review" },
+      { "quote": "Their service has never disappointed me.", "name": "Emily", "source": "Google review" },
+      { "quote": "Thank you Ms. Bawani for taking care of me during my lasik surgery.", "name": "SoulOasis", "source": "Google review" }
+    ]
+  },
+  "recognition": {
+    "eyebrow": "Recognition",
+    "title": "Recognised, insured, in the news.",
+    "awards_title": "Awards",
+    "awards": [
+      { "name": "GlobalHealth Awards 2024", "logo": "" },
+      { "name": "GlobalHealth Awards 2023", "logo": "" },
+      { "name": "GlobalHealth Awards 2022", "logo": "" },
+      { "name": "Frost & Sullivan", "logo": "" },
+      { "name": "Healthcare Asia", "logo": "" },
+      { "name": "Malaysia Book of Records", "logo": "" },
+      { "name": "Parenthood Award", "logo": "" },
+      { "name": "Golden Bull 2005", "logo": "" }
+    ],
+    "panels_title": "Insurance panel partners",
+    "panels": [
+      { "name": "Allianz", "logo": "" },
+      { "name": "Prudential", "logo": "" },
+      { "name": "PMCare", "logo": "" },
+      { "name": "MiCare", "logo": "" },
+      { "name": "IHM", "logo": "" },
+      { "name": "Health Metrics", "logo": "" },
+      { "name": "Asia Assistance", "logo": "" },
+      { "name": "MIYA", "logo": "" }
+    ],
+    "media_title": "As featured in",
+    "media": [
+      { "name": "The Star", "logo": "" },
+      { "name": "New Straits Times", "logo": "" },
+      { "name": "The Edge Malaysia", "logo": "" },
+      { "name": "Forbes Asia", "logo": "" },
+      { "name": "Sin Chew Daily", "logo": "" },
+      { "name": "The Malaysian Reserve", "logo": "" },
+      { "name": "Business Today", "logo": "" },
+      { "name": "The PEAK", "logo": "" }
+    ]
+  },
+  "booking": {
+    "eyebrow": "Book now",
+    "title": "Book your free eye check.",
+    "intro": "Tell us a little about you and our team will call to confirm a time.",
+    "submit_label": "Request my free eye check",
+    "success_title": "Request received",
+    "success_text": "Thank you! Our team will contact you within operating hours (Mon–Sat 9am–6pm) to confirm your appointment.",
+    "consent": "By submitting, you agree to be contacted by Optimax about your appointment.",
+    "services": [
+      "Not sure yet — help me decide",
+      "ZEISS SMILE® PRO",
+      "SMILE",
+      "CLEAR Max",
+      "Femto-LASIK",
+      "ASA / TESA",
+      "ICL",
+      "PRESBYOND®",
+      "Cataract surgery (FLACS)",
+      "Glaucoma screening",
+      "Children's eye care / myopia control",
+      "Ortho-K",
+      "RGP lenses",
+      "General eye screening"
+    ]
+  }
+}

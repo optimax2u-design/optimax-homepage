@@ -1,0 +1,364 @@
+---
+permalink: /index.html
+---
+{%- set h = home -%}
+<!doctype html>
+<html lang="en-MY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ site.seo_title }}</title>
+  <meta name="description" content="{{ site.seo_description }}">
+  <meta name="theme-color" content="#FFF8EE">
+  <meta property="og:title" content="{{ site.seo_title }}">
+  <meta property="og:description" content="{{ site.seo_description }}">
+  <link rel="icon" href="{{ site.logo }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
+  <link rel="preload" as="image" href="{{ h.hero.image }}">
+  <link rel="stylesheet" href="/assets/css/style.css?v={{ build }}">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+{# 1. Top bar #}
+<div class="topbar">
+  <div class="wrap topbar__in">
+    <a href="tel:{{ site.topbar.hotline | replace(' ', '') }}" class="topbar__item"><span aria-hidden="true">☎</span> Hotline <strong>{{ site.topbar.hotline }}</strong></a>
+    <a href="{{ site.topbar.whatsapp_link }}" class="topbar__item" target="_blank" rel="noopener"><span aria-hidden="true">💬</span> WhatsApp <strong>{{ site.topbar.whatsapp }}</strong></a>
+    <span class="topbar__item topbar__hide-sm">{{ site.topbar.hours }}</span>
+    <span class="topbar__item topbar__listing topbar__hide-sm"><span class="dot" aria-hidden="true"></span>{{ site.topbar.listing }}</span>
+  </div>
+</div>
+
+{# 2. Navigation #}
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a href="#top" class="brand" aria-label="{{ site.name }} home">
+      <img src="{{ site.logo }}" alt="" width="34" height="34">
+      <span>Optimax<span class="brand__sub">Eye Specialist</span></span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      {%- for l in site.nav %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+    </nav>
+    <a href="{{ site.nav_cta.url }}" class="btn btn--primary btn--sm nav__cta">{{ site.nav_cta.label }}</a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+  <div class="nav__sheet" id="mobile-menu" hidden>
+    {%- for l in site.nav %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+    <a href="{{ site.nav_cta.url }}" class="btn btn--primary">{{ site.nav_cta.label }}</a>
+  </div>
+</header>
+
+<main id="main">
+
+{# 3. Hero #}
+<section class="hero" id="top">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow load" style="--d:0">{{ h.hero.eyebrow }}</p>
+      <h1 class="hero__title load" style="--d:1">{{ h.hero.headline }}<span>{{ h.hero.headline_line2 }}</span></h1>
+      <p class="hero__sub load" style="--d:2">{{ h.hero.subhead }}</p>
+      <div class="hero__ctas load" style="--d:3">
+        <a href="{{ h.hero.primary_cta.url }}" class="btn btn--primary btn--lg">{{ h.hero.primary_cta.label }}</a>
+        <a href="{{ h.hero.secondary_cta.url }}" class="btn btn--ghost btn--lg">{{ h.hero.secondary_cta.label }} <span aria-hidden="true">→</span></a>
+      </div>
+      <ul class="pills load" style="--d:4" aria-label="Why patients trust us">
+        {%- for p in h.hero.trust_pills %}<li class="pill">{{ p.text }}</li>{% endfor %}
+      </ul>
+    </div>
+    <div class="hero__visual load" style="--d:2">
+      <div class="hero__photo">
+        <img src="{{ h.hero.image }}" alt="{{ h.hero.image_alt }}" width="1200" height="1400" fetchpriority="high">
+      </div>
+      <div class="badge" role="img" aria-label="{{ h.hero.badge_number }} {{ h.hero.badge_label }}">
+        <svg class="badge__ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="88"/></svg>
+        <span class="badge__num">{{ h.hero.badge_number }}</span>
+        <span class="badge__label">{{ h.hero.badge_label }}</span>
+      </div>
+      <span class="blob blob--y" aria-hidden="true"></span>
+      <span class="blob blob--m" aria-hidden="true"></span>
+    </div>
+  </div>
+  <p class="wrap footnote">{{ h.hero.footnote }}</p>
+</section>
+
+{# 4. Stats #}
+<section class="stats" aria-label="Optimax at a glance">
+  <div class="wrap stats__grid">
+    {%- for s in h.stats %}
+    <div class="tile c-{{ s.color }} reveal" style="--d:{{ loop.index0 }}">
+      <span class="tile__value">{{ s.value }}</span>
+      <span class="tile__label">{{ s.label }}</span>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+{# 5. Treatment finder #}
+<section class="section finder" id="finder">
+  <div class="wrap">
+    <header class="head reveal">
+      <p class="eyebrow">{{ h.finder.eyebrow }}</p>
+      <h2>{{ h.finder.title }}</h2>
+      <p class="lead">{{ h.finder.intro }}</p>
+    </header>
+    <div class="finder__box reveal">
+      <div class="finder__options" role="radiogroup" aria-label="Choose your concern">
+        {%- for o in h.finder.options %}
+        <button type="button" role="radio" aria-checked="{{ 'true' if loop.first else 'false' }}" tabindex="{{ '0' if loop.first else '-1' }}" class="chip c-{{ o.color }}" data-id="{{ o.id }}">
+          <span class="chip__emoji" aria-hidden="true">{{ o.emoji }}</span>{{ o.concern }}
+        </button>
+        {%- endfor %}
+      </div>
+      {%- set f = h.finder.options[0] %}
+      <div class="finder__result c-{{ f.color }}" aria-live="polite" id="finder-result">
+        <p class="finder__kicker">We'd suggest starting with</p>
+        <h3 class="finder__rec" data-f="recommended">{{ f.recommended }}</h3>
+        <p data-f="summary">{{ f.summary }}</p>
+        <p class="finder__alt-title">Other options to discuss</p>
+        <ul class="finder__alts" data-f="alternatives">{% for a in f.alternatives %}<li>{{ a }}</li>{% endfor %}</ul>
+        <div class="finder__actions">
+          <a href="#book" class="btn btn--dark" data-f="book">Book a free eye check</a>
+        </div>
+        <p class="finder__note">{{ h.finder.note }}</p>
+      </div>
+    </div>
+  </div>
+  <script type="application/json" id="finder-data">{{ h.finder.options | dump | safe }}</script>
+</section>
+
+{# 6. Treatments #}
+<section class="section" id="treatments">
+  <div class="wrap">
+    <header class="head reveal">
+      <p class="eyebrow">{{ h.treatments.eyebrow }}</p>
+      <h2>{{ h.treatments.title }}</h2>
+    </header>
+    <div class="cards">
+      {%- for c in h.treatments.cards %}
+      <article class="card c-{{ c.color }} reveal" style="--d:{{ loop.index0 }}">
+        <div class="card__body">
+          <h3>{{ c.title }}</h3>
+          <p>{{ c.text }}</p>
+          <ul class="tags">{% for i in c.items %}<li>{{ i }}</li>{% endfor %}</ul>
+          <a href="{{ c.url }}" class="card__link">Learn more <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="card__media"><img src="{{ c.image }}" alt="" width="800" height="600" loading="lazy" decoding="async"></div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{# 7. Why Optimax #}
+<section class="section section--tint" id="why">
+  <div class="wrap">
+    <header class="head reveal">
+      <p class="eyebrow">{{ h.why.eyebrow }}</p>
+      <h2>{{ h.why.title }}</h2>
+    </header>
+    <div class="why">
+      {%- for w in h.why.items %}
+      <article class="why__item reveal" style="--d:{{ loop.index0 }}">
+        <div class="why__media"><img src="{{ w.image }}" alt="" width="800" height="600" loading="lazy" decoding="async"></div>
+        <span class="why__num c-{{ w.color }}">{{ loop.index }}</span>
+        <h3>{{ w.title }}</h3>
+        <p>{{ w.text }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{# 8. Journey #}
+<section class="section" id="journey">
+  <div class="wrap">
+    <header class="head reveal">
+      <p class="eyebrow">{{ h.journey.eyebrow }}</p>
+      <h2>{{ h.journey.title }}</h2>
+    </header>
+    <ol class="journey">
+      {%- set jc = ['violet','yellow','coral','mint'] %}
+      {%- for s in h.journey.steps %}
+      <li class="journey__step reveal" style="--d:{{ loop.index0 }}">
+        <span class="journey__n c-{{ jc[loop.index0 % 4] }}">{{ loop.index }}</span>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.text }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+{# 9. Doctors #}
+<section class="section section--tint" id="doctors">
+  <div class="wrap">
+    <header class="head head--row reveal">
+      <div>
+        <p class="eyebrow">{{ h.doctors.eyebrow }}</p>
+        <h2>{{ h.doctors.title }}</h2>
+        <p class="lead">{{ h.doctors.intro }}</p>
+      </div>
+      <div class="scroller__ctrl">
+        <button type="button" class="round" data-scroll="-1" aria-label="Previous doctors">←</button>
+        <button type="button" class="round" data-scroll="1" aria-label="Next doctors">→</button>
+      </div>
+    </header>
+  </div>
+  <div class="scroller" id="doctor-scroller" tabindex="0" aria-label="Doctors">
+    {%- for d in doctors.list %}
+    <figure class="doc">
+      <div class="doc__photo c-{{ d.color }}"><img src="{{ d.photo }}" alt="Portrait of {{ d.name }} (placeholder)" width="600" height="750" loading="lazy" decoding="async"></div>
+      <figcaption><strong>{{ d.name }}</strong><span>{{ d.credentials }}</span></figcaption>
+    </figure>
+    {%- endfor %}
+  </div>
+  <div class="wrap"><a class="textlink" href="{{ h.doctors.link.url }}">{{ h.doctors.link.label }} <span aria-hidden="true">→</span></a></div>
+</section>
+
+{# 10. Reviews #}
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <header class="head reveal">
+      <p class="eyebrow">{{ h.reviews.eyebrow }}</p>
+      <h2>{{ h.reviews.title }}</h2>
+      <p class="reviews__rating"><span class="stars" aria-hidden="true">★★★★★</span> {{ h.reviews.rating_text }}</p>
+    </header>
+    <div class="quotes">
+      {%- for r in h.reviews.items %}
+      <figure class="quote reveal" style="--d:{{ loop.index0 % 3 }}">
+        <blockquote>“{{ r.quote }}”</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">{{ r.name | first }}</span><span><strong>{{ r.name }}</strong><small>{{ r.source }}</small></span></figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+    <a class="textlink" href="{{ h.reviews.link.url }}">{{ h.reviews.link.label }} <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+{# 11. Recognition #}
+<section class="section" id="recognition">
+  <div class="wrap">
+    <header class="head reveal">
+      <p class="eyebrow">{{ h.recognition.eyebrow }}</p>
+      <h2>{{ h.recognition.title }}</h2>
+    </header>
+    {%- macro logos(title, items, cls) %}
+    <div class="logos reveal">
+      <h3>{{ title }}</h3>
+      <ul class="logos__grid {{ cls }}">
+        {%- for a in items %}
+        <li class="logo">{% if a.logo %}<img src="{{ a.logo }}" alt="{{ a.name }}" loading="lazy" decoding="async">{% else %}<span>{{ a.name }}</span>{% endif %}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+    {%- endmacro %}
+    {{ logos(h.recognition.awards_title, h.recognition.awards, 'logos--awards') }}
+    {{ logos(h.recognition.panels_title, h.recognition.panels, '') }}
+    <div class="logos reveal">
+      <h3>{{ h.recognition.media_title }}</h3>
+      <div class="marquee" aria-label="{{ h.recognition.media_title }}">
+        <ul class="marquee__track">
+          {%- for rep in [0,1] %}{% for m in h.recognition.media %}<li class="media"{% if rep %} aria-hidden="true"{% endif %}>{% if m.logo %}<img src="{{ m.logo }}" alt="{{ m.name }}" loading="lazy">{% else %}{{ m.name }}{% endif %}</li>{% endfor %}{% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# 12. Booking #}
+<section class="section booking" id="book">
+  <div class="wrap booking__grid">
+    <div class="booking__intro reveal">
+      <p class="eyebrow">{{ h.booking.eyebrow }}</p>
+      <h2>{{ h.booking.title }}</h2>
+      <p class="lead">{{ h.booking.intro }}</p>
+      <ul class="booking__contacts">
+        <li><a href="tel:{{ site.topbar.hotline | replace(' ', '') }}"><span>Hotline</span>{{ site.topbar.hotline }}</a></li>
+        <li><a href="{{ site.topbar.whatsapp_link }}" target="_blank" rel="noopener"><span>WhatsApp</span>{{ site.topbar.whatsapp }}</a></li>
+        <li><span>Hours</span>{{ site.topbar.hours }}</li>
+      </ul>
+    </div>
+    <div class="formcard reveal" style="--d:1">
+      <form id="booking-form" novalidate {% if site.form_endpoint %}action="{{ site.form_endpoint }}" method="post"{% endif %}>
+        <div class="field">
+          <label for="f-name">Full name</label>
+          <input id="f-name" name="name" autocomplete="name" required>
+          <small class="err">Please enter your name.</small>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="012-345 6789" required pattern="^[+0-9][0-9\s\-]{7,15}$">
+            <small class="err">Please enter a valid phone number.</small>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+            <small class="err">Please enter a valid email.</small>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-branch">Preferred branch</label>
+            <select id="f-branch" name="branch" required>
+              <option value="">Choose a branch</option>
+              {%- for r in branches.regions %}
+              <optgroup label="{{ r.region }}">{% for b in r.branches %}<option>{{ b.name }}</option>{% endfor %}</optgroup>
+              {%- endfor %}
+            </select>
+            <small class="err">Please choose a branch.</small>
+          </div>
+          <div class="field">
+            <label for="f-service">Service</label>
+            <select id="f-service" name="service" required>
+              {%- for s in h.booking.services %}<option>{{ s }}</option>{% endfor %}
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg btn--block">{{ h.booking.submit_label }}</button>
+        <p class="consent">{{ h.booking.consent }}</p>
+      </form>
+      <div class="success" id="booking-success" hidden tabindex="-1">
+        <span class="success__tick" aria-hidden="true"><svg viewBox="0 0 52 52"><path d="M14 27l8 8 16-17"/></svg></span>
+        <h3>{{ h.booking.success_title }}</h3>
+        <p>{{ h.booking.success_text }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+{# 13. Footer #}
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <a href="#top" class="brand brand--light"><img src="{{ site.logo }}" alt="" width="34" height="34"><span>Optimax<span class="brand__sub">Eye Specialist</span></span></a>
+      <p class="footer__addr"><strong>{{ site.footer.address_label }}</strong><br>{{ site.footer.address }}</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>{% for l in site.footer.links %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}</ul>
+    </div>
+    <div>
+      <h4>Talk to us</h4>
+      <ul>
+        <li><a href="tel:{{ site.topbar.hotline | replace(' ', '') }}">Hotline {{ site.topbar.hotline }}</a></li>
+        <li><a href="{{ site.topbar.whatsapp_link }}" target="_blank" rel="noopener">WhatsApp {{ site.topbar.whatsapp }}</a></li>
+        <li>{{ site.topbar.hours }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer__base">
+    <p>© {{ year }} {{ site.footer.company }} · Company reg. no. {{ site.footer.registration }} · {{ site.topbar.listing }}</p>
+    <p class="footer__legal">{{ site.footer.legal }}</p>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js?v={{ build }}" defer></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+{
+  "list": [
+    {
+      "name": "Dr Stephen Chung Soon Hee",
+      "credentials": "MBBS, MS (Ophthal)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "violet"
+    },
+    {
+      "name": "Dr Chuah Kay Leong",
+      "credentials": "MB BAO BCh (UK), FRCOphth (London)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "yellow"
+    },
+    {
+      "name": "Dr Lee Seow Yeang",
+      "credentials": "MD (UKM), M Surg (Ophth) (UKM), M.Med (Ophth) S'pore, FRCSEd",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "coral"
+    },
+    {
+      "name": "Dr Nor Zainura Zainal",
+      "credentials": "LRCP & SI, MBBCh BAO (Ireland), MS (Ophthal) (UKM)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "sky"
+    },
+    {
+      "name": "Dr Ngo Chek Tung",
+      "credentials": "MBBS (Malaya), M.Med Ophth (NUS), MRCSEd, FRCOphth, CertLRS",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "mint"
+    },
+    {
+      "name": "Dr Chang Khai Meng",
+      "credentials": "MD (USM), MMed (Ophthalmology)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "violet"
+    },
+    {
+      "name": "Dr Lam Hee Hong",
+      "credentials": "MBBS (UM), ICO (Cambridge), Master of Surgery (UM)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "yellow"
+    },
+    {
+      "name": "Dr Ngim You Siang",
+      "credentials": "MBBS (UM), M.S. Ophthal (UM)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "coral"
+    },
+    {
+      "name": "Dr Adeline Sia Sien Bing",
+      "credentials": "MBBS (UM), MOphth (UM)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "sky"
+    },
+    {
+      "name": "Dr Marcus Ng Kang Kok",
+      "credentials": "MBBS (Taiwan), M.S. Ophthal (UKM)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "mint"
+    },
+    {
+      "name": "Dr Leow Sue Ngein",
+      "credentials": "MD (UKM), M.S Ophthalmology (UKM), CMIA (Malaysia)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "violet"
+    },
+    {
+      "name": "Dr Ang Ee Ling",
+      "credentials": "MBBS, MSOphthal (UM), Fellowship in Vitreoretinal Surgery Malaysia and Sydney",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "yellow"
+    },
+    {
+      "name": "Dr Edwin Ooi Inn Loon",
+      "credentials": "MD (UKM), M.S Ophthal (UKM)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "coral"
+    },
+    {
+      "name": "Dr Faith Ho Fui Li",
+      "credentials": "MD (UKM), Dr.Ophth (UKM)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "sky"
+    },
+    {
+      "name": "Dr Tang Seng Fai",
+      "credentials": "MD (UKM), Dr Ophthal (UKM), Fellowship in Glaucoma (UKM)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "mint"
+    },
+    {
+      "name": "Dr Siuw Chin Pei",
+      "credentials": "MBBS (IMU), Doctor of Ophthalmology (UKM)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "violet"
+    },
+    {
+      "name": "Dr Gan Say Seong",
+      "credentials": "MBBS (UM), MS (Ophth) UKM",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "yellow"
+    },
+    {
+      "name": "Dr Anhar Hafiz Bin Silim",
+      "credentials": "MBBS (Jordan), Doctor of Ophthalmology (UKM), Fellowship in Vitreoretinal Surgery (CCFT, M'sia)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "coral"
+    },
+    {
+      "name": "Dr Mohd Syafiq Bin Azman",
+      "credentials": "MBBS (UIAM), Doctor of Ophthalmology (UKM)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "sky"
+    },
+    {
+      "name": "Dr Cassandra Lo Yee Lin",
+      "credentials": "MD (KSMU), MS Ophthal (UKM)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "mint"
+    },
+    {
+      "name": "Dr Ng Chun Wai",
+      "credentials": "MD (UCSI), Doctor of Ophthalmology (UKM), CMIA (NIOSH)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "violet"
+    },
+    {
+      "name": "Dr Miswan Muiz Mahyudin",
+      "credentials": "MOphthal (Malaya), MBChB (Otago, NZ)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "yellow"
+    },
+    {
+      "name": "Dr Ivan Chong Jia Cherng",
+      "credentials": "MBBS (IMU), MOphthal (UM)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "coral"
+    },
+    {
+      "name": "Dr Chong Ka Lung",
+      "credentials": "MBBS (IMU), MOphthal (UM), Vitreoretinal Fellowship (Australia)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "sky"
+    },
+    {
+      "name": "Dr Teo Shee Kiang",
+      "credentials": "MD (UKM), Doctor of Ophthalmology (UKM)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "mint"
+    },
+    {
+      "name": "Dr Alex Yee Chau Sim",
+      "credentials": "MD (UKM), Doctor of Ophthalmology (UKM)",
+      "photo": "/assets/uploads/doctor-placeholder.svg",
+      "color": "violet"
+    }
+  ]
+}

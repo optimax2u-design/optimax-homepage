@@ -1,0 +1,16 @@
+{
+  "name": "optimax-homepage",
+  "version": "1.0.0",
+  "description": "Optimax Eye Specialist homepage — Eleventy + Pages CMS",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  },
+  "type": "module",
+  "private": true
+}
