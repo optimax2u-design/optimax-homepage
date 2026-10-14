@@ -169,9 +169,9 @@ permalink: /index.html
     </header>
     <div class="why">
       {%- for w in h.why.items %}
-      <article class="why__item reveal" style="--d:{{ loop.index0 }}">
-        <div class="why__media"><img src="{{ w.image }}" alt="" width="800" height="600" loading="lazy" decoding="async"></div>
-        <span class="why__num c-{{ w.color }}">{{ loop.index }}</span>
+      <article class="why__item c-{{ w.color }} reveal" style="--d:{{ loop.index0 }}">
+        <div class="why__media"><img src="{{ w.image }}" alt="{{ w.image_alt or '' }}" width="720" height="720" loading="lazy" decoding="async"></div>
+        <span class="why__num">{{ loop.index }}</span>
         <h3>{{ w.title }}</h3>
         <p>{{ w.text }}</p>
       </article>

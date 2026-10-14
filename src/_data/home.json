@@ -192,19 +192,22 @@
         "title": "Malaysia's first LASIK provider",
         "text": "We've been performing laser vision correction since 1995 — longer than anyone else in the country.",
         "color": "violet",
-        "image": "/assets/uploads/why-first.svg"
+        "image": "/assets/uploads/why/why-first-lasik.webp",
+        "image_alt": "Optimax eye specialist in front of the Republik TTDI headquarters"
       },
       {
         "title": "Largest eye care network",
         "text": "25 centres — 24 across Malaysia and 1 in Cambodia — so expert care is never far away.",
         "color": "mint",
-        "image": "/assets/uploads/why-network.svg"
+        "image": "/assets/uploads/why/why-network.webp",
+        "image_alt": "Optimax headquarters at Republik TTDI"
       },
       {
         "title": "ZEISS technology",
         "text": "From ZEISS SMILE® PRO to PRESBYOND®, our specialists work with advanced ZEISS systems.",
         "color": "sky",
-        "image": "/assets/uploads/why-zeiss.svg"
+        "image": "/assets/uploads/why/why-zeiss.webp",
+        "image_alt": "ZEISS VISUMAX 800 laser system"
       }
     ]
   },

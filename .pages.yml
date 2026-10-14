@@ -110,7 +110,8 @@ content:
               - { name: title, type: string }
               - { name: text, type: text }
               - *color
-              - { name: image, label: Image (~800×600), type: image }
+              - { name: image, label: Image (transparent PNG/WebP, roughly square), type: image }
+              - { name: image_alt, label: Image description (for screen readers), type: string }
 
       - name: journey
         label: Your journey
