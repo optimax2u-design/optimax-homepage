@@ -25,8 +25,14 @@
   const onScroll = () => nav.classList.toggle('is-stuck', scrollY > 8);
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
   const toggle = $('.nav__toggle'), sheet = $('#mobile-menu');
-  const setMenu = open => { toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); sheet.hidden = !open; };
+  const setMenu = open => {
+    toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    sheet.style.top = open ? Math.max(0, nav.getBoundingClientRect().bottom) + 'px' : '';
+    document.documentElement.classList.toggle('menu-open', open); sheet.hidden = !open;
+  };
   toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+  const placeSheet = () => { if (!sheet.hidden) sheet.style.top = Math.max(0, nav.getBoundingClientRect().bottom) + 'px'; };
+  addEventListener('resize', placeSheet); addEventListener('scroll', placeSheet, { passive: true });
   sheet.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
   addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 
@@ -112,6 +118,29 @@
       }, { threshold: 0.6 });
       bio.observe(badge);
     }
+  }
+
+  // Carousels (phones): a small progress track under each swipeable row
+  $$('[data-carousel]').forEach(el => {
+    const track = document.createElement('div'); track.className = 'cprog'; track.setAttribute('aria-hidden', 'true');
+    const thumb = document.createElement('span'); track.appendChild(thumb); el.after(track);
+    const upd = () => {
+      const sw = el.scrollWidth, cw = el.clientWidth, over = sw - cw > 4;
+      track.classList.toggle('on', over); if (!over) return;
+      thumb.style.width = (cw / sw * 100) + '%';
+      thumb.style.transform = `translateX(${el.scrollLeft / cw * 100}%)`;
+    };
+    el.addEventListener('scroll', upd, { passive: true }); addEventListener('resize', upd); upd();
+    new ResizeObserver(upd).observe(el);
+  });
+
+  // Mobile quick-action bar: shows once the hero is passed, hides at the booking form
+  const mbar = $('.mbar');
+  if (mbar && 'IntersectionObserver' in window) {
+    const seen = { top: true, book: false };
+    const set = () => mbar.classList.toggle('is-on', !seen.top && !seen.book);
+    const mo = new IntersectionObserver(es => { es.forEach(e => { seen[e.target.id] = e.isIntersecting; }); set(); }, { threshold: 0 });
+    ['top', 'book'].forEach(id => { const n = document.getElementById(id); n && mo.observe(n); });
   }
 
   // Stat tiles: count up to the number shown, once, when each tile scrolls into view.

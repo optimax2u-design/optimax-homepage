@@ -144,7 +144,7 @@ permalink: /index.html
       <p class="eyebrow">{{ h.treatments.eyebrow }}</p>
       <h2>{{ h.treatments.title }}</h2>
     </header>
-    <div class="cards">
+    <div class="cards" data-carousel>
       {%- for c in h.treatments.cards %}
       <article class="card c-{{ c.color }} reveal" style="--d:{{ loop.index0 }}">
         <div class="card__body">
@@ -215,7 +215,7 @@ permalink: /index.html
       </div>
     </header>
   </div>
-  <div class="scroller" id="doctor-scroller" tabindex="0" aria-label="Doctors">
+  <div class="scroller" id="doctor-scroller" tabindex="0" aria-label="Doctors" data-carousel>
     {%- for d in doctors.list %}
     <figure class="doc">
       <div class="doc__photo c-{{ d.color }}"><img src="{{ d.photo }}" alt="Portrait of {{ d.name }}" width="600" height="750" loading="lazy" decoding="async"></div>
@@ -234,7 +234,7 @@ permalink: /index.html
       <h2>{{ h.reviews.title }}</h2>
       <p class="reviews__rating"><span class="stars" aria-hidden="true">★★★★★</span> {{ h.reviews.rating_text }}</p>
     </header>
-    <div class="quotes">
+    <div class="quotes" data-carousel>
       {%- for r in h.reviews.items %}
       <figure class="quote reveal" style="--d:{{ loop.index0 % 3 }}">
         <blockquote>“{{ r.quote }}”</blockquote>
@@ -265,7 +265,7 @@ permalink: /index.html
     {%- endmacro %}
     <div class="logos reveal">
       <h3>{{ h.recognition.awards_title }}</h3>
-      <ul class="awards">
+      <ul class="awards" data-carousel>
         {%- for a in h.recognition.awards %}
         <li class="award">
           <div class="award__logo">{% if a.logo %}<img src="{{ a.logo }}" alt="{{ a.name }}" loading="lazy" decoding="async">{% endif %}</div>
@@ -359,6 +359,13 @@ permalink: /index.html
 </section>
 
 </main>
+
+{# Mobile quick-action bar (phones only) #}
+<nav class="mbar" aria-label="Quick actions">
+  <a class="mbar__icon" href="tel:{{ site.topbar.hotline | replace(' ', '') }}" aria-label="Call {{ site.topbar.hotline }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></a>
+  <a class="mbar__icon mbar__wa" href="{{ site.topbar.whatsapp_link }}" target="_blank" rel="noopener" aria-label="WhatsApp {{ site.topbar.whatsapp }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg></a>
+  <a class="btn btn--primary mbar__cta" href="{{ site.nav_cta.url }}">{{ site.nav_cta.label }}</a>
+</nav>
 
 {# 13. Footer #}
 <footer class="footer">

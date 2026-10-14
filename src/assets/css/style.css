@@ -495,3 +495,53 @@ input:focus,select:focus{outline:none;border-color:var(--violet);background:#fff
   .footer ul{gap:8px;font-size:14.5px}
   .footer__base{margin-top:32px;font-size:12px}
 }
+
+
+/* ================= Signature mobile layer ================= */
+.cprog,.mbar{display:none}
+@media (max-width:640px){
+  /* Hero: bolder editorial type */
+  .hero__title{font-size:clamp(58px,17.5vw,78px);letter-spacing:-.055em}
+  .hero__title span{font-size:.44em;margin-top:.3em}
+
+  /* Stats: bento rhythm (wide / half / half / wide) */
+  .stats__grid{gap:10px}
+  .tile:nth-child(1),.tile:nth-child(4){grid-column:1/-1;min-height:0;flex-direction:row;align-items:center;justify-content:space-between;padding:20px 22px}
+  .tile:nth-child(1) .tile__label,.tile:nth-child(4) .tile__label{text-align:right;max-width:17ch}
+  .tile:nth-child(2),.tile:nth-child(3){min-height:150px}
+
+  /* Treatments: swipeable full-height cards */
+  .cards[data-carousel]{display:grid;grid-auto-flow:column;grid-auto-columns:84%;grid-template-columns:none;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:2px 16px 6px;scroll-padding-inline:16px;scrollbar-width:none}
+  .cards[data-carousel]::-webkit-scrollbar{display:none}
+  .cards[data-carousel] .card{scroll-snap-align:start;opacity:1!important;transform:none!important}
+  .cards[data-carousel] .card__media{margin-top:auto}
+  .cards[data-carousel] .card__media img{height:min(210px,54vw)}
+
+  /* Carousel progress track — one consistent swipe cue everywhere */
+  .cprog.on{display:block;position:relative;width:72px;height:4px;margin:14px auto 0;border-radius:4px;background:rgba(20,18,58,.12);overflow:hidden}
+  .cprog span{position:absolute;inset:0 auto 0 0;border-radius:4px;background:var(--ink);transition:transform .25s var(--ease)}
+  .reviews .cprog.on{background:rgba(20,18,58,.18)}
+  .scroller+.cprog.on{margin-top:18px}
+
+  /* Full-screen menu */
+  .menu-open,.menu-open body{overflow:hidden}
+  .menu-open .nav{-webkit-backdrop-filter:none;backdrop-filter:none;background:var(--bg)}
+  .nav__sheet{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--bg);display:flex;flex-direction:column;padding:12px max(16px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));overflow:auto;border-top:1px solid var(--line)}
+  .nav__sheet a:not(.btn){font:700 34px/1.1 var(--head);letter-spacing:-.035em;padding:16px 2px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+  .nav__sheet a:not(.btn)::after{content:"→";font:500 22px/1 var(--body);color:var(--violet)}
+  .nav__sheet .btn{margin-top:auto;padding:17px;font-size:17px}
+  .nav__sheet:not([hidden])>*{animation:fadeUp .5s var(--ease) both}
+  .nav__sheet>*:nth-child(2){animation-delay:.04s}.nav__sheet>*:nth-child(3){animation-delay:.08s}.nav__sheet>*:nth-child(4){animation-delay:.12s}
+  .nav__sheet>*:nth-child(5){animation-delay:.16s}.nav__sheet>*:nth-child(6){animation-delay:.2s}.nav__sheet>*:nth-child(7){animation-delay:.24s}
+
+  /* Sticky quick-action bar */
+  .mbar{display:flex;align-items:center;gap:8px;position:fixed;z-index:55;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));padding:8px;border-radius:999px;background:rgba(20,18,58,.86);-webkit-backdrop-filter:saturate(160%) blur(16px);backdrop-filter:saturate(160%) blur(16px);box-shadow:0 18px 40px -16px rgba(20,18,58,.6);transform:translateY(140%);opacity:0;transition:transform .5s var(--ease),opacity .4s var(--ease);pointer-events:none}
+  .mbar.is-on{transform:none;opacity:1;pointer-events:auto}
+  .menu-open .mbar{transform:translateY(140%);opacity:0}
+  .mbar__icon{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.12);color:#fff}
+  .mbar__icon svg{width:21px;height:21px;fill:currentColor}
+  .mbar__wa{background:#25D366;color:#fff}
+  .mbar__cta{flex:1;padding:14px 16px;font-size:15.5px}
+  .footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+}
+@media (max-width:640px) and (prefers-reduced-motion:reduce){.mbar{transition:none}}
