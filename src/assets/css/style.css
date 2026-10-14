@@ -103,6 +103,13 @@ ul,ol{margin:0;padding:0;list-style:none}
 .badge__ring{position:absolute;inset:-10px;width:calc(100% + 20px);height:calc(100% + 20px);transform:rotate(-90deg)}
 .badge__ring circle{fill:none;stroke:var(--yellow);stroke-width:5;stroke-linecap:round;stroke-dasharray:553;stroke-dashoffset:553;transition:stroke-dashoffset 1.6s var(--ease) .6s}
 .is-loaded .badge__ring circle{stroke-dashoffset:0}
+/* Badge counter: 1s → 8s, the ring fills one step per second-tick */
+.badge.is-counting .badge__ring circle{transition:stroke-dashoffset .45s var(--ease)}
+.badge__num{display:inline-block;font-variant-numeric:tabular-nums}
+.badge__num.tick{animation:badgeTick .42s var(--ease)}
+.badge__num.done{animation:badgeDone .7s var(--ease)}
+@keyframes badgeTick{from{transform:translateY(10px) scale(.86);opacity:.35}to{transform:none;opacity:1}}
+@keyframes badgeDone{0%{transform:scale(.9)}45%{transform:scale(1.12)}100%{transform:scale(1)}}
 .blob{position:absolute;border-radius:50%;z-index:-1;filter:blur(2px)}
 /* Hero — transparent cut-out model (no card frame) */
 .hero__visual--cutout{aspect-ratio:1100/1090;max-width:none;width:118%;margin-right:-14%;justify-self:end;isolation:isolate}

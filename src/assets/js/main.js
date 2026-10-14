@@ -84,6 +84,36 @@
     form.hidden = true; ok.hidden = false; ok.focus();
   });
 
+  // Hero badge: step from 1s up to the final value (e.g. 8s), one clear number at a time,
+  // with the yellow ring filling in step. Starts when the badge is on screen.
+  const badge = $('.badge'), bnum = badge && $('.badge__num', badge), ring = badge && $('.badge__ring circle', badge);
+  if (badge && bnum && !reduce && 'IntersectionObserver' in window) {
+    const final = bnum.textContent.trim(), m = final.match(/^(\D*?)(\d+)(.*)$/s);
+    const target = m ? parseInt(m[2], 10) : 0;
+    if (target >= 2 && target <= 30) {
+      const C = 553, STEP = 560;               // ms per number: slow enough to read each one
+      badge.classList.add('is-counting');
+      const show = n => {
+        bnum.textContent = m[1] + n + m[3];
+        bnum.classList.remove('tick', 'done'); void bnum.offsetWidth;
+        bnum.classList.add(n === target ? 'done' : 'tick');
+        if (ring) ring.style.strokeDashoffset = String(C * (1 - n / target));
+      };
+      bnum.textContent = m[1] + '1' + m[3];
+      if (ring) ring.style.strokeDashoffset = String(C * (1 - 1 / target));
+      const bio = new IntersectionObserver(es => {
+        if (!es.some(e => e.isIntersecting)) return;
+        bio.disconnect();
+        let n = 1;
+        setTimeout(function next() {
+          show(n);
+          if (n < target) { n++; setTimeout(next, STEP); }
+        }, 700);
+      }, { threshold: 0.6 });
+      bio.observe(badge);
+    }
+  }
+
   // Stat tiles: count up to the number shown, once, when each tile scrolls into view.
   // The final value is already in the HTML, so search engines, screen readers and
   // visitors who prefer reduced motion simply see the real number.
