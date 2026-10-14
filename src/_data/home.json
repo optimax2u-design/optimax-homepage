@@ -49,7 +49,7 @@
     },
     {
       "value": "~8s",
-      "label": "Laser time per eye with SMILE® PRO",
+      "label": "Laser time per eye with SMILE® Pro 3.0",
       "color": "sky"
     }
   ],
@@ -64,7 +64,7 @@
         "concern": "I wear glasses or contacts",
         "emoji": "👓",
         "color": "violet",
-        "recommended": "ZEISS SMILE® PRO",
+        "recommended": "ZEISS SMILE® Pro 3.0",
         "summary": "Our newest flapless laser vision correction. The laser works for about 8 seconds per eye, through a tiny opening.",
         "alternatives": [
           "SMILE",
@@ -79,7 +79,7 @@
         "concern": "I'm 40+ and need reading glasses",
         "emoji": "📖",
         "color": "yellow",
-        "recommended": "PRESBYOND®",
+        "recommended": "PRESBYOND® 2.0",
         "summary": "Laser blended vision designed to help you see near, middle and far distances with less reliance on reading glasses.",
         "alternatives": [
           "Premium lens options",
