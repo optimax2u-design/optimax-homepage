@@ -16,7 +16,7 @@ permalink: /index.html
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
-  <link rel="preload" as="image" href="{{ h.hero.image }}">
+  {%- if h.hero.image_mobile %}<link rel="preload" as="image" href="{{ h.hero.image_mobile }}" media="(max-width: 640px)"><link rel="preload" as="image" href="{{ h.hero.image }}" media="(min-width: 641px)">{% else %}<link rel="preload" as="image" href="{{ h.hero.image }}">{% endif %}
   <link rel="stylesheet" href="/assets/css/style.css?v={{ build }}">
   <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -68,10 +68,18 @@ permalink: /index.html
         {%- for p in h.hero.trust_pills %}<li class="pill">{{ p.text }}</li>{% endfor %}
       </ul>
     </div>
-    <div class="hero__visual load" style="--d:2">
+    <div class="hero__visual{% if h.hero.image_cutout %} hero__visual--cutout{% endif %} load" style="--d:2">
+      {%- if h.hero.image_cutout %}
+      <span class="hero__glow" aria-hidden="true"></span>
+      <picture class="hero__cutout">
+        {%- if h.hero.image_mobile %}<source media="(max-width: 640px)" srcset="{{ h.hero.image_mobile }}">{% endif %}
+        <img src="{{ h.hero.image }}" alt="{{ h.hero.image_alt }}" width="1100" height="1090" fetchpriority="high" decoding="async">
+      </picture>
+      {%- else %}
       <div class="hero__photo">
         <img src="{{ h.hero.image }}" alt="{{ h.hero.image_alt }}" width="1200" height="1400" fetchpriority="high">
       </div>
+      {%- endif %}
       <div class="badge" role="img" aria-label="{{ h.hero.badge_number }} {{ h.hero.badge_label }}">
         <svg class="badge__ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="88"/></svg>
         <span class="badge__num">{{ h.hero.badge_number }}</span>

@@ -34,7 +34,9 @@ content:
               - { name: url, label: Link, type: string }
           - { name: secondary_cta, label: Second button, type: object, fields: *link }
           - { name: footnote, label: Footnote, type: text }
-          - { name: image, label: Hero photo (portrait, ~1200×1400), type: image }
+          - { name: image, label: Hero image (desktop), type: image }
+          - { name: image_mobile, label: Hero image (phones — smaller copy, optional), type: image }
+          - { name: image_cutout, label: Image has a transparent background (show without a frame), type: boolean }
           - { name: image_alt, label: Photo description (for screen readers), type: string }
           - name: trust_pills
             label: Trust pills

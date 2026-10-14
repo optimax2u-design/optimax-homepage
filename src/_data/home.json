@@ -15,8 +15,8 @@
       "url": "#finder"
     },
     "footnote": "*Laser time per eye. Your full visit takes longer. Suitability is confirmed by your eye specialist.",
-    "image": "/assets/uploads/Hero.jpg",
-    "image_alt": "Patient smiling after vision correction (placeholder)",
+    "image": "/assets/uploads/hero-model.webp",
+    "image_alt": "Smiling woman enjoying clear vision",
     "trust_pills": [
       {
         "text": "4.7★ Google from 916 reviews"
@@ -27,7 +27,9 @@
       {
         "text": "ISO 9001 / MHTC"
       }
-    ]
+    ],
+    "image_mobile": "/assets/uploads/hero-model-640.webp",
+    "image_cutout": true
   },
   "stats": [
     {
