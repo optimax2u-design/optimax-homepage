@@ -92,7 +92,8 @@ content:
               - { name: title, type: string }
               - { name: text, type: string }
               - *color
-              - { name: image, label: Card image (~800×600), type: image }
+              - { name: image, label: Card photo (transparent PNG/WebP cut-out, ~900px wide), type: image }
+              - { name: image_alt, label: Photo description (for screen readers), type: string }
               - { name: items, label: Treatments listed, type: string, list: true }
               - { name: url, label: Learn more link, type: string }
 

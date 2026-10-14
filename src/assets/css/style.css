@@ -170,19 +170,35 @@ ul,ol{margin:0;padding:0;list-style:none}
 @media (max-width:860px){.finder__box{grid-template-columns:1fr;padding:10px;border-radius:28px}.finder__options{padding:4px}.chip{padding:12px}.chip__emoji{width:40px;height:40px}}
 
 /* 6. Treatment cards */
+/* 6. Treatment cards — gradient cards with cut-out photography (image right, copy left) */
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.card{background:var(--tint);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.card{--grad:linear-gradient(135deg,#F3F0FF,#E6DEFC);--deep:var(--violet-deep);--btn:var(--violet);--btn-on:#fff;--ring:rgba(108,76,224,.35);
+  position:relative;isolation:isolate;overflow:hidden;min-height:clamp(420px,35vw,490px);border-radius:var(--radius);background:var(--grad);display:flex;flex-direction:column;justify-content:center;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.card.c-sky{--focus:62%;--grad:linear-gradient(135deg,#EEF7FF 0%,#D6ECFF 100%);--deep:#1D5C8F;--btn:#4F5BD5;--ring:rgba(79,91,213,.35)}
+.card.c-violet{--focus:78%;--grad:linear-gradient(135deg,#F4F0FF 0%,#E2D9FB 100%);--deep:var(--violet-deep);--btn:var(--violet);--ring:rgba(108,76,224,.35)}
+.card.c-yellow{--focus:60%;--grad:linear-gradient(135deg,#FFF9E6 0%,#FDEDB8 100%);--deep:#7A4E00;--btn:#F5BC3C;--btn-on:var(--ink);--ring:rgba(201,138,11,.4)}
+.card.c-coral{--focus:72%;--grad:linear-gradient(135deg,#FFF3EE 0%,#FFDFD3 100%);--deep:#A63A1E;--btn:var(--coral);--btn-on:var(--ink);--ring:rgba(214,84,52,.35)}
+.card::before{content:"";position:absolute;z-index:-1;width:78%;aspect-ratio:1;right:-14%;top:-12%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.75),rgba(255,255,255,.25) 70%,transparent)}
 .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.card__body{padding:clamp(28px,3.5vw,40px) clamp(24px,3.5vw,40px) 24px}
-.card h3{font-size:clamp(28px,3vw,36px);font-weight:800}
-.card p{color:var(--ink-2);margin-top:8px;font-size:18px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-.tags li{background:var(--c);color:var(--on);font-size:14px;font-weight:600;padding:7px 13px;border-radius:999px}
-.card__link{display:inline-flex;gap:6px;margin-top:22px;font-weight:600;text-decoration:none}
-.card__link:hover{text-decoration:underline;text-underline-offset:4px}
-.card__media{margin-top:auto;padding:0 24px;overflow:hidden}
-.card__media img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:20px 20px 0 0;transition:transform 1s var(--ease)}
+.card__body{position:relative;z-index:2;max-width:52%;padding:clamp(32px,3.6vw,48px) 0 clamp(32px,3.6vw,44px) clamp(28px,3.4vw,44px)}
+.card h3{font-size:clamp(28px,2.5vw,38px);font-weight:700;letter-spacing:-.035em;line-height:1.02}
+.card p{color:var(--ink-2);margin-top:12px;font-size:clamp(17px,1.5vw,20px);line-height:1.4;max-width:20ch}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags li{background:rgba(255,255,255,.55);color:var(--deep);box-shadow:inset 0 0 0 1.5px var(--ring);font-size:14px;font-weight:600;padding:7px 14px;border-radius:999px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.card__link{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:13px 22px;border-radius:999px;background:var(--btn);color:var(--btn-on);font-weight:600;text-decoration:none;align-self:flex-start;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.card__link:hover{transform:translateY(-1px);box-shadow:0 10px 24px -10px var(--ring)}
+.card__media{position:absolute;z-index:1;right:0;bottom:0;width:54%;height:100%;pointer-events:none;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 32%);mask-image:linear-gradient(to right,transparent 0,#000 32%)}
+.card__media img{width:100%;height:100%;object-fit:cover;object-position:var(--focus,70%) bottom;transform-origin:right bottom;transition:transform 1s var(--ease)}
 .card:hover .card__media img{transform:scale(1.03)}
+@media (max-width:1100px){
+  .card{min-height:0;justify-content:flex-start}
+  .card::before{width:110%;right:-40%;top:auto;bottom:-30%}
+  .card__body{max-width:none;padding:28px 24px 0}
+  .card p{max-width:none}
+  .card__media{position:relative;width:100%;height:auto;margin-top:-8px;-webkit-mask-image:none;mask-image:none}
+  .card__media img{height:auto;max-height:300px;object-fit:contain;object-position:center bottom}
+}
+@media (max-width:760px){.cards{grid-template-columns:1fr;gap:16px}}
 @media (max-width:760px){.cards{grid-template-columns:1fr}}
 
 /* 7. Why */

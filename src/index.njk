@@ -151,9 +151,9 @@ permalink: /index.html
           <h3>{{ c.title }}</h3>
           <p>{{ c.text }}</p>
           <ul class="tags">{% for i in c.items %}<li>{{ i }}</li>{% endfor %}</ul>
-          <a href="{{ c.url }}" class="card__link">Learn more <span aria-hidden="true">→</span></a>
+          <a href="{{ c.url }}" class="card__link" aria-label="Learn more about {{ c.title }}">Learn more <span aria-hidden="true">→</span></a>
         </div>
-        <div class="card__media"><img src="{{ c.image }}" alt="" width="800" height="600" loading="lazy" decoding="async"></div>
+        <div class="card__media"><img src="{{ c.image }}" alt="{{ c.image_alt or '' }}" width="900" height="700" loading="lazy" decoding="async"></div>
       </article>
       {%- endfor %}
     </div>

@@ -132,8 +132,8 @@
       {
         "title": "Laser vision correction",
         "text": "Freedom from glasses and contacts.",
-        "color": "violet",
-        "image": "/assets/uploads/treatment-laser.svg",
+        "color": "sky",
+        "image": "/assets/uploads/treatments/laser-vision-correction.webp",
         "items": [
           "SMILE® PRO",
           "SMILE",
@@ -142,41 +142,45 @@
           "ASA / TESA",
           "ICL"
         ],
-        "url": "https://optimaxeyespecialist.com/treatments/"
+        "url": "https://optimaxeyespecialist.com/treatments/",
+        "image_alt": "Smiling diver with mask, free from glasses"
       },
       {
         "title": "Presbyopia",
         "text": "Clearer near vision after 40.",
-        "color": "yellow",
-        "image": "/assets/uploads/treatment-presbyopia.svg",
+        "color": "violet",
+        "image": "/assets/uploads/treatments/presbyopia.webp",
         "items": [
           "PRESBYOND®"
         ],
-        "url": "https://optimaxeyespecialist.com/treatments/"
+        "url": "https://optimaxeyespecialist.com/treatments/",
+        "image_alt": "Woman lifting her reading glasses to read her phone"
       },
       {
         "title": "Cataract",
         "text": "Brighter, sharper days again.",
-        "color": "coral",
-        "image": "/assets/uploads/treatment-cataract.svg",
+        "color": "yellow",
+        "image": "/assets/uploads/treatments/cataract.webp",
         "items": [
           "FLACS",
           "Premium lenses"
         ],
-        "url": "https://optimaxeyespecialist.com/treatments/"
+        "url": "https://optimaxeyespecialist.com/treatments/",
+        "image_alt": "Happy elderly couple embracing"
       },
       {
         "title": "Screening & children's care",
         "text": "Healthy eyes for the whole family.",
-        "color": "sky",
-        "image": "/assets/uploads/treatment-screening.svg",
+        "color": "coral",
+        "image": "/assets/uploads/treatments/screening-childrens-care.webp",
         "items": [
           "Glaucoma",
           "Myopia control",
           "Ortho-K",
           "RGP"
         ],
-        "url": "https://optimaxeyespecialist.com/treatments/"
+        "url": "https://optimaxeyespecialist.com/treatments/",
+        "image_alt": "Smiling boy holding his glasses"
       }
     ]
   },
