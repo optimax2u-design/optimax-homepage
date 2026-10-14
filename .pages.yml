@@ -157,13 +157,20 @@ content:
           - { name: title, type: string }
           - { name: awards_title, type: string }
           - name: awards
+            label: Awards (logo with the award name shown underneath)
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Award name (shown under the logo), type: string }
+              - { name: logo, label: Award logo (transparent SVG/PNG/WebP, no caption text), type: image }
+          - { name: panels_title, type: string }
+          - name: panels
+            label: Insurance panels
             type: object
             list: true
             fields: &logo
               - { name: name, type: string }
               - { name: logo, label: Logo (optional — name shows if empty), type: image }
-          - { name: panels_title, type: string }
-          - { name: panels, label: Insurance panels, type: object, list: true, fields: *logo }
           - { name: media_title, type: string }
           - { name: media, label: Media mentions, type: object, list: true, fields: *logo }
 

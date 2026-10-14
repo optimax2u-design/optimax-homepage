@@ -255,7 +255,17 @@ permalink: /index.html
       </ul>
     </div>
     {%- endmacro %}
-    {{ logos(h.recognition.awards_title, h.recognition.awards, 'logos--awards') }}
+    <div class="logos reveal">
+      <h3>{{ h.recognition.awards_title }}</h3>
+      <ul class="awards">
+        {%- for a in h.recognition.awards %}
+        <li class="award">
+          <div class="award__logo">{% if a.logo %}<img src="{{ a.logo }}" alt="{{ a.name }}" loading="lazy" decoding="async">{% endif %}</div>
+          <p class="award__name">{{ a.name }}</p>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
     {{ logos(h.recognition.panels_title, h.recognition.panels, '') }}
     <div class="logos reveal">
       <h3>{{ h.recognition.media_title }}</h3>

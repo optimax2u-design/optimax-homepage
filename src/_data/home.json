@@ -280,28 +280,56 @@
     "awards_title": "Awards",
     "awards": [
       {
-        "name": "GlobalHealth Awards 2024"
+        "name": "Specialty Hospital of the Year (Ophthalmology) – Malaysia",
+        "logo": "/assets/uploads/awards/specialty-hospital-of-the-year-ophthalmology-malaysia.svg"
       },
       {
-        "name": "GlobalHealth Awards 2023"
+        "name": "Ophthalmology Medical Centre of the Year 2022, 2023 & 2024 in Asia Pacific",
+        "logo": "/assets/uploads/awards/ophthalmology-medical-centre-of-the-year-2022-2023-2024-in-a.svg"
       },
       {
-        "name": "GlobalHealth Awards 2022"
+        "name": "Best Myopia Control Centre for Children",
+        "logo": "/assets/uploads/awards/best-myopia-control-centre-for-children.svg"
       },
       {
-        "name": "Frost & Sullivan"
+        "name": "Most Refractive Eye Treatments Provided in Malaysia",
+        "logo": "/assets/uploads/awards/most-refractive-eye-treatments-provided-in-malaysia.svg"
       },
       {
-        "name": "Healthcare Asia"
+        "name": "Malaysia Health & Wellness Brand Awards 2022",
+        "logo": "/assets/uploads/awards/malaysia-health-wellness-brand-awards-2022.webp"
       },
       {
-        "name": "Malaysia Book of Records"
+        "name": "Frost and Sullivan Best LASIK Centre Award",
+        "logo": "/assets/uploads/awards/frost-and-sullivan-best-lasik-centre-award.svg"
       },
       {
-        "name": "Parenthood Award"
+        "name": "MRCA Crown Award – Outstanding National Growth Award 2016",
+        "logo": "/assets/uploads/awards/mrca-crown-award-outstanding-national-growth-award-2016.webp"
       },
       {
-        "name": "Golden Bull 2005"
+        "name": "Sin Chew Business Excellence Awards 2014 and 2015",
+        "logo": "/assets/uploads/awards/sin-chew-business-excellence-awards-2014-and-2015.webp"
+      },
+      {
+        "name": "BabyTalk Reader's Choice & Recognition as the Pioneer in Eye Care for Paediatric",
+        "logo": "/assets/uploads/awards/babytalk-reader-s-choice-recognition-as-the-pioneer-in-eye-c.svg"
+      },
+      {
+        "name": "The SMEs Best Brand Award – The Brand Laureate",
+        "logo": "/assets/uploads/awards/the-smes-best-brand-award-the-brand-laureate.svg"
+      },
+      {
+        "name": "Golden Bull Award 2005",
+        "logo": "/assets/uploads/awards/golden-bull-award-2005.webp"
+      },
+      {
+        "name": "Golden Bull Award 2003",
+        "logo": "/assets/uploads/awards/golden-bull-award-2003.svg"
+      },
+      {
+        "name": "5 Years of Successful Surgeries Certification by Carl Zeiss",
+        "logo": "/assets/uploads/awards/5-years-of-successful-surgeries-certification-by-carl-zeiss.svg"
       }
     ],
     "panels_title": "Insurance panel partners",
