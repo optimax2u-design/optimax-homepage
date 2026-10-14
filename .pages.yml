@@ -223,7 +223,9 @@ content:
     format: json
     fields:
       - { name: name, label: Site name, type: string }
-      - { name: logo, label: Logo (square SVG/PNG), type: image }
+      - { name: logo, label: Header logo (colour, on light background), type: image }
+      - { name: logo_footer, label: Footer logo (white, on dark background), type: image }
+      - { name: favicon, label: Browser tab icon (square), type: image }
       - { name: seo_title, label: Browser tab / Google title, type: string }
       - { name: seo_description, label: Google description, type: text }
       - name: topbar

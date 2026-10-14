@@ -64,8 +64,11 @@ ul,ol{margin:0;padding:0;list-style:none}
 /* 2. Nav — frosted, Apple-style */
 .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,248,238,.72);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
 .nav.is-stuck{border-bottom-color:var(--line);background:rgba(255,248,238,.85)}
-.nav__in{display:flex;align-items:center;gap:24px;height:64px}
+.nav__in{display:flex;align-items:center;gap:24px;height:76px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 20px/1 var(--head);letter-spacing:-.02em}
+.brand__logo{height:50px;width:auto}
+@media (max-width:640px){.brand__logo{height:44px}}
+.brand__logo--footer{height:52px}
 .brand__sub{display:block;font:500 11px/1.2 var(--body);letter-spacing:.04em;color:var(--ink-2);margin-top:2px}
 .nav__links{display:flex;gap:28px;margin-left:auto}
 .nav__links a{text-decoration:none;font-size:15px;color:var(--ink-2);transition:color .2s}

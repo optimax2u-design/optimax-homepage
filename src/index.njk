@@ -12,7 +12,7 @@ permalink: /index.html
   <meta name="theme-color" content="#FFF8EE">
   <meta property="og:title" content="{{ site.seo_title }}">
   <meta property="og:description" content="{{ site.seo_description }}">
-  <link rel="icon" href="{{ site.logo }}" type="image/svg+xml">
+  <link rel="icon" href="{{ site.favicon }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
@@ -37,8 +37,7 @@ permalink: /index.html
 <header class="nav" id="nav">
   <div class="wrap nav__in">
     <a href="#top" class="brand" aria-label="{{ site.name }} home">
-      <img src="{{ site.logo }}" alt="" width="34" height="34">
-      <span>Optimax<span class="brand__sub">Eye Specialist</span></span>
+      <img class="brand__logo" src="{{ site.logo }}" alt="{{ site.name }}" width="279" height="96">
     </a>
     <nav class="nav__links" aria-label="Main">
       {%- for l in site.nav %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
@@ -337,7 +336,7 @@ permalink: /index.html
 <footer class="footer">
   <div class="wrap footer__grid">
     <div>
-      <a href="#top" class="brand brand--light"><img src="{{ site.logo }}" alt="" width="34" height="34"><span>Optimax<span class="brand__sub">Eye Specialist</span></span></a>
+      <a href="#top" class="brand brand--light" aria-label="{{ site.name }} home"><img class="brand__logo brand__logo--footer" src="{{ site.logo_footer }}" alt="{{ site.name }}" width="279" height="96" loading="lazy"></a>
       <p class="footer__addr"><strong>{{ site.footer.address_label }}</strong><br>{{ site.footer.address }}</p>
     </div>
     <div>
