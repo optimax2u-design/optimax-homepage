@@ -134,15 +134,6 @@
     new ResizeObserver(upd).observe(el);
   });
 
-  // Mobile quick-action bar: shows once the hero is passed, hides at the booking form
-  const mbar = $('.mbar');
-  if (mbar && 'IntersectionObserver' in window) {
-    const seen = { top: true, book: false };
-    const set = () => mbar.classList.toggle('is-on', !seen.top && !seen.book);
-    const mo = new IntersectionObserver(es => { es.forEach(e => { seen[e.target.id] = e.isIntersecting; }); set(); }, { threshold: 0 });
-    ['top', 'book'].forEach(id => { const n = document.getElementById(id); n && mo.observe(n); });
-  }
-
   // Stat tiles: count up to the number shown, once, when each tile scrolls into view.
   // The final value is already in the HTML, so search engines, screen readers and
   // visitors who prefer reduced motion simply see the real number.

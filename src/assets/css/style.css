@@ -498,7 +498,7 @@ input:focus,select:focus{outline:none;border-color:var(--violet);background:#fff
 
 
 /* ================= Signature mobile layer ================= */
-.cprog,.mbar{display:none}
+.cprog,.nav__quick{display:none}
 @media (max-width:640px){
   /* Hero: bolder editorial type */
   .hero__title{font-size:clamp(58px,17.5vw,78px);letter-spacing:-.055em}
@@ -534,14 +534,16 @@ input:focus,select:focus{outline:none;border-color:var(--violet);background:#fff
   .nav__sheet>*:nth-child(2){animation-delay:.04s}.nav__sheet>*:nth-child(3){animation-delay:.08s}.nav__sheet>*:nth-child(4){animation-delay:.12s}
   .nav__sheet>*:nth-child(5){animation-delay:.16s}.nav__sheet>*:nth-child(6){animation-delay:.2s}.nav__sheet>*:nth-child(7){animation-delay:.24s}
 
-  /* Sticky quick-action bar */
-  .mbar{display:flex;align-items:center;gap:8px;position:fixed;z-index:55;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));padding:8px;border-radius:999px;background:rgba(20,18,58,.86);-webkit-backdrop-filter:saturate(160%) blur(16px);backdrop-filter:saturate(160%) blur(16px);box-shadow:0 18px 40px -16px rgba(20,18,58,.6);transform:translateY(140%);opacity:0;transition:transform .5s var(--ease),opacity .4s var(--ease);pointer-events:none}
-  .mbar.is-on{transform:none;opacity:1;pointer-events:auto}
-  .menu-open .mbar{transform:translateY(140%);opacity:0}
-  .mbar__icon{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.12);color:#fff}
-  .mbar__icon svg{width:21px;height:21px;fill:currentColor}
-  .mbar__wa{background:#25D366;color:#fff}
-  .mbar__cta{flex:1;padding:14px 16px;font-size:15.5px}
-  .footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+
 }
-@media (max-width:640px) and (prefers-reduced-motion:reduce){.mbar{transition:none}}
+
+/* Header quick actions on phones/tablets: always reachable, never covered by browser toolbars */
+@media (max-width:960px){
+  .nav__quick{display:flex;align-items:center;gap:8px;margin-left:auto}
+  .nav__toggle{margin-left:4px}
+  .nav__wa{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 6px 14px -8px rgba(37,211,102,.9);transition:transform .3s var(--ease)}
+  .nav__wa:active{transform:scale(.94)}
+  .nav__wa svg{width:21px;height:21px;fill:currentColor}
+  .nav__book{padding:10px 16px;font-size:14.5px;gap:.3em}
+}
+@media (max-width:400px){.nav__book-more{display:none}.brand__logo{height:34px}}
