@@ -1,0 +1,25 @@
+name: One-off - fetch media logos
+on:
+  push:
+    paths: [".github/workflows/fetch-media-logos.yml"]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download logos from optimaxeyespecialist.com
+        run: |
+          mkdir -p media-raw
+          for n in Business-Today-Malaysia China-Press Forbes-Asia Healthcare-Asia Nanyang-Siang-Pau New-Straits-Times Oriental-Daily-News Sin-Chew-Daily The-Edge-Malaysia The-Malaysian-Reserve The-PEAK The-Star Yahoo-News; do
+            curl -fsS -A "Mozilla/5.0" -o "media-raw/$n.webp" "https://optimaxeyespecialist.com/cms/wp-content/uploads/$n.webp"
+          done
+          ls -la media-raw
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media-raw
+          git commit -m "Fetch media logos from optimaxeyespecialist.com"
+          git push
