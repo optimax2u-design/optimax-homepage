@@ -279,7 +279,7 @@ permalink: /index.html
       <h3>{{ h.recognition.media_title }}</h3>
       <div class="marquee" aria-label="{{ h.recognition.media_title }}">
         <ul class="marquee__track">
-          {%- for rep in [0,1] %}{% for m in h.recognition.media %}<li class="media"{% if rep %} aria-hidden="true"{% endif %}>{% if m.logo %}<img src="{{ m.logo }}" alt="{{ m.name }}" loading="lazy">{% else %}{{ m.name }}{% endif %}</li>{% endfor %}{% endfor %}
+          {%- for rep in [0,1] %}{% for m in h.recognition.media %}<li class="media"{% if rep %} aria-hidden="true"{% endif %}>{% if m.logo %}<img src="{{ m.logo }}" alt="{{ '' if rep else m.name }}" decoding="async">{% else %}{{ m.name }}{% endif %}</li>{% endfor %}{% endfor %}
         </ul>
       </div>
     </div>
