@@ -1,6 +1,6 @@
 {
   "hero": {
-    "eyebrow": "ZEISS SMILE® Pro 3.0 · 8-second LASIK",
+    "eyebrow": "ZEISS SMILE® pro 3.0 · 8-second LASIK",
     "headline": "8 seconds.",
     "headline_line2": "A lifetime of clear vision.",
     "subhead": "Malaysia's first LASIK provider since 1995 now offers ZEISS SMILE® Pro 3.0 — a gentle, flapless laser treatment for glasses and contact lens wearers.",
@@ -64,7 +64,7 @@
         "concern": "I wear glasses or contacts",
         "emoji": "👓",
         "color": "violet",
-        "recommended": "ZEISS SMILE® Pro 3.0",
+        "recommended": "ZEISS SMILE® pro 3.0",
         "summary": "Our newest flapless laser vision correction. The laser works for about 8 seconds per eye, through a tiny opening.",
         "alternatives": [
           "SMILE",
@@ -136,7 +136,7 @@
         "image": "/assets/uploads/treatments/laser-vision-correction.webp",
         "image_alt": "Smiling diver with mask, free from glasses",
         "items": [
-          "SMILE® Pro 3.0",
+          "SMILE® pro 3.0",
           "SMILE",
           "CLEAR Max",
           "Femto-LASIK",
@@ -204,7 +204,7 @@
       },
       {
         "title": "ZEISS technology",
-        "text": "From ZEISS SMILE® Pro 3.0 to PRESBYOND® 2.0, our specialists work with advanced ZEISS systems.",
+        "text": "From ZEISS SMILE® pro 3.0 to PRESBYOND® 2.0, our specialists work with advanced ZEISS systems.",
         "color": "sky",
         "image": "/assets/uploads/why/why-zeiss.webp",
         "image_alt": "ZEISS VISUMAX 800 laser system"
@@ -258,7 +258,7 @@
         "rating": 5
       },
       {
-        "quote": "Recently we had our SMILE Pro correction surgery at Optimax TTDI, and the whole experience was excellent.",
+        "quote": "Recently we had our SMILE pro correction surgery at Optimax TTDI, and the whole experience was excellent.",
         "name": "Rachel A.",
         "photo": "/assets/uploads/reviewers/rachel.webp",
         "rating": 5
@@ -448,7 +448,7 @@
     "consent": "By submitting, you agree to be contacted by Optimax about your appointment.",
     "services": [
       "Not sure yet — help me decide",
-      "ZEISS SMILE® Pro 3.0",
+      "ZEISS SMILE® pro 3.0",
       "SMILE",
       "CLEAR Max",
       "Femto-LASIK",
