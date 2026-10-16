@@ -2,7 +2,8 @@
   "name": "Optimax Eye Specialist",
   "logo": "/assets/uploads/logo/optimax-logo-color.svg",
   "logo_footer": "/assets/uploads/logo/optimax-logo-white.svg",
-  "favicon": "/assets/uploads/favicon-placeholder.svg",
+  "favicon": "/assets/uploads/logo/favicon.svg",
+  "apple_touch_icon": "/assets/uploads/logo/apple-touch-icon.png",
   "seo_title": "Optimax Eye Specialist — ZEISS SMILE® PRO 8-second LASIK in Malaysia",
   "seo_description": "Malaysia's first LASIK provider since 1995. ZEISS SMILE® PRO, PRESBYOND, FLACS cataract surgery and children's eye care across 25 centres. Check if you're suitable — free.",
   "topbar": {

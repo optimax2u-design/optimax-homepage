@@ -237,7 +237,8 @@ content:
       - { name: name, label: Site name, type: string }
       - { name: logo, label: Header logo (colour, on light background), type: image }
       - { name: logo_footer, label: Footer logo (white, on dark background), type: image }
-      - { name: favicon, label: Browser tab icon (square), type: image }
+      - { name: favicon, label: Browser tab icon (square SVG or PNG), type: image }
+      - { name: apple_touch_icon, label: Phone home-screen icon (180×180 PNG), type: image }
       - { name: seo_title, label: Browser tab / Google title, type: string }
       - { name: seo_description, label: Google description, type: text }
       - name: topbar
