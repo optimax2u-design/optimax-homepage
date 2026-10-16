@@ -90,31 +90,39 @@
     form.hidden = true; ok.hidden = false; ok.focus();
   });
 
-  // Hero badge: step from 1s up to the final value (e.g. 8s), one clear number at a time,
-  // with the yellow ring filling in step. Starts when the badge is on screen.
+  // Hero badge: smooth rolling counter from 1s to the final value (e.g. 8s).
+  // Digits glide upward like an odometer while the yellow ring sweeps round in sync.
   const badge = $('.badge'), bnum = badge && $('.badge__num', badge), ring = badge && $('.badge__ring circle', badge);
   if (badge && bnum && !reduce && 'IntersectionObserver' in window) {
     const final = bnum.textContent.trim(), m = final.match(/^(\D*?)(\d+)(.*)$/s);
     const target = m ? parseInt(m[2], 10) : 0;
     if (target >= 2 && target <= 30) {
-      const C = 553, STEP = 560;               // ms per number: slow enough to read each one
+      const C = 553, DUR = 650 * (target - 1) + 700;   // ~5.3s for 1→8: smooth, every number readable
+      const nums = Array.from({ length: target }, (_, i) => `<span>${i + 1}</span>`).join('');
+      bnum.innerHTML = `${m[1] ? `<span>${m[1]}</span>` : ''}<span class="roll" aria-hidden="true"><span class="roll__col">${nums}</span></span><span class="roll__suf" aria-hidden="true">${m[3]}</span>`;
+      const col = $('.roll__col', bnum);
       badge.classList.add('is-counting');
-      const show = n => {
-        bnum.textContent = m[1] + n + m[3];
-        bnum.classList.remove('tick', 'done'); void bnum.offsetWidth;
-        bnum.classList.add(n === target ? 'done' : 'tick');
-        if (ring) ring.style.strokeDashoffset = String(C * (1 - n / target));
-      };
-      bnum.textContent = m[1] + '1' + m[3];
       if (ring) ring.style.strokeDashoffset = String(C * (1 - 1 / target));
+      // gentle ease-in-out: starts softly, glides, settles softly on the final number
+      const ease = t => -(Math.cos(Math.PI * t) - 1) / 2;   // even glide: no number rushes past
+      const frame = v => {                       // v: 0 → target-1 (continuous)
+        col.style.transform = `translate3d(0, ${-v / target * 100}%, 0)`;
+        if (ring) ring.style.strokeDashoffset = String(C * (1 - (1 + v) / target));
+      };
+      frame(0);
       const bio = new IntersectionObserver(es => {
         if (!es.some(e => e.isIntersecting)) return;
         bio.disconnect();
-        let n = 1;
-        setTimeout(function next() {
-          show(n);
-          if (n < target) { n++; setTimeout(next, STEP); }
-        }, 700);
+        setTimeout(() => {
+          let t0;
+          const tick = t => {
+            t0 ??= t; const k = Math.min(1, (t - t0) / DUR);
+            frame(ease(k) * (target - 1));
+            if (k < 1) requestAnimationFrame(tick);
+            else { bnum.classList.add('done'); }
+          };
+          requestAnimationFrame(tick);
+        }, 600);
       }, { threshold: 0.6 });
       bio.observe(badge);
     }
