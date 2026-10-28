@@ -72,7 +72,8 @@
           "Femto-LASIK",
           "ASA / TESA",
           "ICL"
-        ]
+        ],
+        "url": "/zeiss-smile-pro/"
       },
       {
         "id": "reading",
@@ -84,7 +85,8 @@
         "alternatives": [
           "Premium lens options",
           "Eye screening"
-        ]
+        ],
+        "url": "/zeiss-presbyond/"
       },
       {
         "id": "cloudy",
@@ -96,7 +98,8 @@
         "alternatives": [
           "Premium lenses",
           "Eye screening"
-        ]
+        ],
+        "url": "/flacs/"
       },
       {
         "id": "child",
@@ -109,7 +112,8 @@
           "Myopia control",
           "Ortho-K",
           "RGP lenses"
-        ]
+        ],
+        "url": "/treatments/#screening-care"
       },
       {
         "id": "checkup",
@@ -121,7 +125,8 @@
         "alternatives": [
           "Glaucoma screening",
           "Children's eye care"
-        ]
+        ],
+        "url": "/treatments/#screening-care"
       }
     ]
   },
@@ -143,7 +148,7 @@
           "ASA / TESA",
           "ICL"
         ],
-        "url": "https://optimaxeyespecialist.com/treatments/"
+        "url": "/treatments/#laser"
       },
       {
         "title": "Presbyopia",
@@ -154,7 +159,7 @@
         "items": [
           "PRESBYOND® 2.0"
         ],
-        "url": "https://optimaxeyespecialist.com/treatments/"
+        "url": "/zeiss-presbyond/"
       },
       {
         "title": "Cataract",
@@ -166,7 +171,7 @@
           "FLACS",
           "Premium lenses"
         ],
-        "url": "https://optimaxeyespecialist.com/treatments/"
+        "url": "/flacs/"
       },
       {
         "title": "Screening & children's care",
@@ -180,7 +185,7 @@
           "Ortho-K",
           "RGP"
         ],
-        "url": "https://optimaxeyespecialist.com/treatments/"
+        "url": "/treatments/#screening-care"
       }
     ]
   },
@@ -239,7 +244,7 @@
     "intro": "Our ophthalmologists bring training from Malaysia, Singapore, the UK and beyond.",
     "link": {
       "label": "See all doctors",
-      "url": "https://optimaxeyespecialist.com/doctor/"
+      "url": "/doctor/"
     }
   },
   "reviews": {
@@ -248,7 +253,7 @@
     "rating_text": "4.7★ on Google from 916 reviews",
     "link": {
       "label": "Read all reviews on Google",
-      "url": "https://optimaxeyespecialist.com/#testimonials"
+      "url": "https://search.google.com/local/reviews?placeid=ChIJE9solTpJzDER1jU1c2imPnE"
     },
     "items": [
       {

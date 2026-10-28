@@ -1,0 +1,44 @@
+---
+permalink: /branches/
+layout: layouts/base.njk
+title: "Optimax Branches — 25 eye specialist centres in Malaysia & Cambodia"
+description: "Find your nearest Optimax eye specialist centre: addresses, phone numbers, WhatsApp and opening hours for all 25 hospitals and clinics."
+---
+{%- import "macros.njk" as m -%}
+{%- set allB = branches | flatBranches -%}
+
+{{ m.phero({eyebrow: "Branches", title: "Expert eye care,", title_line2: "close to home.", subhead: "25 hospital & clinics — 24 across Malaysia and 1 in Cambodia. Pick the one nearest you."}, { compact: true, crumbs: [{label: "Branches"}], pills: [allB.length + " locations", branches.regions.length + " regions", "Several open on Sundays"] }) }}
+
+<section class="section section--flush">
+  <div class="wrap">
+    <div class="filters filters--search reveal">
+      <div class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <label for="branch-q" class="sr">Search branches</label>
+        <input id="branch-q" type="search" placeholder="Search by town, state or postcode" autocomplete="off" data-branch-search>
+      </div>
+      <div class="fchips" role="group" aria-label="Region">
+        <button type="button" class="fchip" aria-pressed="true" data-region="">All</button>
+        {%- for r in branches.regions %}<button type="button" class="fchip" aria-pressed="false" data-region="{{ r.region }}">{{ r.region }}</button>{% endfor %}
+      </div>
+    </div>
+
+    {%- for r in branches.regions %}
+    <div class="bregion" data-region-block="{{ r.region }}">
+      <h2 class="bregion__title reveal">{{ r.region }} <span>{{ r.branches.length }}</span></h2>
+      <div class="bgrid">
+        {%- for b in r.branches %}
+        <a class="bcard reveal" href="/branches/{{ b.slug }}/" data-search="{{ (b.full_name + ' ' + b.address + ' ' + b.area + ' ' + r.region) | lower }}" style="--d:{{ loop.index0 % 3 }}">
+          <span class="bcard__region">{{ b.area or r.region }}</span>
+          <strong class="bcard__name">{{ b.full_name }}</strong>
+          <span class="bcard__addr">{{ b.address }}</span>
+          <span class="bcard__meta"><span>☎ {{ b.tel }}</span>{% if b.hours.length %}<span>🕘 {{ b.hours[0] }}</span>{% endif %}</span>
+          <span class="bcard__go" aria-hidden="true">→</span>
+        </a>
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endfor %}
+    <p class="empty" data-empty hidden>No branches match “<span data-q></span>”. Try a town or state name.</p>
+  </div>
+</section>

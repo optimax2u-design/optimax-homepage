@@ -14,14 +14,36 @@
     "listing": "Listed on Bursa Malaysia Main Market"
   },
   "nav": [
-    { "label": "Treatments", "url": "#treatments" },
-    { "label": "Doctors", "url": "#doctors" },
-    { "label": "Branches", "url": "#book" },
-    { "label": "About", "url": "#why" },
-    { "label": "Reviews", "url": "#reviews" },
-    { "label": "Blog", "url": "https://optimaxeyespecialist.com/blog/" }
+    {
+      "label": "Treatments",
+      "url": "/treatments/",
+      "mega": true
+    },
+    {
+      "label": "Doctors",
+      "url": "/doctor/"
+    },
+    {
+      "label": "Branches",
+      "url": "/branches/"
+    },
+    {
+      "label": "About",
+      "url": "/about-us/"
+    },
+    {
+      "label": "FAQs",
+      "url": "/faqs/"
+    },
+    {
+      "label": "Blog",
+      "url": "/blog/"
+    }
   ],
-  "nav_cta": { "label": "Book free eye check", "url": "#book" },
+  "nav_cta": {
+    "label": "Book free eye check",
+    "url": "#book"
+  },
   "form_endpoint": "",
   "footer": {
     "company": "Optimax Eye Specialist",
@@ -29,12 +51,46 @@
     "address": "Unit 2-2-1, Republik TTDI, Jalan Tun Mohd Fuad 3, Taman Tun Dr. Ismail, 60000 Kuala Lumpur",
     "address_label": "TTDI Headquarters",
     "links": [
-      { "label": "Treatments", "url": "#treatments" },
-      { "label": "Our doctors", "url": "#doctors" },
-      { "label": "FAQs", "url": "https://optimaxeyespecialist.com/faqs/" },
-      { "label": "Financing options", "url": "https://optimaxeyespecialist.com/financing-options/" },
-      { "label": "Blog", "url": "https://optimaxeyespecialist.com/blog/" }
+      {
+        "label": "All treatments",
+        "url": "/treatments/"
+      },
+      {
+        "label": "Our doctors",
+        "url": "/doctor/"
+      },
+      {
+        "label": "Branches",
+        "url": "/branches/"
+      },
+      {
+        "label": "About Optimax",
+        "url": "/about-us/"
+      },
+      {
+        "label": "FAQs",
+        "url": "/faqs/"
+      },
+      {
+        "label": "Financing options",
+        "url": "/financing-options/"
+      },
+      {
+        "label": "Blog",
+        "url": "/blog/"
+      }
     ],
-    "legal": "Treatment suitability and outcomes vary from person to person and are confirmed by your eye specialist after a full assessment."
-  }
+    "legal": "Treatment suitability and outcomes vary from person to person and are confirmed by your eye specialist after a full assessment.",
+    "legal_links": [
+      {
+        "label": "Privacy Policy",
+        "url": "/privacy-policy/"
+      },
+      {
+        "label": "Terms of Use",
+        "url": "/terms-of-use/"
+      }
+    ]
+  },
+  "reviews_url": "https://search.google.com/local/reviews?placeid=ChIJE9solTpJzDER1jU1c2imPnE"
 }

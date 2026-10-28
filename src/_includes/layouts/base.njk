@@ -1,0 +1,142 @@
+{#- Shared page shell: top bar, menu, booking section and footer on every page.
+    Page front matter / data can set: title, description, nav_key, book_service, book_branch, book_doctor, hide_booking, preload_image -#}
+{%- set pageTitle = title or site.seo_title -%}
+{%- set pageDesc = description or site.seo_description -%}
+{%- set ctaUrl = ('/' + site.nav_cta.url) if (hide_booking and site.nav_cta.url[0] == '#') else site.nav_cta.url -%}
+<!doctype html>
+<html lang="en-MY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDesc }}">
+  <meta name="theme-color" content="#FFF8EE">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDesc }}">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/assets/uploads/logo/favicon.ico" sizes="any">
+  <link rel="icon" href="{{ site.favicon }}" type="image/svg+xml">
+  <link rel="icon" href="/assets/uploads/logo/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="{{ site.apple_touch_icon or '/assets/uploads/logo/apple-touch-icon.png' }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
+  {%- if page.url == "/" %}{% set hh = home.hero %}{% if hh.image_mobile %}<link rel="preload" as="image" href="{{ hh.image_mobile }}" media="(max-width: 640px)"><link rel="preload" as="image" href="{{ hh.image }}" media="(min-width: 641px)">{% else %}<link rel="preload" as="image" href="{{ hh.image }}">{% endif %}{% endif %}
+  <link rel="stylesheet" href="/assets/css/style.css?v={{ build }}">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="{{ body_class or '' }}">
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="topbar">
+  <div class="wrap topbar__in">
+    <a href="{{ site.topbar.hotline | tel }}" class="topbar__item"><span aria-hidden="true">☎</span> <span class="topbar__lbl">Hotline</span> <strong>{{ site.topbar.hotline }}</strong></a>
+    <a href="{{ site.topbar.whatsapp_link }}" class="topbar__item" target="_blank" rel="noopener"><span aria-hidden="true">💬</span> WhatsApp <strong class="topbar__num">{{ site.topbar.whatsapp }}</strong></a>
+    <span class="topbar__item topbar__hide-sm">{{ site.topbar.hours }}</span>
+    <span class="topbar__item topbar__listing topbar__hide-sm"><span class="dot" aria-hidden="true"></span>{{ site.topbar.listing }}</span>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a href="/" class="brand" aria-label="{{ site.name }} home">
+      <img class="brand__logo" src="{{ site.logo }}" alt="{{ site.name }}" width="279" height="96">
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      {%- for l in site.nav %}
+      {%- set on = (nav_key == l.label) or (page.url | isActive(l.url)) %}
+      {%- if l.mega %}
+      <div class="mega" data-mega>
+        <a href="{{ l.url }}" class="mega__trigger{% if on %} is-on{% endif %}" aria-haspopup="true" aria-expanded="false"{% if on %} aria-current="page"{% endif %}>{{ l.label }} <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></a>
+        <div class="mega__panel">
+          <div class="mega__grid">
+            {%- for g in treatments.overview.groups %}
+            {%- set items = treatments.list | byGroup(g.id) %}
+            {%- if items.length %}
+            <div class="mega__col">
+              <p class="mega__title"><span class="mega__dot c-{{ g.color }}" aria-hidden="true"></span>{{ g.title }}</p>
+              <ul>{% for t in items %}<li><a href="/{{ t.slug }}/"><strong>{{ t.short }}</strong><span>{{ t.card.summary }}</span></a></li>{% endfor %}</ul>
+            </div>
+            {%- endif %}
+            {%- endfor %}
+          </div>
+          <div class="mega__foot">
+            <a href="/treatments/" class="textlink">Compare all treatments <span aria-hidden="true">→</span></a>
+            <a href="/treatments/#screening-care" class="textlink">Screening & children's care <span aria-hidden="true">→</span></a>
+            <a href="/#finder" class="textlink">Not sure? Try the treatment finder <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+      {%- else %}
+      <a href="{{ l.url }}"{% if on %} class="is-on" aria-current="page"{% endif %}>{{ l.label }}</a>
+      {%- endif %}
+      {%- endfor %}
+    </nav>
+    <a href="{{ ctaUrl }}" class="btn btn--primary btn--sm nav__cta">{{ site.nav_cta.label }}</a>
+    <div class="nav__quick">
+      <a class="nav__wa" href="{{ site.topbar.whatsapp_link }}" target="_blank" rel="noopener" aria-label="WhatsApp {{ site.topbar.whatsapp }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg></a>
+      <a class="btn btn--primary btn--sm nav__book" href="{{ ctaUrl }}">Book<span class="nav__book-more">free check</span></a>
+    </div>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+  <div class="nav__sheet" id="mobile-menu" hidden>
+    {%- for l in site.nav %}
+    {%- if l.mega %}
+    <details class="sheet__group">
+      <summary>{{ l.label }}</summary>
+      <div class="sheet__sub">
+        {%- for t in treatments.list %}<a href="/{{ t.slug }}/">{{ t.short }}</a>{% endfor %}
+        <a href="/treatments/" class="sheet__all">All treatments →</a>
+      </div>
+    </details>
+    {%- else %}
+    <a href="{{ l.url }}">{{ l.label }}</a>
+    {%- endif %}
+    {%- endfor %}
+    <a href="{{ ctaUrl }}" class="btn btn--primary">{{ site.nav_cta.label }}</a>
+  </div>
+</header>
+
+<main id="main">
+{{ content | safe }}
+
+{%- if not hide_booking %}
+{% include "partials/booking.njk" %}
+{%- endif %}
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid footer__grid--4">
+    <div>
+      <a href="/" class="brand brand--light" aria-label="{{ site.name }} home"><img class="brand__logo brand__logo--footer" src="{{ site.logo_footer }}" alt="{{ site.name }}" width="279" height="96" loading="lazy"></a>
+      <p class="footer__addr"><strong>{{ site.footer.address_label }}</strong><br>{{ site.footer.address }}</p>
+      <ul class="footer__badges" aria-label="Accreditations"><li>ISO 9001</li><li>MHTC</li><li>ZEISS</li></ul>
+    </div>
+    <div>
+      <h4>Treatments</h4>
+      <ul>{% for t in treatments.list %}<li><a href="/{{ t.slug }}/">{{ t.short }}</a></li>{% endfor %}</ul>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>{% for l in site.footer.links %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}</ul>
+    </div>
+    <div>
+      <h4>Talk to us</h4>
+      <ul>
+        <li><a href="{{ site.topbar.hotline | tel }}">Hotline <span class="nowrap">{{ site.topbar.hotline }}</span></a></li>
+        <li><a href="{{ site.topbar.whatsapp_link }}" target="_blank" rel="noopener">WhatsApp <span class="nowrap">{{ site.topbar.whatsapp }}</span></a></li>
+        <li>{{ site.topbar.hours }}</li>
+        <li><a href="/branches/">Find a branch near you →</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer__base">
+    <p>© {{ year }} {{ site.footer.company }} · Company reg. no. {{ site.footer.registration }} · {{ site.topbar.listing }}</p>
+    <p class="footer__legal">{{ site.footer.legal }}</p>
+    <p class="footer__legal-links">{% for l in site.footer.legal_links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</p>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js?v={{ build }}" defer></script>
+</body>
+</html>

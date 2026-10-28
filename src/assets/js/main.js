@@ -1,8 +1,11 @@
-/* Optimax homepage — small, dependency-free interactions */
+/* Optimax website — small, dependency-free interactions (every page) */
 (() => {
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Site may live under a sub-path (GitHub Pages /repo/); the logo link tells us the root
+  const root = (document.querySelector('.brand') || {}).getAttribute?.('href') || '/';
+  const withBase = u => (u && u.startsWith('/') && !u.startsWith('//')) ? root.replace(/\/$/, '') + u : u;
 
   // Load-in animation once fonts are ready (or after 600ms, whichever is first)
   const loaded = () => document.documentElement.classList.add('is-loaded');
@@ -37,7 +40,9 @@
   addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 
   // Treatment finder
-  const data = JSON.parse($('#finder-data').textContent);
+  const fdata = $('#finder-data');
+  if (fdata) {
+  const data = JSON.parse(fdata.textContent);
   const result = $('#finder-result');
   const chips = $$('.finder__options .chip');
   const select = (chip, focus) => {
@@ -48,6 +53,7 @@
     $('[data-f=recommended]', result).textContent = o.recommended;
     $('[data-f=summary]', result).textContent = o.summary;
     $('[data-f=alternatives]', result).innerHTML = o.alternatives.map(a => `<li>${a.replace(/</g, '&lt;')}</li>`).join('');
+    const lm = $('[data-f=url]', result); if (lm && o.url) lm.setAttribute('href', withBase(o.url));
     $('[data-f=book]', result).dataset.service = o.recommended;
     if (!reduce) { result.classList.remove('swap'); void result.offsetWidth; result.classList.add('swap'); }
   };
@@ -65,15 +71,20 @@
     const match = [...sel.options].find(o => { const t = o.text.toLowerCase(); return t.includes(want) || want.includes(t.split(' (')[0]); });
     if (match) sel.value = match.value;
   });
+  }
 
   // Doctors scroller buttons
   const sc = $('#doctor-scroller');
-  $$('[data-scroll]').forEach(b => b.addEventListener('click', () => {
+  if (sc) $$('[data-scroll]').forEach(b => b.addEventListener('click', () => {
     sc.scrollBy({ left: Number(b.dataset.scroll) * sc.clientWidth * 0.8, behavior: reduce ? 'auto' : 'smooth' });
   }));
 
   // Booking form
   const form = $('#booking-form'), ok = $('#booking-success');
+  if (form) {
+  // Pre-select branch / service set by the page (e.g. a branch or treatment page)
+  const pre = (sel, want) => { if (!sel || !want) return; const o = [...sel.options].find(o => o.text === want || o.value === want); if (o) sel.value = o.value; };
+  pre($('#f-branch'), form.dataset.branch); pre($('#f-service'), form.dataset.service);
   const check = f => { const valid = f.querySelector('input,select').checkValidity(); f.classList.toggle('invalid', !valid); return valid; };
   $$('.field', form).forEach(f => { const el = f.querySelector('input,select'); ['input','change'].forEach(t => el.addEventListener(t, () => f.classList.contains('invalid') && check(f))); });
   form.addEventListener('submit', async e => {
@@ -89,6 +100,7 @@
     } catch (_) { /* still confirm; the team follows up by phone */ }
     form.hidden = true; ok.hidden = false; ok.focus();
   });
+  }
 
   // Hero badge: smooth rolling counter from 1s to the final value (e.g. 8s).
   // Digits glide upward like an odometer while the yellow ring sweeps round in sync.
@@ -146,7 +158,7 @@
   // The final value is already in the HTML, so search engines, screen readers and
   // visitors who prefer reduced motion simply see the real number.
   const tiles = $$('.tile__value');
-  const parse = t => { const m = t.match(/^(\D*?)(\d+(?:\.\d+)?)(.*)$/s); return m && { pre: m[1], num: parseFloat(m[2]), dec: (m[2].split('.')[1] || '').length, post: m[3] }; };
+  const parse = t => { const m = t.match(/^(\D*?)(\d+(?:\.\d+)?)(.*)$/s); return m && !/\d/.test(m[3]) && m[1].length < 2 && m[3].length < 4 ? { pre: m[1], num: parseFloat(m[2]), dec: (m[2].split('.')[1] || '').length, post: m[3] } : null; };
   const ease = x => 1 - Math.pow(1 - x, 4);
   const run = el => {
     const p = parse(el.dataset.final); if (!p) return;
@@ -168,5 +180,74 @@
       if (e.isIntersecting) { tio.unobserve(e.target); run(e.target); }
     }), { threshold: 0.6 });
     tiles.forEach(el => tio.observe(el));
+  }
+  // Treatments mega menu: click/tap toggles (hover + focus handled in CSS)
+  $$('[data-mega]').forEach(m => {
+    const trig = $('.mega__trigger', m);
+    trig.addEventListener('click', e => {
+      if (matchMedia('(hover: hover)').matches && !m.classList.contains('is-open') && e.detail) return; // mouse users: link works
+      e.preventDefault();
+      const open = !m.classList.contains('is-open');
+      m.classList.toggle('is-open', open); trig.setAttribute('aria-expanded', open);
+    });
+    m.addEventListener('mouseenter', () => trig.setAttribute('aria-expanded', 'true'));
+    m.addEventListener('mouseleave', () => { m.classList.remove('is-open'); trig.setAttribute('aria-expanded', 'false'); });
+    document.addEventListener('click', e => { if (!m.contains(e.target)) { m.classList.remove('is-open'); trig.setAttribute('aria-expanded', 'false'); } });
+    addEventListener('keydown', e => { if (e.key === 'Escape') { m.classList.remove('is-open'); trig.setAttribute('aria-expanded', 'false'); } });
+  });
+
+  // Chip groups behave like radio buttons
+  const chipGroup = (btns, onPick) => btns.forEach(b => b.addEventListener('click', () => {
+    btns.forEach(x => x.setAttribute('aria-pressed', x === b)); onPick(b);
+  }));
+
+  // Doctors page: filter by branch + language
+  const dlist = $('[data-filter-list]');
+  if (dlist) {
+    const cards = $$('.doc--link', dlist), sel = $('[data-filter=branch]'), langBtns = $$('[data-lang]');
+    const count = $('[data-count]'), empty = $('[data-empty]');
+    let lang = '';
+    const params = new URLSearchParams(location.search);
+    if (params.get('branch') && sel) sel.value = params.get('branch');
+    const apply = () => {
+      const br = sel ? sel.value : ''; let n = 0;
+      cards.forEach(c => {
+        const ok = (!br || c.dataset.branches.split(' ').includes(br)) && (!lang || c.dataset.langs.split('|').includes(lang));
+        c.classList.toggle('is-hidden', !ok); if (ok) n++;
+      });
+      if (count) count.textContent = n; if (empty) empty.hidden = n > 0;
+    };
+    sel && sel.addEventListener('change', apply);
+    chipGroup(langBtns, b => { lang = b.dataset.lang; apply(); });
+    const reset = $('[data-reset]'); reset && reset.addEventListener('click', () => { if (sel) sel.value = ''; lang = ''; langBtns.forEach((x, i) => x.setAttribute('aria-pressed', i === 0)); apply(); });
+    apply();
+  }
+
+  // Branches page: search + region chips
+  const bq = $('[data-branch-search]');
+  if (bq) {
+    const blocks = $$('[data-region-block]'), empty = $('[data-empty]'); let region = '';
+    const apply = () => {
+      const q = bq.value.trim().toLowerCase(); let total = 0;
+      blocks.forEach(bl => {
+        let n = 0;
+        $$('.bcard', bl).forEach(c => { const ok = (!q || c.dataset.search.includes(q)); c.classList.toggle('is-hidden', !ok); if (ok) n++; });
+        const show = n > 0 && (!region || bl.dataset.regionBlock === region);
+        bl.classList.toggle('is-hidden', !show); if (show) total += n;
+      });
+      if (empty) { empty.hidden = total > 0; const qs = $('[data-q]', empty); if (qs) qs.textContent = bq.value; }
+    };
+    bq.addEventListener('input', apply);
+    chipGroup($$('[data-region]'), b => { region = b.dataset.region; apply(); });
+  }
+
+  // Blog: filter by topic
+  const pf = $('[data-post-filter]');
+  if (pf) {
+    const posts = $$('.posts .post');
+    chipGroup($$('[data-cat]', pf), b => {
+      const c = b.dataset.cat;
+      posts.forEach(p => p.classList.toggle('is-hidden', !!c && !p.dataset.cats.split('|').includes(c)));
+    });
   }
 })();

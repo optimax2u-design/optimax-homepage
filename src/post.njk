@@ -1,0 +1,55 @@
+---
+pagination:
+  data: blog.posts
+  size: 1
+  alias: p
+permalink: "/{{ p.slug }}/"
+layout: layouts/base.njk
+nav_key: Blog
+eleventyComputed:
+  title: "{{ p.title }} | Optimax Eye Specialist"
+  description: "{{ p.excerpt }}"
+---
+{%- import "macros.njk" as m -%}
+
+<section class="phero phero--compact phero--post">
+  <div class="wrap wrap--narrow">
+    {{ m.crumbs([{label: "Blog", url: "/blog/"}, {label: p.categories[0]}]) }}
+    <p class="post__meta load" style="--d:0">{% for c in p.categories %}<span class="post__cat">{{ c }}</span>{% endfor %} · <time datetime="{{ p.date }}">{{ p.date | niceDate }}</time></p>
+    <h1 class="phero__title phero__title--post load" style="--d:1">{{ p.title }}</h1>
+    <p class="phero__sub load" style="--d:2">{{ p.excerpt }}</p>
+  </div>
+  <div class="wrap wrap--narrow"><div class="cover cover--hero c-{{ p.color }} load" style="--d:2"><span aria-hidden="true">{{ p.emoji }}</span></div></div>
+</section>
+
+<section class="section section--flush">
+  <div class="wrap wrap--narrow">
+    <article class="prose prose--post">
+      {{ p.body | safe }}
+    </article>
+    <aside class="postcta c-violet">
+      <div><strong>Questions about your eyes?</strong><span>Book a free eye check at any of our 25 branches.</span></div>
+      <a href="#book" class="btn btn--primary">Book a free eye check</a>
+    </aside>
+    <p class="fine">This article is general information and isn't a substitute for an examination by your eye specialist.</p>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap">
+    <header class="head head--row reveal">
+      <div><p class="eyebrow">Keep reading</p><h2>More from the blog.</h2></div>
+      <a class="textlink textlink--top" href="/blog/">All articles <span aria-hidden="true">→</span></a>
+    </header>
+    <div class="posts">
+      {%- set shown = 0 -%}
+      {%- for o in blog.posts | except("slug", p.slug) %}{% if loop.index <= 3 %}
+      <a class="post reveal" href="/{{ o.slug }}/" style="--d:{{ loop.index0 }}">
+        <div class="cover c-{{ o.color }}"><span aria-hidden="true">{{ o.emoji }}</span></div>
+        <p class="post__meta"><span class="post__cat">{{ o.categories[0] }}</span> · {{ o.date | niceDate }}</p>
+        <h3>{{ o.title }}</h3>
+      </a>
+      {%- endif %}{% endfor %}
+    </div>
+  </div>
+</section>

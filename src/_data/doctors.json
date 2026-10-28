@@ -1,160 +1,740 @@
 {
   "list": [
     {
+      "slug": "dr-stephen-chung-soon-hee",
       "name": "Dr Stephen Chung Soon Hee",
+      "title": "Consultant Ophthalmologist, Refractive Surgeon & Medical Director",
       "credentials": "MBBS, MS (Ophthal)",
       "photo": "/assets/uploads/doctors/dr-stephen-chung-soon-hee.webp",
-      "color": "violet"
+      "color": "violet",
+      "specialties": [
+        "LASIK & laser refractive surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "Femto-LASIK",
+        "ASA",
+        "PRESBYOND® 2.0"
+      ],
+      "languages": [
+        "English"
+      ],
+      "branches": [
+        "taman-tun-dr-ismail-kuala-lumpur-hq"
+      ]
     },
     {
+      "slug": "dr-chuah-kay-leong",
       "name": "Dr Chuah Kay Leong",
+      "title": "Consultant Ophthalmologist, Refractive Surgeon & Medical Director",
       "credentials": "MB BAO BCh (UK), FRCOphth (London)",
       "photo": "/assets/uploads/doctors/dr-chuah-kay-leong.webp",
-      "color": "yellow"
+      "color": "yellow",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "General ophthalmology & cataract surgery",
+        "Cornea & external eye diseases"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "Femto-LASIK",
+        "ASA",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "taman-tun-dr-ismail-kuala-lumpur-hq"
+      ]
     },
     {
+      "slug": "dr-lee-seow-yeang",
       "name": "Dr Lee Seow Yeang",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MD (UKM), M Surg (Ophth) (UKM), M.Med (Ophth) S'pore, FRCSEd",
       "photo": "/assets/uploads/doctors/dr-lee-seow-yeang.webp",
-      "color": "coral"
+      "color": "coral",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "Femto-LASIK",
+        "ASA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Indonesia",
+        "Bahasa Malaysia",
+        "English",
+        "Hokkien",
+        "Mandarin"
+      ],
+      "branches": [
+        "penang-eye-specialist-hospital"
+      ]
     },
     {
+      "slug": "dr-nor-zainura-zainal",
       "name": "Dr Nor Zainura Zainal",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "LRCP & SI, MBBCh BAO (Ireland), MS (Ophthal) (UKM)",
       "photo": "/assets/uploads/doctors/dr-nor-zainura-zainal.webp",
-      "color": "sky"
+      "color": "sky",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "Femto-LASIK",
+        "ASA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English"
+      ],
+      "branches": [
+        "shah-alam"
+      ]
     },
     {
+      "slug": "dr-ngo-chek-tung",
       "name": "Dr Ngo Chek Tung",
+      "title": "Consultant Ophthalmologist, Refractive Surgeon & Retina Specialist",
       "credentials": "MBBS (Malaya), M.Med Ophth (NUS), MRCSEd, FRCOphth, CertLRS",
       "photo": "/assets/uploads/doctors/dr-ngo-chek-tung.webp",
-      "color": "mint"
+      "color": "mint",
+      "specialties": [
+        "Retina surgery",
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "bandar-sunway"
+      ]
     },
     {
+      "slug": "dr-chang-khai-meng",
       "name": "Dr Chang Khai Meng",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MD (USM), MMed (Ophthalmology)",
       "photo": "/assets/uploads/doctors/dr-chang-khai-meng.webp",
-      "color": "violet"
+      "color": "violet",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery",
+        "Dry eyes",
+        "Glaucoma",
+        "Cornea & external eye diseases"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Hokkien",
+        "Mandarin"
+      ],
+      "branches": [
+        "sri-petaling"
+      ]
     },
     {
+      "slug": "dr-lam-hee-hong",
       "name": "Dr Lam Hee Hong",
+      "title": "Consultant Ophthalmologist, Refractive Surgeon & Medical Director",
       "credentials": "MBBS (UM), ICO (Cambridge), Master of Surgery (UM)",
       "photo": "/assets/uploads/doctors/dr-lam-hee-hong.webp",
-      "color": "yellow"
+      "color": "yellow",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "Femto-LASIK",
+        "ASA",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "johor-bahru",
+        "kluang"
+      ]
     },
     {
+      "slug": "dr-ngim-you-siang",
       "name": "Dr Ngim You Siang",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MBBS (UM), M.S. Ophthal (UM)",
       "photo": "/assets/uploads/doctors/dr-ngim-you-siang.webp",
-      "color": "coral"
+      "color": "coral",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "Femto-LASIK",
+        "ASA",
+        "TESA"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "muar-johor",
+        "segamat"
+      ]
     },
     {
+      "slug": "dr-adeline-sia-sien-bing",
       "name": "Dr Adeline Sia Sien Bing",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MBBS (UM), MOphth (UM)",
       "photo": "/assets/uploads/doctors/dr-adeline-sia-sien-bing.webp",
-      "color": "sky"
+      "color": "sky",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "General ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "taman-tun-dr-ismail-kuala-lumpur-hq"
+      ]
     },
     {
+      "slug": "dr-marcus-ng-kang-kok",
       "name": "Dr Marcus Ng Kang Kok",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MBBS (Taiwan), M.S. Ophthal (UKM)",
       "photo": "/assets/uploads/doctors/dr-marcus-ng-kang-kok.webp",
-      "color": "mint"
+      "color": "mint",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "muar-johor",
+        "segamat"
+      ]
     },
     {
+      "slug": "dr-leow-sue-ngein",
       "name": "Dr Leow Sue Ngein",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MD (UKM), M.S Ophthalmology (UKM), CMIA (Malaysia)",
       "photo": "/assets/uploads/doctors/dr-leow-sue-ngein.webp",
-      "color": "violet"
+      "color": "violet",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE",
+        "Femto-LASIK",
+        "ASA"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "johor-bahru"
+      ]
     },
     {
+      "slug": "dr-ang-ee-ling",
       "name": "Dr Ang Ee Ling",
+      "title": "Consultant Ophthalmologist & Vitreoretinal Surgeon",
       "credentials": "MBBS, MSOphthal (UM), Fellowship in Vitreoretinal Surgery Malaysia and Sydney",
       "photo": "/assets/uploads/doctors/dr-ang-ee-ling.webp",
-      "color": "yellow"
+      "color": "yellow",
+      "specialties": [
+        "Vitreoretinal surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Hokkien",
+        "Mandarin"
+      ],
+      "branches": [
+        "penang-eye-specialist-hospital"
+      ]
     },
     {
+      "slug": "dr-edwin-ooi-inn-loon",
       "name": "Dr Edwin Ooi Inn Loon",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MD (UKM), M.S Ophthal (UKM)",
       "photo": "/assets/uploads/doctors/dr-edwin-ooi-inn-loon.webp",
-      "color": "coral"
+      "color": "coral",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "General ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Hokkien",
+        "Mandarin"
+      ],
+      "branches": [
+        "penang-eye-specialist-hospital"
+      ]
     },
     {
+      "slug": "dr-faith-ho-fui-li",
       "name": "Dr Faith Ho Fui Li",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MD (UKM), Dr.Ophth (UKM)",
       "photo": "/assets/uploads/doctors/dr-faith-ho-fui-li.webp",
-      "color": "sky"
+      "color": "sky",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "Femto-LASIK",
+        "ASA",
+        "TESA"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Hakka",
+        "Mandarin"
+      ],
+      "branches": [
+        "kuching"
+      ]
     },
     {
+      "slug": "dr-tang-seng-fai",
       "name": "Dr Tang Seng Fai",
+      "title": "Consultant Ophthalmologist, Refractive Surgeon & Glaucoma Specialist",
       "credentials": "MD (UKM), Dr Ophthal (UKM), Fellowship in Glaucoma (UKM)",
       "photo": "/assets/uploads/doctors/dr-tang-seng-fai.webp",
-      "color": "mint"
+      "color": "mint",
+      "specialties": [
+        "Glaucoma, incl. iStent minimally invasive surgery",
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "klang",
+        "taman-tun-dr-ismail-kuala-lumpur-hq"
+      ]
     },
     {
+      "slug": "dr-siuw-chin-pei",
       "name": "Dr Siuw Chin Pei",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MBBS (IMU), Doctor of Ophthalmology (UKM)",
       "photo": "/assets/uploads/doctors/dr-siuw-chin-pei.webp",
-      "color": "violet"
+      "color": "violet",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE",
+        "Femto-LASIK",
+        "ASA"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "johor-bahru",
+        "sutera-johor-bahru"
+      ]
     },
     {
+      "slug": "dr-gan-say-seong",
       "name": "Dr Gan Say Seong",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MBBS (UM), MS (Ophth) UKM",
       "photo": "/assets/uploads/doctors/dr-gan-say-seong.webp",
-      "color": "yellow"
+      "color": "yellow",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "bahau",
+        "seremban"
+      ]
     },
     {
+      "slug": "dr-anhar-hafiz-bin-silim",
       "name": "Dr Anhar Hafiz Bin Silim",
+      "title": "Consultant Ophthalmologist, Refractive & Vitreoretinal Surgeon",
       "credentials": "MBBS (Jordan), Doctor of Ophthalmology (UKM), Fellowship in Vitreoretinal Surgery (CCFT, M'sia)",
       "photo": "/assets/uploads/doctors/dr-anhar-hafiz-bin-silim.webp",
-      "color": "coral"
+      "color": "coral",
+      "specialties": [
+        "Vitreoretinal surgery",
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL) / EyePCL",
+        "General ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English"
+      ],
+      "branches": [
+        "shah-alam"
+      ]
     },
     {
+      "slug": "dr-mohd-syafiq-bin-azman",
       "name": "Dr Mohd Syafiq Bin Azman",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MBBS (UIAM), Doctor of Ophthalmology (UKM)",
       "photo": "/assets/uploads/doctors/dr-mohd-syafiq-bin-azman.webp",
-      "color": "sky"
+      "color": "sky",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English"
+      ],
+      "branches": [
+        "seremban"
+      ]
     },
     {
+      "slug": "dr-cassandra-lo-yee-lin",
       "name": "Dr Cassandra Lo Yee Lin",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MD (KSMU), MS Ophthal (UKM)",
       "photo": "/assets/uploads/doctors/dr-cassandra-lo-yee-lin.webp",
-      "color": "mint"
+      "color": "mint",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Hakka",
+        "Mandarin"
+      ],
+      "branches": [
+        "oug"
+      ]
     },
     {
+      "slug": "dr-ng-chun-wai",
       "name": "Dr Ng Chun Wai",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MD (UCSI), Doctor of Ophthalmology (UKM), CMIA (NIOSH)",
       "photo": "/assets/uploads/doctors/dr-ng-chun-wai.webp",
-      "color": "violet"
+      "color": "violet",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Hokkien",
+        "Mandarin"
+      ],
+      "branches": [
+        "damansara-jaya",
+        "kepong",
+        "taman-tun-dr-ismail-kuala-lumpur-hq"
+      ]
     },
     {
+      "slug": "dr-miswan-muiz-mahyudin",
       "name": "Dr Miswan Muiz Mahyudin",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon · President, Malaysian Society of Ophthalmology",
       "credentials": "MOphthal (Malaya), MBChB (Otago, NZ)",
       "photo": "/assets/uploads/doctors/dr-miswan-muiz-mahyudin.webp",
-      "color": "yellow"
+      "color": "yellow",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "General ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English"
+      ],
+      "branches": [
+        "cheras",
+        "damansara-jaya",
+        "melawati"
+      ]
     },
     {
+      "slug": "dr-ivan-chong-jia-cherng",
       "name": "Dr Ivan Chong Jia Cherng",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MBBS (IMU), MOphthal (UM)",
       "photo": "/assets/uploads/doctors/dr-ivan-chong-jia-cherng.webp",
-      "color": "coral"
+      "color": "coral",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Hakka",
+        "Mandarin"
+      ],
+      "branches": [
+        "optimax-kota-kinabalu-eye-specialist-centre"
+      ]
     },
     {
+      "slug": "dr-chong-ka-lung",
       "name": "Dr Chong Ka Lung",
-      "credentials": "MBBS (IMU), MOphthal (UM), Vitreoretinal Fellowship (Australia)",
+      "title": "Consultant Ophthalmologist & Vitreoretinal Surgeon",
+      "credentials": "MBBS (IMU), MOphthal (UM), Vitreoretinal Fellowship (Australia), Subspecialty Vitreoretinal Fellowship (MOH, CCFT, M'sia), CMIA (NIOSH), AM, AMM",
       "photo": "/assets/uploads/doctors/dr-chong-ka-lung.webp",
-      "color": "sky"
+      "color": "sky",
+      "specialties": [
+        "Vitreoretinal surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "seremban"
+      ]
     },
     {
+      "slug": "dr-teo-shee-kiang",
       "name": "Dr Teo Shee Kiang",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MD (UKM), Doctor of Ophthalmology (UKM)",
       "photo": "/assets/uploads/doctors/dr-teo-shee-kiang.webp",
-      "color": "mint"
+      "color": "mint",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Hokkien",
+        "Mandarin"
+      ],
+      "branches": [
+        "johor-bahru"
+      ]
     },
     {
+      "slug": "dr-alex-yee-chau-sim",
       "name": "Dr Alex Yee Chau Sim",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
       "credentials": "MD (UKM), Doctor of Ophthalmology (UKM)",
       "photo": "/assets/uploads/doctors/dr-alex-yee-chau-sim.webp",
-      "color": "violet"
+      "color": "violet",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "Femto-LASIK",
+        "ASA",
+        "PRESBYOND® 2.0"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Hokkien",
+        "Mandarin"
+      ],
+      "branches": [
+        "klang",
+        "kota-kemuning"
+      ]
     }
   ]
 }

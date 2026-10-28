@@ -1,64 +1,8 @@
 ---
 permalink: /index.html
+layout: layouts/base.njk
 ---
 {%- set h = home -%}
-<!doctype html>
-<html lang="en-MY">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>{{ site.seo_title }}</title>
-  <meta name="description" content="{{ site.seo_description }}">
-  <meta name="theme-color" content="#FFF8EE">
-  <meta property="og:title" content="{{ site.seo_title }}">
-  <meta property="og:description" content="{{ site.seo_description }}">
-  <link rel="icon" href="/assets/uploads/logo/favicon.ico" sizes="any">
-  <link rel="icon" href="{{ site.favicon }}" type="image/svg+xml">
-  <link rel="icon" href="/assets/uploads/logo/favicon-32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="{{ site.apple_touch_icon or '/assets/uploads/logo/apple-touch-icon.png' }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
-  {%- if h.hero.image_mobile %}<link rel="preload" as="image" href="{{ h.hero.image_mobile }}" media="(max-width: 640px)"><link rel="preload" as="image" href="{{ h.hero.image }}" media="(min-width: 641px)">{% else %}<link rel="preload" as="image" href="{{ h.hero.image }}">{% endif %}
-  <link rel="stylesheet" href="/assets/css/style.css?v={{ build }}">
-  <script>document.documentElement.classList.add('js')</script>
-</head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-
-{# 1. Top bar #}
-<div class="topbar">
-  <div class="wrap topbar__in">
-    <a href="tel:{{ site.topbar.hotline | replace(' ', '') }}" class="topbar__item"><span aria-hidden="true">☎</span> <span class="topbar__lbl">Hotline</span> <strong>{{ site.topbar.hotline }}</strong></a>
-    <a href="{{ site.topbar.whatsapp_link }}" class="topbar__item" target="_blank" rel="noopener"><span aria-hidden="true">💬</span> WhatsApp <strong class="topbar__num">{{ site.topbar.whatsapp }}</strong></a>
-    <span class="topbar__item topbar__hide-sm">{{ site.topbar.hours }}</span>
-    <span class="topbar__item topbar__listing topbar__hide-sm"><span class="dot" aria-hidden="true"></span>{{ site.topbar.listing }}</span>
-  </div>
-</div>
-
-{# 2. Navigation #}
-<header class="nav" id="nav">
-  <div class="wrap nav__in">
-    <a href="#top" class="brand" aria-label="{{ site.name }} home">
-      <img class="brand__logo" src="{{ site.logo }}" alt="{{ site.name }}" width="279" height="96">
-    </a>
-    <nav class="nav__links" aria-label="Main">
-      {%- for l in site.nav %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
-    </nav>
-    <a href="{{ site.nav_cta.url }}" class="btn btn--primary btn--sm nav__cta">{{ site.nav_cta.label }}</a>
-    <div class="nav__quick">
-      <a class="nav__wa" href="{{ site.topbar.whatsapp_link }}" target="_blank" rel="noopener" aria-label="WhatsApp {{ site.topbar.whatsapp }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg></a>
-      <a class="btn btn--primary btn--sm nav__book" href="{{ site.nav_cta.url }}">Book<span class="nav__book-more">free check</span></a>
-    </div>
-    <button class="nav__toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
-  </div>
-  <div class="nav__sheet" id="mobile-menu" hidden>
-    {%- for l in site.nav %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
-    <a href="{{ site.nav_cta.url }}" class="btn btn--primary">{{ site.nav_cta.label }}</a>
-  </div>
-</header>
-
-<main id="main">
 
 {# 3. Hero #}
 <section class="hero" id="top">
@@ -136,6 +80,7 @@ permalink: /index.html
         <ul class="finder__alts" data-f="alternatives">{% for a in f.alternatives %}<li>{{ a }}</li>{% endfor %}</ul>
         <div class="finder__actions">
           <a href="#book" class="btn btn--dark" data-f="book">Book a free eye check</a>
+          <a href="{{ f.url }}" class="btn btn--ghost" data-f="url">Learn more <span aria-hidden="true">→</span></a>
         </div>
         <p class="finder__note">{{ h.finder.note }}</p>
       </div>
@@ -157,7 +102,7 @@ permalink: /index.html
         <div class="card__body">
           <h3>{{ c.title }}</h3>
           <p>{{ c.text }}</p>
-          <ul class="tags">{% for i in c.items %}<li>{{ i }}</li>{% endfor %}</ul>
+          <ul class="tags">{% for i in c.items %}{% set t = i | findTreatment(treatments.list) %}<li>{% if t %}<a href="/{{ t.slug }}/">{{ i }}</a>{% else %}{{ i }}{% endif %}</li>{% endfor %}</ul>
           <a href="{{ c.url }}" class="card__link" aria-label="Learn more about {{ c.title }}">Learn more <span aria-hidden="true">→</span></a>
         </div>
         <div class="card__media"><img src="{{ c.image }}" alt="{{ c.image_alt or '' }}" width="900" height="700" loading="lazy" decoding="async"></div>
@@ -224,10 +169,10 @@ permalink: /index.html
   </div>
   <div class="scroller" id="doctor-scroller" tabindex="0" aria-label="Doctors" data-carousel>
     {%- for d in doctors.list %}
-    <figure class="doc">
+    <a class="doc doc--link" href="/doctor/{{ d.slug }}/">
       <div class="doc__photo c-{{ d.color }}"><img src="{{ d.photo }}" alt="Portrait of {{ d.name }}" width="600" height="750" loading="lazy" decoding="async"></div>
-      <figcaption><strong>{{ d.name }}</strong><span>{{ d.credentials }}</span></figcaption>
-    </figure>
+      <div class="doc__cap"><strong>{{ d.name }}</strong><span>{{ d.credentials }}</span></div>
+    </a>
     {%- endfor %}
   </div>
   <div class="wrap"><a class="textlink" href="{{ h.doctors.link.url }}">{{ h.doctors.link.label }} <span aria-hidden="true">→</span></a></div>
@@ -249,151 +194,9 @@ permalink: /index.html
       </figure>
       {%- endfor %}
     </div>
-    <a class="textlink" href="{{ h.reviews.link.url }}">{{ h.reviews.link.label }} <span aria-hidden="true">→</span></a>
+    <a class="textlink" href="{{ h.reviews.link.url }}" target="_blank" rel="noopener">{{ h.reviews.link.label }} <span aria-hidden="true">→</span></a>
   </div>
 </section>
 
 {# 11. Recognition #}
-<section class="section" id="recognition">
-  <div class="wrap">
-    <header class="head reveal">
-      <p class="eyebrow">{{ h.recognition.eyebrow }}</p>
-      <h2>{{ h.recognition.title }}</h2>
-    </header>
-    {%- macro logos(title, items, cls) %}
-    <div class="logos reveal">
-      <h3>{{ title }}</h3>
-      <ul class="logos__grid {{ cls }}">
-        {%- for a in items %}
-        <li class="logo">{% if a.logo %}<img src="{{ a.logo }}" alt="{{ a.name }}" loading="lazy" decoding="async">{% else %}<span>{{ a.name }}</span>{% endif %}</li>
-        {%- endfor %}
-      </ul>
-    </div>
-    {%- endmacro %}
-    <div class="logos reveal">
-      <h3>{{ h.recognition.awards_title }}</h3>
-      <ul class="awards" data-carousel>
-        {%- for a in h.recognition.awards %}
-        <li class="award">
-          <div class="award__logo">{% if a.logo %}<img src="{{ a.logo }}" alt="{{ a.name }}" loading="lazy" decoding="async">{% endif %}</div>
-          <p class="award__name">{{ a.name }}</p>
-        </li>
-        {%- endfor %}
-      </ul>
-    </div>
-    <div class="logos reveal">
-      <h3>{{ h.recognition.panels_title }}</h3>
-      <ul class="awards awards--panels">
-        {%- for a in h.recognition.panels %}
-        <li class="award award--panel">
-          <div class="award__logo">{% if a.logo %}<img src="{{ a.logo }}" alt="{{ a.name }}" width="640" height="320" loading="lazy" decoding="async">{% endif %}</div>
-          <p class="award__name">{{ a.name }}</p>
-        </li>
-        {%- endfor %}
-      </ul>
-    </div>
-    <div class="logos reveal">
-      <h3>{{ h.recognition.media_title }}</h3>
-      <div class="marquee" aria-label="{{ h.recognition.media_title }}">
-        <ul class="marquee__track">
-          {%- for rep in [0,1] %}{% for m in h.recognition.media %}<li class="media"{% if rep %} aria-hidden="true"{% endif %}>{% if m.logo %}<img src="{{ m.logo }}" alt="{{ '' if rep else m.name }}" decoding="async">{% else %}{{ m.name }}{% endif %}</li>{% endfor %}{% endfor %}
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-{# 12. Booking #}
-<section class="section booking" id="book">
-  <div class="wrap booking__grid">
-    <div class="booking__intro reveal">
-      <p class="eyebrow">{{ h.booking.eyebrow }}</p>
-      <h2>{{ h.booking.title }}</h2>
-      <p class="lead">{{ h.booking.intro }}</p>
-      <ul class="booking__contacts">
-        <li><a href="tel:{{ site.topbar.hotline | replace(' ', '') }}"><span>Hotline</span>{{ site.topbar.hotline }}</a></li>
-        <li><a href="{{ site.topbar.whatsapp_link }}" target="_blank" rel="noopener"><span>WhatsApp</span>{{ site.topbar.whatsapp }}</a></li>
-        <li><span>Hours</span>{{ site.topbar.hours }}</li>
-      </ul>
-    </div>
-    <div class="formcard reveal" style="--d:1">
-      <form id="booking-form" novalidate {% if site.form_endpoint %}action="{{ site.form_endpoint }}" method="post"{% endif %}>
-        <div class="field">
-          <label for="f-name">Full name</label>
-          <input id="f-name" name="name" autocomplete="name" required>
-          <small class="err">Please enter your name.</small>
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="f-phone">Phone</label>
-            <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="012-345 6789" required pattern="^[+0-9][0-9\s\-]{7,15}$">
-            <small class="err">Please enter a valid phone number.</small>
-          </div>
-          <div class="field">
-            <label for="f-email">Email</label>
-            <input id="f-email" name="email" type="email" autocomplete="email" required>
-            <small class="err">Please enter a valid email.</small>
-          </div>
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="f-branch">Preferred branch</label>
-            <select id="f-branch" name="branch" required>
-              <option value="">Choose a branch</option>
-              {%- for r in branches.regions %}
-              <optgroup label="{{ r.region }}">{% for b in r.branches %}<option>{{ b.name }}</option>{% endfor %}</optgroup>
-              {%- endfor %}
-            </select>
-            <small class="err">Please choose a branch.</small>
-          </div>
-          <div class="field">
-            <label for="f-service">Service</label>
-            <select id="f-service" name="service" required>
-              {%- for s in h.booking.services %}<option>{{ s }}</option>{% endfor %}
-            </select>
-          </div>
-        </div>
-        <button type="submit" class="btn btn--primary btn--lg btn--block">{{ h.booking.submit_label }}</button>
-        <p class="consent">{{ h.booking.consent }}</p>
-      </form>
-      <div class="success" id="booking-success" hidden tabindex="-1">
-        <span class="success__tick" aria-hidden="true"><svg viewBox="0 0 52 52"><path d="M14 27l8 8 16-17"/></svg></span>
-        <h3>{{ h.booking.success_title }}</h3>
-        <p>{{ h.booking.success_text }}</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-
-{# 13. Footer #}
-<footer class="footer">
-  <div class="wrap footer__grid">
-    <div>
-      <a href="#top" class="brand brand--light" aria-label="{{ site.name }} home"><img class="brand__logo brand__logo--footer" src="{{ site.logo_footer }}" alt="{{ site.name }}" width="279" height="96" loading="lazy"></a>
-      <p class="footer__addr"><strong>{{ site.footer.address_label }}</strong><br>{{ site.footer.address }}</p>
-    </div>
-    <div>
-      <h4>Explore</h4>
-      <ul>{% for l in site.footer.links %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}</ul>
-    </div>
-    <div>
-      <h4>Talk to us</h4>
-      <ul>
-        <li><a href="tel:{{ site.topbar.hotline | replace(' ', '') }}">Hotline <span class="nowrap">{{ site.topbar.hotline }}</span></a></li>
-        <li><a href="{{ site.topbar.whatsapp_link }}" target="_blank" rel="noopener">WhatsApp <span class="nowrap">{{ site.topbar.whatsapp }}</span></a></li>
-        <li>{{ site.topbar.hours }}</li>
-      </ul>
-    </div>
-  </div>
-  <div class="wrap footer__base">
-    <p>© {{ year }} {{ site.footer.company }} · Company reg. no. {{ site.footer.registration }} · {{ site.topbar.listing }}</p>
-    <p class="footer__legal">{{ site.footer.legal }}</p>
-  </div>
-</footer>
-
-<script src="/assets/js/main.js?v={{ build }}" defer></script>
-</body>
-</html>
+{% include "partials/recognition.njk" %}

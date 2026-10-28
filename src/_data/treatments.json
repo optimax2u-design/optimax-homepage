@@ -1,0 +1,1751 @@
+{
+  "overview": {
+    "seo_title": "LASIK & Eye Treatments in Malaysia | Optimax Eye Specialist",
+    "seo_description": "Compare ZEISS SMILE® pro, SMILE, PRESBYOND, CLEAR Max, Femto-LASIK, TESA, ASA, ICL, RGP lenses and FLACS cataract surgery at Optimax.",
+    "eyebrow": "Treatments",
+    "title": "Find the right fit",
+    "title_line2": "for your eyes.",
+    "subhead": "Every eye is different. We scan, measure and talk you through every option — then recommend what's safest for you.",
+    "intro_title": "What is refractive treatment?",
+    "intro_text": "Refractive treatments reduce your need for glasses or contact lenses. Some reshape the cornea with a laser; others place a thin lens inside the eye. Most are day procedures done with numbing drops. They can correct short-sightedness (myopia), long-sightedness (hyperopia) and astigmatism.",
+    "suitable": [
+      "Healthy adults aged 18 and above",
+      "A stable prescription for at least a year",
+      "Healthy corneas and retina",
+      "Realistic expectations about results"
+    ],
+    "not_suitable": [
+      "Keratoconus or other corneal disease",
+      "Active eye infection or inflammation",
+      "Severe dry eye",
+      "Pregnant or breastfeeding",
+      "A prescription that is still changing"
+    ],
+    "groups": [
+      {
+        "id": "laser",
+        "title": "Laser vision correction",
+        "text": "Freedom from glasses and contacts.",
+        "color": "sky"
+      },
+      {
+        "id": "presbyopia",
+        "title": "Presbyopia",
+        "text": "Clearer near vision after 40.",
+        "color": "violet"
+      },
+      {
+        "id": "cataract",
+        "title": "Cataract",
+        "text": "Brighter, sharper days again.",
+        "color": "yellow"
+      },
+      {
+        "id": "lenses",
+        "title": "Specialist lenses",
+        "text": "Clear vision without surgery.",
+        "color": "coral"
+      }
+    ],
+    "screening": {
+      "eyebrow": "Screening & children's care",
+      "title": "Healthy eyes for the whole family.",
+      "text": "Not everything needs surgery. Our optometrists and specialists also look after everyday eye health — from a first check-up to long-term care.",
+      "items": [
+        {
+          "emoji": "🔍",
+          "title": "Comprehensive eye screening",
+          "text": "A thorough check of vision and eye health — a good first step at any age.",
+          "color": "mint"
+        },
+        {
+          "emoji": "🟢",
+          "title": "Glaucoma screening",
+          "text": "Pressure checks and optic nerve scans to catch glaucoma early, before it affects your sight.",
+          "color": "violet"
+        },
+        {
+          "emoji": "🧒",
+          "title": "Children's eye care",
+          "text": "Friendly check-ups for growing eyes, plus lazy eye and squint management.",
+          "color": "sky"
+        },
+        {
+          "emoji": "📉",
+          "title": "Myopia control & Ortho-K",
+          "text": "Options to slow short-sightedness as your child grows, including overnight Ortho-K lenses.",
+          "color": "yellow"
+        }
+      ]
+    }
+  },
+  "list": [
+    {
+      "slug": "zeiss-smile-pro",
+      "name": "ZEISS SMILE® pro 3.0",
+      "short": "SMILE® pro 3.0",
+      "aliases": [
+        "SMILE® pro 3.0",
+        "ZEISS SMILE® pro 3.0",
+        "SMILE pro",
+        "ZEISS SMILE PRO"
+      ],
+      "group": "laser",
+      "color": "violet",
+      "service": "ZEISS SMILE® pro 3.0",
+      "image": "/assets/uploads/treatments/laser-vision-correction.webp",
+      "image_alt": "Smiling diver with mask, free from glasses",
+      "seo_title": "ZEISS SMILE® pro 3.0 in Malaysia — 8-second flapless LASIK | Optimax",
+      "seo_description": "ZEISS SMILE® pro 3.0 at Optimax: flapless laser vision correction with about 8–10 seconds of laser time per eye and recovery in 24–48 hours.",
+      "card": {
+        "summary": "Our newest flapless laser. About 8–10 seconds per eye.",
+        "age": "18–39",
+        "suited": "Active lifestyles, dry-eye concerns"
+      },
+      "hero": {
+        "eyebrow": "Laser vision correction · Newest",
+        "title": "ZEISS SMILE® pro 3.0",
+        "title_line2": "Seconds of laser. Years of clear vision.",
+        "subhead": "Our newest flapless laser vision correction, powered by the ZEISS VisuMax® 800. A tiny 2 mm opening, no flap, and most people are back to light activity in a day or two.",
+        "badge_number": "8s",
+        "badge_label": "laser per eye*"
+      },
+      "facts": [
+        {
+          "value": "~8–10s",
+          "label": "Laser time per eye",
+          "color": "violet"
+        },
+        {
+          "value": "24–48h",
+          "label": "Typical healing time",
+          "color": "yellow"
+        },
+        {
+          "value": "~2mm",
+          "label": "Opening — no flap",
+          "color": "mint"
+        },
+        {
+          "value": "18–39",
+          "label": "Typical age range",
+          "color": "sky"
+        }
+      ],
+      "what": {
+        "title": "What is ZEISS SMILE® pro 3.0?",
+        "text": "A flapless procedure that reshapes the cornea from the inside to correct short-sightedness and astigmatism. The laser creates a thin disc of tissue (a lenticule), which your surgeon removes through a tiny opening. Treatment is planned with ZEISS VISULYZE software using your own eye data.",
+        "features": [
+          "No flap and no blade — gentle on the cornea",
+          "Quiet, contactless docking for more comfort",
+          "Lower risk of dry eyes than traditional LASIK",
+          "Backed by 13 years and 32,000+ SMILE treatments at Optimax",
+          "Personalised, data-driven treatment planning"
+        ]
+      },
+      "suits": [
+        "Mild to moderate short-sightedness (myopia)",
+        "Mild astigmatism",
+        "Active lifestyles and contact sports",
+        "Anyone wanting a flapless alternative to LASIK"
+      ],
+      "not_suits": [
+        "High long-sightedness (hyperopia)",
+        "Keratoconus or irregular corneas",
+        "Uncontrolled diabetes or autoimmune conditions",
+        "Pregnancy or breastfeeding",
+        "Very thin corneas or severe dry eyes"
+      ],
+      "compare": {
+        "title": "SMILE® pro vs SMILE vs traditional LASIK",
+        "columns": [
+          "SMILE® pro 3.0",
+          "ZEISS SMILE®",
+          "Traditional LASIK"
+        ],
+        "rows": [
+          {
+            "label": "Laser time per eye",
+            "values": [
+              "~8–10 seconds",
+              "~24 seconds",
+              "30–45 seconds"
+            ]
+          },
+          {
+            "label": "Opening size",
+            "values": [
+              "~2 mm",
+              "2–4 mm",
+              "~20 mm flap"
+            ]
+          },
+          {
+            "label": "Flap",
+            "values": [
+              "No",
+              "No",
+              "Yes"
+            ]
+          },
+          {
+            "label": "Typical healing",
+            "values": [
+              "24–48 hours",
+              "1–3 days",
+              "3–5 days"
+            ]
+          },
+          {
+            "label": "Dry-eye risk",
+            "values": [
+              "Lowest",
+              "Low",
+              "Higher"
+            ]
+          },
+          {
+            "label": "Platform",
+            "values": [
+              "ZEISS VisuMax® 800",
+              "ZEISS VisuMax®",
+              "Excimer + femtosecond"
+            ]
+          }
+        ]
+      },
+      "steps": {
+        "title": "Four calm steps on the day.",
+        "note": "Numbing drops only — no general anaesthetic.",
+        "items": [
+          {
+            "title": "Eye preparation",
+            "text": "Numbing drops make the eye comfortable. You stay awake and relaxed.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Eye-Preparation.webp"
+          },
+          {
+            "title": "Laser application",
+            "text": "The VisuMax® 800 shapes a thin lenticule inside the cornea and a tiny opening.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Laser-Application.webp"
+          },
+          {
+            "title": "Lenticule removal",
+            "text": "Your surgeon removes the lenticule through the micro-opening, reshaping the cornea.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Lenticule-Removal-2.webp"
+          },
+          {
+            "title": "Healing begins",
+            "text": "No stitches. The opening seals naturally and vision settles over the week.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Healing-Begins.webp"
+          }
+        ]
+      },
+      "care": {
+        "before": [
+          "Complete your full diagnostic scans",
+          "Stop contact lenses as advised",
+          "Arrange a ride home on the day"
+        ],
+        "after": [
+          "Don't rub your eyes",
+          "Use your prescribed drops",
+          "Attend your follow-up checks",
+          "Light activity is usually fine within 1–2 days"
+        ]
+      }
+    },
+    {
+      "slug": "zeiss-smile",
+      "name": "ZEISS SMILE®",
+      "short": "SMILE",
+      "aliases": [
+        "SMILE",
+        "ZEISS SMILE",
+        "ZEISS SMILE®",
+        "ReLEx SMILE"
+      ],
+      "group": "laser",
+      "color": "sky",
+      "service": "SMILE",
+      "image": "/assets/uploads/treatments/laser-vision-correction.webp",
+      "image_alt": "Smiling diver with mask, free from glasses",
+      "seo_title": "ZEISS SMILE® flapless laser eye surgery in Malaysia | Optimax",
+      "seo_description": "ZEISS SMILE® (ReLEx SMILE) at Optimax: a flap-free, minimally invasive alternative to LASIK for myopia and mild astigmatism, with recovery in 1–3 days.",
+      "card": {
+        "summary": "Flap-free laser through a small opening. Proven worldwide.",
+        "age": "18–39",
+        "suited": "Myopia, first-time patients"
+      },
+      "hero": {
+        "eyebrow": "Laser vision correction",
+        "title": "ZEISS SMILE®",
+        "title_line2": "Precision meets comfort.",
+        "subhead": "A flap-free laser vision correction trusted by surgeons worldwide. One small opening, no flap, and most people get back to routine within one to three days.",
+        "badge_number": "0",
+        "badge_label": "flaps, no blade"
+      },
+      "facts": [
+        {
+          "value": "1–3 days",
+          "label": "Typical recovery",
+          "color": "sky"
+        },
+        {
+          "value": "2–4mm",
+          "label": "Single small opening",
+          "color": "yellow"
+        },
+        {
+          "value": "<10 min",
+          "label": "Per eye, start to finish",
+          "color": "violet"
+        },
+        {
+          "value": "18–39",
+          "label": "Typical age range",
+          "color": "mint"
+        }
+      ],
+      "what": {
+        "title": "What is ZEISS SMILE®?",
+        "text": "SMILE stands for Small Incision Lenticule Extraction. It corrects short-sightedness and mild astigmatism by reshaping the cornea through one small opening. Because there's no corneal flap, there's less disruption to the eye and a lower risk of dry eyes than with LASIK.",
+        "features": [
+          "Minimally invasive — no flap",
+          "Gentle and quiet procedure",
+          "Lower dry-eye risk than LASIK",
+          "Typical recovery of 1–3 days"
+        ]
+      },
+      "suits": [
+        "Stable short-sightedness or mild astigmatism",
+        "Physically active lifestyles",
+        "Anyone who prefers a flap-free option",
+        "People worried about dry eyes after LASIK",
+        "Those wanting a quick return to routine"
+      ],
+      "not_suits": [
+        "Severe long-sightedness or irregular astigmatism",
+        "Pregnancy or breastfeeding",
+        "Keratoconus or thin corneas",
+        "Uncontrolled conditions such as diabetes"
+      ],
+      "compare": {
+        "title": "SMILE vs SMILE® pro vs traditional LASIK",
+        "columns": [
+          "ZEISS SMILE®",
+          "SMILE® pro 3.0",
+          "Traditional LASIK"
+        ],
+        "rows": [
+          {
+            "label": "Laser",
+            "values": [
+              "Femtosecond",
+              "Ultra-fast 2 MHz femtosecond",
+              "Excimer + femtosecond"
+            ]
+          },
+          {
+            "label": "Opening size",
+            "values": [
+              "~2–4 mm",
+              "~2 mm",
+              "~20 mm flap"
+            ]
+          },
+          {
+            "label": "Flap",
+            "values": [
+              "No",
+              "No",
+              "Yes"
+            ]
+          },
+          {
+            "label": "Typical healing",
+            "values": [
+              "1–3 days",
+              "24–48 hours",
+              "3–5 days"
+            ]
+          },
+          {
+            "label": "Dry-eye risk",
+            "values": [
+              "Low",
+              "Lower",
+              "Higher"
+            ]
+          },
+          {
+            "label": "Comfort",
+            "values": [
+              "High",
+              "Very high",
+              "Moderate"
+            ]
+          }
+        ]
+      },
+      "steps": {
+        "title": "Usually under 10 minutes per eye.",
+        "note": "Numbing drops only — no general anaesthetic.",
+        "items": [
+          {
+            "title": "Preparation",
+            "text": "Numbing drops keep you comfortable. You're awake the whole time.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Preparation-1.webp"
+          },
+          {
+            "title": "Laser treatment",
+            "text": "A femtosecond laser shapes a lenticule and a small opening inside the cornea.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Laser-Treatment-1.webp"
+          },
+          {
+            "title": "Lenticule removal",
+            "text": "Your surgeon removes the lenticule through the opening to reshape the cornea.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Lenticule-Removal.webp"
+          },
+          {
+            "title": "Natural healing",
+            "text": "No stitches needed — the opening heals by itself.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Natural-Healing.webp"
+          }
+        ]
+      },
+      "care": {
+        "before": [
+          "Stop contact lenses 1–2 weeks before",
+          "Complete your full diagnostic scans",
+          "Arrange transport — no driving after treatment"
+        ],
+        "after": [
+          "Use your prescribed drops and artificial tears",
+          "No swimming, dusty places or eye rubbing for 1 month",
+          "Attend your scheduled follow-ups"
+        ]
+      }
+    },
+    {
+      "slug": "zeiss-presbyond",
+      "name": "ZEISS PRESBYOND® 2.0",
+      "short": "PRESBYOND® 2.0",
+      "aliases": [
+        "PRESBYOND® 2.0",
+        "PRESBYOND",
+        "ZEISS PRESBYOND"
+      ],
+      "group": "presbyopia",
+      "color": "yellow",
+      "service": "PRESBYOND® 2.0",
+      "image": "/assets/uploads/treatments/presbyopia.webp",
+      "image_alt": "Woman lifting her reading glasses to read her phone",
+      "seo_title": "ZEISS PRESBYOND® Laser Blended Vision for presbyopia | Optimax",
+      "seo_description": "PRESBYOND® Laser Blended Vision at Optimax helps people over 40 see near, intermediate and far with less reliance on reading glasses.",
+      "card": {
+        "summary": "Laser blended vision for near, middle and far.",
+        "age": "40+",
+        "suited": "Presbyopia, reading-glasses users"
+      },
+      "hero": {
+        "eyebrow": "Presbyopia · 40+",
+        "title": "ZEISS PRESBYOND®",
+        "title_line2": "Read the menu again.",
+        "subhead": "A personalised laser treatment for age-related reading difficulty. PRESBYOND® Laser Blended Vision helps you see near, middle and far — with less reaching for reading glasses.",
+        "badge_number": "40+",
+        "badge_label": "years and up"
+      },
+      "facts": [
+        {
+          "value": "3",
+          "label": "Distances: near, middle, far",
+          "color": "yellow"
+        },
+        {
+          "value": "10–15",
+          "label": "Minutes per eye",
+          "color": "violet"
+        },
+        {
+          "value": "40+",
+          "label": "Typical age range",
+          "color": "coral"
+        },
+        {
+          "value": "1",
+          "label": "Personal blend-zone plan",
+          "color": "mint"
+        }
+      ],
+      "what": {
+        "title": "What is PRESBYOND®?",
+        "text": "From around 40, the eye's natural lens gets less flexible and close-up focus gets harder — this is presbyopia. PRESBYOND® gently tunes one eye for distance and the other for near, joined by a smooth 'blend zone'. Your brain combines the two for a wide, comfortable range of vision.",
+        "features": [
+          "A wider range: near, intermediate and far",
+          "Less need for reading glasses",
+          "Planned around your eye dominance and vision profile",
+          "Quick recovery and long-term results"
+        ]
+      },
+      "suits": [
+        "Adults over 40 with presbyopia",
+        "Healthy eyes, with or without mild-to-moderate myopia, hyperopia or astigmatism",
+        "Anyone tired of switching between reading and distance glasses",
+        "People wanting a long-term laser solution"
+      ],
+      "not_suits": [
+        "Frequent dry eyes or unstable vision",
+        "Pregnancy or breastfeeding",
+        "Cataract, glaucoma or other eye disease",
+        "Thin corneas or previous corneal surgery"
+      ],
+      "compare": {
+        "title": "PRESBYOND® vs monovision LASIK vs reading glasses",
+        "columns": [
+          "PRESBYOND®",
+          "Monovision LASIK",
+          "Reading glasses"
+        ],
+        "rows": [
+          {
+            "label": "Vision range",
+            "values": [
+              "Near, middle & far",
+              "Near & far only",
+              "Near only"
+            ]
+          },
+          {
+            "label": "Depth of focus",
+            "values": [
+              "Smooth blend zone",
+              "Less adaptable",
+              "None"
+            ]
+          },
+          {
+            "label": "Two-eye (binocular) vision",
+            "values": [
+              "Preserved",
+              "Often reduced",
+              "Preserved"
+            ]
+          },
+          {
+            "label": "How long it lasts",
+            "values": [
+              "Long-term",
+              "Long-term",
+              "Replaceable accessory"
+            ]
+          },
+          {
+            "label": "Glasses-free life",
+            "values": [
+              "Possible",
+              "Partial",
+              "No"
+            ]
+          }
+        ]
+      },
+      "steps": {
+        "title": "Tuned to how you see.",
+        "note": "About 10–15 minutes per eye. No general anaesthetic.",
+        "items": [
+          {
+            "title": "Full diagnostics",
+            "text": "Eye scans, refraction and wavefront analysis map your eyes in detail.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Comprehensive-Diagnostics.webp"
+          },
+          {
+            "title": "Corneal reshaping",
+            "text": "The laser gently adjusts the curve of each cornea.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Corneal-Reshaping-2.webp"
+          },
+          {
+            "title": "Blend zone",
+            "text": "One eye is tuned for distance, the other for near, with a smooth overlap.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Blend-Zone-Creation.webp"
+          },
+          {
+            "title": "Healing & adapting",
+            "text": "Your brain naturally learns to blend the two views.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Healing-Adaptation.webp"
+          }
+        ]
+      },
+      "care": {
+        "before": [
+          "Stop contact lenses as advised",
+          "Complete eye-dominance and vision-profile tests"
+        ],
+        "after": [
+          "Use your prescribed drops",
+          "No swimming, eye rubbing or eye make-up for 1 month",
+          "Attend reviews so we can track how you adapt"
+        ]
+      }
+    },
+    {
+      "slug": "clear-max-lasik",
+      "name": "CLEAR Max LASIK",
+      "short": "CLEAR Max",
+      "aliases": [
+        "CLEAR Max",
+        "CLEAR MAX LASIK",
+        "Clear Max"
+      ],
+      "group": "laser",
+      "color": "mint",
+      "service": "CLEAR Max",
+      "image": "/assets/uploads/treatments/laser-vision-correction.webp",
+      "image_alt": "Smiling diver with mask, free from glasses",
+      "seo_title": "CLEAR Max all-laser LASIK in Malaysia | Optimax Eye Specialist",
+      "seo_description": "CLEAR Max at Optimax: 100% laser, blade-free vision correction with ZIEMER's Swiss-made femtosecond laser for myopia, hyperopia and astigmatism.",
+      "card": {
+        "summary": "100% laser, Swiss-made ZIEMER technology.",
+        "age": "18–45",
+        "suited": "Personalised correction, high visual demands"
+      },
+      "hero": {
+        "eyebrow": "Laser vision correction",
+        "title": "CLEAR Max",
+        "title_line2": "All laser. No blades.",
+        "subhead": "Our premium all-laser vision correction, using ZIEMER's Swiss-made femtosecond laser. A keyhole-style treatment tailored to the profile of each eye.",
+        "badge_number": "100%",
+        "badge_label": "laser"
+      },
+      "facts": [
+        {
+          "value": "100%",
+          "label": "All-laser, blade-free",
+          "color": "mint"
+        },
+        {
+          "value": "30–45s",
+          "label": "Laser time per eye",
+          "color": "violet"
+        },
+        {
+          "value": "3–5 days",
+          "label": "Typical recovery",
+          "color": "yellow"
+        },
+        {
+          "value": "18–45",
+          "label": "Typical age range",
+          "color": "sky"
+        }
+      ],
+      "what": {
+        "title": "What is CLEAR Max?",
+        "text": "A 100% laser-based treatment that uses a femtosecond laser to reshape the cornea through a small keyhole opening. It can treat short-sightedness, long-sightedness and astigmatism, and is planned around the exact profile of your eye.",
+        "features": [
+          "100% all-laser procedure",
+          "Swiss-made ZIEMER precision",
+          "Fast visual recovery",
+          "Designed for comfort and safety"
+        ]
+      },
+      "suits": [
+        "Adults 18+ with a stable prescription",
+        "Short-sightedness, long-sightedness or astigmatism",
+        "Anyone wanting a precise, all-laser option",
+        "People wanting a fast recovery with minimal discomfort"
+      ],
+      "not_suits": [
+        "Pregnancy or breastfeeding",
+        "Certain autoimmune conditions",
+        "Unstable vision or underlying eye conditions"
+      ],
+      "compare": {
+        "title": "CLEAR Max vs SMILE® pro vs traditional LASIK",
+        "columns": [
+          "CLEAR Max",
+          "SMILE® pro 3.0",
+          "Traditional LASIK"
+        ],
+        "rows": [
+          {
+            "label": "Technology",
+            "values": [
+              "ZIEMER femtosecond",
+              "ZEISS VisuMax® femtosecond",
+              "Blade-assisted"
+            ]
+          },
+          {
+            "label": "Corneal flap",
+            "values": [
+              "No",
+              "No",
+              "Yes"
+            ]
+          },
+          {
+            "label": "Comfort",
+            "values": [
+              "High",
+              "Very high",
+              "Moderate"
+            ]
+          },
+          {
+            "label": "Typical recovery",
+            "values": [
+              "3–5 days",
+              "24–48 hours",
+              "3–5 days"
+            ]
+          },
+          {
+            "label": "Dry-eye risk",
+            "values": [
+              "Low",
+              "Lowest",
+              "Higher"
+            ]
+          }
+        ]
+      },
+      "steps": {
+        "title": "Precise, from map to finish.",
+        "note": "The laser itself works for about 30–45 seconds per eye.",
+        "items": [
+          {
+            "title": "Eye mapping",
+            "text": "Detailed scans personalise your treatment.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Personalized-Eye-Mapping.webp"
+          },
+          {
+            "title": "Lenticule creation",
+            "text": "The laser shapes a small disc of corneal tissue and a tiny opening.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Laser-Treatment-1.webp"
+          },
+          {
+            "title": "Lenticule removal",
+            "text": "The disc is removed with minimal stress on the cornea.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Lenticule-Removal.webp"
+          },
+          {
+            "title": "Healing & recovery",
+            "text": "The reshaped cornea settles and vision improves within days.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Epithelial-Regeneration.webp"
+          }
+        ]
+      },
+      "care": {
+        "before": [
+          "Stop contact lenses as advised",
+          "No make-up, perfume or skincare on the day",
+          "Arrange a ride home"
+        ],
+        "after": [
+          "Use your prescribed drops",
+          "No eye rubbing, swimming or strenuous activity for 1 month",
+          "Attend your follow-ups"
+        ]
+      }
+    },
+    {
+      "slug": "femto-lasik",
+      "name": "Femto-LASIK",
+      "short": "Femto-LASIK",
+      "aliases": [
+        "Femto-LASIK",
+        "FEMTO-LASIK",
+        "FemtoLASIK"
+      ],
+      "group": "laser",
+      "color": "sky",
+      "service": "Femto-LASIK",
+      "image": "/assets/uploads/treatments/laser-vision-correction.webp",
+      "image_alt": "Smiling diver with mask, free from glasses",
+      "seo_title": "Femto-LASIK blade-free LASIK in Malaysia | Optimax Eye Specialist",
+      "seo_description": "Femto-LASIK at Optimax: blade-free, dual-laser LASIK using SCHWIND AMARIS® and Ziemer FEMTO LDV™ for a wide range of prescriptions.",
+      "card": {
+        "summary": "Blade-free LASIK with two lasers. Treats a wide range.",
+        "age": "18–45",
+        "suited": "Moderate to high prescriptions"
+      },
+      "hero": {
+        "eyebrow": "Laser vision correction",
+        "title": "Femto-LASIK",
+        "title_line2": "Proven. Precise. Blade-free.",
+        "subhead": "A proven LASIK treatment using two lasers for safe, accurate results — suitable for a wide range of prescriptions.",
+        "badge_number": "2",
+        "badge_label": "lasers, no blade"
+      },
+      "facts": [
+        {
+          "value": "1–3 days",
+          "label": "Typical recovery",
+          "color": "sky"
+        },
+        {
+          "value": "~15 min",
+          "label": "Per eye",
+          "color": "coral"
+        },
+        {
+          "value": "2",
+          "label": "Lasers: femto + excimer",
+          "color": "violet"
+        },
+        {
+          "value": "18–45",
+          "label": "Typical age range",
+          "color": "mint"
+        }
+      ],
+      "what": {
+        "title": "What is Femto-LASIK?",
+        "text": "A bladeless evolution of classic LASIK. A femtosecond laser (Ziemer FEMTO LDV™) creates a thin, precise corneal flap, then an excimer laser (SCHWIND AMARIS®) reshapes the cornea to correct your prescription.",
+        "features": [
+          "Bladeless, precise flap creation",
+          "Intelligent eye tracking and fast treatment",
+          "Tissue-saving treatment profile",
+          "Treats a wide range of prescriptions"
+        ]
+      },
+      "suits": [
+        "Adults 18+ with a stable prescription",
+        "Short-sightedness, long-sightedness or astigmatism",
+        "Enough corneal thickness",
+        "Anyone wanting a fast-recovery laser option"
+      ],
+      "not_suits": [
+        "Thin corneas or irregular corneal shape",
+        "Keratoconus or unstable vision",
+        "Pregnancy or breastfeeding",
+        "Chronic dry eye or eye inflammation"
+      ],
+      "not_suits_note": "If Femto-LASIK isn't right, ZEISS SMILE® or TESA may be.",
+      "compare": {
+        "title": "Femto-LASIK vs SMILE vs TESA",
+        "columns": [
+          "Femto-LASIK",
+          "ZEISS SMILE®",
+          "TESA"
+        ],
+        "rows": [
+          {
+            "label": "Flap",
+            "values": [
+              "Yes (bladeless)",
+              "No",
+              "No"
+            ]
+          },
+          {
+            "label": "Laser type",
+            "values": [
+              "Femtosecond + excimer",
+              "Femtosecond only",
+              "Excimer only"
+            ]
+          },
+          {
+            "label": "Typical recovery",
+            "values": [
+              "1–3 days",
+              "1–3 days",
+              "5–7 days"
+            ]
+          },
+          {
+            "label": "Discomfort",
+            "values": [
+              "Minimal",
+              "Very minimal",
+              "Mild, early on"
+            ]
+          },
+          {
+            "label": "Thin corneas",
+            "values": [
+              "Not suitable",
+              "Suitable",
+              "Suitable"
+            ]
+          }
+        ]
+      },
+      "steps": {
+        "title": "Two lasers, four steps.",
+        "note": "About 15 minutes per eye.",
+        "items": [
+          {
+            "title": "Eye mapping",
+            "text": "Topography and wavefront scans plan every detail.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Personalized-Eye-Mapping.webp"
+          },
+          {
+            "title": "Flap creation",
+            "text": "The femtosecond laser creates a thin corneal flap — no blade.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Laser-Flap-Creation.webp"
+          },
+          {
+            "title": "Corneal reshaping",
+            "text": "The excimer laser corrects your prescription.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Corneal-Reshaping-2.png"
+          },
+          {
+            "title": "Flap repositioning",
+            "text": "The flap is laid back in place to heal naturally.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Flap-Repositioning-1.png"
+          }
+        ]
+      },
+      "care": {
+        "before": [
+          "Stop contact lenses 1–2 weeks before",
+          "Attend a detailed eye exam and planning consultation"
+        ],
+        "after": [
+          "No eye rubbing for 1 week",
+          "Use prescribed drops and wear sunglasses outdoors",
+          "No swimming, sauna, facials or contact sports for 1 month",
+          "Attend your follow-up reviews"
+        ]
+      }
+    },
+    {
+      "slug": "tesa",
+      "name": "TESA®",
+      "short": "TESA",
+      "aliases": [
+        "TESA",
+        "TESA®",
+        "TransPRK"
+      ],
+      "group": "laser",
+      "color": "coral",
+      "service": "ASA / TESA",
+      "image": "/assets/uploads/treatments/laser-vision-correction.webp",
+      "image_alt": "Smiling diver with mask, free from glasses",
+      "seo_title": "TESA® TransPRK surface laser in Malaysia | Optimax Eye Specialist",
+      "seo_description": "TESA® (TransPRK) at Optimax: a no-touch, flap-free surface laser for thin corneas, dry eyes and active lifestyles.",
+      "card": {
+        "summary": "No-touch surface laser. Good for thin corneas.",
+        "age": "18–40",
+        "suited": "Thin corneas, contact sports"
+      },
+      "hero": {
+        "eyebrow": "Laser vision correction",
+        "title": "TESA®",
+        "title_line2": "No flap. No touch.",
+        "subhead": "A surface laser alternative for active lifestyles and sensitive eyes — often an option when LASIK isn't, such as with thin corneas or dry eyes.",
+        "badge_number": "1",
+        "badge_label": "step, no touch"
+      },
+      "facts": [
+        {
+          "value": "5–10 min",
+          "label": "Per eye",
+          "color": "coral"
+        },
+        {
+          "value": "5–7 days",
+          "label": "Early recovery",
+          "color": "yellow"
+        },
+        {
+          "value": "2–4 wks",
+          "label": "Vision fully settles",
+          "color": "sky"
+        },
+        {
+          "value": "18–40",
+          "label": "Typical age range",
+          "color": "mint"
+        }
+      ],
+      "what": {
+        "title": "What is TESA®?",
+        "text": "TESA (Transepithelial Surface Ablation, also known as TransPRK) uses one excimer laser to remove the thin surface layer of the cornea and reshape the tissue beneath — in a single step. No blade, no instruments touching the eye and no flap.",
+        "features": [
+          "SCHWIND AMARIS® 1050RS excimer laser with eye tracking",
+          "No flap — so no flap complications",
+          "Suitable for thin or irregular corneas",
+          "Great for active people and contact sports"
+        ]
+      },
+      "suits": [
+        "Not eligible for LASIK or SMILE due to corneal thickness",
+        "Contact sports or high-impact activities",
+        "Dry eyes or a sensitive eye surface",
+        "Anyone wanting a non-invasive, flapless option"
+      ],
+      "not_suits": [
+        "A prescription that is still changing",
+        "Keratoconus or severe corneal disorders",
+        "Pregnancy or breastfeeding",
+        "Autoimmune or healing-related conditions"
+      ],
+      "not_suits_note": "If TESA isn't right, ZEISS SMILE® or ICL may be.",
+      "compare": {
+        "title": "TESA vs SMILE vs LASIK",
+        "columns": [
+          "TESA®",
+          "ZEISS SMILE®",
+          "LASIK"
+        ],
+        "rows": [
+          {
+            "label": "Approach",
+            "values": [
+              "Surface, no touch",
+              "Minimally invasive",
+              "Flap-based"
+            ]
+          },
+          {
+            "label": "Flap",
+            "values": [
+              "None",
+              "None",
+              "Required"
+            ]
+          },
+          {
+            "label": "Typical recovery",
+            "values": [
+              "5–7 days",
+              "1–3 days",
+              "2–3 days"
+            ]
+          },
+          {
+            "label": "Thin corneas",
+            "values": [
+              "Suitable",
+              "Suitable",
+              "Not suitable"
+            ]
+          },
+          {
+            "label": "Ideal for",
+            "values": [
+              "Active lives, thin corneas",
+              "Busy professionals",
+              "Standard cases"
+            ]
+          }
+        ]
+      },
+      "steps": {
+        "title": "One laser, one smooth step.",
+        "note": "About 5–10 minutes per eye.",
+        "items": [
+          {
+            "title": "Preparation",
+            "text": "Numbing drops only — no injections.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Preparation.webp"
+          },
+          {
+            "title": "Laser treatment",
+            "text": "The laser removes the surface layer and reshapes the cornea in one go.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Laser-treatment.webp"
+          },
+          {
+            "title": "Protective lens",
+            "text": "A soft contact lens protects the eye while it heals.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Protective-Contact-Lens.webp"
+          },
+          {
+            "title": "Surface regrows",
+            "text": "The surface layer regenerates naturally over several days.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Epithelial-Regeneration.webp"
+          }
+        ]
+      },
+      "care": {
+        "before": [
+          "Stop contact lenses as instructed",
+          "Complete eye mapping and diagnostics"
+        ],
+        "after": [
+          "Mild discomfort for 2–4 days is normal",
+          "Use prescribed drops and protective sunglasses",
+          "No swimming or intense exercise for 1 month",
+          "Attend your check-ups"
+        ]
+      }
+    },
+    {
+      "slug": "advanced-surface-ablation",
+      "name": "Advanced Surface Ablation (ASA)",
+      "short": "ASA",
+      "aliases": [
+        "ASA",
+        "PRK",
+        "LASEK",
+        "ASA / TESA"
+      ],
+      "group": "laser",
+      "color": "mint",
+      "service": "ASA / TESA",
+      "image": "/assets/uploads/treatments/laser-vision-correction.webp",
+      "image_alt": "Smiling diver with mask, free from glasses",
+      "seo_title": "Advanced Surface Ablation (ASA / PRK) in Malaysia | Optimax",
+      "seo_description": "Advanced Surface Ablation (ASA, also called PRK or LASEK) at Optimax: flap-free, blade-free laser vision correction for thin corneas and active lifestyles.",
+      "card": {
+        "summary": "Flap-free surface laser. Keeps the cornea strong.",
+        "age": "18–40",
+        "suited": "Thin or irregular corneas"
+      },
+      "hero": {
+        "eyebrow": "Laser vision correction",
+        "title": "ASA",
+        "title_line2": "Clear vision, without a flap.",
+        "subhead": "Advanced Surface Ablation is a flap-free laser treatment for people with thin corneas, dry eyes or active lifestyles — the treatment Optimax first offered in 1995.",
+        "badge_number": "0",
+        "badge_label": "flaps, no blade"
+      },
+      "facts": [
+        {
+          "value": "0",
+          "label": "Flaps, no blade",
+          "color": "mint"
+        },
+        {
+          "value": "2–4 wks",
+          "label": "Vision fully settles",
+          "color": "sky"
+        },
+        {
+          "value": "1995",
+          "label": "Our first laser treatment",
+          "color": "yellow"
+        },
+        {
+          "value": "18–40",
+          "label": "Typical age range",
+          "color": "violet"
+        }
+      ],
+      "what": {
+        "title": "What is ASA?",
+        "text": "Also known as PRK or LASEK. The thin outer layer of the cornea is gently removed, then an excimer laser corrects your prescription on the surface. A soft protective lens supports healing. Because no flap is made, the cornea stays structurally strong.",
+        "features": [
+          "Advanced excimer laser system",
+          "Customised treatment from detailed corneal mapping",
+          "100% bladeless, computer-guided",
+          "Keeps the cornea structurally strong"
+        ]
+      },
+      "suits": [
+        "Thin corneas or dry eyes",
+        "Active or contact-sport lifestyles",
+        "People told they're not suitable for LASIK",
+        "Myopia, hyperopia or astigmatism"
+      ],
+      "not_suits": [
+        "Unstable or progressing prescription",
+        "Advanced corneal disease",
+        "Pregnancy or breastfeeding",
+        "Certain autoimmune or healing conditions",
+        "Uncontrolled eye infection or inflammation"
+      ],
+      "compare": {
+        "title": "ASA vs CLEAR Max vs SMILE® pro",
+        "columns": [
+          "ASA",
+          "CLEAR Max",
+          "SMILE® pro 3.0"
+        ],
+        "rows": [
+          {
+            "label": "Laser",
+            "values": [
+              "Excimer",
+              "Femtosecond",
+              "ZEISS VisuMax® 800"
+            ]
+          },
+          {
+            "label": "Corneal stability",
+            "values": [
+              "Excellent",
+              "Excellent",
+              "Excellent"
+            ]
+          },
+          {
+            "label": "Comfort",
+            "values": [
+              "Moderate",
+              "Very high",
+              "Very high"
+            ]
+          },
+          {
+            "label": "Typical recovery",
+            "values": [
+              "2–4 weeks",
+              "3–5 days",
+              "24–48 hours"
+            ]
+          },
+          {
+            "label": "Dry-eye risk",
+            "values": [
+              "Lowest",
+              "Low",
+              "Lowest"
+            ]
+          }
+        ]
+      },
+      "steps": {
+        "title": "Gentle, on the surface.",
+        "note": "Performed by our full-time ophthalmologists.",
+        "items": [
+          {
+            "title": "Eye assessment",
+            "text": "Diagnostics and corneal mapping personalise treatment.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Comprehensive-Diagnostics.webp"
+          },
+          {
+            "title": "Surface preparation",
+            "text": "The surface layer is gently removed — no flap, no blade.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Preparation-1.webp"
+          },
+          {
+            "title": "Laser correction",
+            "text": "The excimer laser reshapes the cornea.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Laser-Treatment-1.webp"
+          },
+          {
+            "title": "Healing phase",
+            "text": "A protective lens supports healing over several days.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Epithelial-Regeneration.webp"
+          }
+        ]
+      },
+      "care": {
+        "before": [
+          "Attend a comprehensive eye examination",
+          "Stop contact lenses as advised",
+          "No make-up or perfume on the day",
+          "Arrange a ride home"
+        ],
+        "after": [
+          "Mild discomfort or light sensitivity for a few days is normal",
+          "Use prescribed drops",
+          "No swimming, eye rubbing or strenuous activity for 1 month",
+          "Stay for your 1-week check before flying"
+        ]
+      }
+    },
+    {
+      "slug": "icl",
+      "name": "Implantable Collamer Lens (ICL)",
+      "short": "ICL",
+      "aliases": [
+        "ICL",
+        "Implantable Collamer Lens",
+        "EyePCL"
+      ],
+      "group": "laser",
+      "color": "violet",
+      "service": "ICL",
+      "image": "/assets/uploads/treatments/laser-vision-correction.webp",
+      "image_alt": "Smiling diver with mask, free from glasses",
+      "seo_title": "ICL — Implantable Collamer Lens for high myopia | Optimax",
+      "seo_description": "ICL at Optimax: a removable lens for moderate to high myopia (-6.00D to -20.00D) and thin corneas. No tissue removed, porcine-free option available.",
+      "card": {
+        "summary": "A removable lens for high prescriptions.",
+        "age": "21–45",
+        "suited": "High myopia, thin corneas"
+      },
+      "hero": {
+        "eyebrow": "Lens-based vision correction",
+        "title": "ICL",
+        "title_line2": "High-definition, and reversible.",
+        "subhead": "A thin, flexible lens placed inside the eye — an alternative to LASIK for moderate to high short-sightedness and thin corneas. No corneal tissue is removed.",
+        "badge_number": "-20",
+        "badge_label": "dioptres treatable"
+      },
+      "facts": [
+        {
+          "value": "-6 to -20",
+          "label": "Dioptres of myopia",
+          "color": "violet"
+        },
+        {
+          "value": "15–20 min",
+          "label": "Per eye",
+          "color": "yellow"
+        },
+        {
+          "value": "24–48h",
+          "label": "Back to normal activity",
+          "color": "mint"
+        },
+        {
+          "value": "21–45",
+          "label": "Typical age range",
+          "color": "sky"
+        }
+      ],
+      "what": {
+        "title": "What is an ICL?",
+        "text": "A micro-thin, flexible lens made of collamer — a biocompatible material. It sits behind the iris and in front of your natural lens, correcting myopia and astigmatism without changing the shape of the cornea. It's invisible, needs no maintenance, and can be removed or replaced.",
+        "features": [
+          "Corrects high myopia, from -6.00D to -20.00D",
+          "Suitable for thin or irregular corneas",
+          "Doesn't cause dry eyes",
+          "Porcine-free (Halal) lens available",
+          "Permanent, but reversible"
+        ]
+      },
+      "suits": [
+        "Moderate to severe short-sightedness",
+        "Not eligible for LASIK or PRK",
+        "Dry eyes or thin corneas",
+        "Anyone wanting a reversible option",
+        "Aged 21–45, prescription stable for 1+ year"
+      ],
+      "not_suits": [
+        "Advanced cataract or glaucoma",
+        "Pregnancy or breastfeeding",
+        "Chronic eye inflammation or infection",
+        "Under 21, or over 45 with presbyopia"
+      ],
+      "not_suits_note": "Over 45? PRESBYOND® or FLACS may be a better fit.",
+      "compare": {
+        "title": "ICL vs LASIK vs contact lenses",
+        "columns": [
+          "ICL",
+          "LASIK",
+          "Contact lenses"
+        ],
+        "rows": [
+          {
+            "label": "How it works",
+            "values": [
+              "Lens inside the eye",
+              "Cornea reshaped by laser",
+              "Lens worn daily"
+            ]
+          },
+          {
+            "label": "Reversible",
+            "values": [
+              "Yes",
+              "No",
+              "Yes"
+            ]
+          },
+          {
+            "label": "Thin corneas",
+            "values": [
+              "Suitable",
+              "Not suitable",
+              "Suitable"
+            ]
+          },
+          {
+            "label": "Dry-eye risk",
+            "values": [
+              "Low",
+              "Moderate to high",
+              "Depends on use"
+            ]
+          },
+          {
+            "label": "Maintenance",
+            "values": [
+              "None",
+              "None",
+              "Daily cleaning"
+            ]
+          },
+          {
+            "label": "Night vision",
+            "values": [
+              "Less glare and halos",
+              "May have glare",
+              "Varies"
+            ]
+          }
+        ]
+      },
+      "steps": {
+        "title": "Made to measure for your eye.",
+        "note": "About 15–20 minutes per eye. Same-day exam and treatment at selected centres.",
+        "items": [
+          {
+            "title": "Pre-op mapping",
+            "text": "Corneal scans, chamber depth and pupil size are measured.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Pre-op-Eye-Mapping.webp"
+          },
+          {
+            "title": "Lens customisation",
+            "text": "Your lens is ordered to match your eye's anatomy.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Lens-Customization.webp"
+          },
+          {
+            "title": "Lens implantation",
+            "text": "The foldable lens goes in through a tiny opening, behind the iris.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Lens-Implantation.webp"
+          },
+          {
+            "title": "Quick recovery",
+            "text": "Most people are back to normal activity within 24–48 hours.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Quick-Recovery.webp"
+          }
+        ]
+      },
+      "care": {
+        "before": [
+          "Stop contact lenses as instructed",
+          "Complete pre-op measurements and medical screening"
+        ],
+        "after": [
+          "Use prescribed anti-inflammatory and antibiotic drops",
+          "No swimming or strenuous activity for 1 week",
+          "Attend follow-ups to check eye pressure and lens position"
+        ]
+      }
+    },
+    {
+      "slug": "rigid-gas-permeable-lenses-rgp",
+      "name": "RGP lenses",
+      "short": "RGP",
+      "aliases": [
+        "RGP",
+        "RGP lenses",
+        "Rigid Gas Permeable"
+      ],
+      "group": "lenses",
+      "color": "coral",
+      "service": "RGP lenses",
+      "image": "/assets/uploads/treatments/screening-childrens-care.webp",
+      "image_alt": "Smiling boy holding his glasses",
+      "seo_title": "RGP lenses for keratoconus & irregular corneas | Optimax",
+      "seo_description": "Custom-fitted Rigid Gas Permeable (RGP) lenses at Optimax: sharp, stable vision without surgery for keratoconus, irregular astigmatism and high prescriptions.",
+      "card": {
+        "summary": "Custom-fitted lenses. Clear vision without surgery.",
+        "age": "All ages",
+        "suited": "Keratoconus, irregular corneas"
+      },
+      "hero": {
+        "eyebrow": "Specialist lenses",
+        "title": "RGP lenses",
+        "title_line2": "Clear vision, without surgery.",
+        "subhead": "Custom-fitted Rigid Gas Permeable lenses for sharper, steadier vision — especially for irregular corneas, keratoconus and people who aren't suited to laser.",
+        "badge_number": "0",
+        "badge_label": "surgery needed"
+      },
+      "facts": [
+        {
+          "value": "0",
+          "label": "Surgery or downtime",
+          "color": "coral"
+        },
+        {
+          "value": "1–2 yrs",
+          "label": "Typical lens lifespan",
+          "color": "yellow"
+        },
+        {
+          "value": "100%",
+          "label": "Custom-fitted",
+          "color": "violet"
+        },
+        {
+          "value": "All",
+          "label": "Ages",
+          "color": "mint"
+        }
+      ],
+      "what": {
+        "title": "What are RGP lenses?",
+        "text": "Contact lenses made from an oxygen-permeable material, so your cornea can still breathe. Because they hold their shape, they create a smooth optical surface over irregular corneas — giving sharper, more stable vision than soft lenses.",
+        "features": [
+          "Sharp, stable vision",
+          "Non-surgical and reversible",
+          "High oxygen permeability",
+          "Custom-fitted for each eye",
+          "Professional fitting and ongoing support"
+        ]
+      },
+      "suits": [
+        "Irregular astigmatism or keratoconus",
+        "High myopia or hyperopia",
+        "People unsuitable for LASIK or other laser",
+        "Anyone wanting a non-surgical, reversible option"
+      ],
+      "not_suits": [
+        "Can't adapt to rigid lenses after a trial period",
+        "Eye surface conditions that prevent lens wear",
+        "Unable to keep up lens hygiene or follow-ups"
+      ],
+      "compare": {
+        "title": "RGP lenses vs LASIK",
+        "columns": [
+          "RGP lenses",
+          "LASIK"
+        ],
+        "rows": [
+          {
+            "label": "Type",
+            "values": [
+              "Non-surgical, removable",
+              "Permanent laser procedure"
+            ]
+          },
+          {
+            "label": "How it works",
+            "values": [
+              "Smooth optical surface",
+              "Reshapes the cornea"
+            ]
+          },
+          {
+            "label": "Best for",
+            "values": [
+              "Irregular corneas, keratoconus",
+              "Stable prescriptions, healthy corneas"
+            ]
+          },
+          {
+            "label": "Recovery",
+            "values": [
+              "None",
+              "3–5 days"
+            ]
+          },
+          {
+            "label": "Reversible",
+            "values": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      "steps": {
+        "title": "Fitted around your eye.",
+        "note": "Our optometrists guide you every step.",
+        "items": [
+          {
+            "title": "Eye assessment",
+            "text": "A detailed exam and corneal mapping."
+          },
+          {
+            "title": "Custom design",
+            "text": "Lenses made to match your eye shape and prescription."
+          },
+          {
+            "title": "Fitting & training",
+            "text": "Hands-on help inserting, removing and caring for your lenses."
+          },
+          {
+            "title": "Follow-up reviews",
+            "text": "Regular checks on comfort, vision and eye health."
+          }
+        ]
+      },
+      "care": {
+        "before": [
+          "Stop contact lenses 24 hours before your assessment",
+          "Bring your current glasses or prescription",
+          "No eye make-up on fitting day"
+        ],
+        "after": [
+          "Clean and store lenses as instructed",
+          "Expect a short adjustment period",
+          "Wash hands well before handling lenses",
+          "Attend follow-ups for fine-tuning"
+        ]
+      }
+    },
+    {
+      "slug": "flacs",
+      "name": "FLACS cataract surgery",
+      "short": "FLACS",
+      "aliases": [
+        "FLACS",
+        "Cataract surgery (FLACS)",
+        "Premium lenses",
+        "Cataract"
+      ],
+      "group": "cataract",
+      "color": "yellow",
+      "service": "Cataract surgery (FLACS)",
+      "image": "/assets/uploads/treatments/cataract.webp",
+      "image_alt": "Happy elderly couple embracing",
+      "seo_title": "FLACS laser-assisted cataract surgery in Malaysia | Optimax",
+      "seo_description": "Femtosecond Laser-Assisted Cataract Surgery (FLACS) with the Ziemer Z8 at Optimax, plus monofocal, bifocal and trifocal lens options.",
+      "card": {
+        "summary": "Laser-assisted cataract surgery and premium lenses.",
+        "age": "Usually 50+",
+        "suited": "Cloudy or glary vision"
+      },
+      "hero": {
+        "eyebrow": "Cataract",
+        "title": "FLACS",
+        "title_line2": "Brighter, sharper days again.",
+        "subhead": "Femtosecond Laser-Assisted Cataract Surgery — a bladeless, computer-guided way to remove cataracts, with a choice of lenses planned around how you live.",
+        "badge_number": "Z8",
+        "badge_label": "Ziemer laser"
+      },
+      "facts": [
+        {
+          "value": "0",
+          "label": "Blades used",
+          "color": "yellow"
+        },
+        {
+          "value": "3",
+          "label": "Lens options to choose from",
+          "color": "violet"
+        },
+        {
+          "value": "Local",
+          "label": "Anaesthesia, no injection",
+          "color": "mint"
+        },
+        {
+          "value": "Kuching",
+          "label": "Where FLACS is available",
+          "color": "sky"
+        }
+      ],
+      "what": {
+        "title": "What is FLACS?",
+        "text": "A cataract is when the eye's natural lens turns cloudy, usually with age — making vision blurry, glary and dim. FLACS uses the Ziemer Z8 femtosecond laser to make the key steps of cataract surgery bladeless and computer-guided, for more precision and predictability.",
+        "features": [
+          "Micron-level, computer-mapped precision",
+          "Customisable incision patterns",
+          "Less ultrasound energy — gentler on the eye",
+          "Every step monitored in real time"
+        ]
+      },
+      "suits": [
+        "Blurry, cloudy or dim vision",
+        "Glare or halos, especially at night",
+        "Colours that look faded",
+        "Cataract affecting daily life, reading or driving"
+      ],
+      "not_suits": [
+        "Suitability is confirmed through a full clinical evaluation",
+        "Some eyes are better suited to conventional surgery — your specialist will advise"
+      ],
+      "compare": {
+        "title": "FLACS vs conventional cataract surgery",
+        "columns": [
+          "FLACS",
+          "Conventional"
+        ],
+        "rows": [
+          {
+            "label": "Instruments",
+            "values": [
+              "Laser-guided, blade-free",
+              "Manual blade and ultrasound"
+            ]
+          },
+          {
+            "label": "Incision precision",
+            "values": [
+              "Computer-mapped, laser-made",
+              "Hand-measured, manual"
+            ]
+          },
+          {
+            "label": "Energy used",
+            "values": [
+              "Reduced",
+              "Higher ultrasound energy"
+            ]
+          },
+          {
+            "label": "Lens placement",
+            "values": [
+              "Higher accuracy",
+              "Varies with technique"
+            ]
+          },
+          {
+            "label": "Recovery",
+            "values": [
+              "Often quicker",
+              "Slightly longer in some cases"
+            ]
+          },
+          {
+            "label": "At Optimax",
+            "values": [
+              "Kuching branch",
+              "Available"
+            ]
+          }
+        ]
+      },
+      "steps": {
+        "title": "Precise at every stage.",
+        "note": "Local anaesthesia with no injections. General anaesthesia available if needed.",
+        "items": [
+          {
+            "title": "Corneal incision",
+            "text": "The laser creates a precise entry point.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Corneal-Incision-1.webp"
+          },
+          {
+            "title": "Capsulotomy",
+            "text": "A perfectly centred opening is made in the lens capsule.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Capsulotomy-1.webp"
+          },
+          {
+            "title": "Lens fragmentation",
+            "text": "Laser pulses soften the cataract, so less ultrasound is needed.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Lens-Fragmentation-2.webp"
+          },
+          {
+            "title": "New lens",
+            "text": "The cloudy lens is removed and replaced with your chosen lens.",
+            "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Lens-Removal-IOL-Implantation-2.webp"
+          }
+        ]
+      },
+      "lenses": {
+        "title": "Choose the lens that fits your life.",
+        "intro": "We'll talk you through each option, with simulations, at your consultation.",
+        "items": [
+          {
+            "title": "Monofocal",
+            "text": "Sharp distance vision. You may still use glasses for reading.",
+            "color": "sky"
+          },
+          {
+            "title": "Bifocal",
+            "text": "Near and distance vision, with less reliance on glasses.",
+            "color": "violet"
+          },
+          {
+            "title": "Trifocal / multifocal",
+            "text": "Near, middle and far — the most freedom from glasses.",
+            "color": "yellow"
+          }
+        ]
+      },
+      "care": {
+        "before": [
+          "Complete your eye examinations and scans",
+          "Discuss your lens choice with your specialist"
+        ],
+        "after": [
+          "Use your prescribed drops",
+          "Attend scheduled follow-ups",
+          "Follow your recovery guidance"
+        ]
+      }
+    }
+  ]
+}
