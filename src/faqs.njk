@@ -1,29 +1,32 @@
 ---
 permalink: /faqs/
 layout: layouts/base.njk
+hide_booking: true
 eleventyComputed:
-  title: "{{ faqs.seo_title }}"
-  description: "{{ faqs.seo_description }}"
+  title: "{{ pages.faqs.title }}"
+  description: "{{ pages.faqs.description }}"
 ---
+{#- FAQs — content word-for-word from optimaxeyespecialist.com/faqs/ (src/_data/pages/faqs.json) -#}
 {%- import "macros.njk" as m -%}
+{%- set P = pages.faqs -%}
 
-{{ m.phero(faqs, { compact: true, crumbs: [{label: "FAQs"}], ctas: [{label: "Ask us on WhatsApp", url: site.topbar.whatsapp_link, external: true}, {label: "Book a free eye check", url: "#book", style: "ghost"}] }) }}
+{{ m.phero({title: "FAQs"}, [{label: "FAQs"}]) }}
 
 <section class="section section--flush">
   <div class="wrap faqs">
-    <nav class="faqs__nav reveal" aria-label="FAQ topics">
-      <p class="faqs__navtitle">Topics</p>
-      {%- for g in faqs.groups %}<a href="#{{ g.id }}" class="faqs__link c-{{ g.color }}"><span class="faqs__emoji" aria-hidden="true">{{ g.emoji }}</span>{{ g.title }}<span class="faqs__n">{{ g.items.length }}</span></a>{% endfor %}
+    <nav class="faqs__nav" aria-label="FAQ topics">
+      {%- for g in P.groups %}<a href="#topic-{{ loop.index }}" class="faqs__link">{{ g.heading }}</a>{% endfor %}
     </nav>
     <div class="faqs__body">
-      {%- for g in faqs.groups %}
-      <section class="faqs__group reveal" id="{{ g.id }}" aria-labelledby="{{ g.id }}-h">
-        <h2 id="{{ g.id }}-h" class="faqs__h"><span class="faqs__emoji c-{{ g.color }}" aria-hidden="true">{{ g.emoji }}</span>{{ g.title }}</h2>
-        {{ m.faqList(g.items, loop.first) }}
+      {%- for g in P.groups %}
+      <section class="faqs__group reveal" id="topic-{{ loop.index }}">
+        <h2 class="h3">{{ g.heading }}</h2>
+        {%- if g.questions.length %}{{ m.faqList(g.questions, loop.first) }}{% endif %}
+        {%- if g.items.length %}<div class="prose">{{ m.items(g.items) }}</div>{% endif %}
       </section>
       {%- endfor %}
     </div>
   </div>
 </section>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for g in faqs.groups %}{% for f in g.items %}{"@type":"Question","name":{{ f.q | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | dump | safe }}}}{{ "," if not loop.last }}{% endfor %}{{ "," if not loop.last }}{% endfor %}]}</script>
+<script type="application/ld+json">{{ P.groups | faqSchema | safe }}</script>

@@ -1,25 +1,64 @@
-{#- Booking section, shown at the bottom of every page (id="book").
-    Optional page variables: book_title, book_intro, book_service, book_branch, book_doctor -#}
+{#- Booking section (id="book").
+    form: "lasik"   → live "LASIK Enquiry Form" (treatment pages)
+          "general" → live "General Enquiry Form" (Treatments overview)
+          (none)    → homepage booking form
+    cta_page: page key in src/_data/pages — its "cta" section text is shown beside the form, word-for-word. -#}
 {%- set bk = home.booking -%}
+{%- set cta = null -%}
+{%- if cta_page and pages[cta_page] -%}
+  {%- set src = pages[cta_page] -%}
+  {%- set cta = src.cta or (src.sections | whereKind("cta")) -%}
+{%- endif -%}
+{%- set F = forms[form] if form else null -%}
 <section class="section booking" id="book">
   <div class="wrap booking__grid">
     <div class="booking__intro reveal">
+      {%- if cta %}
+      <h2>{{ cta.heading }}</h2>
+      {%- for p in cta.texts %}{% if not (p | isNote) and p != 'You’ll receive a confirmation Whatsapp or call within 1 working day.' %}<p class="{{ 'booking__sub' if p.length < 70 else 'lead' }}">{{ p | nl2br | safe }}</p>{% endif %}{% endfor %}
+      {%- if cta.list and cta.list.length %}<ul class="bullets bullets--light">{% for li in cta.list %}<li>{{ li }}</li>{% endfor %}</ul>{% endif %}
+      {%- if cta.buttons %}<div class="ctas">{% for b in cta.buttons %}<a class="btn btn--light" href="{{ b.href }}"{% if b.href.startsWith('http') %} target="_blank" rel="noopener"{% endif %}>{{ b.label }}</a>{% endfor %}</div>{% endif %}
+      {%- for p in cta.texts %}{% if p | isNote %}<p class="booking__note">{{ p | nl2br | safe }}</p>{% endif %}{% endfor %}
+      {%- else %}
       <p class="eyebrow">{{ bk.eyebrow }}</p>
-      <h2>{{ book_title or bk.title }}</h2>
-      <p class="lead">{{ book_intro or bk.intro }}</p>
+      <h2>{{ bk.title }}</h2>
+      <p class="lead">{{ bk.intro }}</p>
       <ul class="booking__contacts">
         <li><a href="{{ site.topbar.hotline | tel }}"><span>Hotline</span>{{ site.topbar.hotline }}</a></li>
         <li><a href="{{ site.topbar.whatsapp_link }}" target="_blank" rel="noopener"><span>WhatsApp</span>{{ site.topbar.whatsapp }}</a></li>
         <li><span>Hours</span>{{ site.topbar.hours }}</li>
       </ul>
+      {%- endif %}
     </div>
     <div class="formcard reveal" style="--d:1">
       <form id="booking-form" novalidate {% if site.form_endpoint %}action="{{ site.form_endpoint }}" method="post"{% endif %} data-service="{{ book_service or '' }}" data-branch="{{ book_branch or '' }}">
-        {%- if book_doctor %}
-        <input type="hidden" name="doctor" value="{{ book_doctor }}">
-        <p class="formcard__with"><span aria-hidden="true">👩‍⚕️</span> Booking with <strong>{{ book_doctor }}</strong></p>
-        {%- endif %}
         <input type="hidden" name="page" value="{{ page.url }}">
+        {%- if F %}
+        <div class="form-grid">
+        {%- for f in F.fields %}
+        {%- set fid = 'f-' + loop.index %}
+        {%- if f.type == 'radio' %}
+        <fieldset class="field field--radio"><legend>{{ f.label }}</legend>
+          <div class="radios">{% for o in f.options %}<label><input type="radio" name="{{ f.name }}" value="{{ o }}"> {{ o }}</label>{% endfor %}</div>
+        </fieldset>
+        {%- else %}
+        <div class="field{{ ' field--wide' if f.type == 'textarea' or f.type == 'text' and loop.first }}">
+          <label for="{{ fid }}">{{ f.label }}</label>
+          {%- if f.type == 'select' %}
+          <select id="{{ fid }}" name="{{ f.name }}"{% if f.name == 'preferred_branch' %} data-role="branch"{% elif f.name == 'eyecare_service' %} data-role="service"{% elif f.name == 'country' %} data-role="country"{% endif %}>{% for o in f.options %}<option{% if loop.first and (o.startsWith('Select') or o.startsWith('–')) %} value=""{% endif %}{% if o == 'Malaysia' %} selected{% endif %}>{{ o }}</option>{% endfor %}</select>
+          {%- elif f.type == 'textarea' %}
+          <textarea id="{{ fid }}" name="{{ f.name }}" rows="3" placeholder="{{ f.placeholder | trim }}"></textarea>
+          {%- else %}
+          <input id="{{ fid }}" name="{{ f.name }}" type="{{ 'date' if f.name == 'appt_date' else f.type }}"{% if f.placeholder %} placeholder="{{ f.placeholder }}"{% endif %}{% if f.type == 'tel' %} inputmode="tel" autocomplete="tel" required pattern="^[+0-9][0-9\s\-]{7,15}$"{% elif f.type == 'email' %} autocomplete="email"{% elif loop.first %} autocomplete="name" required{% endif %}>
+          {%- if f.type == 'tel' %}<small class="err">Please enter a valid phone number.</small>{% elif loop.first %}<small class="err">Please enter your name.</small>{% endif %}
+          {%- endif %}
+        </div>
+        {%- endif %}
+        {%- endfor %}
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg btn--block">{{ F.submit }}</button>
+        {%- if form == 'general' %}<p class="consent">You’ll receive a confirmation Whatsapp or call within 1 working day.</p>{% endif %}
+        {%- else %}
         <div class="field">
           <label for="f-name">Full name</label>
           <input id="f-name" name="name" autocomplete="name" required>
@@ -40,23 +79,24 @@
         <div class="field-row">
           <div class="field">
             <label for="f-branch">Preferred branch</label>
-            <select id="f-branch" name="branch" required>
+            <select id="f-branch" name="branch" required data-role="branch">
               <option value="">Choose a branch</option>
               {%- for r in branches.regions %}
-              <optgroup label="{{ r.region }}">{% for b in r.branches %}<option{% if book_branch == b.name %} selected{% endif %}>{{ b.name }}</option>{% endfor %}</optgroup>
+              <optgroup label="{{ r.region }}">{% for b in r.branches %}<option>{{ b.name }}</option>{% endfor %}</optgroup>
               {%- endfor %}
             </select>
             <small class="err">Please choose a branch.</small>
           </div>
           <div class="field">
             <label for="f-service">Service</label>
-            <select id="f-service" name="service" required>
-              {%- for s in bk.services %}<option{% if book_service == s %} selected{% endif %}>{{ s }}</option>{% endfor %}
+            <select id="f-service" name="service" required data-role="service">
+              {%- for s in bk.services %}<option>{{ s }}</option>{% endfor %}
             </select>
           </div>
         </div>
         <button type="submit" class="btn btn--primary btn--lg btn--block">{{ bk.submit_label }}</button>
         <p class="consent">{{ bk.consent }}</p>
+        {%- endif %}
       </form>
       <div class="success" id="booking-success" hidden tabindex="-1">
         <span class="success__tick" aria-hidden="true"><svg viewBox="0 0 52 52"><path d="M14 27l8 8 16-17"/></svg></span>

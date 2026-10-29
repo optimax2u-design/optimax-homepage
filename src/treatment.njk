@@ -6,166 +6,166 @@ pagination:
 permalink: "/{{ t.slug }}/"
 layout: layouts/base.njk
 nav_key: Treatments
+form: lasik
 eleventyComputed:
-  title: "{{ t.seo_title }}"
-  description: "{{ t.seo_description }}"
+  title: "{{ pages[t.slug].title }}"
+  description: "{{ pages[t.slug].description }}"
   book_service: "{{ t.service }}"
-  book_title: "Book your {{ t.short }} consultation."
+  cta_page: "{{ t.slug }}"
 ---
+{#- Treatment page. All text and images come word-for-word from the live page (src/_data/pages/<slug>.json),
+    in the same order. Section types: intro, feature, suitpair, compare, steps, prepost, journey, why,
+    awards, quotes, cards, generic, cta (cta = the booking section at the bottom). -#}
 {%- import "macros.njk" as m -%}
+{%- set P = pages[t.slug] -%}
+{%- set about = pages.about -%}
 
-{{ m.phero(t.hero, {
-  color: t.color, image: t.image, image_alt: t.image_alt,
-  badge_number: t.hero.badge_number, badge_label: t.hero.badge_label,
-  crumbs: [{label: "Treatments", url: "/treatments/"}, {label: t.short}],
-  ctas: [{label: "Check if I'm suitable — free", url: "#book"}, {label: "Ask on WhatsApp", url: site.topbar.whatsapp_link, style: "ghost", external: true}]
-}) }}
+{{ m.phero({title: P.hero.title, sub: P.hero.sub, image: P.hero.image, image_alt: P.hero.image_alt, buttons: [{label: "BOOK APPOINTMENT", href: "#book"}]}, [{label: "Treatments", url: "/treatments/"}, {label: t.menu}]) }}
 
-{{ m.tiles(t.facts) }}
+{%- set tint = cycler(false, true) %}
+{%- for s in P.sections %}
+{%- if s.kind == 'cta' %}{# rendered by the booking section below #}
 
-{#- What is it -#}
-<section class="section">
-  <div class="wrap split">
-    <div class="reveal">
-      <p class="eyebrow">How it works</p>
-      <h2 class="h2">{{ t.what.title }}</h2>
-      <p class="lead">{{ t.what.text }}</p>
+{%- elif s.kind == 'intro' or s.kind == 'feature' or s.kind == 'why' or s.kind == 'generic' %}
+<section class="section{{ ' section--tint' if tint.next() }}">
+  {%- set img = s.image or (s.items | firstImage) %}
+  <div class="wrap{{ ' split split--media' if img }}">
+    <div class="prose-block reveal">
+      <h2 class="h2">{{ s.heading | nl2br | safe }}</h2>
+      {{ m.items(s.items, {noImages: true}) }}
     </div>
-    <div class="feat c-{{ t.color }} reveal" style="--d:1">
-      <h3>Key features</h3>
-      <ul class="checks">{% for f in t.what.features %}<li>{{ f }}</li>{% endfor %}</ul>
-    </div>
+    {%- if img %}<div class="side-media reveal" style="--d:1"><figure class="fig fig--card"><img src="{{ img }}" alt="{{ s.image_alt or '' }}" loading="lazy" decoding="async"></figure></div>{% endif %}
   </div>
 </section>
 
-{#- Who it suits -#}
-<section class="section section--tint">
-  <div class="wrap">
-    <header class="head reveal">
-      <p class="eyebrow">Is it right for me?</p>
-      <h2>Who it's for.</h2>
-    </header>
-    <div class="suit suit--wide">
-      <div class="suit__card suit__card--yes reveal">
-        <h3><span aria-hidden="true">✓</span> Often a good fit if you have</h3>
-        <ul class="checks">{% for s in t.suits %}<li>{{ s }}</li>{% endfor %}</ul>
-      </div>
-      <div class="suit__card suit__card--no reveal" style="--d:1">
-        <h3><span aria-hidden="true">✕</span> May not be suitable if you have</h3>
-        <ul class="crosses">{% for s in t.not_suits %}<li>{{ s }}</li>{% endfor %}</ul>
-        {%- if t.not_suits_note %}<p class="suit__note">{{ t.not_suits_note }}</p>{% endif %}
-      </div>
+{%- elif s.kind == 'suitpair' %}
+<section class="section{{ ' section--tint' if tint.next() }}">
+  <div class="wrap pair">
+    {%- for side in [s.yes, s.no] %}
+    <div class="pair__card {{ 'pair__card--yes' if loop.first else 'pair__card--no' }} reveal" style="--d:{{ loop.index0 }}">
+      <h2 class="h3">{{ side.heading }}</h2>
+      {{ m.items(side.items) }}
     </div>
-    <p class="fine reveal">Suitability can only be confirmed after a full eye assessment and consultation with your eye specialist.</p>
+    {%- endfor %}
   </div>
 </section>
 
-{#- Comparison -#}
-{%- if t.compare %}
-<section class="section">
+{%- elif s.kind == 'compare' %}
+<section class="section{{ ' section--tint' if tint.next() }}">
   <div class="wrap">
     <header class="head reveal">
-      <p class="eyebrow">Compare</p>
-      <h2>{{ t.compare.title }}</h2>
+      <h2 class="h2">{{ s.heading }}</h2>
+      {%- for p in s.intro %}{% for line in p | lines %}<p class="lead">{{ line }}</p>{% endfor %}{% endfor %}
     </header>
-    <div class="ctable ctable--hl reveal" role="region" aria-label="{{ t.compare.title }}" tabindex="0">
+    <div class="ctable ctable--hl reveal" role="region" aria-label="{{ s.heading }}" tabindex="0">
       <table>
-        <thead><tr><th scope="col"><span class="sr">Feature</span></th>{% for c in t.compare.columns %}<th scope="col"{% if loop.first %} class="is-hl"{% endif %}>{{ c }}</th>{% endfor %}</tr></thead>
+        <thead><tr><th scope="col"></th>{% for c in s.columns %}<th scope="col"{% if loop.first %} class="is-hl"{% endif %}>{{ c }}</th>{% endfor %}</tr></thead>
         <tbody>
-          {%- for r in t.compare.rows %}
-          <tr><th scope="row">{{ r.label }}</th>{% for v in r.values %}<td{% if loop.first %} class="is-hl"{% endif %}>{{ v }}</td>{% endfor %}</tr>
-          {%- endfor %}
+          {%- for r in s.rows %}<tr><th scope="row">{{ r.label }}</th>{% for v in r.values %}<td{% if loop.first %} class="is-hl"{% endif %}>{{ v }}</td>{% endfor %}</tr>{% endfor %}
         </tbody>
       </table>
     </div>
+    {%- for p in s.note %}<p class="note">{{ p | nl2br | safe }}</p>{% endfor %}
   </div>
 </section>
-{%- endif %}
 
-{#- Procedure steps -#}
-<section class="section section--tint">
+{%- elif s.kind == 'steps' %}
+<section class="section{{ ' section--tint' if tint.next() }}">
   <div class="wrap">
     <header class="head reveal">
-      <p class="eyebrow">The procedure</p>
-      <h2>{{ t.steps.title }}</h2>
-      {%- if t.steps.note %}<p class="lead">{{ t.steps.note }}</p>{% endif %}
+      <h2 class="h2">{{ s.heading }}</h2>
+      {%- for p in s.intro %}{% for line in p | lines %}<p class="lead">{{ line }}</p>{% endfor %}{% endfor %}
     </header>
     <ol class="steps">
-      {%- set jc = ['violet','yellow','coral','mint'] %}
-      {%- for s in t.steps.items %}
+      {%- for st in s.items %}
       <li class="step reveal" style="--d:{{ loop.index0 }}">
-        {%- if s.image %}<div class="step__img"><img src="{{ s.image }}" alt="" width="600" height="450" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></div>{% endif %}
-        <span class="journey__n c-{{ jc[loop.index0 % 4] }}">{{ loop.index }}</span>
-        <h3>{{ s.title }}</h3>
-        <p>{{ s.text }}</p>
+        {%- if st.image %}<div class="step__img"><img src="{{ st.image }}" alt="{{ st.title }}" loading="lazy" decoding="async"></div>{% endif %}
+        <span class="step__n">{{ loop.index }}</span>
+        <h3>{{ st.title }}</h3>
+        <p>{{ st.text | nl2br | safe }}</p>
       </li>
       {%- endfor %}
     </ol>
+    {%- for p in s.note %}<p class="note">{{ p | nl2br | safe }}</p>{% endfor %}
   </div>
 </section>
 
-{#- Lens options (cataract) -#}
-{%- if t.lenses %}
-<section class="section">
+{%- elif s.kind == 'prepost' %}
+<section class="section{{ ' section--tint' if tint.next() }}">
   <div class="wrap">
     <header class="head reveal">
-      <p class="eyebrow">Lens options</p>
-      <h2>{{ t.lenses.title }}</h2>
-      <p class="lead">{{ t.lenses.intro }}</p>
+      <h2 class="h2">{{ s.heading }}</h2>
+      {%- for p in s.intro %}{% for line in p | lines %}<p class="lead">{{ line }}</p>{% endfor %}{% endfor %}
     </header>
-    <div class="icards icards--3">
-      {%- for l in t.lenses.items %}
-      <article class="icard c-{{ l.color }} reveal" style="--d:{{ loop.index0 }}"><span class="icard__emoji" aria-hidden="true">👁️</span><h3>{{ l.title }}</h3><p>{{ l.text }}</p></article>
+    <div class="pair">
+      {%- for g in s.groups %}
+      <div class="pair__card reveal" style="--d:{{ loop.index0 }}">
+        <h3 class="h3">{{ g.label }}</h3>
+        <ul class="bullets">{% for li in g.items %}<li>{{ li }}</li>{% endfor %}</ul>
+      </div>
       {%- endfor %}
     </div>
+    {%- for p in s.note %}<p class="note">{{ p | nl2br | safe }}</p>{% endfor %}
+  </div>
+</section>
+
+{%- elif s.kind == 'journey' %}
+<section class="section{{ ' section--tint' if tint.next() }}">
+  <div class="wrap">
+    <header class="head reveal"><h2 class="h2">{{ s.heading }}</h2></header>
+    <ol class="journey">
+      {%- set jc = ['violet','yellow','coral','mint'] %}
+      {%- for it in s.items %}
+      <li class="journey__step reveal" style="--d:{{ loop.index0 }}"><span class="journey__n c-{{ jc[loop.index0 % 4] }}">{{ loop.index }}</span><h3>{{ it.title }}</h3><p>{{ it.text }}</p></li>
+      {%- endfor %}
+    </ol>
+    {%- for p in s.note %}<p class="note">{{ p | nl2br | safe }}</p>{% endfor %}
+  </div>
+</section>
+
+{%- elif s.kind == 'awards' %}
+{%- set aw = about.sections | whereKind("logos") %}
+<section class="section{{ ' section--tint' if tint.next() }}">
+  <div class="wrap">
+    <header class="head reveal"><h2 class="h2">{{ s.heading }}</h2></header>
+    <div class="reveal">{{ m.logoGrid(aw.logos) }}</div>
+  </div>
+</section>
+
+{%- elif s.kind == 'quotes' %}
+<section class="section reviews">
+  <div class="wrap">
+    <header class="head reveal">
+      <h2 class="h2">{{ s.heading }}</h2>
+      {%- for p in s.intro %}{% for line in p | lines %}<p class="lead">{{ line }}</p>{% endfor %}{% endfor %}
+    </header>
+    <div class="quotes quotes--{{ s.quotes.length }}">
+      {%- for q in s.quotes %}
+      <figure class="quote reveal" style="--d:{{ loop.index0 }}"><blockquote>“{{ q.quote }}”</blockquote><figcaption><strong>— {{ q.by }}</strong></figcaption></figure>
+      {%- endfor %}
+    </div>
+    {%- for p in s.note %}<p class="note">{{ p | nl2br | safe }}</p>{% endfor %}
+  </div>
+</section>
+
+{%- elif s.kind == 'cards' %}
+<section class="section{{ ' section--tint' if tint.next() }}">
+  <div class="wrap">
+    <header class="head reveal">
+      <h2 class="h2">{{ s.heading }}</h2>
+      {%- for p in s.intro %}{% for line in p | lines %}<p class="lead">{{ line }}</p>{% endfor %}{% endfor %}
+    </header>
+    <div class="icards icards--{{ s.cards.length }}">
+      {%- for c in s.cards %}
+      <article class="icard reveal" style="--d:{{ loop.index0 }}">
+        <figure class="icard__img"><img src="{{ c.image }}" alt="{{ c.title }}" loading="lazy" decoding="async"></figure>
+        <h3>{{ c.title }}</h3>
+        <ul class="bullets">{% for li in c.items %}<li>{{ li }}</li>{% endfor %}</ul>
+      </article>
+      {%- endfor %}
+    </div>
+    {%- for p in s.note %}<p class="note">{{ p | nl2br | safe }}</p>{% endfor %}
   </div>
 </section>
 {%- endif %}
-
-{#- Before & after -#}
-<section class="section">
-  <div class="wrap">
-    <header class="head reveal">
-      <p class="eyebrow">Before & after</p>
-      <h2>What to expect.</h2>
-    </header>
-    <div class="care">
-      <div class="care__card c-sky reveal"><h3><span aria-hidden="true">🗓️</span> Before treatment</h3><ul class="checks">{% for c in t.care.before %}<li>{{ c }}</li>{% endfor %}</ul></div>
-      <div class="care__card c-mint reveal" style="--d:1"><h3><span aria-hidden="true">🌿</span> After treatment</h3><ul class="checks">{% for c in t.care.after %}<li>{{ c }}</li>{% endfor %}</ul></div>
-    </div>
-  </div>
-</section>
-
-{#- Journey (shared with homepage) -#}
-<section class="section section--tint">
-  <div class="wrap">
-    <header class="head reveal">
-      <p class="eyebrow">{{ home.journey.eyebrow }}</p>
-      <h2>{{ home.journey.title }}</h2>
-    </header>
-    <ol class="journey">
-      {%- set jc = ['violet','yellow','coral','mint'] %}
-      {%- for s in home.journey.steps %}
-      <li class="journey__step reveal" style="--d:{{ loop.index0 }}"><span class="journey__n c-{{ jc[loop.index0 % 4] }}">{{ loop.index }}</span><h3>{{ s.title }}</h3><p>{{ s.text }}</p></li>
-      {%- endfor %}
-    </ol>
-  </div>
-</section>
-
-{{ m.reviewsBand(home.reviews, site) }}
-
-{#- Other treatments -#}
-<section class="section">
-  <div class="wrap">
-    <header class="head head--row reveal">
-      <div>
-        <p class="eyebrow">Keep exploring</p>
-        <h2>Other treatments.</h2>
-      </div>
-      <a class="textlink textlink--top" href="/treatments/">Compare all <span aria-hidden="true">→</span></a>
-    </header>
-    <div class="tcards tcards--scroll" data-carousel>
-      {%- for o in treatments.list | except("slug", t.slug) %}{% if loop.index <= 4 %}{{ m.tcard(o) }}{% endif %}{% endfor %}
-    </div>
-  </div>
-</section>
+{%- endfor %}

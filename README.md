@@ -6,25 +6,26 @@ Preview: https://optimax2u-design.github.io/optimax-homepage/
 
 ## Site map
 
-| Page | Address | Template | Content file |
+The homepage is the new design. **Every other page uses the exact wording, order and images of the live optimaxeyespecialist.com page** (copied 29 Oct 2026), restyled in the homepage design. One HTML markup serves every screen size — layout changes are CSS only.
+
+| Page | Address | Template | Content (word-for-word from live site) |
 |---|---|---|---|
 | Homepage | `/` | `src/index.njk` | `home.json` |
-| Treatments overview | `/treatments/` | `src/treatments.njk` | `treatments.json` → `overview` |
-| 10 treatment pages | `/zeiss-smile-pro/`, `/zeiss-smile/`, `/zeiss-presbyond/`, `/clear-max-lasik/`, `/femto-lasik/`, `/tesa/`, `/advanced-surface-ablation/`, `/icl/`, `/rigid-gas-permeable-lenses-rgp/`, `/flacs/` | `src/treatment.njk` | `treatments.json` → `list` |
-| Doctors (filter by branch & language) | `/doctor/` | `src/doctors.njk` | `doctors.json` |
+| Treatments overview | `/treatments/` | `src/treatments.njk` | `pages/treatments.json` |
+| 10 treatment pages | `/zeiss-smile-pro/`, `/zeiss-smile/`, `/zeiss-presbyond/`, `/clear-max-lasik/`, `/femto-lasik/`, `/tesa/`, `/advanced-surface-ablation/`, `/icl/`, `/rigid-gas-permeable-lenses-rgp/`, `/flacs/` | `src/treatment.njk` | `pages/<address>.json` |
+| Doctors (branch + language filters) | `/doctor/` | `src/doctors.njk` | `doctors.json` |
 | 26 doctor profiles | `/doctor/<name>/` | `src/doctor.njk` | `doctors.json` |
-| Branches (search + regions) | `/branches/` | `src/branches.njk` | `branches.json` |
-| 25 branch pages (map, hours, doctors) | `/branches/<branch>/` | `src/branch.njk` | `branches.json` |
-| About | `/about-us/` | `src/about.njk` | `about.json` |
-| FAQs | `/faqs/` | `src/faqs.njk` | `faqs.json` |
-| Financing options | `/financing-options/` | `src/financing.njk` | `financing.json` |
+| 25 branch pages | `/branches/<branch>/` | `src/branch.njk` | `branches.json` |
+| About Us | `/about-us/` | `src/about.njk` | `pages/about.json` |
+| FAQs | `/faqs/` | `src/faqs.njk` | `pages/faqs.json` |
+| Financing Options | `/financing-options/` | `src/financing.njk` | `pages/financing.json` |
 | Blog + 9 articles | `/blog/`, `/<article>/` | `src/blog.njk`, `src/post.njk` | `blog.json` |
-| Privacy Policy, Terms of Use | `/privacy-policy/`, `/terms-of-use/` | `src/legal.njk` | `legal.json` |
+| Privacy Policy, Terms of Use | `/privacy-policy/`, `/terms-of-use/` | `src/legal.njk` | `pages/privacy-policy.json`, `pages/terms-of-use.json` |
 | Not found | `/404.html` | `src/404.njk` | — |
 
-Shared pieces live in `src/_includes/`: `layouts/base.njk` (top bar, menu with Treatments drop-down, footer), `partials/booking.njk` (the booking form at the bottom of every page), `partials/recognition.njk` (awards, panels, media) and `macros.njk` (page header, fact tiles, cards, reviews band, FAQ accordion).
+Treatment-page sections are typed (`intro`, `feature`, `suitpair`, `compare`, `steps`, `prepost`, `journey`, `why`, `awards`, `quotes`, `cards`, `cta`) and rendered in the live page's order. Booking forms use the live form fields (`forms.json`: "LASIK Enquiry Form" on treatment pages, "General Enquiry Form" on /treatments/). Images on inner pages load from the live site's media library (`optimaxeyespecialist.com/cms/wp-content/uploads/…`), so they already exist in WordPress.
 
-Page addresses match the current live site (optimaxeyespecialist.com) wherever possible, so existing Google rankings carry over. The only new address is `/about-us/` (live: `/about-us-2/`) — add a redirect when going live.
+Shared pieces live in `src/_includes/`: `layouts/base.njk` (top bar, one responsive menu, footer), `partials/booking.njk`, `partials/recognition.njk`, `macros.njk`.
 
 ## Edit content and images (no code)
 

@@ -1,4 +1,5 @@
-{#- Reusable building blocks for inner pages -#}
+{#- Reusable building blocks. All text comes from the data files (copied word-for-word from the live site).
+    One markup for every screen size — layout changes are done in CSS only. -#}
 
 {%- macro crumbs(items) -%}
 <nav class="crumbs" aria-label="Breadcrumb"><ol>
@@ -7,102 +8,91 @@
 </ol></nav>
 {%- endmacro -%}
 
-{#- Page hero. h: {eyebrow,title,title_line2,subhead}; opts: {color,image,image_alt,badge_number,badge_label,crumbs,ctas,pills,compact} -#}
-{%- macro phero(h, o) -%}
-<section class="phero{% if o.compact %} phero--compact{% endif %}{% if not o.image %} phero--text{% endif %}">
+{#- Page header. h: {eyebrow?, title, sub:[...], buttons:[{label,href,style}], image, image_alt} -#}
+{%- macro phero(h, crumbItems) -%}
+<section class="phero{% if not h.image %} phero--text{% endif %}">
   <div class="wrap phero__grid">
     <div class="phero__copy">
-      {{ crumbs(o.crumbs) if o.crumbs }}
-      <p class="eyebrow load" style="--d:0">{{ h.eyebrow }}</p>
-      <h1 class="phero__title{% if h.title | length > 14 %} phero__title--long{% endif %} load" style="--d:1">{{ h.title }}{% if h.title_line2 %}<span>{{ h.title_line2 }}</span>{% endif %}</h1>
-      {%- if h.subhead %}<p class="phero__sub load" style="--d:2">{{ h.subhead }}</p>{% endif %}
-      {%- if o.ctas %}
-      <div class="hero__ctas load" style="--d:3">
-        {%- for c in o.ctas %}<a href="{{ c.url }}" class="btn btn--{{ c.style or 'primary' }} btn--lg"{% if c.external %} target="_blank" rel="noopener"{% endif %}>{{ c.label | safe }}</a>{% endfor %}
-      </div>
-      {%- endif %}
-      {%- if o.pills %}<ul class="pills load" style="--d:4">{% for p in o.pills %}<li class="pill">{{ p }}</li>{% endfor %}</ul>{% endif %}
-    </div>
-    {%- if o.image %}
-    <div class="phero__visual c-{{ o.color or 'violet' }} load" style="--d:2">
-      <div class="phero__card"><img src="{{ o.image }}" alt="{{ o.image_alt or '' }}" width="900" height="700" fetchpriority="high" decoding="async"{% if o.image_fit %} style="object-fit:{{ o.image_fit }}"{% endif %}></div>
-      {%- if o.badge_number %}
-      <div class="badge phero__badge" role="img" aria-label="{{ o.badge_number }} {{ o.badge_label }}">
-        <svg class="badge__ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="88"/></svg>
-        <span class="badge__num">{{ o.badge_number }}</span>
-        <span class="badge__label">{{ o.badge_label }}</span>
+      {{ crumbs(crumbItems) if crumbItems }}
+      {%- if h.eyebrow %}<p class="eyebrow load" style="--d:0">{{ h.eyebrow }}</p>{% endif %}
+      <h1 class="phero__title load" style="--d:1">{{ h.title | nl2br | safe }}</h1>
+      {%- for s in h.sub %}<p class="phero__sub load" style="--d:2">{{ s | nl2br | safe }}</p>{% endfor %}
+      {%- if h.buttons and h.buttons.length %}
+      <div class="ctas load" style="--d:3">
+        {%- for b in h.buttons %}<a href="{{ b.href }}" class="btn btn--{{ b.style or 'primary' }} btn--lg"{% if b.href.startsWith('http') %} target="_blank" rel="noopener"{% endif %}>{{ b.label }}</a>{% endfor %}
       </div>
       {%- endif %}
     </div>
+    {%- if h.image %}
+    <div class="phero__media load" style="--d:2"><img src="{{ h.image }}" alt="{{ h.image_alt or '' }}" width="1200" height="800" fetchpriority="high" decoding="async"></div>
     {%- endif %}
   </div>
 </section>
 {%- endmacro -%}
 
-{%- macro tiles(items) -%}
-<section class="stats" aria-label="Key facts">
-  <div class="wrap stats__grid">
-    {%- for s in items %}
-    <div class="tile c-{{ s.color }} reveal" style="--d:{{ loop.index0 }}">
-      <span class="tile__value tile__value--sm">{{ s.value }}</span>
-      <span class="tile__label">{{ s.label }}</span>
+{#- Renders a list of content items: sub (small heading), p, list, img, btn, table -#}
+{%- macro items(list, opts) -%}
+{%- for it in list %}
+{%- if it.t == 'sub' %}<h3 class="sub"{% if it.id %} id="{{ it.id }}"{% endif %}>{{ it.v | nl2br | safe }}</h3>
+{%- elif it.t == 'p' %}
+  {%- if it.v | isButtonText %}<p><a class="btn btn--primary" href="{{ it.v | buttonHref }}">{{ it.v | buttonLabel }}</a></p>
+  {%- else %}{% for line in it.v | lines %}<p{% if it.v | isNote %} class="note"{% endif %}>{{ line }}</p>{% endfor %}{% endif %}
+{%- elif it.t == 'list' %}<ul class="bullets">{% for li in it.v %}<li>{{ li | nl2br | safe }}</li>{% endfor %}</ul>
+{%- elif it.t == 'img' and not (opts and opts.noImages) %}<figure class="fig"><img src="{{ it.v }}" alt="{{ it.alt or '' }}" loading="lazy" decoding="async"></figure>
+{%- elif it.t == 'btn' %}<p><a class="btn btn--primary" href="{{ it.href | fixHref }}"{% if it.href.startsWith('http') and not it.href.includes('optimaxeyespecialist.com') %} target="_blank" rel="noopener"{% endif %}>{{ it.v }}</a></p>
+{%- elif it.t == 'table' %}{{ table(it.v) }}
+{%- endif %}
+{%- endfor %}
+{%- endmacro -%}
+
+{%- macro imagesOf(list) -%}{%- for it in list %}{% if it.t == 'img' %}<figure class="fig"><img src="{{ it.v }}" alt="{{ it.alt or '' }}" loading="lazy" decoding="async"></figure>{% endif %}{% endfor %}{%- endmacro -%}
+
+{%- macro table(rows) -%}
+<div class="ctable" role="region" tabindex="0"><table>
+  {%- for r in rows %}<tr>{% for c in r %}{% if loop.first %}<th scope="row">{{ c | nl2br | safe }}</th>{% else %}<td>{{ c | nl2br | safe }}</td>{% endif %}{% endfor %}</tr>{% endfor %}
+</table></div>
+{%- endmacro -%}
+
+{#- Section with heading + content; images go to the side column -#}
+{%- macro textSection(heading, list, tint, idAttr) -%}
+{%- set hasImg = list | hasImages -%}
+<section class="section{{ ' section--tint' if tint }}"{% if idAttr %} id="{{ idAttr }}"{% endif %}>
+  <div class="wrap{{ ' split split--media' if hasImg }}">
+    <div class="prose-block reveal">
+      <h2 class="h2">{{ heading | nl2br | safe }}</h2>
+      {{ items(list, {noImages: true}) }}
     </div>
-    {%- endfor %}
+    {%- if hasImg %}<div class="side-media reveal" style="--d:1">{{ imagesOf(list) }}</div>{% endif %}
   </div>
 </section>
 {%- endmacro -%}
 
-{%- macro tcard(t, groups) -%}
-<a class="tcard c-{{ t.color }} reveal" href="/{{ t.slug }}/">
-  {%- if groups %}{% for g in groups %}{% if g.id == t.group %}<span class="tcard__group">{{ g.title }}</span>{% endif %}{% endfor %}{% endif %}
-  <span class="tcard__name">{{ t.short }}</span>
-  <span class="tcard__sum">{{ t.card.summary }}</span>
-  <span class="tcard__best"><b>Best for</b> {{ t.card.suited }}</span>
-  <span class="tcard__meta"><span>{% if "0123456789".indexOf(t.card.age[0]) > -1 %}Age {% endif %}{{ t.card.age }}</span></span>
-  <span class="tcard__go" aria-hidden="true">→</span>
-</a>
+{%- macro logoGrid(logos) -%}
+<ul class="logogrid">
+  {%- for l in logos %}<li><img src="{{ l.image }}" alt="{{ l.name }}" loading="lazy" decoding="async"></li>{% endfor %}
+</ul>
 {%- endmacro -%}
 
-{%- macro doccard(d, branchesData) -%}
-<a class="doc doc--link" href="/doctor/{{ d.slug }}/" data-branches="{{ d.branches | join(' ') }}" data-langs="{{ d.languages | join('|') }}">
-  <div class="doc__photo c-{{ d.color }}"><img src="{{ d.photo }}" alt="Portrait of {{ d.name }}" width="600" height="750" loading="lazy" decoding="async"></div>
-  <div class="doc__cap">
-    <strong>{{ d.name }}</strong>
-    <span class="doc__title">{{ d.title }}</span>
-    <span>{{ d.credentials }}</span>
-    {%- if branchesData %}<span class="doc__where">📍 {% for s in d.branches %}{% set b = s | branchBySlug(branchesData) %}{{ b.name if b }}{{ ', ' if not loop.last }}{% endfor %}</span>{% endif %}
-  </div>
-</a>
-{%- endmacro -%}
-
-{%- macro reviewsBand(rv, siteData, title) -%}
-<section class="section reviews">
-  <div class="wrap">
-    <header class="head reveal">
-      <p class="eyebrow">{{ rv.eyebrow }}</p>
-      <h2>{{ title or rv.title }}</h2>
-      <p class="reviews__rating"><span class="stars" aria-hidden="true">★★★★★</span> {{ rv.rating_text }}</p>
-    </header>
-    <div class="quotes" data-carousel>
-      {%- for r in rv.items | batch(3) | first %}
-      <figure class="quote reveal" style="--d:{{ loop.index0 }}">
-        <blockquote>“{{ r.quote }}”</blockquote>
-        <figcaption>{% if r.photo %}<img class="avatar avatar--photo" src="{{ r.photo }}" alt="" width="44" height="44" loading="lazy" decoding="async">{% else %}<span class="avatar" aria-hidden="true">{{ r.name | first }}</span>{% endif %}<span><strong>{{ r.name }}</strong><span class="rating" role="img" aria-label="Rated 5 out of 5 stars">{% for i in range(5) %}<svg viewBox="0 0 20 20" aria-hidden="true" class="on"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>{% endfor %}</span></span></figcaption>
-      </figure>
+{%- macro faqList(questions, openFirst) -%}
+<div class="faq">
+  {%- for f in questions %}
+  <details class="faq__item"{% if openFirst and loop.first %} open{% endif %}>
+    <summary><span>{{ f.q }}</span><i aria-hidden="true"></i></summary>
+    <div class="faq__a">
+      {%- for a in f.a %}
+      {%- if a.t == 'list' %}<ul class="bullets">{% for li in a.v %}<li>{{ li | nl2br | safe }}</li>{% endfor %}</ul>
+      {%- elif a.t == 'img' %}<figure class="fig"><img src="{{ a.v }}" alt="{{ a.alt or '' }}" loading="lazy" decoding="async"></figure>
+      {%- else %}<p>{{ a.v | nl2br | safe }}</p>{% endif %}
       {%- endfor %}
     </div>
-    <a class="textlink" href="{{ rv.link.url }}" target="_blank" rel="noopener">{{ rv.link.label }} <span aria-hidden="true">→</span></a>
-  </div>
-</section>
-{%- endmacro -%}
-
-{%- macro faqList(items, idp) -%}
-<div class="faq">
-  {%- for f in items %}
-  <details class="faq__item"{% if idp and loop.first %} open{% endif %}>
-    <summary><span>{{ f.q }}</span><i aria-hidden="true"></i></summary>
-    <div class="faq__a"><p>{{ f.a }}</p></div>
   </details>
   {%- endfor %}
 </div>
+{%- endmacro -%}
+
+{%- macro doccard(d) -%}
+<a class="doc doc--link" href="/doctor/{{ d.slug }}/" data-branches="{{ d.branches | join(' ') }}" data-langs="{{ d.languages | join('|') }}">
+  <div class="doc__photo c-{{ d.color }}"><img src="{{ d.photo }}" alt="{{ d.name }}" width="600" height="750" loading="lazy" decoding="async"></div>
+  <div class="doc__cap"><strong>{{ d.name }}</strong><span>{{ d.credentials }}</span></div>
+</a>
 {%- endmacro -%}

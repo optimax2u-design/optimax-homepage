@@ -1,0 +1,328 @@
+{
+ "title": "CLEAR MAX LASIK | All-Laser Vision Correction at Optimax",
+ "description": "Experience CLEAR MAX LASIK at Optimax Malaysia — 100% laser, bladeless, and precise vision correction with fast recovery and proven results.",
+ "hero": {
+  "title": "Advanced All-Laser Vision Correction: CLEAR MAX LASIK at OPTIMAX",
+  "sub": [
+   "Experience 100% laser, bladeless LASIK using ZIEMER’s Swiss-made femtosecond laser technology for sharper vision and greater safety."
+  ],
+  "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Clear-Max-top-banner-image.webp",
+  "image_alt": "Clear Max Lasik",
+  "image2": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Clear-Max.webp",
+  "image2_alt": "Optimax Clear Max LASIK"
+ },
+ "sections": [
+  {
+   "kind": "intro",
+   "heading": "CLEAR MAX LASIK: Precision Vision, Powered by All-Laser Technology",
+   "items": [
+    {
+     "t": "p",
+     "v": "CLEAR MAX LASIK is Optimax’s premium all-laser vision correction treatment, designed for patients seeking precise, safe, and comfortable visual outcomes. Using advanced ZIEMER’s Swiss-made femtosecond laserr technology, CLEAR MAX corrects refractive errors with exceptional accuracy — without the use of blades.\nAt Optimax Eye Specialist Malaysia, CLEAR MAX LASIK combines world-class technology with personalised surgical care to help patients achieve clearer vision and faster recovery."
+    },
+    {
+     "t": "list",
+     "v": [
+      "Over 1,000,000+ successful procedures",
+      "31+ years of trusted clinical experience",
+      "Full-time refractive eye surgeons",
+      "ISO-certified medical facilities"
+     ]
+    }
+   ],
+   "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Clear-Max.webp",
+   "image_alt": "Optimax Clear Max LASIK"
+  },
+  {
+   "kind": "feature",
+   "heading": "What is CLEAR MAX LASIK?",
+   "items": [
+    {
+     "t": "p",
+     "v": "CLEAR MAX LASIK is a 100% laser-based LASIK procedure that uses femtosecond laser to reshape the cornea and improve how light focuses on the retina.\nUnlike traditional LASIK, CLEAR MAX is a flapless keyhole vision correction procedure that corrects vision based on your individual eye profile.\nThis advanced laser approach enhances accuracy, comfort, and overall treatment safety."
+    },
+    {
+     "t": "sub",
+     "v": "Key Features:"
+    },
+    {
+     "t": "list",
+     "v": [
+      "100% All-Laser Procedure",
+      "Advanced Laser Accuracy",
+      "Fast Visual Recovery",
+      "Enhanced Comfort & Safety"
+     ]
+    },
+    {
+     "t": "p",
+     "v": "*Suitability is determined by a comprehensive eye assessment with our specialists."
+    },
+    {
+     "t": "img",
+     "v": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Clear-Max-2.webp",
+     "alt": "CLEAR MAX - all-laser LASIK procedure"
+    }
+   ]
+  },
+  {
+   "kind": "suitpair",
+   "yes": {
+    "kind": "suits",
+    "heading": "Who Can Benefit from CLEAR MAX LASIK?",
+    "items": [
+     {
+      "t": "p",
+      "v": "You may be suitable for CLEAR MAX LASIK if you:"
+     },
+     {
+      "t": "list",
+      "v": [
+       "Are 18 years and above with a stable prescription",
+       "Have myopia (short-sightedness), hyperopia (long-sightedness), or astigmatism",
+       "Prefer a precise, all-laser LASIK option",
+       "Want a faster recovery with minimal discomfort"
+      ]
+     },
+     {
+      "t": "p",
+      "v": "A comprehensive eye assessment at Optimax is required to confirm suitability."
+     }
+    ]
+   },
+   "no": {
+    "kind": "notsuits",
+    "heading": "Who Is Not Suitable for CLEAR MAX LASIK?",
+    "items": [
+     {
+      "t": "p",
+      "v": "CLEAR MAX LASIK may not be suitable for individuals who:"
+     },
+     {
+      "t": "list",
+      "v": [
+       "Are pregnant or breastfeeding",
+       "Have certain autoimmune conditions",
+       "Have unstable vision or underlying eye conditions"
+      ]
+     },
+     {
+      "t": "p",
+      "v": "Our ophthalmologists will advise on the safest alternative treatment if CLEAR MAX is not recommended."
+     }
+    ]
+   }
+  },
+  {
+   "kind": "compare",
+   "heading": "CLEAR MAX vs SMILE® PRO vs Traditional LASIK",
+   "intro": [],
+   "columns": [
+    "CLEAR MAX",
+    "ZEISS SMILE® PRO",
+    "Traditional EYE LASIK"
+   ],
+   "rows": [
+    {
+     "label": "Technology",
+     "values": [
+      "ZIEMER’s Swiss-made femtosecond",
+      "ZEISS VisuMax® femtosecond",
+      "Blade-assisted"
+     ]
+    },
+    {
+     "label": "Corneal Flap",
+     "values": [
+      "❌ No",
+      "❌ No",
+      "✅ Yes"
+     ]
+    },
+    {
+     "label": "Comfort Level",
+     "values": [
+      "High",
+      "Very High (contactless docking with PatientSky Lighting)",
+      "Moderate"
+     ]
+    },
+    {
+     "label": "Recovery Time",
+     "values": [
+      "3-5 days",
+      "24–48 hours",
+      "3-5 days"
+     ]
+    },
+    {
+     "label": "Dry Eye Risk",
+     "values": [
+      "Low",
+      "Lowest",
+      "Higher"
+     ]
+    },
+    {
+     "label": "Visual Results",
+     "values": [
+      "Excellent",
+      "Excellent",
+      "Good"
+     ]
+    },
+    {
+     "label": "Available at OPTIMAX?",
+     "values": [
+      "✅ Yes",
+      "✅ Yes",
+      "✅ Yes"
+     ]
+    }
+   ],
+   "note": []
+  },
+  {
+   "kind": "steps",
+   "heading": "CLEAR MAX LASIK Procedure Steps",
+   "intro": [],
+   "items": [
+    {
+     "title": "Eye Mapping",
+     "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Personalized-Eye-Mapping.webp",
+     "text": "Detailed scans of your eyes are used to personalise treatment."
+    },
+    {
+     "title": "Lenticule Creation",
+     "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Laser-Treatment-1.webp",
+     "text": "A small disc-shaped piece of corneal tissue (lenticule) and a small incision are created within the cornea."
+    },
+    {
+     "title": "Lenticule Removal",
+     "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Lenticule-Removal.webp",
+     "text": "The lenticule is removed through the incision with minimal stress to the cornea."
+    },
+    {
+     "title": "Healing & Recovery",
+     "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Epithelial-Regeneration.webp",
+     "text": "The cornea is reshaped, correcting the refractive error and allowing vision to improve within days."
+    }
+   ],
+   "note": [
+    "The laser portion typically takes 30–45 seconds per eye."
+   ]
+  },
+  {
+   "kind": "prepost",
+   "heading": "Pre & Post CLEAR MAX LASIK Instruction",
+   "intro": [],
+   "groups": [
+    {
+     "label": "Before Your Procedure:",
+     "items": [
+      "Stop wearing contact lenses as advised",
+      "Avoid makeup, perfume, or skincare on treatment day",
+      "Arrange transport home after the procedure"
+     ]
+    },
+    {
+     "label": "After Your Procedure:",
+     "items": [
+      "Use prescribed eye drops as directed",
+      "Avoid rubbing your eyes, swimming, or strenuous activity for one month",
+      "Attend scheduled follow-up appointments"
+     ]
+    }
+   ],
+   "note": [
+    "Many patients achieve clear vision within a few days."
+   ]
+  },
+  {
+   "kind": "journey",
+   "heading": "Your Journey with OPTIMAX EYE SPECIALIST",
+   "items": [
+    {
+     "title": "Consultation & Eye Assessment",
+     "text": "Vision tests, corneal scans, and eligibility checks"
+    },
+    {
+     "title": "Personalized Planning",
+     "text": "One-on-one consultation with our specialists on your clinical findings and recommendation on your best treatment plan"
+    },
+    {
+     "title": "Surgery Day",
+     "text": "Quick outpatient procedure at ISO-accredited facility"
+    },
+    {
+     "title": "Post-Treatment Care & Follow-Ups",
+     "text": "Regular follow-ups ensure optimal healing and results"
+    }
+   ],
+   "note": []
+  },
+  {
+   "kind": "why",
+   "heading": "Why Choose OPTIMAX?",
+   "items": [
+    {
+     "t": "list",
+     "v": [
+      "Over 31+ years of excellence in eye care",
+      "Full-time, experienced ophthalmic surgeons",
+      "Lifetime vision warranty"
+     ]
+    },
+    {
+     "t": "list",
+     "v": [
+      "Over 1,000,000+ successful procedures",
+      "24 eye specialist centres nationwide",
+      "ISO-accredited facilities"
+     ]
+    },
+    {
+     "t": "p",
+     "v": "Your vision is always treated with expertise and integrity at Optimax."
+    }
+   ]
+  },
+  {
+   "kind": "awards",
+   "heading": "MULTI-AWARD WINNING EYE SPECIALIST",
+   "items": []
+  },
+  {
+   "kind": "quotes",
+   "heading": "What Our Patients Say",
+   "intro": [
+    "All testimonials shared with consent."
+   ],
+   "quotes": [
+    {
+     "quote": "I could see clearly the next day after CLEAR MAX. The procedure was quick, comfortable, and the team was very reassuring.",
+     "by": "Nur Aida, Kuching"
+    },
+    {
+     "quote": "Within 48 hours, my vision was sharp again. I’m very happy with my experience at Optimax.",
+     "by": "Jason, Kuching"
+    }
+   ],
+   "note": []
+  },
+  {
+   "kind": "cta",
+   "heading": "Your Clearer Tomorrow Begins With CLEAR MAX",
+   "texts": [
+    "Take the first step towards sharper, more confident vision with Optimax Eye Specialist Malaysia.",
+    "Schedule Your Consultation",
+    "⚠️Disclaimer: This content is informational and not a substitute for professional clinical evaluation. Final treatment decisions are made during in-person consultation."
+   ],
+   "list": [
+    "No-pressure, educational approach",
+    "Nationwide clinics",
+    "Patient-focused eye care experience"
+   ]
+  }
+ ]
+}

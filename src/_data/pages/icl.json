@@ -1,0 +1,321 @@
+{
+ "title": "ICL Malaysia | Implantable Collamer Lens at Optimax",
+ "description": "Discover ICL at Optimax—blade-free, reversible vision correction for high myopia, thin corneas & dry eyes. Safe LASIK alternative. Enquire Now.",
+ "hero": {
+  "title": "Implantable Collamer Lens (ICL): A High-Definition Vision Solution at OPTIMAX",
+  "sub": [
+   "An Advanced Alternative to LASIK for Moderate to Severe Myopia and Thin Corneas"
+  ],
+  "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/ICL-treatment.webp",
+  "image_alt": "",
+  "image2": "https://optimaxeyespecialist.com/cms/wp-content/uploads/ICL-LP.webp",
+  "image2_alt": ""
+ },
+ "sections": [
+  {
+   "kind": "intro",
+   "heading": "Beyond LASIK — A Safe Option for High Myopia",
+   "items": [
+    {
+     "t": "p",
+     "v": "If you’ve been told you’re not a good candidate for LASIK due to thin corneas, high myopia, or dry eyes, you’re not out of options. At OPTIMAX Eye Specialist, we offer the Implantable Collamer Lens (ICL) — a safe and reversible solution for long-term vision correction.\nUnlike laser surgery, ICL does not remove corneal tissue. Instead, a biocompatible lens is gently implanted behind your iris and in front of your natural lens to correct your vision from the inside."
+    },
+    {
+     "t": "list",
+     "v": [
+      "Over 1,000,000+ vision correction procedures completed",
+      "Experienced ICL-trained refractive surgeons",
+      "ISO-certified surgical suites with advanced diagnostic tools"
+     ]
+    }
+   ],
+   "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/ICL-LP.webp",
+   "image_alt": ""
+  },
+  {
+   "kind": "feature",
+   "heading": "What Is an Implantable Collamer Lens (ICL)?",
+   "items": [
+    {
+     "t": "p",
+     "v": "ICL is a micro-thin, flexible lens made of collamer, a biocompatible material that works in harmony with your natural eye. Once implanted, the lens corrects short-sightedness (myopia) and astigmatism without altering the shape of the cornea.\nThe ICL is invisible, does not require maintenance, and can be removed or replaced if needed."
+    },
+    {
+     "t": "sub",
+     "v": "Key Features:"
+    },
+    {
+     "t": "list",
+     "v": [
+      "Ideal for patients with high myopia (-6.00D to -20.00D)",
+      "Suitable for thin or irregular corneas",
+      "Does not cause dry eyes",
+      "Porcine-free (Halal) ICL available",
+      "Permanent but reversible"
+     ]
+    },
+    {
+     "t": "p",
+     "v": "*A full consultation will determine your eye health and suitability for ICL."
+    },
+    {
+     "t": "img",
+     "v": "https://optimaxeyespecialist.com/cms/wp-content/uploads/ICL-2.webp",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "kind": "suitpair",
+   "yes": {
+    "kind": "suits",
+    "heading": "Who Can Benefit from ICL?",
+    "items": [
+     {
+      "t": "p",
+      "v": "ICL may be ideal if you:"
+     },
+     {
+      "t": "list",
+      "v": [
+       "Have moderate to severe myopia",
+       "Are not eligible for LASIK or PRK",
+       "Have dry eyes or thin corneas",
+       "Want a reversible vision correction option",
+       "Are aged 21 to 45, with stable prescription for at least one year"
+      ]
+     },
+     {
+      "t": "p",
+      "v": "Eligibility is confirmed through detailed diagnostics and eye mapping."
+     }
+    ]
+   },
+   "no": {
+    "kind": "notsuits",
+    "heading": "Who Is Not Suitable for ICL?",
+    "items": [
+     {
+      "t": "p",
+      "v": "ICL may not be recommended if you:"
+     },
+     {
+      "t": "list",
+      "v": [
+       "Have advanced cataracts or glaucoma",
+       "Are currently pregnant or breastfeeding",
+       "Have chronic eye inflammation or infections",
+       "Are under 21 or over 45 with presbyopia (may benefit from alternative options)"
+      ]
+     },
+     {
+      "t": "p",
+      "v": "Alternative solutions such as PRESBYOND or FLACS may be more appropriate."
+     }
+    ]
+   }
+  },
+  {
+   "kind": "compare",
+   "heading": "ICL vs LASIK vs Contact Lenses",
+   "intro": [],
+   "columns": [
+    "ICL",
+    "LASIK",
+    "Contact Lenses"
+   ],
+   "rows": [
+    {
+     "label": "Method",
+     "values": [
+      "Implantable lens",
+      "Cornea reshaped with laser",
+      "External lens worn daily"
+     ]
+    },
+    {
+     "label": "Reversibility",
+     "values": [
+      "✅ Yes",
+      "❌ No",
+      "✅ Yes"
+     ]
+    },
+    {
+     "label": "Suitable for Thin Corneas",
+     "values": [
+      "✅ Yes",
+      "❌ No",
+      "✅ Yes"
+     ]
+    },
+    {
+     "label": "Dry Eye Risk",
+     "values": [
+      "Low",
+      "Moderate to high",
+      "Depends on usage"
+     ]
+    },
+    {
+     "label": "Maintenance",
+     "values": [
+      "None",
+      "None",
+      "Daily cleaning/replacement"
+     ]
+    },
+    {
+     "label": "Night Vision Quality",
+     "values": [
+      "High (less glare/halos)",
+      "May have glare/halos",
+      "Varies by lens"
+     ]
+    }
+   ],
+   "note": []
+  },
+  {
+   "kind": "steps",
+   "heading": "ICL Procedure Steps",
+   "intro": [
+    "How ICL Works — Step by Step:"
+   ],
+   "items": [
+    {
+     "title": "Pre-op Eye Mapping",
+     "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Pre-op-Eye-Mapping.webp",
+     "text": "Corneal scans, anterior chamber depth, and pupil size measurement"
+    },
+    {
+     "title": "Lens Customization",
+     "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Lens-Customization.webp",
+     "text": "ICL ordered to match your eye anatomy"
+    },
+    {
+     "title": "Lens Implantation",
+     "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Lens-Implantation.webp",
+     "text": "A tiny incision allows placement of the foldable lens behind the iris"
+    },
+    {
+     "title": "Quick Recovery",
+     "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Quick-Recovery.webp",
+     "text": "Most patients resume normal activity within 24–48 hours"
+    }
+   ],
+   "note": [
+    "The procedure typically takes 15–20 minutes per eye and is painless."
+   ]
+  },
+  {
+   "kind": "prepost",
+   "heading": "Pre & Post Procedure Instructions",
+   "intro": [],
+   "groups": [
+    {
+     "label": "Before Surgery:",
+     "items": [
+      "Stop wearing contact lenses as instructed",
+      "Complete pre-operative eye measurements and medical screening"
+     ]
+    },
+    {
+     "label": "After Surgery:",
+     "items": [
+      "Use prescribed anti-inflammatory and antibiotic drops",
+      "Avoid swimming and strenuous activities for one week",
+      "Attend follow-ups to monitor intraocular pressure and lens position"
+     ]
+    }
+   ],
+   "note": []
+  },
+  {
+   "kind": "journey",
+   "heading": "Your ICL Journey at OPTIMAX",
+   "items": [
+    {
+     "title": "Comprehensive Eye Assessment",
+     "text": "Including pupil size, corneal mapping & visual stability"
+    },
+    {
+     "title": "Surgeon Consultation",
+     "text": "Personalised risk-benefit discussion and ICL lens planning"
+    },
+    {
+     "title": "Procedure Day",
+     "text": "Quick outpatient surgery in a sterile, accredited setting"
+    },
+    {
+     "title": "Ongoing Monitoring",
+     "text": "Post-op care to ensure visual clarity and long-term eye health"
+    }
+   ],
+   "note": [
+    "Note: Same day eye examination and ICL treatment available at certain Optimax centres."
+   ]
+  },
+  {
+   "kind": "why",
+   "heading": "Why Choose OPTIMAX?",
+   "items": [
+    {
+     "t": "list",
+     "v": [
+      "Over 31+ years of vision correction leadership",
+      "Trusted by over 1,000,000+ satisfied patients"
+     ]
+    },
+    {
+     "t": "list",
+     "v": [
+      "Highly experienced ICL-trained surgeons",
+      "24 clinics across Malaysia with ISO-accredited surgical suites"
+     ]
+    },
+    {
+     "t": "p",
+     "v": "We combine global best practices with personalized care to help you achieve long-lasting vision freedom."
+    }
+   ]
+  },
+  {
+   "kind": "awards",
+   "heading": "Multi-Award Winning Eye Specialist",
+   "items": []
+  },
+  {
+   "kind": "quotes",
+   "heading": "Patient Testimonials",
+   "intro": [
+    "Patient testimonials are shared with consent and do not imply typical outcomes or suitability."
+   ],
+   "quotes": [
+    {
+     "quote": "I was told I couldn’t get LASIK due to my high prescription. ICL at OPTIMAX gave me the vision I never thought possible.",
+     "by": "Hanis, Kota Kinabalu"
+    },
+    {
+     "quote": "The procedure was quick and comfortable. I was back to work in two days without my glasses.",
+     "by": "Julian, Petaling Jaya"
+    }
+   ],
+   "note": []
+  },
+  {
+   "kind": "cta",
+   "heading": "Discover Your ICL Options Today",
+   "texts": [
+    "Let OPTIMAX guide you toward clearer, glasses-free vision with a safe, implantable solution.",
+    "Schedule Your Consultation",
+    "⚠️Disclaimer: This content is informational and not a substitute for professional clinical evaluation. Final treatment decisions are made during in-person consultation."
+   ],
+   "list": [
+    "Experienced eye surgeons",
+    "Biocompatible, high-definition vision lens",
+    "Trusted eye care brand since 1995"
+   ]
+  }
+ ]
+}

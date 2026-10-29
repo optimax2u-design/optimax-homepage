@@ -6,88 +6,29 @@ pagination:
 permalink: "/doctor/{{ d.slug }}/"
 layout: layouts/base.njk
 nav_key: Doctors
+hide_booking: true
 eleventyComputed:
-  title: "{{ d.name }} — {{ d.title }} | Optimax"
-  description: "{{ d.name }} ({{ d.credentials }}), {{ d.title }} at Optimax Eye Specialist."
-  book_doctor: "{{ d.name }}"
-  book_title: "Book with {{ d.name }}."
-  book_branch: "{{ (d.branches[0] | branchBySlug(branches)).name }}"
+  title: "{{ d.seo_title }}"
+  description: "{{ d.seo_description }}"
 ---
+{#- Doctor profile — same fields and wording as the live profile page -#}
 {%- import "macros.njk" as m -%}
-{%- set firstB = d.branches[0] | branchBySlug(branches) -%}
 
-<section class="phero phero--compact">
+<section class="phero">
+  <div class="wrap">{{ m.crumbs([{label: "Doctors", url: "/doctor/"}, {label: d.name}]) }}</div>
   <div class="wrap profile">
     <div class="profile__photo doc__photo c-{{ d.color }} load" style="--d:1">
-      <img src="{{ d.photo }}" alt="Portrait of {{ d.name }}" width="600" height="750" fetchpriority="high">
+      <img src="{{ d.photo }}" alt="{{ d.name }}" width="600" height="750" fetchpriority="high">
     </div>
     <div class="profile__copy">
-      {{ m.crumbs([{label: "Doctors", url: "/doctor/"}, {label: d.name}]) }}
-      <p class="eyebrow load" style="--d:0">{{ d.title }}</p>
       <h1 class="phero__title phero__title--name load" style="--d:1">{{ d.name }}</h1>
-      <p class="profile__creds load" style="--d:2">{{ d.credentials }}</p>
-
-      <dl class="profile__facts load" style="--d:3">
-        <div><dt>Practises at</dt><dd>{% for s in d.branches %}{% set b = s | branchBySlug(branches) %}<a href="/branches/{{ b.slug }}/" class="pill pill--link">📍 {{ b.name }}</a>{% endfor %}</dd></div>
-        <div><dt>Speaks</dt><dd>{% for l in d.languages %}<span class="pill">{{ l }}</span>{% endfor %}</dd></div>
+      <dl class="profile__facts load" style="--d:2">
+        <div><dt>POSITION</dt><dd>{% for p in d.position %}<span class="line">{{ p }}</span>{% endfor %}</dd></div>
+        <div><dt>QUALIFICATIONS</dt><dd>{{ d.credentials }}</dd></div>
+        <div><dt>SPECIALTIES</dt><dd><ul class="bullets">{% for s in d.specialties %}<li>{{ s }}</li>{% endfor %}</ul></dd></div>
+        <div><dt>LANGUAGE(S)</dt><dd>{{ d.languages_text }}</dd></div>
+        <div><dt>BRANCH</dt><dd class="chips">{% set names = d.branch_text.split(', ') %}{% for s in d.branches %}<a href="/branches/{{ s }}/" class="pill pill--link">{{ names[loop.index0] or s }}</a>{% endfor %}</dd></div>
       </dl>
-      <div class="hero__ctas load" style="--d:4">
-        <a href="#book" class="btn btn--primary btn--lg">Book an appointment</a>
-        <a href="{{ firstB.whatsapp | wa }}" class="btn btn--ghost btn--lg" target="_blank" rel="noopener">WhatsApp {{ firstB.name }}</a>
-      </div>
     </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap split">
-    <div class="reveal">
-      <p class="eyebrow">Areas of expertise</p>
-      <h2 class="h2">Clinical interests.</h2>
-      <ul class="checks checks--lg">{% for s in d.specialties %}<li>{{ s }}</li>{% endfor %}</ul>
-    </div>
-    {%- if d.procedures.length %}
-    <div class="feat c-{{ d.color }} reveal" style="--d:1">
-      <h3>Treatments performed</h3>
-      <ul class="tags tags--solid">
-        {%- for p in d.procedures %}{% set t = p | findTreatment(treatments.list) %}<li>{% if t %}<a href="/{{ t.slug }}/">{{ p }}</a>{% else %}{{ p }}{% endif %}</li>{% endfor %}
-      </ul>
-      <p class="fine">Your doctor will recommend the safest option after a full assessment.</p>
-    </div>
-    {%- endif %}
-  </div>
-</section>
-
-{#- Branch cards for this doctor -#}
-<section class="section section--tint">
-  <div class="wrap">
-    <header class="head reveal">
-      <p class="eyebrow">Where to find {{ d.name }}</p>
-      <h2>Visit us.</h2>
-    </header>
-    <div class="bgrid">
-      {%- for s in d.branches %}{% set b = s | branchBySlug(branches) %}
-      <a class="bcard reveal" href="/branches/{{ b.slug }}/" style="--d:{{ loop.index0 }}">
-        <span class="bcard__region">{{ b.region }}</span>
-        <strong class="bcard__name">{{ b.full_name }}</strong>
-        <span class="bcard__addr">{{ b.address }}</span>
-        <span class="bcard__meta"><span>☎ {{ b.tel }}</span>{% if b.hours.length %}<span>🕘 {{ b.hours[0] }}</span>{% endif %}</span>
-        <span class="bcard__go" aria-hidden="true">→</span>
-      </a>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-
-{#- Colleagues -#}
-<section class="section">
-  <div class="wrap">
-    <header class="head head--row reveal">
-      <div><p class="eyebrow">Our team</p><h2>Meet other specialists.</h2></div>
-      <a class="textlink textlink--top" href="/doctor/">All doctors <span aria-hidden="true">→</span></a>
-    </header>
-  </div>
-  <div class="scroller" data-carousel>
-    {%- for o in doctors.list | except("slug", d.slug) %}{% if loop.index <= 8 %}{{ m.doccard(o) }}{% endif %}{% endfor %}
   </div>
 </section>

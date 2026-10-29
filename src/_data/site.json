@@ -15,9 +15,17 @@
   },
   "nav": [
     {
+      "label": "Home",
+      "url": "/"
+    },
+    {
       "label": "Treatments",
       "url": "/treatments/",
       "mega": true
+    },
+    {
+      "label": "About Us",
+      "url": "/about-us/"
     },
     {
       "label": "Doctors",
@@ -25,15 +33,11 @@
     },
     {
       "label": "Branches",
-      "url": "/branches/"
+      "url": "/branches/taman-tun-dr-ismail-kuala-lumpur-hq/"
     },
     {
-      "label": "About",
-      "url": "/about-us/"
-    },
-    {
-      "label": "FAQs",
-      "url": "/faqs/"
+      "label": "Contact",
+      "url": "/#book"
     },
     {
       "label": "Blog",
@@ -52,32 +56,36 @@
     "address_label": "TTDI Headquarters",
     "links": [
       {
-        "label": "All treatments",
-        "url": "/treatments/"
+        "label": "Home",
+        "url": "/"
       },
       {
-        "label": "Our doctors",
+        "label": "About Us",
+        "url": "/about-us/"
+      },
+      {
+        "label": "Doctors",
         "url": "/doctor/"
       },
       {
         "label": "Branches",
-        "url": "/branches/"
+        "url": "/branches/taman-tun-dr-ismail-kuala-lumpur-hq/"
       },
       {
-        "label": "About Optimax",
-        "url": "/about-us/"
+        "label": "Blog",
+        "url": "/blog/"
+      },
+      {
+        "label": "Awards",
+        "url": "/about-us/#awards"
       },
       {
         "label": "FAQs",
         "url": "/faqs/"
       },
       {
-        "label": "Financing options",
+        "label": "Financing Options",
         "url": "/financing-options/"
-      },
-      {
-        "label": "Blog",
-        "url": "/blog/"
       }
     ],
     "legal": "Treatment suitability and outcomes vary from person to person and are confirmed by your eye specialist after a full assessment.",

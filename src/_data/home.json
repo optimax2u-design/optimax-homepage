@@ -113,7 +113,7 @@
           "Ortho-K",
           "RGP lenses"
         ],
-        "url": "/treatments/#screening-care"
+        "url": "/treatments/"
       },
       {
         "id": "checkup",
@@ -126,7 +126,7 @@
           "Glaucoma screening",
           "Children's eye care"
         ],
-        "url": "/treatments/#screening-care"
+        "url": "/treatments/"
       }
     ]
   },
@@ -148,7 +148,7 @@
           "ASA / TESA",
           "ICL"
         ],
-        "url": "/treatments/#laser"
+        "url": "/treatments/#all"
       },
       {
         "title": "Presbyopia",
@@ -185,7 +185,7 @@
           "Ortho-K",
           "RGP"
         ],
-        "url": "/treatments/#screening-care"
+        "url": "/treatments/"
       }
     ]
   },

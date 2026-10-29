@@ -1,0 +1,343 @@
+{
+ "title": "FEMTO-LASIK Malaysia | Blade-Free LASIK at Optimax",
+ "description": "Experience FEMTO-LASIK at Optimax—blade-free, dual-laser LASIK with advanced SCHWIND AMARIS & Ziemer FEMTO LDV. Enquire Now.",
+ "hero": {
+  "title": "FEMTO-LASIK: Blade-Free LASIK for Reliable, Custom Vision Correction",
+  "sub": [
+   "A Proven LASIK Solution Using Dual Laser Technology for Safe, Accurate Results"
+  ],
+  "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Femto-Lasik-1-1.webp",
+  "image_alt": "",
+  "image2": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Femto-Lasik-LP.webp",
+  "image2_alt": ""
+ },
+ "sections": [
+  {
+   "kind": "intro",
+   "heading": "See Clearly, Live Fully",
+   "items": [
+    {
+     "t": "p",
+     "v": "If you struggle with myopia (short-sightedness), hyperopia (long-sightedness), or astigmatism, you may be a candidate for FEMTO-LASIK — a safe and widely performed laser eye surgery trusted by millions worldwide.\nAt OPTIMAX Eye Specialist, we combine experience with cutting-edge laser systems to deliver highly personalized care. FEMTO-LASIK is one of our most popular procedures, offering faster recovery, high precision, and long-term visual clarity."
+    },
+    {
+     "t": "list",
+     "v": [
+      "Over 1,000,000+ successful procedures",
+      "31+ years of LASIK experience",
+      "Bladeless dual-laser approach",
+      "Full-time eye surgeons in ISO-accredited centres"
+     ]
+    }
+   ],
+   "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Femto-Lasik-LP.webp",
+   "image_alt": ""
+  },
+  {
+   "kind": "feature",
+   "heading": "What is FEMTO-LASIK?",
+   "items": [
+    {
+     "t": "p",
+     "v": "FEMTO-LASIK (Femtosecond LASIK) is a modern evolution of conventional LASIK that uses two lasers instead of a mechanical blade:"
+    },
+    {
+     "t": "list",
+     "v": [
+      "A femtosecond laser creates a thin, precise corneal flap",
+      "An excimer laser reshapes the cornea to correct refractive error"
+     ]
+    },
+    {
+     "t": "p",
+     "v": "This bladeless approach improves safety, comfort, and precision.\nTechnology Used at OPTIMAX\nWe use the SCHWIND AMARIS® excimer laser combined with Ziemer FEMTO LDV™ femtosecond laser for high-definition outcomes:"
+    },
+    {
+     "t": "list",
+     "v": [
+      "Ultra-thin, low-pressure flap creation",
+      "Intelligent eye tracking & fast ablation speed",
+      "High safety profile, tissue-conserving algorithm"
+     ]
+    },
+    {
+     "t": "p",
+     "v": "Final treatment recommendation is determined during your consultation."
+    },
+    {
+     "t": "sub",
+     "v": "Key Benefits:"
+    },
+    {
+     "t": "list",
+     "v": [
+      "Bladeless and precise flap creation"
+     ]
+    },
+    {
+     "t": "list",
+     "v": [
+      "Enhanced comfort and reduced flap complications",
+      "Rapid visual recovery",
+      "Treats a wide range of prescriptions"
+     ]
+    },
+    {
+     "t": "img",
+     "v": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Femto-Lasik-2.webp",
+     "alt": ""
+    }
+   ]
+  },
+  {
+   "kind": "suitpair",
+   "yes": {
+    "kind": "suits",
+    "heading": "Who Can Benefit from FEMTO-LASIK?",
+    "items": [
+     {
+      "t": "p",
+      "v": "You may be suitable for FEMTO-LASIK if you:"
+     },
+     {
+      "t": "list",
+      "v": [
+       "Are 18 years or older with stable prescription",
+       "Have myopia, hyperopia, or astigmatism",
+       "Have adequate corneal thickness",
+       "Prefer a fast-recovery laser option"
+      ]
+     },
+     {
+      "t": "p",
+      "v": "A full clinical assessment is needed to confirm eligibility."
+     }
+    ]
+   },
+   "no": {
+    "kind": "notsuits",
+    "heading": "Who Is Not Suitable for FEMTO-LASIK?",
+    "items": [
+     {
+      "t": "p",
+      "v": "FEMTO-LASIK may not be appropriate if you:"
+     },
+     {
+      "t": "list",
+      "v": [
+       "Have thin corneas or irregular topography",
+       "Are diagnosed with keratoconus or unstable vision",
+       "Are pregnant or nursing",
+       "Have chronic dry eyes or eye inflammation"
+      ]
+     },
+     {
+      "t": "p",
+      "v": "Alternatives such as ZEISS SMILE® or TESA® may be recommended."
+     }
+    ]
+   }
+  },
+  {
+   "kind": "compare",
+   "heading": "FEMTO-LASIK vs ZEISS SMILE® vs TESA®",
+   "intro": [],
+   "columns": [
+    "FEMTO-LASIK",
+    "ZEISS SMILE®",
+    "TESA® (TransPRK)"
+   ],
+   "rows": [
+    {
+     "label": "Flap Creation",
+     "values": [
+      "✅ Yes (bladeless)",
+      "❌ No",
+      "❌ No"
+     ]
+    },
+    {
+     "label": "Laser Type",
+     "values": [
+      "Femtosecond + Excimer",
+      "Femtosecond only",
+      "Excimer only"
+     ]
+    },
+    {
+     "label": "Recovery Time",
+     "values": [
+      "1–3 days",
+      "1–3 days",
+      "5–7 days(TransPRK)"
+     ]
+    },
+    {
+     "label": "Discomfort Level",
+     "values": [
+      "Minimal",
+      "Very Minimal",
+      "Mild (in early recovery)"
+     ]
+    },
+    {
+     "label": "Suitable for Thin Cornea",
+     "values": [
+      "❌ No",
+      "✅ Yes",
+      "✅ Yes"
+     ]
+    },
+    {
+     "label": "Vision Outcome Range",
+     "values": [
+      "Excellent for most prescriptions",
+      "High for mild to moderate myopia",
+      "High for moderate prescriptions"
+     ]
+    }
+   ],
+   "note": []
+  },
+  {
+   "kind": "steps",
+   "heading": "FEMTO-LASIK Procedure Steps",
+   "intro": [],
+   "items": [
+    {
+     "title": "Eye Mapping",
+     "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Personalized-Eye-Mapping.webp",
+     "text": "Advanced topography & wavefront scans"
+    },
+    {
+     "title": "Flap Creation",
+     "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Laser-Flap-Creation.webp",
+     "text": "Femtosecond laser creates a thin corneal flap"
+    },
+    {
+     "title": "Corneal Reshaping",
+     "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Corneal-Reshaping-2.png",
+     "text": "Excimer laser corrects refractive error"
+    },
+    {
+     "title": "Flap Repositioning",
+     "image": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Flap-Repositioning-1.png",
+     "text": "Flap is gently placed back to heal naturally"
+    }
+   ],
+   "note": [
+    "Entire procedure takes around 15 minutes per eye"
+   ]
+  },
+  {
+   "kind": "prepost",
+   "heading": "Pre & Post FEMTO-LASIK Care",
+   "intro": [],
+   "groups": [
+    {
+     "label": "Before Your Surgery:",
+     "items": [
+      "Stop wearing contact lenses 1–2 weeks prior",
+      "Attend detailed eye exam and planning consultation"
+     ]
+    },
+    {
+     "label": "After Surgery:",
+     "items": [
+      "Avoid rubbing eyes for 1 week",
+      "Use prescribed drops for healing and dryness",
+      "Wear protective sunglasses outdoors",
+      "Attend follow-up reviews for progress checks",
+      "Avoid swimming, sauna, facial and contact sports for 1 month"
+     ]
+    }
+   ],
+   "note": []
+  },
+  {
+   "kind": "journey",
+   "heading": "Your Treatment Journey at OPTIMAX",
+   "items": [
+    {
+     "title": "Initial Consultation",
+     "text": "Eye screening, diagnostics, and treatment recommendation"
+    },
+    {
+     "title": "Pre-Surgery Planning",
+     "text": "Specialist-guided plan using your custom eye data"
+    },
+    {
+     "title": "Procedure Day",
+     "text": "Outpatient bladeless LASIK surgery"
+    },
+    {
+     "title": "Aftercare & Monitoring",
+     "text": "Recovery support and long-term outcome tracking"
+    }
+   ],
+   "note": []
+  },
+  {
+   "kind": "why",
+   "heading": "Why Choose OPTIMAX?",
+   "items": [
+    {
+     "t": "list",
+     "v": [
+      "31+ years of experience in laser vision correction",
+      "Trusted by over 1,000,000+ patients nationwide",
+      "Lifetime vision warranty"
+     ]
+    },
+    {
+     "t": "list",
+     "v": [
+      "Certified use of SCHWIND and Ziemer laser systems",
+      "Patient-first care model with full-time surgeons"
+     ]
+    },
+    {
+     "t": "p",
+     "v": "We combine precision technology with personal attention to restore your sight confidently."
+    }
+   ]
+  },
+  {
+   "kind": "awards",
+   "heading": "Multi-Award Winning Eye Specialist",
+   "items": []
+  },
+  {
+   "kind": "quotes",
+   "heading": "What Our Patients Say",
+   "intro": [
+    "Shared with consent."
+   ],
+   "quotes": [
+    {
+     "quote": "FEMTO-LASIK gave me back my confidence. The whole experience at OPTIMAX was seamless, from consultation to post-op.",
+     "by": "Joanna, Penang"
+    },
+    {
+     "quote": "I was amazed how quickly I could see after surgery. It was completely painless and professional.",
+     "by": "Hafiz, Klang"
+    }
+   ],
+   "note": []
+  },
+  {
+   "kind": "cta",
+   "heading": "Book Your FEMTO-LASIK Assessment",
+   "texts": [
+    "Let our experienced refractive team guide you to sharper, hassle-free vision.",
+    "Book Your Consultation Today",
+    "Disclaimer: This page is for educational purposes only. Final treatment decisions are made following in-person clinical evaluation."
+   ],
+   "list": [
+    "Blade-free, dual-laser LASIK",
+    "Personalized care & advanced diagnostics",
+    "Nationwide OPTIMAX branches"
+   ]
+  }
+ ]
+}
