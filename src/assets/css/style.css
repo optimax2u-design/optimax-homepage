@@ -851,4 +851,3 @@ textarea:focus{outline:none;border-color:var(--violet);background:#fff}
 .quotes--1,.quotes--2{display:grid;grid-auto-flow:row;grid-auto-columns:auto;overflow:visible;margin:0;padding:0}
 @media (max-width:760px){.quotes--1,.quotes--2{grid-template-columns:1fr}}
 .head .lead+.lead,.prose-block p+p{margin-top:10px}
-.step__img img{width:72%;height:auto;object-fit:contain}
