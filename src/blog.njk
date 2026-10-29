@@ -1,27 +1,43 @@
 ---
 permalink: /blog/
 layout: layouts/base.njk
-hide_booking: true
-title: "Optimax Blog | Eye Care News, LASIK & Vision Tips Malaysia"
-description: "Eye care news, LASIK and vision tips from Optimax Eye Specialist."
+eleventyComputed:
+  title: "{{ blog.seo_title }}"
+  description: "{{ blog.seo_description }}"
 ---
-{#- Blog list — posts, titles, categories, excerpts and featured images from optimaxeyespecialist.com/blog/ -#}
 {%- import "macros.njk" as m -%}
+{%- set posts = blog.posts | sort(true, false, "date") -%}
+{%- set cats = blog.posts | pluck("categories") | uniq -%}
+{%- set lead = posts[0] -%}
 
-{{ m.phero({title: blog.heading}, [{label: "Blog"}]) }}
+{{ m.phero(blog, { compact: true, crumbs: [{label: "Blog"}] }) }}
 
 <section class="section section--flush">
   <div class="wrap">
+    <a class="feature c-{{ lead.color }} reveal" href="/{{ lead.slug }}/">
+      <div class="feature__cover cover c-{{ lead.color }}"><span aria-hidden="true">{{ lead.emoji }}</span></div>
+      <div class="feature__body">
+        <p class="post__meta"><span class="post__cat">{{ lead.categories[0] }}</span> · {{ lead.date | niceDate }}</p>
+        <h2>{{ lead.title }}</h2>
+        <p>{{ lead.excerpt }}</p>
+        <span class="textlink">Read article <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+
+    <div class="fchips fchips--center reveal" role="group" aria-label="Filter by topic" data-post-filter>
+      <button type="button" class="fchip" aria-pressed="true" data-cat="">All topics</button>
+      {%- for c in cats %}<button type="button" class="fchip" aria-pressed="false" data-cat="{{ c }}">{{ c }}</button>{% endfor %}
+    </div>
+
     <div class="posts">
-      {%- for p in blog.posts %}
-      <a class="post reveal" href="/{{ p.slug }}/" style="--d:{{ loop.index0 % 3 }}">
-        <figure class="post__img"><img src="{{ p.image }}" alt="{{ p.title }}" width="768" height="513" loading="lazy" decoding="async"></figure>
-        <p class="post__meta">{% for c in p.categories %}<span class="post__cat">{{ c }}</span>{% endfor %}</p>
-        <h2 class="post__title">{{ p.title }}</h2>
-        <p class="post__date">{{ p.date | niceDate }}</p>
-        <p class="post__excerpt">{{ p.excerpt }}</p>
+      {%- for p in posts %}{% if not loop.first %}
+      <a class="post reveal" href="/{{ p.slug }}/" data-cats="{{ p.categories | join('|') }}" style="--d:{{ loop.index0 % 3 }}">
+        <div class="cover c-{{ p.color }}"><span aria-hidden="true">{{ p.emoji }}</span></div>
+        <p class="post__meta"><span class="post__cat">{{ p.categories[0] }}</span> · {{ p.date | niceDate }}</p>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.excerpt }}</p>
       </a>
-      {%- endfor %}
+      {%- endif %}{% endfor %}
     </div>
   </div>
 </section>

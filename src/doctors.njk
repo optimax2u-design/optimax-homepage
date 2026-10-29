@@ -1,39 +1,40 @@
 ---
 permalink: /doctor/
 layout: layouts/base.njk
-hide_booking: true
-title: "Optimax Eye Specialists | Ophthalmologists in Malaysia"
-description: "Meet Optimax's ophthalmologists — experts in LASIK, SMILE, cataract & vision correction across Malaysia."
+title: "Our Ophthalmologists | Optimax Eye Specialist Malaysia"
+description: "Meet Optimax's 26 ophthalmologists — specialists in LASIK, SMILE, ICL, cataract, glaucoma and retina care across Malaysia."
 ---
-{#- Doctors list — same doctors, wording and filters as optimaxeyespecialist.com/doctor/ -#}
 {%- import "macros.njk" as m -%}
-{%- set F = doctors.filters -%}
+{%- set allB = branches | flatBranches -%}
+{%- set langs = doctors.list | pluck("languages") | uniq | sort -%}
 
-{{ m.phero({title: "Doctors"}, [{label: "Doctors"}]) }}
+{{ m.phero({eyebrow: "Meet our doctors", title: "Specialists", title_line2: "you can talk to.", subhead: home.doctors.intro + " Find a doctor near you, in the language you're most comfortable with."}, { compact: true, crumbs: [{label: "Doctors"}], pills: [doctors.list.length + " ophthalmologists", "Refractive, cataract, glaucoma & retina", langs.length + " languages spoken"] }) }}
 
 <section class="section section--flush">
   <div class="wrap">
-    <div class="filters reveal">
+    <div class="filters reveal" data-filter-group="doctors">
       <div class="filters__row">
         <label for="flt-branch" class="filters__label">Branch</label>
-        <select id="flt-branch" data-filter="branch">
-          <option value="">{{ F.branch_placeholder }}</option>
-          {%- for b in F.branches %}<option value="{{ b.slug }}">{{ b.label }} ({{ (b.slug | doctorsAt(doctors)).length }})</option>{% endfor %}
+        <select id="flt-branch" data-filter="branch" class="filters__select">
+          <option value="">All branches</option>
+          {%- for r in branches.regions %}
+          <optgroup label="{{ r.region }}">{% for b in r.branches %}{% if (b.slug | doctorsAt(doctors)).length %}<option value="{{ b.slug }}">{{ b.name }}</option>{% endif %}{% endfor %}</optgroup>
+          {%- endfor %}
         </select>
       </div>
-      <div class="filters__row">
-        <label for="flt-lang" class="filters__label">Language</label>
-        <select id="flt-lang" data-filter="lang">
-          <option value="">{{ F.language_placeholder }}</option>
-          {%- for l in F.languages %}<option value="{{ l }}">{{ l }} ({{ (doctors.list | selectattr('languages') | langCount(l)) }})</option>{% endfor %}
-        </select>
+      <div class="filters__row" role="group" aria-label="Language">
+        <span class="filters__label">Language</span>
+        <div class="fchips">
+          <button type="button" class="fchip" aria-pressed="true" data-lang="">Any</button>
+          {%- for l in langs %}<button type="button" class="fchip" aria-pressed="false" data-lang="{{ l }}">{{ l }}</button>{% endfor %}
+        </div>
       </div>
-      <p class="filters__count" aria-live="polite">Show (<span data-count>{{ doctors.list.length }}</span>)</p>
+      <p class="filters__count" aria-live="polite"><strong data-count>{{ doctors.list.length }}</strong> doctors</p>
     </div>
 
     <div class="dgrid" data-filter-list>
-      {%- for d in doctors.list %}{{ m.doccard(d) }}{% endfor %}
+      {%- for d in doctors.list %}{{ m.doccard(d, branches) }}{% endfor %}
     </div>
-    <p class="empty" data-empty hidden>No doctors match. <button type="button" class="linkbtn" data-reset>Cancel</button></p>
+    <p class="empty" data-empty hidden>No doctors match those filters. <button type="button" class="linkbtn" data-reset>Clear filters</button></p>
   </div>
 </section>

@@ -1,916 +1,740 @@
 {
- "list": [
-  {
-   "slug": "dr-stephen-chung-soon-hee",
-   "name": "DR STEPHEN CHUNG SOON HEE",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon, Medical Director",
-   "credentials": "MBBS, MS (OPHTHAL)",
-   "photo": "/assets/uploads/doctors/dr-stephen-chung-soon-hee.webp",
-   "color": "violet",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE Pro 2.0, FemtoLASIK, ASA, PRESBYOND)"
-   ],
-   "languages": [
-    "English"
-   ],
-   "branches": [
-    "taman-tun-dr-ismail-kuala-lumpur-hq"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon",
-    "Medical Director"
-   ],
-   "languages_text": "English",
-   "branch_text": "TTDI",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-stephen2022-3.webp",
-   "seo_title": "Dr Stephen Chung | Consultant Ophthalmologist Optimax",
-   "seo_description": "Meet Dr Stephen Chung at Optimax TTDI — expert in LASIK, SMILE PRO, Femto-LASIK & PRESBYOND. Book your specialist consultation today."
-  },
-  {
-   "slug": "dr-chuah-kay-leong",
-   "name": "Dr Chuah Kay Leong",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon, Medical Director",
-   "credentials": "MB BAO BCh (UK), FRCOphth (London)",
-   "photo": "/assets/uploads/doctors/dr-chuah-kay-leong.webp",
-   "color": "yellow",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE Pro, FemtoLASIK, ASA)",
-    "Implantable Contact Lens (ICL)",
-    "General Ophthalmology and Cataract Surgery",
-    "Cornea and External Eye Diseases"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "Cantonese",
-    "English",
-    "Mandarin"
-   ],
-   "branches": [
-    "taman-tun-dr-ismail-kuala-lumpur-hq"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon",
-    "Medical Director"
-   ],
-   "languages_text": "Bahasa Malaysia, Cantonese, English, Mandarin",
-   "branch_text": "TTDI",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-chuah2022-1.webp",
-   "seo_title": "Dr Chuah Kay Leong | Consultant Ophthalmologist Optimax",
-   "seo_description": "Meet Dr Chuah Kay Leong at Optimax TTDI — expert in LASIK, SMILE PRO, ICL & cataract. Book your specialist consultation today."
-  },
-  {
-   "slug": "dr-lee-seow-yeang",
-   "name": "Dr Lee Seow Yeang",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MD (UKM), M SURG (OPHTH) (UKM), M.MED (OPHTH) S'PORE, FRCSEd",
-   "photo": "/assets/uploads/doctors/dr-lee-seow-yeang.webp",
-   "color": "coral",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE Pro, FemtoLASIK, ASA, PRESBYOND)",
-    "Implantable Contact Lens (ICL)",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Indonesia",
-    "Bahasa Malaysia",
-    "English",
-    "Hokkien",
-    "Mandarin"
-   ],
-   "branches": [
-    "penang-eye-specialist-hospital"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Indonesia, Bahasa Malaysia, English, Hokkien, Mandarin",
-   "branch_text": "Penang",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-lee2022-1.webp",
-   "seo_title": "Dr Lee Seow Yeang | Consultant Ophthalmologist Optimax",
-   "seo_description": "Meet Dr Lee Seow Yeang at Optimax Penang — specialist in LASIK, Femto-LASIK, SMILE & cataract care. Book your consultation now."
-  },
-  {
-   "slug": "dr-nor-zainura-zainal",
-   "name": "Dr Nor Zainura Zainal",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "LRCP & SI, MBBCh. BAO (Ireland), MS (OPHTHAL) (UKM)",
-   "photo": "/assets/uploads/doctors/dr-nor-zainura-zainal.webp",
-   "color": "sky",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE Pro, FemtoLASIK, ASA, PRESBYOND)",
-    "Implantable Contact Lens (ICL) / EyePCL",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "English"
-   ],
-   "branches": [
-    "shah-alam"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, English",
-   "branch_text": "Shah Alam",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-zainura2022.webp",
-   "seo_title": "Dr Nor Zainura Zainal | Ophthalmologist at Optimax Shah Alam",
-   "seo_description": "Meet Dr Nor Zainura Zainal at Optimax Shah Alam — specialist in LASIK, cataract & refractive surgery. Book your consultation with our expert today."
-  },
-  {
-   "slug": "dr-ngo-chek-tung",
-   "name": "Dr Ngo Chek Tung",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon, Retina Specialist",
-   "credentials": "MBBS (Malaya), M.Med Ophth (NUS), MRCSEd, FRCOphth, CertLRS",
-   "photo": "/assets/uploads/doctors/dr-ngo-chek-tung.webp",
-   "color": "mint",
-   "specialties": [
-    "Retina Surgery",
-    "LASIK / Laser Refractive Surgery (SMILE Pro, SMILE, FemtoLASIK, ASA, TESA, PRESBYOND)",
-    "Implantable Contact Lens (ICL)",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "English",
-    "Mandarin"
-   ],
-   "branches": [
-    "bandar-sunway"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon",
-    "Retina Specialist"
-   ],
-   "languages_text": "Bahasa Malaysia, English, Mandarin",
-   "branch_text": "Bandar Sunway",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-jason-ngo.webp",
-   "seo_title": "Dr Ngo Chek Tung | Ophthalmologist at Optimax Bandar Sunway",
-   "seo_description": "Meet Dr Ngo Chek Tung at Optimax Bandar Sunway — specialist in retina, LASIK, ICL & cataract care. Book your consultation today."
-  },
-  {
-   "slug": "dr-chang-khai-meng",
-   "name": "Dr Chang Khai Meng",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MD (USM), MMED (OPHTHALMOLOGY)",
-   "photo": "/assets/uploads/doctors/dr-chang-khai-meng.webp",
-   "color": "violet",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE Pro, SMILE, FemtoLASIK, ASA, TESA, PRESBYOND)",
-    "Implantable Contact Lens (ICL)",
-    "Comprehensive Ophthalmology and Cataract Surgery",
-    "Dry Eyes",
-    "Glaucoma",
-    "Cornea and External Eye Diseases"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "Cantonese",
-    "English",
-    "Hokkien",
-    "Mandarin"
-   ],
-   "branches": [
-    "sri-petaling"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, Cantonese, English, Hokkien, Mandarin",
-   "branch_text": "Sri Petaling",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-chang.webp",
-   "seo_title": "Dr Chang Khai Meng | Ophthalmologist at Optimax Sri Petaling",
-   "seo_description": "Meet Dr Chang Khai Meng at Optimax Sri Petaling — expert in LASIK, cataract & refractive surgery. Book your specialist consultation today."
-  },
-  {
-   "slug": "dr-lam-hee-hong",
-   "name": "Dr Lam Hee Hong",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon, Medical Director",
-   "credentials": "MBBS (UM), ICO (Cambridge), Master of Surgery (UM)",
-   "photo": "/assets/uploads/doctors/dr-lam-hee-hong.webp",
-   "color": "yellow",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (FemtoLASIK, ASA)",
-    "Implantable Contact Lens (ICL)",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "Cantonese",
-    "English",
-    "Mandarin"
-   ],
-   "branches": [
-    "johor-bahru",
-    "kluang"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon",
-    "Medical Director"
-   ],
-   "languages_text": "Bahasa Malaysia, Cantonese, English, Mandarin",
-   "branch_text": "Johor Bahru, Kluang",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-lam2022.webp",
-   "seo_title": "Dr Lam Hee Hong | Ophthalmologist at Optimax JB & Kluang",
-   "seo_description": "Meet Dr Lam Hee Hong at Optimax JB & Kluang — specialist in LASIK, ICL, cataract & refractive surgery. Book your consultation today."
-  },
-  {
-   "slug": "dr-ngim-you-siang",
-   "name": "Dr Ngim You Siang",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MBBS (UM), M.S. OPHTHAL (UM)",
-   "photo": "/assets/uploads/doctors/dr-ngim-you-siang.webp",
-   "color": "coral",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (FemtoLASIK, ASA, TESA)",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "English",
-    "Mandarin"
-   ],
-   "branches": [
-    "muar-johor",
-    "segamat"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, English, Mandarin",
-   "branch_text": "Muar, Segamat",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-ngim.webp",
-   "seo_title": "Dr Ngim You Siang | Ophthalmologist at Optimax Muar, Segamat",
-   "seo_description": "Meet Dr Ngim You Siang at Optimax Muar & Segamat — expert in LASIK, Femto-LASIK, TESA & cataract surgery. Book your specialist consultation today."
-  },
-  {
-   "slug": "dr-adeline-sia-sien-bing",
-   "name": "Dr Adeline Sia Sien Bing",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MBBS (UM), MOphth (UM)",
-   "photo": "/assets/uploads/doctors/dr-adeline-sia-sien-bing.webp",
-   "color": "sky",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE Pro, SMILE, FemtoLASIK, ASA, TESA, PRESBYOND)",
-    "General Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "English",
-    "Mandarin"
-   ],
-   "branches": [
-    "taman-tun-dr-ismail-kuala-lumpur-hq"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, English, Mandarin",
-   "branch_text": "TTDI",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-adeline2022.webp",
-   "seo_title": "Dr Adeline Sia | Consultant Ophthalmologist Optimax TTDI",
-   "seo_description": "Dr Adeline Sia at Optimax TTDI — expert in LASIK, SMILE PRO, Femto-LASIK, TESA, PRESBYOND & cataract surgery. Enquire Now."
-  },
-  {
-   "slug": "dr-marcus-ng-kang-kok",
-   "name": "Dr Marcus Ng Kang Kok",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MBBS (Taiwan), M.S. Ophthal (UKM)",
-   "photo": "/assets/uploads/doctors/dr-marcus-ng-kang-kok.webp",
-   "color": "mint",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (FemtoLASIK, ASA, TESA)",
-    "Implantable Contact Lens (ICL)",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "English",
-    "Mandarin"
-   ],
-   "branches": [
-    "muar-johor",
-    "segamat"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, English, Mandarin",
-   "branch_text": "Muar, Segamat",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-marcus2022.webp",
-   "seo_title": "Dr Marcus Ng | Ophthalmologist at Optimax Muar & Segamat",
-   "seo_description": "Meet Dr Marcus Ng at Optimax Muar & Segamat — specialist in LASIK, TESA, ICL & cataract surgery. Schedule your consultation today."
-  },
-  {
-   "slug": "dr-leow-sue-ngein",
-   "name": "Dr Leow Sue Ngein",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MD (UKM), M.S Ophthalmology (UKM), CMIA (Malaysia)",
-   "photo": "/assets/uploads/doctors/dr-leow-sue-ngein.webp",
-   "color": "violet",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE, FemtoLASIK, ASA)",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "English",
-    "Mandarin"
-   ],
-   "branches": [
-    "johor-bahru"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, English, Mandarin",
-   "branch_text": "Johor Bahru",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-leow.webp",
-   "seo_title": "Dr Leow Sue Ngein | Consultant Ophthalmologist at Optimax JB",
-   "seo_description": "Meet Dr Leow Sue Ngein at Optimax Johor Bahru—specialist in LASIK, SMILE, Femto-LASIK & cataract care. Book your consultation today."
-  },
-  {
-   "slug": "dr-ang-ee-ling",
-   "name": "Dr Ang Ee Ling",
-   "title": "Consultant Ophthalmologist, Vitreoretinal Surgeon",
-   "credentials": "MBBS. MSOphthal (UM), Fellowship in Vitreoretinal Surgery Malaysia and Sydney",
-   "photo": "/assets/uploads/doctors/dr-ang-ee-ling.webp",
-   "color": "yellow",
-   "specialties": [
-    "Vitreoretinal",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "English",
-    "Hokkien",
-    "Mandarin"
-   ],
-   "branches": [
-    "penang-eye-specialist-hospital"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Vitreoretinal Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, English, Hokkien, Mandarin",
-   "branch_text": "Penang",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-ang.webp",
-   "seo_title": "Dr Ang Ee Ling | Ophthalmologist at Optimax Penang",
-   "seo_description": "Meet Dr Ang Ee Ling — vitreoretinal & cataract specialist at Optimax Penang. Book your consultation for expert eye care in Malaysia."
-  },
-  {
-   "slug": "dr-edwin-ooi-inn-loon",
-   "name": "Dr Edwin Ooi Inn Loon",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MD (UKM), M.S Ophthal (UKM)",
-   "photo": "/assets/uploads/doctors/dr-edwin-ooi-inn-loon.webp",
-   "color": "coral",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE Pro, FemtoLASIK, ASA, TESA, PRESBYOND)",
-    "Implantable Contact Lens (ICL)",
-    "General Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "Cantonese",
-    "English",
-    "Hokkien",
-    "Mandarin"
-   ],
-   "branches": [
-    "penang-eye-specialist-hospital"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, Cantonese, English, Hokkien, Mandarin",
-   "branch_text": "Penang",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-edwin2022.webp",
-   "seo_title": "Dr Edwin Ooi | Consultant Ophthalmologist at Optimax Penang",
-   "seo_description": "Meet Dr Edwin Ooi at Optimax Penang — expert in LASIK, ICL, cataract & refractive surgery. Book your specialist consultation today."
-  },
-  {
-   "slug": "dr-faith-ho-fui-li",
-   "name": "Dr Faith Ho Fui Li",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MD (UKM), Dr.Ophth (UKM)",
-   "photo": "/assets/uploads/doctors/dr-faith-ho-fui-li.webp",
-   "color": "sky",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (FemtoLASIK, ASA, TESA)",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "Cantonese",
-    "English",
-    "Hakka",
-    "Mandarin"
-   ],
-   "branches": [
-    "kuching"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, Cantonese, English, Hakka, Mandarin",
-   "branch_text": "Kuching",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-faith.webp",
-   "seo_title": "Dr Faith Ho Fui Li | Ophthalmologist at Optimax Kuching",
-   "seo_description": "Meet Dr Faith Ho at Optimax Kuching — expert in Femto-LASIK, TESA, cataract & refractive surgery. Book your specialist consultation today."
-  },
-  {
-   "slug": "dr-tang-seng-fai",
-   "name": "Dr Tang Seng Fai",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon, Glaucoma Specialist",
-   "credentials": "MD (UKM), Dr Ophthal (UKM), Fellowship in Glaucoma (UKM)",
-   "photo": "/assets/uploads/doctors/dr-tang-seng-fai.webp",
-   "color": "mint",
-   "specialties": [
-    "Glaucoma, iStent (Minimally Invasive Glaucoma Surgery)",
-    "LASIK / Laser Refractive Surgery (SMILE Pro, SMILE, FemtoLASIK, ASA, TESA, PRESBYOND)",
-    "Implantable Contact Lens (ICL)",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "Cantonese",
-    "English",
-    "Mandarin"
-   ],
-   "branches": [
-    "klang",
-    "taman-tun-dr-ismail-kuala-lumpur-hq"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon",
-    "Glaucoma Specialist"
-   ],
-   "languages_text": "Bahasa Malaysia, Cantonese, English, Mandarin",
-   "branch_text": "Klang, TTDI",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-tang2022.webp",
-   "seo_title": "Dr Tang Seng Fai | Ophthalmologist at Optimax Klang & TTDI",
-   "seo_description": "Meet Dr Tang Seng Fai — glaucoma, LASIK & ICL specialist at Optimax Klang & TTDI. Book your consultation for trusted eye care."
-  },
-  {
-   "slug": "dr-siuw-chin-pei",
-   "name": "Dr Siuw Chin Pei",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MBBS (IMU), Doctor of Ophthalmology (UKM)",
-   "photo": "/assets/uploads/doctors/dr-siuw-chin-pei.webp",
-   "color": "violet",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE, FemtoLASIK, ASA)",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "English",
-    "Mandarin"
-   ],
-   "branches": [
-    "johor-bahru",
-    "sutera-johor-bahru"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, English, Mandarin",
-   "branch_text": "Johor Bahru, Sutera",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-siuw2022.webp",
-   "seo_title": "Dr Siuw Chin Pei | Ophthalmologist at Optimax JB & Sutera",
-   "seo_description": "Meet Dr Siuw Chin Pei at Optimax JB & Sutera — specializing in LASIK, SMILE, Femto-LASIK & cataract surgery. Book your consultation today."
-  },
-  {
-   "slug": "dr-gan-say-seong",
-   "name": "Dr Gan Say Seong",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MBBS (UM), MS (Ophth) UKM",
-   "photo": "/assets/uploads/doctors/dr-gan-say-seong.webp",
-   "color": "yellow",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE, FemtoLASIK, ASA, TESA)",
-    "Implantable Contact Lens (ICL)",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "English",
-    "Mandarin"
-   ],
-   "branches": [
-    "bahau",
-    "seremban"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, English, Mandarin",
-   "branch_text": "Bahau, Seremban",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-gan2022.webp",
-   "seo_title": "Dr Gan Say Seong | Ophthalmologist Optimax Bahau & Seremban",
-   "seo_description": "Dr Gan Say Seong at Optimax Bahau & Seremban — LASIK, ICL & cataract specialist. Schedule your consultation with our doctor today."
-  },
-  {
-   "slug": "dr-anhar-hafiz-bin-silim",
-   "name": "Dr Anhar Hafiz Bin Silim",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon, Vitreoretinal Surgeon",
-   "credentials": "MBBS (Jordan), Doctor of Ophthalmology (UKM), Fellowship in Vitreoretinal Surgery (CCFT, M'sia)",
-   "photo": "/assets/uploads/doctors/dr-anhar-hafiz-bin-silim.webp",
-   "color": "coral",
-   "specialties": [
-    "Vitreoretinal Surgery",
-    "LASIK / Laser Refractive Surgery (SMILE Pro, SMILE, FemtoLASIK, ASA, TESA, PRESBYOND)",
-    "Implantable Contact Lens (ICL), EyePCL",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "English"
-   ],
-   "branches": [
-    "shah-alam"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon",
-    "Vitreoretinal Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, English",
-   "branch_text": "Shah Alam",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-anhar.webp",
-   "seo_title": "Dr Anhar Hafiz Bin Silim | Optimax Ophthalmologist Shah Alam",
-   "seo_description": "Meet Dr Anhar Hafiz at Optimax Shah Alam — expert in vitreoretinal surgery, LASIK, ICL & cataract care. Book your consultation today."
-  },
-  {
-   "slug": "dr-mohd-syafiq-bin-azman",
-   "name": "Dr Mohd Syafiq Bin Azman",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MBBS (UIAM), Doctor of Ophthalmology (UKM)",
-   "photo": "/assets/uploads/doctors/dr-mohd-syafiq-bin-azman.webp",
-   "color": "sky",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE Pro, SMILE, FemtoLASIK, ASA, TESA, PRESBYOND)",
-    "Implantable Contact Lens (ICL)",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "English"
-   ],
-   "branches": [
-    "seremban"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, English",
-   "branch_text": "Seremban",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-syafiq.webp",
-   "seo_title": "Dr Mohd Syafiq Bin Azman | Optimax Ophthalmologist Seremban",
-   "seo_description": "Meet Dr Mohd Syafiq at Optimax Seremban — specialist in LASIK, ICL & cataract surgery. Book your consultation with our expert today."
-  },
-  {
-   "slug": "dr-cassandra-lo-yee-lin",
-   "name": "Dr Cassandra Lo Yee Lin",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MD (KSMU), MS Ophthal (UKM)",
-   "photo": "/assets/uploads/doctors/dr-cassandra-lo-yee-lin.webp",
-   "color": "mint",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE Pro, SMILE, FemtoLASIK, ASA, TESA, PRESBYOND)",
-    "Implantable Contact Lens (ICL)",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "Cantonese",
-    "English",
-    "Hakka",
-    "Mandarin"
-   ],
-   "branches": [
-    "oug"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, Cantonese, English, Hakka, Mandarin",
-   "branch_text": "OUG",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-cass.webp",
-   "seo_title": "Dr Cassandra Lo | Consultant Ophthalmologist Optimax OUG",
-   "seo_description": "Meet Dr Cassandra Lo at Optimax OUG — specialist in LASIK, ICL & cataract surgery. Book your consultation with our expert today."
-  },
-  {
-   "slug": "dr-ng-chun-wai",
-   "name": "Dr Ng Chun Wai",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MD (UCSI), Doctor of Ophthalmology (UKM), CMIA (NIOSH)",
-   "photo": "/assets/uploads/doctors/dr-ng-chun-wai.webp",
-   "color": "violet",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE Pro, SMILE, FemtoLASIK, ASA, TESA, PRESBYOND)",
-    "Implantable Contact Lens (ICL)",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "Cantonese",
-    "English",
-    "Hokkien",
-    "Mandarin"
-   ],
-   "branches": [
-    "damansara-jaya",
-    "kepong",
-    "taman-tun-dr-ismail-kuala-lumpur-hq"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, Cantonese, English, Hokkien, Mandarin",
-   "branch_text": "Damansara Jaya, Kepong, TTDI",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-chun.webp",
-   "seo_title": "Dr Ng Chun Wai | Consultant Ophthalmologist Optimax Kepong",
-   "seo_description": "Meet Dr Ng Chun Wai — expert in LASIK, ICL & cataract surgery at Optimax Damansara Jaya, Kepong & TTDI. Book your consultation today."
-  },
-  {
-   "slug": "dr-miswan-muiz-mahyudin",
-   "name": "Dr Miswan Muiz Mahyudin",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon, President of Malaysian Society of Ophthalmology",
-   "credentials": "MOphthal (Malaya), MBChB (Otago, NZ)",
-   "photo": "/assets/uploads/doctors/dr-miswan-muiz-mahyudin.webp",
-   "color": "yellow",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE Pro, SMILE, FemtoLASIK, ASA, TESA, PRESBYOND)",
-    "Implantable Contact Lens (ICL)",
-    "General Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "English"
-   ],
-   "branches": [
-    "cheras",
-    "damansara-jaya",
-    "melawati"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon",
-    "President of Malaysian Society of Ophthalmology"
-   ],
-   "languages_text": "Bahasa Malaysia, English",
-   "branch_text": "Cheras, Damansara Jaya, Melawati",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-muiz.webp",
-   "seo_title": "Dr Miswan Muiz Mahyudin | Optimax Ophthalmologist Melawati",
-   "seo_description": "Meet Dr Miswan Muiz at Optimax (Cheras, Damansara Jaya & Melawati) — specialist in LASIK, ICL & cataract surgery. Enquire Now."
-  },
-  {
-   "slug": "dr-ivan-chong-jia-cherng",
-   "name": "Dr Ivan Chong Jia Cherng",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MBBS (IMU) & MOphthal (UM)",
-   "photo": "/assets/uploads/doctors/dr-ivan-chong-jia-cherng.webp",
-   "color": "coral",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE Pro, FemtoLASIK, ASA, TESA, PRESBYOND)",
-    "Implantable Contact Lens (ICL)",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "English",
-    "Hakka",
-    "Mandarin"
-   ],
-   "branches": [
-    "optimax-kota-kinabalu-eye-specialist-centre"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, English, Hakka, Mandarin",
-   "branch_text": "Kota Kinabalu",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-ivan.webp",
-   "seo_title": "Dr Ivan Chong | Ophthalmologist at Optimax Kota Kinabalu",
-   "seo_description": "Meet Dr Ivan Chong at Optimax Kota Kinabalu — specialist in LASIK, SMILE, ICL & cataract surgery. Book your consultation today."
-  },
-  {
-   "slug": "dr-chong-ka-lung",
-   "name": "Dr Chong Ka Lung",
-   "title": "Consultant Ophthalmologist, Vitreoretinal Surgeon",
-   "credentials": "MBBS (IMU), MOphthal (UM), Vitreoretinal Fellowship (Australia), Subspecialty Vitreoretinal Fellowship (Ministry of Health, CCFT, M'sia), CMIA (NIOSH), (AM, AMM).",
-   "photo": "/assets/uploads/doctors/dr-chong-ka-lung.webp",
-   "color": "sky",
-   "specialties": [
-    "Vitreoretinal Surgery",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "English",
-    "Mandarin"
-   ],
-   "branches": [
-    "seremban"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Vitreoretinal Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, English, Mandarin",
-   "branch_text": "Seremban",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-chong.webp",
-   "seo_title": "Dr Chong Ka Lung | Ophthalmologist at Optimax Seremban",
-   "seo_description": "Meet Dr Chong Ka Lung at Optimax Seremban — vitreoretinal & cataract specialist. Book your consultation for expert eye care today."
-  },
-  {
-   "slug": "dr-teo-shee-kiang",
-   "name": "DR TEO SHEE KIANG",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MD (UKM), Doctor of Ophthalmology (UKM)",
-   "photo": "/assets/uploads/doctors/dr-teo-shee-kiang.webp",
-   "color": "mint",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "English",
-    "Hokkien",
-    "Mandarin"
-   ],
-   "branches": [
-    "johor-bahru"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, English, Hokkien, Mandarin",
-   "branch_text": "Johor Bahru",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/dr-teo-768x1021.webp",
-   "seo_title": "Dr Teo Shee Kiang | Consultant Ophthalmologist Optimax Johor",
-   "seo_description": "Meet Dr Teo Shee Kiang at Optimax Johor — specialist in LASIK, ICL & cataract treatments. Book your consultation today."
-  },
-  {
-   "slug": "dr-alex-yee-chau-sim",
-   "name": "DR ALEX YEE CHAU SIM",
-   "title": "Consultant Ophthalmologist, Refractive Surgeon",
-   "credentials": "MD (UKM), Doctor of Ophthalmology (UKM)",
-   "photo": "/assets/uploads/doctors/dr-alex-yee-chau-sim.webp",
-   "color": "violet",
-   "specialties": [
-    "LASIK / Laser Refractive Surgery (SMILE Pro, FemtoLASIK, ASA, PRESBYOND)",
-    "Comprehensive Ophthalmology and Cataract Surgery"
-   ],
-   "languages": [
-    "Bahasa Malaysia",
-    "Cantonese",
-    "English",
-    "Hokkien",
-    "Mandarin"
-   ],
-   "branches": [
-    "klang",
-    "kota-kemuning"
-   ],
-   "position": [
-    "Consultant Ophthalmologist",
-    "Refractive Surgeon"
-   ],
-   "languages_text": "Bahasa Malaysia, Cantonese, English, Hokkien, Mandarin",
-   "branch_text": "Klang, Kota Kemuning",
-   "live_photo": "https://optimaxeyespecialist.com/cms/wp-content/uploads/Dr.-Alex.webp",
-   "seo_title": "DR ALEX YEE CHAU SIM - optimaxeyespecialist.com",
-   "seo_description": ""
-  }
- ],
- "filters": {
-  "branch_placeholder": "- Select Branch -",
-  "language_placeholder": "- Select Language -",
-  "branches": [
-   {
-    "slug": "taman-tun-dr-ismail-kuala-lumpur-hq",
-    "label": "TTDI"
-   },
-   {
-    "slug": "penang-eye-specialist-hospital",
-    "label": "Penang"
-   },
-   {
-    "slug": "shah-alam",
-    "label": "Shah Alam"
-   },
-   {
-    "slug": "bandar-sunway",
-    "label": "Bandar Sunway"
-   },
-   {
-    "slug": "sri-petaling",
-    "label": "Sri Petaling"
-   },
-   {
-    "slug": "ipoh",
-    "label": "Ipoh"
-   },
-   {
-    "slug": "kuching",
-    "label": "Kuching"
-   },
-   {
-    "slug": "seremban",
-    "label": "Seremban"
-   },
-   {
-    "slug": "oug",
-    "label": "OUG"
-   },
-   {
-    "slug": "kepong",
-    "label": "Kepong"
-   },
-   {
-    "slug": "damansara-jaya",
-    "label": "Damansara Jaya"
-   },
-   {
-    "slug": "cheras",
-    "label": "Cheras"
-   },
-   {
-    "slug": "melawati",
-    "label": "Melawati"
-   },
-   {
-    "slug": "klang",
-    "label": "Klang"
-   },
-   {
-    "slug": "optimax-kota-kinabalu-eye-specialist-centre",
-    "label": "Kota Kinabalu"
-   },
-   {
-    "slug": "muar-johor",
-    "label": "Muar"
-   },
-   {
-    "slug": "segamat",
-    "label": "Segamat"
-   },
-   {
-    "slug": "johor-bahru",
-    "label": "Johor Bahru"
-   },
-   {
-    "slug": "sutera-johor-bahru",
-    "label": "Sutera"
-   },
-   {
-    "slug": "kluang",
-    "label": "Kluang"
-   },
-   {
-    "slug": "bahau",
-    "label": "Bahau"
-   },
-   {
-    "slug": "kota-kemuning",
-    "label": "Kota Kemuning"
-   }
-  ],
-  "languages": [
-   "English",
-   "Mandarin",
-   "Bahasa Malaysia",
-   "Cantonese",
-   "Hokkien",
-   "Bahasa Indonesia",
-   "Hakka",
-   "Tamil"
+  "list": [
+    {
+      "slug": "dr-stephen-chung-soon-hee",
+      "name": "Dr Stephen Chung Soon Hee",
+      "title": "Consultant Ophthalmologist, Refractive Surgeon & Medical Director",
+      "credentials": "MBBS, MS (Ophthal)",
+      "photo": "/assets/uploads/doctors/dr-stephen-chung-soon-hee.webp",
+      "color": "violet",
+      "specialties": [
+        "LASIK & laser refractive surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "Femto-LASIK",
+        "ASA",
+        "PRESBYOND® 2.0"
+      ],
+      "languages": [
+        "English"
+      ],
+      "branches": [
+        "taman-tun-dr-ismail-kuala-lumpur-hq"
+      ]
+    },
+    {
+      "slug": "dr-chuah-kay-leong",
+      "name": "Dr Chuah Kay Leong",
+      "title": "Consultant Ophthalmologist, Refractive Surgeon & Medical Director",
+      "credentials": "MB BAO BCh (UK), FRCOphth (London)",
+      "photo": "/assets/uploads/doctors/dr-chuah-kay-leong.webp",
+      "color": "yellow",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "General ophthalmology & cataract surgery",
+        "Cornea & external eye diseases"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "Femto-LASIK",
+        "ASA",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "taman-tun-dr-ismail-kuala-lumpur-hq"
+      ]
+    },
+    {
+      "slug": "dr-lee-seow-yeang",
+      "name": "Dr Lee Seow Yeang",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MD (UKM), M Surg (Ophth) (UKM), M.Med (Ophth) S'pore, FRCSEd",
+      "photo": "/assets/uploads/doctors/dr-lee-seow-yeang.webp",
+      "color": "coral",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "Femto-LASIK",
+        "ASA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Indonesia",
+        "Bahasa Malaysia",
+        "English",
+        "Hokkien",
+        "Mandarin"
+      ],
+      "branches": [
+        "penang-eye-specialist-hospital"
+      ]
+    },
+    {
+      "slug": "dr-nor-zainura-zainal",
+      "name": "Dr Nor Zainura Zainal",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "LRCP & SI, MBBCh BAO (Ireland), MS (Ophthal) (UKM)",
+      "photo": "/assets/uploads/doctors/dr-nor-zainura-zainal.webp",
+      "color": "sky",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "Femto-LASIK",
+        "ASA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English"
+      ],
+      "branches": [
+        "shah-alam"
+      ]
+    },
+    {
+      "slug": "dr-ngo-chek-tung",
+      "name": "Dr Ngo Chek Tung",
+      "title": "Consultant Ophthalmologist, Refractive Surgeon & Retina Specialist",
+      "credentials": "MBBS (Malaya), M.Med Ophth (NUS), MRCSEd, FRCOphth, CertLRS",
+      "photo": "/assets/uploads/doctors/dr-ngo-chek-tung.webp",
+      "color": "mint",
+      "specialties": [
+        "Retina surgery",
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "bandar-sunway"
+      ]
+    },
+    {
+      "slug": "dr-chang-khai-meng",
+      "name": "Dr Chang Khai Meng",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MD (USM), MMed (Ophthalmology)",
+      "photo": "/assets/uploads/doctors/dr-chang-khai-meng.webp",
+      "color": "violet",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery",
+        "Dry eyes",
+        "Glaucoma",
+        "Cornea & external eye diseases"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Hokkien",
+        "Mandarin"
+      ],
+      "branches": [
+        "sri-petaling"
+      ]
+    },
+    {
+      "slug": "dr-lam-hee-hong",
+      "name": "Dr Lam Hee Hong",
+      "title": "Consultant Ophthalmologist, Refractive Surgeon & Medical Director",
+      "credentials": "MBBS (UM), ICO (Cambridge), Master of Surgery (UM)",
+      "photo": "/assets/uploads/doctors/dr-lam-hee-hong.webp",
+      "color": "yellow",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "Femto-LASIK",
+        "ASA",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "johor-bahru",
+        "kluang"
+      ]
+    },
+    {
+      "slug": "dr-ngim-you-siang",
+      "name": "Dr Ngim You Siang",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MBBS (UM), M.S. Ophthal (UM)",
+      "photo": "/assets/uploads/doctors/dr-ngim-you-siang.webp",
+      "color": "coral",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "Femto-LASIK",
+        "ASA",
+        "TESA"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "muar-johor",
+        "segamat"
+      ]
+    },
+    {
+      "slug": "dr-adeline-sia-sien-bing",
+      "name": "Dr Adeline Sia Sien Bing",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MBBS (UM), MOphth (UM)",
+      "photo": "/assets/uploads/doctors/dr-adeline-sia-sien-bing.webp",
+      "color": "sky",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "General ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "taman-tun-dr-ismail-kuala-lumpur-hq"
+      ]
+    },
+    {
+      "slug": "dr-marcus-ng-kang-kok",
+      "name": "Dr Marcus Ng Kang Kok",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MBBS (Taiwan), M.S. Ophthal (UKM)",
+      "photo": "/assets/uploads/doctors/dr-marcus-ng-kang-kok.webp",
+      "color": "mint",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "muar-johor",
+        "segamat"
+      ]
+    },
+    {
+      "slug": "dr-leow-sue-ngein",
+      "name": "Dr Leow Sue Ngein",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MD (UKM), M.S Ophthalmology (UKM), CMIA (Malaysia)",
+      "photo": "/assets/uploads/doctors/dr-leow-sue-ngein.webp",
+      "color": "violet",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE",
+        "Femto-LASIK",
+        "ASA"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "johor-bahru"
+      ]
+    },
+    {
+      "slug": "dr-ang-ee-ling",
+      "name": "Dr Ang Ee Ling",
+      "title": "Consultant Ophthalmologist & Vitreoretinal Surgeon",
+      "credentials": "MBBS, MSOphthal (UM), Fellowship in Vitreoretinal Surgery Malaysia and Sydney",
+      "photo": "/assets/uploads/doctors/dr-ang-ee-ling.webp",
+      "color": "yellow",
+      "specialties": [
+        "Vitreoretinal surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Hokkien",
+        "Mandarin"
+      ],
+      "branches": [
+        "penang-eye-specialist-hospital"
+      ]
+    },
+    {
+      "slug": "dr-edwin-ooi-inn-loon",
+      "name": "Dr Edwin Ooi Inn Loon",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MD (UKM), M.S Ophthal (UKM)",
+      "photo": "/assets/uploads/doctors/dr-edwin-ooi-inn-loon.webp",
+      "color": "coral",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "General ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Hokkien",
+        "Mandarin"
+      ],
+      "branches": [
+        "penang-eye-specialist-hospital"
+      ]
+    },
+    {
+      "slug": "dr-faith-ho-fui-li",
+      "name": "Dr Faith Ho Fui Li",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MD (UKM), Dr.Ophth (UKM)",
+      "photo": "/assets/uploads/doctors/dr-faith-ho-fui-li.webp",
+      "color": "sky",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "Femto-LASIK",
+        "ASA",
+        "TESA"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Hakka",
+        "Mandarin"
+      ],
+      "branches": [
+        "kuching"
+      ]
+    },
+    {
+      "slug": "dr-tang-seng-fai",
+      "name": "Dr Tang Seng Fai",
+      "title": "Consultant Ophthalmologist, Refractive Surgeon & Glaucoma Specialist",
+      "credentials": "MD (UKM), Dr Ophthal (UKM), Fellowship in Glaucoma (UKM)",
+      "photo": "/assets/uploads/doctors/dr-tang-seng-fai.webp",
+      "color": "mint",
+      "specialties": [
+        "Glaucoma, incl. iStent minimally invasive surgery",
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "klang",
+        "taman-tun-dr-ismail-kuala-lumpur-hq"
+      ]
+    },
+    {
+      "slug": "dr-siuw-chin-pei",
+      "name": "Dr Siuw Chin Pei",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MBBS (IMU), Doctor of Ophthalmology (UKM)",
+      "photo": "/assets/uploads/doctors/dr-siuw-chin-pei.webp",
+      "color": "violet",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE",
+        "Femto-LASIK",
+        "ASA"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "johor-bahru",
+        "sutera-johor-bahru"
+      ]
+    },
+    {
+      "slug": "dr-gan-say-seong",
+      "name": "Dr Gan Say Seong",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MBBS (UM), MS (Ophth) UKM",
+      "photo": "/assets/uploads/doctors/dr-gan-say-seong.webp",
+      "color": "yellow",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "bahau",
+        "seremban"
+      ]
+    },
+    {
+      "slug": "dr-anhar-hafiz-bin-silim",
+      "name": "Dr Anhar Hafiz Bin Silim",
+      "title": "Consultant Ophthalmologist, Refractive & Vitreoretinal Surgeon",
+      "credentials": "MBBS (Jordan), Doctor of Ophthalmology (UKM), Fellowship in Vitreoretinal Surgery (CCFT, M'sia)",
+      "photo": "/assets/uploads/doctors/dr-anhar-hafiz-bin-silim.webp",
+      "color": "coral",
+      "specialties": [
+        "Vitreoretinal surgery",
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL) / EyePCL",
+        "General ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English"
+      ],
+      "branches": [
+        "shah-alam"
+      ]
+    },
+    {
+      "slug": "dr-mohd-syafiq-bin-azman",
+      "name": "Dr Mohd Syafiq Bin Azman",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MBBS (UIAM), Doctor of Ophthalmology (UKM)",
+      "photo": "/assets/uploads/doctors/dr-mohd-syafiq-bin-azman.webp",
+      "color": "sky",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English"
+      ],
+      "branches": [
+        "seremban"
+      ]
+    },
+    {
+      "slug": "dr-cassandra-lo-yee-lin",
+      "name": "Dr Cassandra Lo Yee Lin",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MD (KSMU), MS Ophthal (UKM)",
+      "photo": "/assets/uploads/doctors/dr-cassandra-lo-yee-lin.webp",
+      "color": "mint",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Hakka",
+        "Mandarin"
+      ],
+      "branches": [
+        "oug"
+      ]
+    },
+    {
+      "slug": "dr-ng-chun-wai",
+      "name": "Dr Ng Chun Wai",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MD (UCSI), Doctor of Ophthalmology (UKM), CMIA (NIOSH)",
+      "photo": "/assets/uploads/doctors/dr-ng-chun-wai.webp",
+      "color": "violet",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Hokkien",
+        "Mandarin"
+      ],
+      "branches": [
+        "damansara-jaya",
+        "kepong",
+        "taman-tun-dr-ismail-kuala-lumpur-hq"
+      ]
+    },
+    {
+      "slug": "dr-miswan-muiz-mahyudin",
+      "name": "Dr Miswan Muiz Mahyudin",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon · President, Malaysian Society of Ophthalmology",
+      "credentials": "MOphthal (Malaya), MBChB (Otago, NZ)",
+      "photo": "/assets/uploads/doctors/dr-miswan-muiz-mahyudin.webp",
+      "color": "yellow",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "General ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "SMILE",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English"
+      ],
+      "branches": [
+        "cheras",
+        "damansara-jaya",
+        "melawati"
+      ]
+    },
+    {
+      "slug": "dr-ivan-chong-jia-cherng",
+      "name": "Dr Ivan Chong Jia Cherng",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MBBS (IMU), MOphthal (UM)",
+      "photo": "/assets/uploads/doctors/dr-ivan-chong-jia-cherng.webp",
+      "color": "coral",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Implantable Contact Lens (ICL)",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "Femto-LASIK",
+        "ASA",
+        "TESA",
+        "PRESBYOND® 2.0",
+        "ICL"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Hakka",
+        "Mandarin"
+      ],
+      "branches": [
+        "optimax-kota-kinabalu-eye-specialist-centre"
+      ]
+    },
+    {
+      "slug": "dr-chong-ka-lung",
+      "name": "Dr Chong Ka Lung",
+      "title": "Consultant Ophthalmologist & Vitreoretinal Surgeon",
+      "credentials": "MBBS (IMU), MOphthal (UM), Vitreoretinal Fellowship (Australia), Subspecialty Vitreoretinal Fellowship (MOH, CCFT, M'sia), CMIA (NIOSH), AM, AMM",
+      "photo": "/assets/uploads/doctors/dr-chong-ka-lung.webp",
+      "color": "sky",
+      "specialties": [
+        "Vitreoretinal surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Mandarin"
+      ],
+      "branches": [
+        "seremban"
+      ]
+    },
+    {
+      "slug": "dr-teo-shee-kiang",
+      "name": "Dr Teo Shee Kiang",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MD (UKM), Doctor of Ophthalmology (UKM)",
+      "photo": "/assets/uploads/doctors/dr-teo-shee-kiang.webp",
+      "color": "mint",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [],
+      "languages": [
+        "Bahasa Malaysia",
+        "English",
+        "Hokkien",
+        "Mandarin"
+      ],
+      "branches": [
+        "johor-bahru"
+      ]
+    },
+    {
+      "slug": "dr-alex-yee-chau-sim",
+      "name": "Dr Alex Yee Chau Sim",
+      "title": "Consultant Ophthalmologist & Refractive Surgeon",
+      "credentials": "MD (UKM), Doctor of Ophthalmology (UKM)",
+      "photo": "/assets/uploads/doctors/dr-alex-yee-chau-sim.webp",
+      "color": "violet",
+      "specialties": [
+        "LASIK & laser refractive surgery",
+        "Comprehensive ophthalmology & cataract surgery"
+      ],
+      "procedures": [
+        "SMILE® pro 3.0",
+        "Femto-LASIK",
+        "ASA",
+        "PRESBYOND® 2.0"
+      ],
+      "languages": [
+        "Bahasa Malaysia",
+        "Cantonese",
+        "English",
+        "Hokkien",
+        "Mandarin"
+      ],
+      "branches": [
+        "klang",
+        "kota-kemuning"
+      ]
+    }
   ]
- }
 }

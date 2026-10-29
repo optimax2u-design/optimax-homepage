@@ -1,22 +1,52 @@
 ---
 permalink: /financing-options/
 layout: layouts/base.njk
-hide_booking: true
 eleventyComputed:
-  title: "{{ pages.financing.title }}"
-  description: "{{ pages.financing.description }}"
+  title: "{{ financing.seo_title }}"
+  description: "{{ financing.seo_description }}"
 ---
-{#- Financing — content word-for-word from optimaxeyespecialist.com/financing-options/ (src/_data/pages/financing.json) -#}
 {%- import "macros.njk" as m -%}
-{%- set P = pages.financing -%}
+{%- set f = financing -%}
 
-{{ m.phero({title: "Financing Options"}, [{label: "Financing Options"}]) }}
+{{ m.phero(f, { compact: true, crumbs: [{label: "Financing options"}], ctas: [{label: "Ask about instalments", url: "#book"}, {label: "WhatsApp us", url: site.topbar.whatsapp_link, style: "ghost", external: true}] }) }}
 
-<section class="section section--flush">
-  <div class="wrap wrap--narrow">
-    {%- for g in P.groups %}
-    <h2 class="h3 reveal">{{ g.heading }}</h2>
-    <div class="reveal">{{ m.faqList(g.questions, true) }}</div>
-    {%- endfor %}
+<section class="stats" aria-label="Instalment plans">
+  <div class="wrap">
+    <div class="plans reveal">
+      <div class="plans__lead"><span class="plans__big">0%</span><span>interest instalments*</span></div>
+      <div class="stats__grid">
+        {%- for p in f.plans %}
+        <div class="tile c-{{ p.color }} reveal" style="--d:{{ loop.index0 }}"><span class="tile__value">{{ p.value }}</span><span class="tile__label">{{ p.label }}</span></div>
+        {%- endfor %}
+      </div>
+    </div>
+    <p class="fine">{{ f.plans_note }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <header class="head reveal">
+      <p class="eyebrow">{{ f.value.eyebrow }}</p>
+      <h2>{{ f.value.title }}</h2>
+      <p class="lead">{{ f.value.intro }}</p>
+    </header>
+    <div class="icards icards--5">
+      {%- for i in f.value.items %}
+      <article class="icard c-{{ i.color }} reveal" style="--d:{{ loop.index0 }}"><span class="icard__emoji" aria-hidden="true">{{ i.emoji }}</span><h3>{{ i.title }}</h3><p>{{ i.text }}</p></article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">Pricing questions</p>
+      <h2 class="h2">Good to know.</h2>
+      <p class="lead">Your exact cost depends on the treatment that suits your eyes. We'll give you a clear plan, timeline and costs at your consultation — no pressure.</p>
+      <a class="textlink" href="/faqs/">More FAQs <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="reveal" style="--d:1">{{ m.faqList(f.faqs, true) }}</div>
   </div>
 </section>

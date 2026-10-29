@@ -1,0 +1,61 @@
+{
+  "seo_title": "LASIK FAQs — preparation, risks, recovery & travel | Optimax",
+  "seo_description": "Answers to common LASIK questions: suitability, contact lenses before your assessment, how long the check takes, risks, follow-ups and flying after treatment.",
+  "eyebrow": "FAQs",
+  "title": "Good questions.",
+  "title_line2": "Straight answers.",
+  "subhead": "Everything people usually ask before, during and after laser vision correction. Can't find yours? WhatsApp us — a real person will reply.",
+  "groups": [
+    {
+      "id": "preparing",
+      "title": "Preparing for LASIK",
+      "emoji": "📋",
+      "color": "violet",
+      "items": [
+        { "q": "How do I know if I'm suitable?", "a": "Book a full eye examination with our LASIK suitability assessment. Afterwards we'll explain which methods suit your eyes, how the treatment works, aftercare, the risks for you specifically, and pricing and payment options." },
+        { "q": "Do I need to stop wearing contact lenses before my assessment?", "a": "Yes. Stop soft lenses 1–2 weeks before. If you wear semi-hard or RGP lenses, stop about one month before. Lenses temporarily change the shape of your cornea, which would affect your measurements." },
+        { "q": "Do I need an appointment?", "a": "Yes, please book ahead. It means less waiting, and we can make sure an optometrist and surgeon are available for you." },
+        { "q": "How long is the pre-LASIK assessment?", "a": "Around 2–3 hours." },
+        { "q": "Why does the assessment take so long?", "a": "We follow a 'no compromise' safety policy. The assessment confirms you're suitable, that treatment can be done safely with minimal risk, and that you clearly understand the risks for your own eyes." },
+        { "q": "Which tests are included?", "a": "Twelve: lazy-eye assessment, visual acuity, refraction, eye-muscle assessment, intraocular and lens examination, external eye exam, fundus (retina) exam, corneal topography, corneal thickness (pachymetry), colour vision and a dry-eye assessment." },
+        { "q": "Can I use an eye examination done elsewhere?", "a": "No. We can't verify the accuracy of tests done at other clinics, so we'll do a fresh examination." },
+        { "q": "What if I'm not suitable for LASIK?", "a": "There are still ways to get rid of glasses, including ICL (implantable contact lens), Refractive Lens Exchange, RGP lenses and Ortho-K lenses. We'll talk you through what fits." },
+        { "q": "Can LASIK help me see things up close?", "a": "Early presbyopia can be corrected with laser, such as PRESBYOND®. More advanced reading difficulty may need other procedures, which we also offer." }
+      ]
+    },
+    {
+      "id": "risks",
+      "title": "Risks & side effects",
+      "emoji": "🛡️",
+      "color": "coral",
+      "items": [
+        { "q": "Does LASIK have risks?", "a": "Yes — like any procedure, and they vary from person to person. That's why our pre-treatment examinations take two to three times longer than at many clinics: to confirm you're suitable and make sure you understand your specific risks." },
+        { "q": "Are there side effects?", "a": "Mostly short-term, during recovery. The most common are temporary dry eyes, helped by artificial tears or lubricating drops, and minor fluctuations in vision. We schedule follow-up checks to monitor your healing." }
+      ]
+    },
+    {
+      "id": "overseas",
+      "title": "Travelling & overseas patients",
+      "emoji": "✈️",
+      "color": "sky",
+      "items": [
+        { "q": "What documents do I need to register?", "a": "Malaysians: bring your MyKad. Non-Malaysians: bring your passport." },
+        { "q": "When are follow-up visits?", "a": "Usually 1 day, 1 week, 1 month, 3 months and 6 months after treatment." },
+        { "q": "Do I have to attend every follow-up?", "a": "We strongly recommend the 1-day and 1-week checks. If you can't attend the rest, you can continue check-ups in your home country on the recommended dates." },
+        { "q": "How soon can I fly home?", "a": "For ZEISS SMILE® and Femto-LASIK, surgeons often clear patients to fly the day after their 1-day check, with the 1-week check done at home. ASA patients should stay for their 1-week check." },
+        { "q": "Can you help with hotels and transport?", "a": "Yes. If you're not familiar with the area, we can suggest nearby hotels and arrange transport." }
+      ]
+    },
+    {
+      "id": "aftercare",
+      "title": "Do's & don'ts after treatment",
+      "emoji": "💧",
+      "color": "mint",
+      "items": [
+        { "q": "When can I travel by plane?", "a": "After Femto-LASIK or ZEISS SMILE®, you may fly the next day if your doctor approves at the 1-day check. Altitude doesn't affect the eye, but cabin air is dry, so use lubricating drops. After ASA, stay on the ground for at least a week." },
+        { "q": "What should I avoid in the first week?", "a": "Rubbing or squeezing your eyes, letting sweat get into them, eye make-up, rough or contact sports, and dusty or smoky places." },
+        { "q": "What should I avoid in the first month?", "a": "Swimming, saunas and facial treatments." }
+      ]
+    }
+  ]
+}

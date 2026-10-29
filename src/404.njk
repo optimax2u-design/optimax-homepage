@@ -5,4 +5,14 @@ title: "Page not found | Optimax Eye Specialist"
 hide_booking: true
 ---
 {%- import "macros.njk" as m -%}
-{{ m.phero({title: "Page not found", sub: ["The page you are looking for may have moved."], buttons: [{label: "Go to homepage", href: "/"}, {label: "Treatments", href: "/treatments/", style: "ghost"}, {label: "Doctors", href: "/doctor/", style: "ghost"}]}) }}
+{{ m.phero({eyebrow: "Error 404", title: "Let's get", title_line2: "you back in focus.", subhead: "We couldn't find that page. It may have moved when we refreshed our website."}, { compact: true, ctas: [{label: "Go to homepage", url: "/"}, {label: "Book a free eye check", url: "/#book", style: "ghost"}] }) }}
+<section class="section section--flush">
+  <div class="wrap">
+    <div class="icards">
+      <a class="icard c-violet" href="/treatments/"><span class="icard__emoji" aria-hidden="true">👁️</span><h3>Treatments</h3><p>Compare all our options.</p></a>
+      <a class="icard c-yellow" href="/doctor/"><span class="icard__emoji" aria-hidden="true">👩‍⚕️</span><h3>Doctors</h3><p>Meet our specialists.</p></a>
+      <a class="icard c-mint" href="/branches/"><span class="icard__emoji" aria-hidden="true">📍</span><h3>Branches</h3><p>Find one near you.</p></a>
+      <a class="icard c-sky" href="/faqs/"><span class="icard__emoji" aria-hidden="true">💬</span><h3>FAQs</h3><p>Answers to common questions.</p></a>
+    </div>
+  </div>
+</section>

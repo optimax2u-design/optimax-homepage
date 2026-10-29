@@ -1,0 +1,55 @@
+{
+  "seo_title": "About Optimax Eye Specialist | Malaysia's first LASIK provider since 1995",
+  "seo_description": "Optimax introduced laser vision correction to Malaysia in 1995. Today we care for patients across 25 hospitals and clinics in Malaysia and Cambodia.",
+  "hero": {
+    "eyebrow": "About Optimax",
+    "title": "New vision.",
+    "title_line2": "New life.",
+    "subhead": "For more than 31 years we've been helping Malaysians achieve lasting clarity, comfort and confidence in their vision.",
+    "image": "/assets/uploads/why/why-first-lasik.webp",
+    "image_alt": "Optimax eye specialist in front of the Republik TTDI headquarters"
+  },
+  "stats": [
+    { "value": "1995", "label": "Year we brought LASIK to Malaysia", "color": "violet" },
+    { "value": "25", "label": "Hospital & clinics in Malaysia and Cambodia", "color": "yellow" },
+    { "value": "26", "label": "Ophthalmologists on our team", "color": "coral" },
+    { "value": "9", "label": "Countries our patients travel from", "color": "sky" }
+  ],
+  "story": {
+    "eyebrow": "Our story",
+    "title": "From one clinic in TTDI to a regional name.",
+    "paragraphs": [
+      "Optimax opened in Taman Tun Dr Ismail, Kuala Lumpur, in 1995 — and introduced laser vision correction to Malaysia. For many of our first patients, waking up without glasses was life-changing.",
+      "Since then we've grown into one of the most trusted eye care providers in Southeast Asia, expanding into cataract, glaucoma, dry eye and children's eye care. Patients now travel to us from Malaysia, Indonesia, the Philippines, Singapore, Thailand, Australia, China, Hong Kong and Japan.",
+      "Today Optimax is listed on the Main Market of Bursa Malaysia, and our headquarters sits at Republik TTDI — a few minutes from where it all began."
+    ],
+    "image": "/assets/uploads/why/why-network.webp",
+    "image_alt": "Optimax headquarters at Republik TTDI"
+  },
+  "timeline": {
+    "eyebrow": "Three decades of progress",
+    "title": "How laser vision correction has evolved.",
+    "intro": "We've adopted each new generation of technology — so patients get safer, gentler and faster treatment.",
+    "items": [
+      { "era": "1995", "title": "Surface laser (ASA / PRK)", "text": "Our first laser treatment. Effective, but vision took weeks to recover.", "color": "sky" },
+      { "era": "Next", "title": "LASIK with a blade", "text": "Same visual results as ASA, with recovery in days instead of weeks.", "color": "yellow" },
+      { "era": "Then", "title": "Bladeless Femto-LASIK", "text": "A femtosecond laser made the flap more precise, accurate and safe.", "color": "coral" },
+      { "era": "Now", "title": "ZEISS SMILE® & SMILE® pro", "text": "No flap at all — fewer complications, better comfort and about 8 seconds of laser time.", "color": "violet" }
+    ]
+  },
+  "people": {
+    "eyebrow": "People first",
+    "title": "Giving back to the community that built us.",
+    "text": "We started small, and we haven't forgotten who supported us. Together with corporate partners and charities, we invest in programmes that bring eye care to more people.",
+    "items": [
+      { "emoji": "🤝", "title": "Sponsored cataract surgery", "text": "Restoring sight for those who couldn't otherwise afford it.", "color": "mint" },
+      { "emoji": "👁️", "title": "Free eye screenings", "text": "Community check-ups to catch problems early.", "color": "sky" },
+      { "emoji": "📚", "title": "Free eye health education", "text": "Public talks and resources about keeping eyes healthy.", "color": "yellow" }
+    ]
+  },
+  "warranty": {
+    "eyebrow": "Peace of mind",
+    "title": "Lifetime vision warranty.",
+    "text": "Our lifetime warranty programme, structured aftercare and nationwide follow-up network mean you're looked after long after treatment day. Ask about the terms at your consultation."
+  }
+}

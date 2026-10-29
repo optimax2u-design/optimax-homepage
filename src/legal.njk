@@ -1,29 +1,32 @@
 ---
 pagination:
-  data: legalPages
+  data: legal
   size: 1
-  alias: L
-permalink: "/{{ L.slug }}/"
+  alias: doc
+  resolve: values
+permalink: "/{{ doc.slug }}/"
 layout: layouts/base.njk
 hide_booking: true
 eleventyComputed:
-  title: "{{ pages[L.slug].title }}"
-  description: "{{ pages[L.slug].description }}"
+  title: "{{ doc.title }} | Optimax Eye Specialist"
+  description: "{{ doc.seo_description }}"
 ---
-{#- Privacy Policy / Terms of Use — content word-for-word from the live pages -#}
 {%- import "macros.njk" as m -%}
-{%- set P = pages[L.slug] -%}
 
-{{ m.phero({title: L.title}, [{label: L.title}]) }}
+{{ m.phero({eyebrow: "Legal", title: doc.title, subhead: doc.intro}, { compact: true, crumbs: [{label: doc.title}] }) }}
 
 <section class="section section--flush">
   <div class="wrap legal">
     <nav class="legal__toc" aria-label="On this page">
-      {%- for t in P.toc %}<a href="#s{{ loop.index }}">{{ t }}</a>{% endfor %}
+      <p class="faqs__navtitle">On this page</p>
+      {%- for s in doc.sections %}<a href="#s{{ loop.index }}">{{ s.title }}</a>{% endfor %}
     </nav>
     <article class="prose">
-      <h2>{{ P.heading }}</h2>
-      {{ m.items(P.items) }}
+      <p class="prose__meta">Last updated: {{ doc.updated }}</p>
+      {%- for s in doc.sections %}
+      <h2 id="s{{ loop.index }}">{{ s.title }}</h2>
+      {{ s.body | safe }}
+      {%- endfor %}
     </article>
   </div>
 </section>

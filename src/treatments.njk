@@ -2,61 +2,122 @@
 permalink: /treatments/
 layout: layouts/base.njk
 nav_key: Treatments
-form: general
-cta_page: treatments
 eleventyComputed:
-  title: "{{ pages.treatments.title }}"
-  description: "{{ pages.treatments.description }}"
+  title: "{{ treatments.overview.seo_title }}"
+  description: "{{ treatments.overview.seo_description }}"
 ---
-{#- Treatments overview — content word-for-word from optimaxeyespecialist.com/treatments/ (src/_data/pages/treatments.json) -#}
 {%- import "macros.njk" as m -%}
-{%- set P = pages.treatments -%}
+{%- set o = treatments.overview -%}
 
-{{ m.phero({title: P.hero.title, sub: P.hero.sub, buttons: P.hero.buttons, image: P.hero.images[0]}, [{label: "Treatments"}]) }}
+{{ m.phero(o, { crumbs: [{label: "Treatments"}], ctas: [{label: "Book a free eye check", url: "#book"}, {label: "Try the treatment finder →", url: "/#finder", style: "ghost"}], pills: ["10 treatment options", "Full 2–3 hour assessment", "ZEISS technology"] }) }}
 
-{%- for s in P.sections %}
-{%- if s.kind == 'generic' %}
-{{ m.textSection(s.heading, s.items, loop.index0 % 2 == 0) }}
-
-{%- elif s.kind == 'twolists' %}
-<section class="section{{ ' section--tint' if loop.index0 % 2 == 0 }}">
+{#- The four care areas — same cards as the homepage -#}
+<section class="section section--top">
   <div class="wrap">
-    <header class="head reveal"><h2 class="h2">{{ s.heading }}</h2></header>
-    <div class="pair">
-      {%- for g in s.groups %}
-      <div class="pair__card {{ 'pair__card--yes' if loop.first else 'pair__card--no' }} reveal" style="--d:{{ loop.index0 }}">
-        <h3 class="h3">{{ g.label }}</h3>
-        <ul class="bullets">{% for li in g.items %}<li>{{ li }}</li>{% endfor %}</ul>
-      </div>
+    <div class="cards" data-carousel>
+      {%- set ids = ['laser','presbyopia','cataract','screening'] %}
+      {%- for c in home.treatments.cards %}
+      <article class="card c-{{ c.color }} reveal" id="{{ ids[loop.index0] }}" style="--d:{{ loop.index0 }}">
+        <div class="card__body">
+          <h3>{{ c.title }}</h3>
+          <p>{{ c.text }}</p>
+          <ul class="tags">{% for i in c.items %}{% set t = i | findTreatment(treatments.list) %}<li>{% if t %}<a href="/{{ t.slug }}/">{{ i }}</a>{% else %}{{ i }}{% endif %}</li>{% endfor %}</ul>
+          {%- if loop.index0 == 3 %}<a href="#screening-care" class="card__link">See screening care <span aria-hidden="true">→</span></a>{% elif loop.index0 == 0 %}<a href="#all" class="card__link">Compare laser options <span aria-hidden="true">→</span></a>{% else %}<a href="{{ c.url }}" class="card__link">Learn more <span aria-hidden="true">→</span></a>{% endif %}
+        </div>
+        <div class="card__media"><img src="{{ c.image }}" alt="{{ c.image_alt or '' }}" width="900" height="700" loading="lazy" decoding="async"></div>
+      </article>
       {%- endfor %}
     </div>
-    {%- for p in s.note %}<p class="note">{{ p }}</p>{% endfor %}
-    {%- if s.btn %}<p class="center"><a class="btn btn--primary btn--lg" href="#book">{{ s.btn.label }}</a></p>{% endif %}
   </div>
 </section>
 
-{%- elif s.kind == 'tcards' %}
-<section class="section{{ ' section--tint' if loop.index0 % 2 == 0 }}" id="all">
+{#- Every treatment -#}
+<section class="section section--tint" id="all">
   <div class="wrap">
     <header class="head reveal">
-      <h2 class="h2">{{ s.heading }}</h2>
-      {%- for p in s.intro %}<p class="lead">{{ p }}</p>{% endfor %}
+      <p class="eyebrow">All treatments</p>
+      <h2>{{ treatments.list.length }} ways to see clearly.</h2>
+      <p class="lead">Tap any treatment for how it works, who it suits, recovery and a side-by-side comparison.</p>
     </header>
     <div class="tcards">
-      {%- for c in s.cards %}
-      <a class="tcard reveal" href="{{ c.href | fixHref }}" style="--d:{{ loop.index0 % 3 }}">
-        <figure class="tcard__img"><img src="{{ c.image }}" alt="{{ c.name }}" width="600" height="400" loading="lazy" decoding="async"></figure>
-        <div class="tcard__body">
-          <h3 class="tcard__name">{{ c.name }}</h3>
-          <p class="tcard__tag">{{ c.tagline }}</p>
-          {%- if c.best.length %}<p class="tcard__label">{{ c.best_label }}</p><ul class="bullets bullets--sm">{% for b in c.best %}<li>{{ b }}</li>{% endfor %}</ul>{% endif %}
-          {%- for x in c.extra %}<p class="tcard__age">{{ x }}</p>{% endfor %}
-          <span class="tcard__more">{{ c.btn or 'Learn More' }} <span aria-hidden="true">→</span></span>
-        </div>
+      {%- for t in treatments.list %}{{ m.tcard(t, o.groups) }}{% endfor %}
+      <a class="tcard tcard--alt c-mint reveal" href="#screening-care">
+        <span class="tcard__group">Everyday care</span>
+        <span class="tcard__name">Screening & children's care</span>
+        <span class="tcard__sum">Glaucoma checks, myopia control, Ortho-K and friendly check-ups for kids.</span>
+        <span class="tcard__go" aria-hidden="true">→</span>
       </a>
+      <a class="tcard tcard--dark reveal" href="/#finder">
+        <span class="tcard__group">Not sure?</span>
+        <span class="tcard__name">Try the treatment finder</span>
+        <span class="tcard__sum">Answer one question and we'll suggest a good place to start.</span>
+        <span class="tcard__go" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{#- Explainer + suitability -#}
+<section class="section">
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">The basics</p>
+      <h2 class="h2">{{ o.intro_title }}</h2>
+      <p class="lead">{{ o.intro_text }}</p>
+      <a class="textlink" href="/faqs/">Read our FAQs <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="suit reveal" style="--d:1">
+      <div class="suit__card suit__card--yes">
+        <h3><span aria-hidden="true">✓</span> Often suitable</h3>
+        <ul class="checks">{% for s in o.suitable %}<li>{{ s }}</li>{% endfor %}</ul>
+      </div>
+      <div class="suit__card suit__card--no">
+        <h3><span aria-hidden="true">✕</span> May not be suitable</h3>
+        <ul class="crosses">{% for s in o.not_suitable %}<li>{{ s }}</li>{% endfor %}</ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{#- Quick comparison table of every treatment -#}
+<section class="section">
+  <div class="wrap">
+    <header class="head reveal">
+      <p class="eyebrow">At a glance</p>
+      <h2>Compare every option.</h2>
+      <p class="lead">A quick guide only — your eye specialist confirms what's right after a full assessment.</p>
+    </header>
+    <div class="ctable reveal" role="region" aria-label="Treatment comparison" tabindex="0">
+      <table>
+        <thead><tr><th scope="col">Treatment</th><th scope="col">Best for</th><th scope="col">Typical age</th><th scope="col"></th></tr></thead>
+        <tbody>
+          {%- for t in treatments.list %}
+          <tr><th scope="row"><span class="ctable__dot c-{{ t.color }}" aria-hidden="true"></span>{{ t.short }}</th><td>{{ t.card.suited }}</td><td>{{ t.card.age }}</td><td><a href="/{{ t.slug }}/" class="ctable__go">Details <span aria-hidden="true">→</span></a></td></tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+{#- Screening & children's care -#}
+<section class="section section--tint" id="screening-care">
+  <div class="wrap">
+    <header class="head reveal">
+      <p class="eyebrow">{{ o.screening.eyebrow }}</p>
+      <h2>{{ o.screening.title }}</h2>
+      <p class="lead">{{ o.screening.text }}</p>
+    </header>
+    <div class="icards">
+      {%- for i in o.screening.items %}
+      <article class="icard c-{{ i.color }} reveal" style="--d:{{ loop.index0 }}">
+        <span class="icard__emoji" aria-hidden="true">{{ i.emoji }}</span>
+        <h3>{{ i.title }}</h3>
+        <p>{{ i.text }}</p>
+      </article>
       {%- endfor %}
     </div>
   </div>
 </section>
-{%- endif %}
-{%- endfor %}
+
+{{ m.reviewsBand(home.reviews, site) }}

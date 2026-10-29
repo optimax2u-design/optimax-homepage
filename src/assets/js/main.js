@@ -23,25 +23,21 @@
     $$('.reveal').forEach(el => el.classList.add('in'));
   }
 
-  // Sticky nav border + menu (one menu for all screens: on phones the toggle opens it as a panel)
-  const nav = $('#nav'), menu = $('#menu'), toggle = $('.nav__toggle');
+  // Sticky nav border + mobile menu
+  const nav = $('#nav');
   const onScroll = () => nav.classList.toggle('is-stuck', scrollY > 8);
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
-  const placeMenu = () => menu.style.setProperty('--top', Math.max(0, nav.getBoundingClientRect().bottom) + 'px');
+  const toggle = $('.nav__toggle'), sheet = $('#mobile-menu');
   const setMenu = open => {
     toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    placeMenu(); document.documentElement.classList.toggle('menu-open', open);
+    sheet.style.top = open ? Math.max(0, nav.getBoundingClientRect().bottom) + 'px' : '';
+    document.documentElement.classList.toggle('menu-open', open); sheet.hidden = !open;
   };
   toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
-  addEventListener('resize', () => { placeMenu(); if (innerWidth > 960) setMenu(false); });
-  menu.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
-  // Sub-menu (Treatments): hover on desktop (CSS), tap the arrow to open/close
-  $$('[data-sub]').forEach(li => {
-    const btn = $('.menu__toggle', li);
-    btn.addEventListener('click', () => { const open = !li.classList.contains('is-open'); li.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', open); });
-    document.addEventListener('click', e => { if (!li.contains(e.target) && innerWidth > 960) { li.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); } });
-  });
-  addEventListener('keydown', e => { if (e.key === 'Escape') { setMenu(false); $$('[data-sub]').forEach(li => li.classList.remove('is-open')); } });
+  const placeSheet = () => { if (!sheet.hidden) sheet.style.top = Math.max(0, nav.getBoundingClientRect().bottom) + 'px'; };
+  addEventListener('resize', placeSheet); addEventListener('scroll', placeSheet, { passive: true });
+  sheet.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 
   // Treatment finder
   const fdata = $('#finder-data');
@@ -71,7 +67,7 @@
   // "Book" from the finder pre-selects the closest service in the form
   $('[data-f=book]', result).addEventListener('click', e => {
     const want = (e.currentTarget.dataset.service || $('[data-f=recommended]', result).textContent).toLowerCase();
-    const sel = $('[data-role=service]'); if (!sel) return;
+    const sel = $('#f-service');
     const match = [...sel.options].find(o => { const t = o.text.toLowerCase(); return t.includes(want) || want.includes(t.split(' (')[0]); });
     if (match) sel.value = match.value;
   });
@@ -88,14 +84,14 @@
   if (form) {
   // Pre-select branch / service set by the page (e.g. a branch or treatment page)
   const pre = (sel, want) => { if (!sel || !want) return; const o = [...sel.options].find(o => o.text === want || o.value === want); if (o) sel.value = o.value; };
-  pre($('[data-role=branch]', form), form.dataset.branch); pre($('[data-role=service]', form), form.dataset.service);
-  const check = f => { const valid = f.querySelector('input,select,textarea').checkValidity(); f.classList.toggle('invalid', !valid); return valid; };
-  $$('.field', form).forEach(f => { const el = f.querySelector('input,select,textarea'); ['input','change'].forEach(t => el.addEventListener(t, () => f.classList.contains('invalid') && check(f))); });
+  pre($('#f-branch'), form.dataset.branch); pre($('#f-service'), form.dataset.service);
+  const check = f => { const valid = f.querySelector('input,select').checkValidity(); f.classList.toggle('invalid', !valid); return valid; };
+  $$('.field', form).forEach(f => { const el = f.querySelector('input,select'); ['input','change'].forEach(t => el.addEventListener(t, () => f.classList.contains('invalid') && check(f))); });
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const fields = $$('.field', form);
     const bad = fields.filter(f => !check(f));
-    if (bad.length) { bad[0].querySelector('input,select,textarea').focus(); return; }
+    if (bad.length) { bad[0].querySelector('input,select').focus(); return; }
     const btn = $('button[type=submit]', form); btn.disabled = true; btn.textContent = 'Sending…';
     try {
       if (form.action && form.getAttribute('action')) {
@@ -185,26 +181,73 @@
     }), { threshold: 0.6 });
     tiles.forEach(el => tio.observe(el));
   }
+  // Treatments mega menu: click/tap toggles (hover + focus handled in CSS)
+  $$('[data-mega]').forEach(m => {
+    const trig = $('.mega__trigger', m);
+    trig.addEventListener('click', e => {
+      if (matchMedia('(hover: hover)').matches && !m.classList.contains('is-open') && e.detail) return; // mouse users: link works
+      e.preventDefault();
+      const open = !m.classList.contains('is-open');
+      m.classList.toggle('is-open', open); trig.setAttribute('aria-expanded', open);
+    });
+    m.addEventListener('mouseenter', () => trig.setAttribute('aria-expanded', 'true'));
+    m.addEventListener('mouseleave', () => { m.classList.remove('is-open'); trig.setAttribute('aria-expanded', 'false'); });
+    document.addEventListener('click', e => { if (!m.contains(e.target)) { m.classList.remove('is-open'); trig.setAttribute('aria-expanded', 'false'); } });
+    addEventListener('keydown', e => { if (e.key === 'Escape') { m.classList.remove('is-open'); trig.setAttribute('aria-expanded', 'false'); } });
+  });
+
   // Chip groups behave like radio buttons
   const chipGroup = (btns, onPick) => btns.forEach(b => b.addEventListener('click', () => {
     btns.forEach(x => x.setAttribute('aria-pressed', x === b)); onPick(b);
   }));
 
-  // Doctors page: filter by branch + language (same filters as the live site)
+  // Doctors page: filter by branch + language
   const dlist = $('[data-filter-list]');
   if (dlist) {
-    const cards = $$('.doc--link', dlist), br = $('[data-filter=branch]'), lg = $('[data-filter=lang]');
+    const cards = $$('.doc--link', dlist), sel = $('[data-filter=branch]'), langBtns = $$('[data-lang]');
     const count = $('[data-count]'), empty = $('[data-empty]');
+    let lang = '';
+    const params = new URLSearchParams(location.search);
+    if (params.get('branch') && sel) sel.value = params.get('branch');
     const apply = () => {
-      let n = 0;
+      const br = sel ? sel.value : ''; let n = 0;
       cards.forEach(c => {
-        const ok = (!br.value || c.dataset.branches.split(' ').includes(br.value)) && (!lg.value || c.dataset.langs.split('|').includes(lg.value));
+        const ok = (!br || c.dataset.branches.split(' ').includes(br)) && (!lang || c.dataset.langs.split('|').includes(lang));
         c.classList.toggle('is-hidden', !ok); if (ok) n++;
       });
-      count.textContent = n; empty.hidden = n > 0;
+      if (count) count.textContent = n; if (empty) empty.hidden = n > 0;
     };
-    br.addEventListener('change', apply); lg.addEventListener('change', apply);
-    const reset = $('[data-reset]'); reset && reset.addEventListener('click', () => { br.value = ''; lg.value = ''; apply(); });
+    sel && sel.addEventListener('change', apply);
+    chipGroup(langBtns, b => { lang = b.dataset.lang; apply(); });
+    const reset = $('[data-reset]'); reset && reset.addEventListener('click', () => { if (sel) sel.value = ''; lang = ''; langBtns.forEach((x, i) => x.setAttribute('aria-pressed', i === 0)); apply(); });
     apply();
+  }
+
+  // Branches page: search + region chips
+  const bq = $('[data-branch-search]');
+  if (bq) {
+    const blocks = $$('[data-region-block]'), empty = $('[data-empty]'); let region = '';
+    const apply = () => {
+      const q = bq.value.trim().toLowerCase(); let total = 0;
+      blocks.forEach(bl => {
+        let n = 0;
+        $$('.bcard', bl).forEach(c => { const ok = (!q || c.dataset.search.includes(q)); c.classList.toggle('is-hidden', !ok); if (ok) n++; });
+        const show = n > 0 && (!region || bl.dataset.regionBlock === region);
+        bl.classList.toggle('is-hidden', !show); if (show) total += n;
+      });
+      if (empty) { empty.hidden = total > 0; const qs = $('[data-q]', empty); if (qs) qs.textContent = bq.value; }
+    };
+    bq.addEventListener('input', apply);
+    chipGroup($$('[data-region]'), b => { region = b.dataset.region; apply(); });
+  }
+
+  // Blog: filter by topic
+  const pf = $('[data-post-filter]');
+  if (pf) {
+    const posts = $$('.posts .post');
+    chipGroup($$('[data-cat]', pf), b => {
+      const c = b.dataset.cat;
+      posts.forEach(p => p.classList.toggle('is-hidden', !!c && !p.dataset.cats.split('|').includes(c)));
+    });
   }
 })();
