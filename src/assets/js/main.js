@@ -61,7 +61,7 @@
   // "Book" from the finder pre-selects the closest service in the form
   $('[data-f=book]', result).addEventListener('click', e => {
     const want = (e.currentTarget.dataset.service || $('[data-f=recommended]', result).textContent).toLowerCase();
-    const sel = $('#f-service');
+    const sel = $('#f-service'); if (!sel) return;
     const match = [...sel.options].find(o => { const t = o.text.toLowerCase(); return t.includes(want) || want.includes(t.split(' (')[0]); });
     if (match) sel.value = match.value;
   });
@@ -74,6 +74,7 @@
 
   // Booking form
   const form = $('#booking-form'), ok = $('#booking-success');
+  if (form) {
   const check = f => { const valid = f.querySelector('input,select').checkValidity(); f.classList.toggle('invalid', !valid); return valid; };
   $$('.field', form).forEach(f => { const el = f.querySelector('input,select'); ['input','change'].forEach(t => el.addEventListener(t, () => f.classList.contains('invalid') && check(f))); });
   form.addEventListener('submit', async e => {
@@ -89,6 +90,7 @@
     } catch (_) { /* still confirm; the team follows up by phone */ }
     form.hidden = true; ok.hidden = false; ok.focus();
   });
+  }
 
   // Hero badge: smooth rolling counter from 1s to the final value (e.g. 8s).
   // Digits glide upward like an odometer while the yellow ring sweeps round in sync.
