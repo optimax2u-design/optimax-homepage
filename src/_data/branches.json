@@ -4,208 +4,40 @@
       "region": "Klang Valley",
       "branches": [
         {
-          "name": "Taman Tun Dr. Ismail (HQ)",
-          "slug": "taman-tun-dr-ismail-kuala-lumpur-hq",
-          "full_name": "Optimax Taman Tun Dr. Ismail (HQ)",
-          "area": "Kuala Lumpur",
-          "address": "Unit 2-2-1, Republik TTDI, Jalan Tun Mohd Fuad 3, Taman Tun Dr. Ismail, 60000 Kuala Lumpur",
-          "tel": "+603-7890 2626",
-          "whatsapp": "+6010-909 1201",
-          "email": "hq@optimax.com.my",
-          "hours": [
-            "Mon–Sat: 9.00am–6.00pm",
-            "1st Sunday of the month: 9.00am–6.00pm"
-          ],
-          "google_profile": "https://share.google/oCt7wZg0KqERAWglv",
-          "waze": "https://waze.com/ul?ll=3.1410844,101.6262983&navigate=yes",
-          "fax": "+603-2859 0214",
-          "note": "Our headquarters at Republik TTDI, with the full range of laser vision correction.",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Taman Tun Dr. Ismail (HQ)"
         },
         {
-          "name": "Sri Petaling",
-          "slug": "sri-petaling",
-          "full_name": "Optimax Sri Petaling",
-          "area": "Kuala Lumpur",
-          "address": "No. 145, Jalan Radin Bagus, Sri Petaling, 57000 Kuala Lumpur",
-          "tel": "+603-2779 6499",
-          "whatsapp": "+6010-221 2300",
-          "email": "sp@optimax.com.my",
-          "hours": [
-            "Mon–Sat: 9.00am–6.00pm",
-            "4th Sunday of the month: 9.00am–6.00pm"
-          ],
-          "google_profile": "https://share.google/YtorvjywD1VzxfL3z",
-          "waze": "",
-          "fax": "+603-9059 1101",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Sri Petaling"
         },
         {
-          "name": "Cheras",
-          "slug": "cheras",
-          "full_name": "Optimax Cheras",
-          "area": "Selangor",
-          "address": "01-02, Residensi Cheras Selatan, Jalan Dataran Cheras 7, Balakong, 43200 Cheras, Selangor",
-          "tel": "+603-8966 1600",
-          "whatsapp": "+6016-828 8101",
-          "email": "cheras@optimax.com.my",
-          "hours": [
-            "Tue–Sat: 9.00am–6.00pm"
-          ],
-          "google_profile": "https://share.google/6K03MlZtYuJ4ghsHW",
-          "waze": "",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Cheras"
         },
         {
-          "name": "Kepong",
-          "slug": "kepong",
-          "full_name": "Optimax Kepong",
-          "area": "Kuala Lumpur",
-          "address": "No. 79, Jalan 3/62A, Bandar Menjalara, 52200 Kuala Lumpur",
-          "tel": "+603-2779 0066",
-          "whatsapp": "+6016-678 4101",
-          "email": "kepong@optimax.com.my",
-          "hours": [
-            "Tue–Sat: 9.00am–6.00pm",
-            "4th Sunday of the month: 9.00am–6.00pm"
-          ],
-          "google_profile": "https://share.google/hDI5xinBQaRVySBgs",
-          "waze": "",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Kepong"
         },
         {
-          "name": "Melawati",
-          "slug": "melawati",
-          "full_name": "Optimax Taman Melawati",
-          "area": "Kuala Lumpur",
-          "address": "20, Jalan Bandar 3, Taman Melawati, 53100 Kuala Lumpur",
-          "tel": "+603-7890 0160",
-          "whatsapp": "+6014-644 2101",
-          "email": "melawati@optimax.com.my",
-          "hours": [
-            "Tue–Sat: 9.00am–6.00pm"
-          ],
-          "google_profile": "https://share.google/vzSCi1daQSRYEcalv",
-          "waze": "",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Melawati"
         },
         {
-          "name": "OUG",
-          "slug": "oug",
-          "full_name": "Optimax OUG",
-          "area": "Kuala Lumpur",
-          "address": "60, Jalan Hujan Rahmat 2, Overseas Union Garden, 58200 Kuala Lumpur",
-          "tel": "+603-2779 6088",
-          "whatsapp": "+6014-621 4101",
-          "email": "oug@optimax.com.my",
-          "hours": [
-            "Mon–Wed, Fri–Sat: 9.30am–6.30pm",
-            "Thu & Sun: Closed"
-          ],
-          "google_profile": "https://share.google/kzcvhxNe5c2p8JWUI",
-          "waze": "",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "OUG"
         },
         {
-          "name": "Damansara Jaya",
-          "slug": "damansara-jaya",
-          "full_name": "Optimax Damansara Jaya",
-          "area": "Petaling Jaya",
-          "address": "C38-40, Concourse Floor, Atria Shopping Gallery, Jalan SS22/23, Damansara Jaya, 47400 Petaling Jaya, Selangor",
-          "tel": "+603-7890 0168",
-          "whatsapp": "+6014-658 8101",
-          "email": "damansarajaya@optimax.com.my",
-          "hours": [
-            "Mon–Sun: 10.00am–7.00pm"
-          ],
-          "google_profile": "https://share.google/CtHigeD5X904zenTZ",
-          "waze": "",
-          "note": "Inside Atria Shopping Gallery — open seven days a week.",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Damansara Jaya"
         },
         {
-          "name": "Bandar Sunway",
-          "slug": "bandar-sunway",
-          "full_name": "Optimax Bandar Sunway",
-          "area": "Petaling Jaya",
-          "address": "No. 11, Ground Floor, Jalan PJS 11/28B, Bandar Sunway, 46150 Petaling Jaya, Selangor",
-          "tel": "+603-8084 1212",
-          "whatsapp": "+6010-363 2101",
-          "email": "bandarsunway@optimax.com.my",
-          "hours": [
-            "Mon–Sun: 8.00am–5.00pm"
-          ],
-          "google_profile": "https://share.google/kyvKklEyUM89rs94Y",
-          "waze": "https://waze.com/ul?ll=3.0721714,101.6071033&navigate=yes",
-          "fax": "+603-5638 4225",
-          "note": "Open seven days a week.",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Bandar Sunway"
         },
         {
-          "name": "Elmina",
-          "slug": "elmina",
-          "full_name": "Optimax Elmina",
-          "area": "Shah Alam",
-          "address": "No. 35-G, Jalan Eserina AA U16/AA, Elmina East, Seksyen U16, 40160 Shah Alam, Selangor",
-          "tel": "+603-5870 1830",
-          "whatsapp": "+6019-357 9111",
-          "email": "elmina@optimax.com.my",
-          "hours": [
-            "Tue–Sat: 9.00am–6.00pm"
-          ],
-          "google_profile": "https://share.google/rj1vGgFhtJwUY1GUv",
-          "waze": "",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Elmina"
         },
         {
-          "name": "Kota Kemuning",
-          "slug": "kota-kemuning",
-          "full_name": "Optimax Kota Kemuning",
-          "area": "Shah Alam",
-          "address": "No. 43-G, Jalan Anggerik Vanilla BF 31/BF, Kota Kemuning, 40460 Shah Alam, Selangor",
-          "tel": "+603-5870 1828",
-          "whatsapp": "+6016-350 7101",
-          "email": "kotakemuning@optimax.com.my",
-          "hours": [
-            "Tue–Sat: 9.00am–6.00pm"
-          ],
-          "google_profile": "https://share.google/CH38mIWWc98mmxfpx",
-          "waze": "",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Kota Kemuning"
         },
         {
-          "name": "Shah Alam",
-          "slug": "shah-alam",
-          "full_name": "Optimax Shah Alam",
-          "area": "Shah Alam",
-          "address": "50G & 52G, Blok 3, Jalan Pahat G15/G, Dataran Otomobil, Seksyen 15, 40200 Shah Alam, Selangor",
-          "tel": "+603-5870 1168",
-          "whatsapp": "+6016-460 1101",
-          "email": "shahalam@optimax.com.my",
-          "hours": [
-            "Mon–Sat: 9.00am–6.00pm",
-            "1st & 2nd Sunday of the month: 9.00am–6.00pm"
-          ],
-          "google_profile": "https://share.google/MonESyb2C9sQ4eySm",
-          "waze": "",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Shah Alam"
         },
         {
-          "name": "Klang",
-          "slug": "klang",
-          "full_name": "Optimax Klang",
-          "area": "Klang",
-          "address": "No. 17 & 19, Jalan Bayu Tinggi 7, 41200 Klang, Selangor",
-          "tel": "+603-3385 1186",
-          "whatsapp": "+6016-468 1101",
-          "email": "klang@optimax.com.my",
-          "hours": [
-            "Mon–Sat: 9.00am–6.00pm",
-            "3rd Sunday of the month: 9.00am–6.00pm"
-          ],
-          "google_profile": "https://share.google/2eLcyy3lacNQAhr8H",
-          "waze": "",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Klang"
         }
       ]
     },
@@ -213,57 +45,13 @@
       "region": "Northern",
       "branches": [
         {
-          "name": "Penang",
-          "slug": "penang-eye-specialist-hospital",
-          "full_name": "Penang Eye Specialist Hospital",
-          "area": "Penang",
-          "address": "223, Jalan Masjid Negeri, 11600 Penang",
-          "tel": "+604-202 0232",
-          "whatsapp": "+6018-272 1101",
-          "email": "penang@optimax.com.my",
-          "hours": [
-            "Mon–Sat: 9.00am–6.00pm",
-            "Sunday: 9.00am–1.00pm"
-          ],
-          "google_profile": "https://share.google/p03QdjW6Qc8cokauj",
-          "waze": "",
-          "note": "Our eye specialist hospital serving northern Malaysia.",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Penang"
         },
         {
-          "name": "Bukit Mertajam",
-          "slug": "bukit-mertajam",
-          "full_name": "Optimax Bukit Mertajam",
-          "area": "Penang",
-          "address": "No. 1931, Ground Floor, Jalan Rozhan, Taman Impian Alma, 14000 Bukit Mertajam, Penang",
-          "tel": "+604-523 0122",
-          "whatsapp": "+6010-967 6101",
-          "email": "bukitmertajam@optimax.com.my",
-          "hours": [
-            "Tue–Sat: 9.00am–6.00pm",
-            "Sun & Mon: Closed"
-          ],
-          "google_profile": "https://share.google/o3UG1eAvajAb3ipPD",
-          "waze": "https://waze.com/ul?ll=5.314795,100.4787152&navigate=yes",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Bukit Mertajam"
         },
         {
-          "name": "Ipoh",
-          "slug": "ipoh",
-          "full_name": "Optimax Ipoh",
-          "area": "Perak",
-          "address": "No. 1, Jalan Dato Khong Kam Tak, Off Jalan Tambun, 31400 Ipoh, Perak",
-          "tel": "+605-238 0028",
-          "whatsapp": "+6019-719 7101",
-          "email": "ipoh@optimax.com.my",
-          "hours": [
-            "Tue–Sat: 9.00am–6.00pm",
-            "1st Sunday of the month: 9.00am–1.00pm",
-            "Monday: Closed"
-          ],
-          "google_profile": "https://share.google/kuft2h9vok8LOddjT",
-          "waze": "",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Ipoh"
         }
       ]
     },
@@ -271,124 +59,25 @@
       "region": "Southern",
       "branches": [
         {
-          "name": "Seremban",
-          "slug": "seremban",
-          "full_name": "Optimax Seremban",
-          "area": "Negeri Sembilan",
-          "address": "No. 141 & 142, Jalan Tun Dr. Ismail, 70200 Seremban, Negeri Sembilan",
-          "tel": "+606-602 0018",
-          "whatsapp": "+6016-426 7101",
-          "email": "seremban@optimax.com.my",
-          "hours": [
-            "Mon–Sun: 9.00am–6.00pm"
-          ],
-          "google_profile": "https://share.google/nDRR7hU0VugErcavA",
-          "waze": "",
-          "fax": "+606-761 0903",
-          "note": "Open seven days a week.",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Seremban"
         },
         {
-          "name": "Bahau",
-          "slug": "bahau",
-          "full_name": "Optimax Bahau",
-          "area": "Negeri Sembilan",
-          "address": "No. 13 & 15, Jalan Seraya 1, Pusat Perniagaan Seraya, 72100 Bahau, Negeri Sembilan",
-          "tel": "+606-618 0012",
-          "whatsapp": "+6016-739 9101",
-          "email": "bahau@optimax.com.my",
-          "hours": [
-            "Mon–Sat: 9.00am–6.00pm",
-            "Sunday: Closed"
-          ],
-          "google_profile": "https://share.google/07GNVk2qMKIzzPWa3",
-          "waze": "",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Bahau"
         },
         {
-          "name": "Kluang",
-          "slug": "kluang",
-          "full_name": "Optimax Kluang",
-          "area": "Johor",
-          "address": "No. 43 & 44, Jalan Haji Manan, 86000 Kluang, Johor",
-          "tel": "+607-701 0018",
-          "whatsapp": "+6016-232 6101",
-          "email": "kluang@optimax.com.my",
-          "hours": [
-            "Mon–Sat: 9.00am–5.00pm",
-            "Sunday: Closed"
-          ],
-          "google_profile": "https://share.google/VGiJMbUgJxTCurzPC",
-          "waze": "",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Kluang"
         },
         {
-          "name": "Muar",
-          "slug": "muar-johor",
-          "full_name": "Optimax Muar",
-          "area": "Johor",
-          "address": "1-5 & 1-6, Jalan Ismail, 84000 Muar, Johor",
-          "tel": "+607-981 0018",
-          "whatsapp": "+6014-986 1851",
-          "email": "muar@optimax.com.my",
-          "hours": [
-            "Mon–Sat: 9.00am–5.00pm",
-            "Sunday: Closed"
-          ],
-          "google_profile": "https://share.google/BOAMLJ7FAkJEhghr5",
-          "waze": "",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Muar"
         },
         {
-          "name": "Segamat",
-          "slug": "segamat",
-          "full_name": "Optimax Segamat",
-          "area": "Johor",
-          "address": "49B & 49C, Jalan Genuang, 85000 Segamat, Johor",
-          "tel": "+607-971 0018",
-          "whatsapp": "+6016-236 9101",
-          "email": "segamat@optimax.com.my",
-          "hours": [
-            "Mon–Sat: 9.00am–5.00pm",
-            "Sunday: Closed"
-          ],
-          "google_profile": "https://share.google/6kadiDC0LPxSsFMbt",
-          "waze": "",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Segamat"
         },
         {
-          "name": "Johor Bahru",
-          "slug": "johor-bahru",
-          "full_name": "Optimax Johor Bahru",
-          "area": "Johor",
-          "address": "51, 53 & 55, Jalan Cantik 6, Taman Pelangi Indah, 81800 Ulu Tiram, Johor",
-          "tel": "+607-859 0528",
-          "whatsapp": "+6019-714 2101",
-          "email": "johor@optimax.com.my",
-          "hours": [
-            "Mon–Sat: 9.00am–6.00pm",
-            "Sunday: Closed"
-          ],
-          "google_profile": "https://share.google/azAi8VQQOFxOE5gwY",
-          "waze": "",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Johor Bahru"
         },
         {
-          "name": "Sutera Johor Bahru",
-          "slug": "sutera-johor-bahru",
-          "full_name": "Optimax Sutera, Johor Bahru",
-          "area": "Johor",
-          "address": "No. 68, Jalan Sutera Tanjung 8/3, Taman Sutera Utama, 81300 Skudai, Johor",
-          "tel": "+607-535 1800",
-          "whatsapp": "+6016-312 4101",
-          "email": "sutera@optimax.com.my",
-          "hours": [
-            "Mon–Sat: 9.00am–5.00pm",
-            "Sunday: Closed"
-          ],
-          "google_profile": "https://share.google/YVB33txF4AK1CSDzM",
-          "waze": "",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Sutera Johor Bahru"
         }
       ]
     },
@@ -396,38 +85,10 @@
       "region": "East Malaysia",
       "branches": [
         {
-          "name": "Kuching",
-          "slug": "kuching",
-          "full_name": "Optimax Kuching",
-          "area": "Sarawak",
-          "address": "No. 59 & 61, Ground Floor, Jalan Tun Jugah, 93350 Kuching, Sarawak",
-          "tel": "+6082-26 8038",
-          "whatsapp": "+6016-426 9101",
-          "email": "kuching@optimax.com.my",
-          "hours": [
-            "Mon–Sun: 9.00am–6.00pm"
-          ],
-          "google_profile": "https://share.google/uLILo5DKu3ReyErEi",
-          "waze": "",
-          "note": "Home of FLACS laser-assisted cataract surgery. Open seven days a week.",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Kuching"
         },
         {
-          "name": "Kota Kinabalu",
-          "slug": "optimax-kota-kinabalu-eye-specialist-centre",
-          "full_name": "Optimax Kota Kinabalu Eye Specialist Centre",
-          "area": "Sabah",
-          "address": "Ground Floor, Sky Arena, Mile 3½, Jalan Penampang, 88300 Kota Kinabalu, Sabah",
-          "tel": "+6088-33 5025",
-          "whatsapp": "+6010-399 9101",
-          "email": "kotakinabalu@optimax.com.my",
-          "hours": [
-            "Mon–Fri: 8.30am–4.30pm",
-            "Saturday: 8.30am–1.00pm"
-          ],
-          "google_profile": "https://share.google/ANYwmIxaoTrqvgDMs",
-          "waze": "https://waze.com/ul?ll=5.9368959,116.0814238&navigate=yes",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Kota Kinabalu"
         }
       ]
     },
@@ -435,19 +96,7 @@
       "region": "International",
       "branches": [
         {
-          "name": "Cambodia",
-          "slug": "cambodia",
-          "full_name": "Optimax Cambodia (Phnom Penh)",
-          "area": "Phnom Penh",
-          "address": "Suite S4-01 to S4-03, 3rd Floor, Exchange Square, Building No. 19 & 20, Street 106, Village 2, Sangkat Wat Phnom, Khan Daun Penh, Phnom Penh, Cambodia",
-          "tel": "+855 1737 2525",
-          "whatsapp": "+855 8799 2525",
-          "email": "phnompenh@optimax2u.com",
-          "hours": [],
-          "google_profile": "https://share.google/bNHiMDlr772jsKnyi",
-          "waze": "https://waze.com/ul?ll=11.5721088,104.9240401&navigate=yes",
-          "note": "WhatsApp and Telegram available on the same number.",
-          "services": "LASIK assessments, cataract care, eye screening and consultations"
+          "name": "Cambodia"
         }
       ]
     }

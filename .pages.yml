@@ -78,7 +78,6 @@ content:
               - { name: recommended, label: Recommended treatment, type: string }
               - { name: summary, type: text }
               - { name: alternatives, type: string, list: true }
-              - { name: url, label: Learn more link, type: string }
 
       - name: treatments
         label: Treatment cards
@@ -196,7 +195,6 @@ content:
   # ───────────────────────────── Doctors ─────────────────────────────
   - name: doctors
     label: Doctors
-    description: Each doctor gets their own page at /doctor/<page-address>/
     type: file
     path: src/_data/doctors.json
     format: json
@@ -207,20 +205,13 @@ content:
         list: true
         fields:
           - { name: name, type: string }
-          - { name: slug, label: Page address (lowercase-with-dashes — don't change once live), type: string }
-          - { name: title, label: Position, type: string }
           - { name: credentials, type: text }
           - { name: photo, label: Portrait (4:5, ~600×750), type: image }
           - *color
-          - { name: specialties, label: Clinical interests, type: string, list: true }
-          - { name: procedures, label: Treatments performed (use the treatment names), type: string, list: true }
-          - { name: languages, label: Languages spoken, type: string, list: true }
-          - { name: branches, label: Branches (branch page addresses, e.g. kuching), type: string, list: true }
 
   # ───────────────────────────── Branches ─────────────────────────────
   - name: branches
-    label: Branches
-    description: Each branch gets its own page at /branches/<page-address>/ and appears in every booking form.
+    label: Branches (booking form)
     type: file
     path: src/_data/branches.json
     format: json
@@ -234,20 +225,7 @@ content:
             type: object
             list: true
             fields:
-              - { name: name, label: Short name (booking form), type: string }
-              - { name: slug, label: Page address (don't change once live), type: string }
-              - { name: full_name, label: Full name (page heading), type: string }
-              - { name: area, label: Town / state label, type: string }
-              - { name: address, type: text }
-              - { name: tel, label: Phone, type: string }
-              - { name: whatsapp, label: WhatsApp, type: string }
-              - { name: email, type: string }
-              - { name: fax, type: string }
-              - { name: hours, label: Opening hours (one line each), type: string, list: true }
-              - { name: note, label: Highlight note (optional), type: string }
-              - { name: services, type: text }
-              - { name: google_profile, label: Google Maps / Business Profile link, type: string }
-              - { name: waze, label: Waze link (optional), type: string }
+              - { name: name, type: string }
 
   # ───────────────────────────── Site settings ─────────────────────────────
   - name: site
@@ -272,14 +250,7 @@ content:
           - { name: whatsapp_link, label: WhatsApp link (https://wa.me/60…), type: string }
           - { name: hours, type: string }
           - { name: listing, label: Listing text, type: string }
-      - name: nav
-        label: Menu links
-        type: object
-        list: true
-        fields:
-          - { name: label, type: string }
-          - { name: url, label: Link, type: string }
-          - { name: mega, label: Show treatments drop-down, type: boolean }
+      - { name: nav, label: Menu links, type: object, list: true, fields: *link }
       - { name: nav_cta, label: Menu button, type: object, fields: *link }
       - { name: form_endpoint, label: Form endpoint URL (optional — e.g. Formspree, Make, Zapier webhook), type: string }
       - name: footer
@@ -290,196 +261,4 @@ content:
           - { name: address_label, type: string }
           - { name: address, type: text }
           - { name: links, type: object, list: true, fields: *link }
-          - { name: legal_links, label: Legal links, type: object, list: true, fields: *link }
           - { name: legal, label: Small print, type: text }
-
-  # ───────────────────────────── Treatments ─────────────────────────────
-  - name: treatments
-    label: Treatments
-    description: The Treatments overview page and one page per treatment (/<page-address>/).
-    type: file
-    path: src/_data/treatments.json
-    format: json
-    fields:
-      - name: overview
-        label: Treatments overview page
-        type: object
-        fields:
-          - { name: seo_title, label: Browser tab / Google title, type: string }
-          - { name: seo_description, label: Google description, type: text }
-          - { name: eyebrow, label: Small heading, type: string }
-          - { name: title, label: Headline (line 1), type: string }
-          - { name: title_line2, label: Headline (line 2), type: string }
-          - { name: subhead, label: Supporting text, type: text }
-          - { name: intro_title, type: string }
-          - { name: intro_text, type: text }
-          - { name: suitable, label: Often suitable, type: string, list: true }
-          - { name: not_suitable, label: May not be suitable, type: string, list: true }
-          - name: groups
-            type: object
-            list: true
-            fields:
-              - { name: id, label: ID (laser / presbyopia / cataract / lenses), type: string }
-              - { name: title, type: string }
-              - { name: text, type: string }
-              - *color
-          - name: screening
-            label: Screening & children's care
-            type: object
-            fields:
-              - { name: eyebrow, type: string }
-              - { name: title, type: string }
-              - { name: text, type: text }
-              - { name: items, type: object, list: true, fields: [ { name: emoji, type: string }, { name: title, type: string }, { name: text, type: text }, *color ] }
-      - name: list
-        label: Treatment pages
-        type: object
-        list: true
-        fields:
-          - { name: name, label: Full name, type: string }
-          - { name: short, label: Short name (menu & cards), type: string }
-          - { name: slug, label: Page address (don't change once live), type: string }
-          - { name: aliases, label: Other names (so tags link here), type: string, list: true }
-          - { name: group, type: select, options: { values: [laser, presbyopia, cataract, lenses] } }
-          - *color
-          - { name: service, label: Booking form service to pre-select, type: string }
-          - { name: image, label: Hero photo (transparent cut-out), type: image }
-          - { name: image_alt, label: Photo description, type: string }
-          - { name: seo_title, label: Browser tab / Google title, type: string }
-          - { name: seo_description, label: Google description, type: text }
-          - { name: card, label: Card summary, type: object, fields: [ { name: summary, type: string }, { name: age, type: string }, { name: suited, label: Best for, type: string } ] }
-          - name: hero
-            type: object
-            fields:
-              - { name: eyebrow, type: string }
-              - { name: title, type: string }
-              - { name: title_line2, label: Tagline, type: string }
-              - { name: subhead, type: text }
-              - { name: badge_number, type: string }
-              - { name: badge_label, type: string }
-          - { name: facts, label: Fact tiles, type: object, list: { max: 4 }, fields: [ { name: value, type: string }, { name: label, type: string }, *color ] }
-          - { name: what, label: What is it, type: object, fields: [ { name: title, type: string }, { name: text, type: text }, { name: features, type: string, list: true } ] }
-          - { name: suits, label: Often a good fit, type: string, list: true }
-          - { name: not_suits, label: May not be suitable, type: string, list: true }
-          - { name: not_suits_note, label: Alternative note (optional), type: string }
-          - name: compare
-            label: Comparison table
-            type: object
-            fields:
-              - { name: title, type: string }
-              - { name: columns, label: Column headings (this treatment first), type: string, list: true }
-              - { name: rows, type: object, list: true, fields: [ { name: label, type: string }, { name: values, label: Values (same order as columns), type: string, list: true } ] }
-          - name: steps
-            label: Procedure steps
-            type: object
-            fields:
-              - { name: title, type: string }
-              - { name: note, type: string }
-              - { name: items, type: object, list: true, fields: [ { name: title, type: string }, { name: text, type: text }, { name: image, label: Illustration (optional), type: image } ] }
-          - { name: lenses, label: Lens options (cataract only), type: object, fields: [ { name: title, type: string }, { name: intro, type: text }, { name: items, type: object, list: true, fields: [ { name: title, type: string }, { name: text, type: text }, *color ] } ] }
-          - { name: care, label: Before & after, type: object, fields: [ { name: before, type: string, list: true }, { name: after, type: string, list: true } ] }
-
-  # ───────────────────────────── About ─────────────────────────────
-  - name: about
-    label: About page
-    type: file
-    path: src/_data/about.json
-    format: json
-    fields:
-      - { name: seo_title, label: Browser tab / Google title, type: string }
-      - { name: seo_description, label: Google description, type: text }
-      - { name: hero, type: object, fields: [ { name: eyebrow, type: string }, { name: title, type: string }, { name: title_line2, type: string }, { name: subhead, type: text }, { name: image, type: image }, { name: image_alt, type: string } ] }
-      - { name: stats, type: object, list: true, fields: [ { name: value, type: string }, { name: label, type: string }, *color ] }
-      - { name: story, type: object, fields: [ { name: eyebrow, type: string }, { name: title, type: string }, { name: paragraphs, type: text, list: true }, { name: image, type: image }, { name: image_alt, type: string } ] }
-      - { name: timeline, type: object, fields: [ { name: eyebrow, type: string }, { name: title, type: string }, { name: intro, type: text }, { name: items, type: object, list: true, fields: [ { name: era, type: string }, { name: title, type: string }, { name: text, type: text }, *color ] } ] }
-      - { name: people, label: People first, type: object, fields: [ { name: eyebrow, type: string }, { name: title, type: string }, { name: text, type: text }, { name: items, type: object, list: true, fields: [ { name: emoji, type: string }, { name: title, type: string }, { name: text, type: text }, *color ] } ] }
-      - { name: warranty, type: object, fields: [ { name: eyebrow, type: string }, { name: title, type: string }, { name: text, type: text } ] }
-
-  # ───────────────────────────── FAQs ─────────────────────────────
-  - name: faqs
-    label: FAQs page
-    type: file
-    path: src/_data/faqs.json
-    format: json
-    fields:
-      - { name: seo_title, type: string }
-      - { name: seo_description, type: text }
-      - { name: eyebrow, type: string }
-      - { name: title, type: string }
-      - { name: title_line2, type: string }
-      - { name: subhead, type: text }
-      - name: groups
-        label: Topics
-        type: object
-        list: true
-        fields:
-          - { name: id, label: ID (lowercase, no spaces), type: string }
-          - { name: title, type: string }
-          - { name: emoji, type: string }
-          - *color
-          - { name: items, label: Questions, type: object, list: true, fields: [ { name: q, label: Question, type: string }, { name: a, label: Answer, type: text } ] }
-
-  # ───────────────────────────── Financing ─────────────────────────────
-  - name: financing
-    label: Financing page
-    type: file
-    path: src/_data/financing.json
-    format: json
-    fields:
-      - { name: seo_title, type: string }
-      - { name: seo_description, type: text }
-      - { name: eyebrow, type: string }
-      - { name: title, type: string }
-      - { name: title_line2, type: string }
-      - { name: subhead, type: text }
-      - { name: plans, label: Instalment tiles, type: object, list: true, fields: [ { name: value, type: string }, { name: label, type: string }, *color ] }
-      - { name: plans_note, type: text }
-      - { name: value, label: What's included, type: object, fields: [ { name: eyebrow, type: string }, { name: title, type: string }, { name: intro, type: text }, { name: items, type: object, list: true, fields: [ { name: emoji, type: string }, { name: title, type: string }, { name: text, type: text }, *color ] } ] }
-      - { name: faqs, type: object, list: true, fields: [ { name: q, label: Question, type: string }, { name: a, label: Answer, type: text } ] }
-
-  # ───────────────────────────── Blog ─────────────────────────────
-  - name: blog
-    label: Blog
-    description: Each post gets its own page at /<page-address>/
-    type: file
-    path: src/_data/blog.json
-    format: json
-    fields:
-      - { name: seo_title, type: string }
-      - { name: seo_description, type: text }
-      - { name: eyebrow, type: string }
-      - { name: title, type: string }
-      - { name: title_line2, type: string }
-      - { name: subhead, type: text }
-      - name: posts
-        type: object
-        list: true
-        fields:
-          - { name: title, type: string }
-          - { name: slug, label: Page address (don't change once live), type: string }
-          - { name: date, type: date }
-          - { name: categories, type: string, list: true }
-          - *color
-          - { name: emoji, label: Cover emoji, type: string }
-          - { name: excerpt, type: text }
-          - { name: body, label: Article, type: rich-text }
-
-  # ───────────────────────────── Legal ─────────────────────────────
-  - name: legal
-    label: Privacy & Terms pages
-    type: file
-    path: src/_data/legal.json
-    format: json
-    fields:
-      - name: privacy
-        label: Privacy Policy
-        type: object
-        fields: &legaldoc
-          - { name: slug, label: Page address, type: string }
-          - { name: title, type: string }
-          - { name: seo_description, type: text }
-          - { name: updated, label: Last updated, type: string }
-          - { name: intro, type: text }
-          - { name: sections, type: object, list: true, fields: [ { name: title, type: string }, { name: body, type: rich-text } ] }
-      - { name: terms, label: Terms of Use, type: object, fields: *legaldoc }
-
