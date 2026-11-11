@@ -1,0 +1,97 @@
+/* Optimax — Welcome screen (standalone; every rule is scoped to body.wl so nothing leaks) */
+.wl{
+  --wl-white:#FFFFFF; --wl-navy:#053776; --wl-ink:#0B1B3A; --wl-cyan:#00ADEE;
+  --wl-head:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --wl-body:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --wl-ease:cubic-bezier(.22,.8,.24,1);
+  /* where the pupil sits inside the photo — keeps it centred behind the "8s" at every screen size */
+  --wl-focus-x:48.6%; --wl-focus-y:55%;
+  margin:0; min-height:100vh; min-height:100svh; background:var(--wl-ink); color:var(--wl-white);
+  font-family:var(--wl-body); -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+.wl *,.wl *::before,.wl *::after{box-sizing:border-box}
+.wl :where(p){margin:0}
+.wl-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.wl-stage{position:relative;isolation:isolate;min-height:100vh;min-height:100svh;display:grid;grid-template-rows:auto 1fr auto;
+  padding:max(28px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(18px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));overflow:hidden}
+
+/* Background eye */
+.wl-bg{position:absolute;inset:0;z-index:-2;display:block;overflow:hidden}
+.wl-bg img{width:100%;height:100%;object-fit:cover;object-position:var(--wl-focus-x) var(--wl-focus-y);display:block;transform-origin:var(--wl-focus-x) var(--wl-focus-y)}
+/* Soft shading so white text stays readable over the iris and the logo over the brow */
+.wl-shade{position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(ellipse 38% 46% at var(--wl-focus-x) 58%,rgba(5,14,40,.42),rgba(5,14,40,.18) 60%,transparent 100%),
+    linear-gradient(180deg,rgba(5,14,40,.55) 0%,rgba(5,14,40,0) 22%,rgba(5,14,40,0) 78%,rgba(5,14,40,.5) 100%)}
+
+/* Logo */
+.wl-brand{justify-self:center;text-align:center}
+.wl-brand img{display:block;width:clamp(170px,17vw,250px);height:auto;filter:drop-shadow(0 2px 10px rgba(0,0,0,.35))}
+
+/* Centre stack */
+.wl-hero{align-self:center;justify-self:center;display:flex;flex-direction:column;align-items:center;text-align:center;
+  padding-top:clamp(8px,4vh,48px);text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.wl-title{margin:0;display:flex;flex-direction:column;align-items:center;line-height:1}
+.wl-num{display:inline-flex;align-items:baseline;font:800 clamp(128px,min(26vh,21vw),250px)/.82 var(--wl-head);letter-spacing:-.045em;font-variant-numeric:tabular-nums}
+.wl-roll{display:inline-block;height:.86em;line-height:.86em;overflow:hidden;vertical-align:bottom}
+.wl-roll__col{display:flex;flex-direction:column;will-change:transform}
+.wl-roll__col>span{display:block;height:.86em;line-height:.86em;text-align:center}
+.wl-unit{line-height:.86em}
+.wl-lasik{display:block;margin-top:clamp(10px,2vh,22px);font:700 clamp(40px,min(7.4vh,6.2vw),64px)/1 var(--wl-head);letter-spacing:.34em;padding-left:.34em}
+
+.wl-cta{display:inline-flex;align-items:center;gap:.45em;margin-top:clamp(22px,4.4vh,44px);padding:clamp(14px,1.9vh,18px) clamp(26px,2.6vw,36px);
+  border-radius:999px;background:var(--wl-white);color:var(--wl-navy);text-decoration:none;text-shadow:none;
+  font:700 clamp(18px,min(2.8vh,2vw),24px)/1 var(--wl-body);letter-spacing:-.01em;
+  box-shadow:0 14px 34px -14px rgba(0,0,0,.6),0 0 0 0 rgba(255,255,255,.55);
+  transition:transform .35s var(--wl-ease),box-shadow .35s var(--wl-ease),background .25s}
+.wl-cta:hover{transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(0,0,0,.65),0 0 0 6px rgba(255,255,255,.18)}
+.wl-cta:active{transform:scale(.98)}
+.wl-cta:focus-visible{outline:3px solid var(--wl-cyan);outline-offset:4px}
+.wl-cta__arrow{display:inline-block;transition:transform .35s var(--wl-ease)}
+.wl-cta:hover .wl-cta__arrow{transform:translateX(4px)}
+
+.wl-discover{margin-top:clamp(12px,2vh,20px);font:700 clamp(18px,min(2.9vh,2.1vw),26px)/1.2 var(--wl-body)}
+.wl-per{margin-top:clamp(28px,7vh,72px);font:500 clamp(15px,min(2.4vh,1.6vw),20px)/1.3 var(--wl-body);opacity:.95}
+
+/* Small print */
+.wl-fine{justify-self:center;max-width:62ch;text-align:center;font:500 12px/1.45 var(--wl-body);color:rgba(255,255,255,.78);text-shadow:0 1px 8px rgba(0,0,0,.5)}
+
+/* Phones */
+@media (max-width:640px){
+  .wl-stage{padding-top:max(24px,env(safe-area-inset-top,0px))}
+  .wl-brand img{width:160px}
+  .wl-num{font-size:clamp(112px,38vw,160px)}
+  .wl-lasik{font-size:clamp(34px,11vw,44px)}
+  .wl-cta{font-size:18px;padding:15px 28px}
+  .wl-discover{font-size:18px}
+  .wl-per{font-size:15px;margin-top:clamp(20px,5vh,40px)}
+  .wl-fine{font-size:11px}
+}
+/* Short landscape screens (phones turned sideways) */
+@media (max-height:480px) and (orientation:landscape){
+  .wl-stage{padding-top:14px}
+  .wl-brand img{width:130px}
+  .wl-num{font-size:min(30vh,120px)}
+  .wl-lasik{font-size:24px;margin-top:6px}
+  .wl-cta{margin-top:12px;padding:10px 22px;font-size:16px}
+  .wl-discover{margin-top:8px;font-size:15px}
+  .wl-per{margin-top:10px;font-size:13px}
+  .wl-fine{display:none}
+}
+
+/* Entrance motion: soft and short; only when JS is present so the page never starts blank */
+@keyframes wl-up{from{opacity:0;transform:translate3d(0,18px,0)}to{opacity:1;transform:none}}
+@keyframes wl-settle{from{transform:scale(1.09)}to{transform:scale(1)}}
+@keyframes wl-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+@keyframes wl-ring{0%{box-shadow:0 14px 34px -14px rgba(0,0,0,.6),0 0 0 0 rgba(255,255,255,.5)}70%,100%{box-shadow:0 14px 34px -14px rgba(0,0,0,.6),0 0 0 14px rgba(255,255,255,0)}}
+.wl-js .wl-in{opacity:0}
+.wl-js.wl-ready .wl-in{animation:wl-up .9s var(--wl-ease) both;animation-delay:calc(var(--d,0) * 120ms + 150ms)}
+.wl-js.wl-ready .wl-bg img{animation:wl-settle 2.6s var(--wl-ease) both,wl-breathe 9s ease-in-out 2.6s infinite}
+.wl-js.wl-ready .wl-cta{animation:wl-up .9s var(--wl-ease) both,wl-ring 2.4s ease-out 2.8s infinite;animation-delay:calc(3 * 120ms + 150ms),2.8s}
+
+@media (prefers-reduced-motion:reduce){
+  .wl-js .wl-in{opacity:1}
+  .wl-js.wl-ready .wl-in,.wl-js.wl-ready .wl-bg img,.wl-js.wl-ready .wl-cta{animation:none}
+  .wl-cta,.wl-cta__arrow{transition:none}
+}
