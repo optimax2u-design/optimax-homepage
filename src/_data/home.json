@@ -15,10 +15,10 @@
       "url": "#finder"
     },
     "footnote": "*Laser time per eye. Your full visit takes longer. Suitability is confirmed by your eye specialist.",
-    "image": "/assets/uploads/hero-model.webp",
-    "image_mobile": "/assets/uploads/hero-model-640.webp",
+    "image": "/assets/uploads/hero-eye.webp",
+    "image_mobile": "/assets/uploads/hero-eye-960.webp",
     "image_cutout": true,
-    "image_alt": "Smiling woman enjoying clear vision",
+    "image_alt": "",
     "trust_pills": [
       {
         "text": "4.7★ Google from 916 reviews"

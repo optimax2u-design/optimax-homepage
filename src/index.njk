@@ -77,23 +77,15 @@ permalink: /index.html
     </div>
     <div class="hero__visual{% if h.hero.image_cutout %} hero__visual--cutout{% endif %} load" style="--d:2">
       {%- if h.hero.image_cutout %}
-      <span class="hero__glow" aria-hidden="true"></span>
       <picture class="hero__cutout">
         {%- if h.hero.image_mobile %}<source media="(max-width: 640px)" srcset="{{ h.hero.image_mobile }}">{% endif %}
-        <img src="{{ h.hero.image }}" alt="{{ h.hero.image_alt }}" width="1100" height="1090" fetchpriority="high" decoding="async">
+        <img src="{{ h.hero.image }}" alt="{{ h.hero.image_alt }}" width="1668" height="1112" fetchpriority="high" decoding="async">
       </picture>
       {%- else %}
       <div class="hero__photo">
         <img src="{{ h.hero.image }}" alt="{{ h.hero.image_alt }}" width="1200" height="1400" fetchpriority="high">
       </div>
       {%- endif %}
-      <div class="badge" role="img" aria-label="{{ h.hero.badge_number }} {{ h.hero.badge_label }}">
-        <svg class="badge__ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="88"/></svg>
-        <span class="badge__num">{{ h.hero.badge_number }}</span>
-        <span class="badge__label">{{ h.hero.badge_label }}</span>
-      </div>
-      <span class="blob blob--y" aria-hidden="true"></span>
-      <span class="blob blob--m" aria-hidden="true"></span>
     </div>
   </div>
   <p class="wrap footnote">{{ h.hero.footnote }}</p>
