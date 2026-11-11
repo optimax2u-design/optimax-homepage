@@ -16,13 +16,16 @@
   set(0);
   const ease = t => -(Math.cos(Math.PI * t) - 1) / 2;   // even glide so every number is readable
   const DUR = 2600;
+  const num = col.closest('.wl-num');
   setTimeout(() => {
+    num && num.classList.add('is-rolling');
     let t0;
     const tick = t => {
       t0 ??= t;
       const k = Math.min(1, (t - t0) / DUR);
       set(ease(k) * (target - 1));
       if (k < 1) requestAnimationFrame(tick);
+      else { num && num.classList.remove('is-rolling'); col.style.transform = ''; col.innerHTML = '<span>8</span>'; }
     };
     requestAnimationFrame(tick);
   }, 450);

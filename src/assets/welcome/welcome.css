@@ -33,11 +33,14 @@
 .wl-hero{align-self:center;justify-self:center;display:flex;flex-direction:column;align-items:center;text-align:center;
   padding-top:clamp(8px,4vh,48px);text-shadow:0 2px 18px rgba(0,0,0,.45)}
 .wl-title{margin:0;display:flex;flex-direction:column;align-items:center;line-height:1}
-.wl-num{display:inline-flex;align-items:flex-start;margin:-.08em 0 -.04em;font:800 clamp(128px,min(26vh,21vw),250px)/1 var(--wl-head);letter-spacing:-.045em;font-variant-numeric:tabular-nums}
-.wl-roll{display:inline-block;height:1.08em;line-height:1.08em;overflow:hidden;padding:0 .02em;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent 100%)}
+.wl-num{display:inline-flex;align-items:flex-start;margin:-.2em 0 -.12em;font:800 clamp(128px,min(26vh,21vw),250px)/1 var(--wl-head);letter-spacing:-.045em;font-variant-numeric:tabular-nums}
+/* "8" and "s" sit in identical tall boxes so they always line up; the box is much taller than the glyphs so nothing is ever cropped */
+.wl-roll,.wl-unit{display:inline-block;height:1.32em;line-height:1.32em}
+.wl-roll{overflow:hidden;padding:0 .03em}
 .wl-roll__col{display:flex;flex-direction:column;will-change:transform}
-.wl-roll__col>span{display:block;height:1.08em;line-height:1.08em;text-align:center}
-.wl-unit{display:inline-block;height:1.08em;line-height:1.08em}
+.wl-roll__col>span{display:block;height:1.32em;line-height:1.32em;text-align:center}
+/* soft fade only while numbers are rolling; removed at rest so the final 8 is fully crisp */
+.wl-num.is-rolling .wl-roll{-webkit-mask-image:linear-gradient(180deg,transparent 9%,#000 21%,#000 79%,transparent 89%);mask-image:linear-gradient(180deg,transparent 9%,#000 21%,#000 79%,transparent 89%)}
 .wl-lasik{display:block;margin:0;margin-top:clamp(10px,2vh,22px);font:700 clamp(40px,min(7.4vh,6.2vw),64px)/1 var(--wl-head);letter-spacing:.34em;padding-left:.34em}
 
 .wl-cta{display:inline-flex;align-items:center;gap:.45em;margin-top:clamp(22px,4.4vh,44px);padding:clamp(14px,1.9vh,18px) clamp(26px,2.6vw,36px);
@@ -73,7 +76,6 @@
   .wl-stage{padding-top:14px}
   .wl-brand img{width:130px}
   .wl-num{font-size:min(30vh,120px)}
-  .wl-num{margin-bottom:0}
   .wl-lasik{font-size:24px;margin-top:16px}
   .wl-cta{margin-top:12px;padding:10px 22px;font-size:16px}
   .wl-discover{margin-top:8px;font-size:15px}
