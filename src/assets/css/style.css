@@ -16,6 +16,8 @@
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+/* clip (not hidden) keeps sideways overflow cut off without turning the body into a scroll box — fixed buttons then stay put on iPhone */
+@supports (overflow:clip){body{overflow-x:clip}}
 [hidden]{display:none!important}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
@@ -504,7 +506,9 @@ ul,ol{margin:0;padding:0;list-style:none}
 @media (max-width:400px){.nav__book-more{display:none}.brand__logo{height:34px}}
 
 /* Floating WhatsApp button — matches the respond.io button on discover.optimaxeyespecialist.com */
-.wa-float{position:fixed;right:25px;bottom:25px;z-index:2147483646;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 0 10px -1px rgba(0,0,3,.5);text-decoration:none;-webkit-tap-highlight-color:transparent}
+.wa-float{position:fixed;right:calc(25px + env(safe-area-inset-right,0px));bottom:calc(25px + env(safe-area-inset-bottom,0px));z-index:2147483646;
+  /* own GPU layer: stops iPhone Safari from dropping the button while the page scrolls and the toolbar collapses */
+  -webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);-webkit-backface-visibility:hidden;backface-visibility:hidden;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 0 10px -1px rgba(0,0,3,.5);text-decoration:none;-webkit-tap-highlight-color:transparent}
 .wa-float svg{display:block;width:54px;height:54px;flex:none}
 .wa-float:hover{opacity:.5}
 .wa-float__cap{display:none;position:absolute;left:-10px;top:50%;transform:translate(-100%,-50%);background:#464646;color:#fff;border-radius:5px;padding:5px;font:11px Arial,Helvetica,sans-serif;white-space:nowrap}
