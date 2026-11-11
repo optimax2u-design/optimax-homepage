@@ -33,11 +33,11 @@
 .wl-hero{align-self:center;justify-self:center;display:flex;flex-direction:column;align-items:center;text-align:center;
   padding-top:clamp(8px,4vh,48px);text-shadow:0 2px 18px rgba(0,0,0,.45)}
 .wl-title{margin:0;display:flex;flex-direction:column;align-items:center;line-height:1}
-.wl-num{display:inline-flex;align-items:baseline;font:800 clamp(128px,min(26vh,21vw),250px)/.82 var(--wl-head);letter-spacing:-.045em;font-variant-numeric:tabular-nums}
-.wl-roll{display:inline-block;height:.86em;line-height:.86em;overflow:hidden;vertical-align:bottom}
+.wl-num{display:inline-flex;align-items:flex-start;margin:-.08em 0 -.04em;font:800 clamp(128px,min(26vh,21vw),250px)/1 var(--wl-head);letter-spacing:-.045em;font-variant-numeric:tabular-nums}
+.wl-roll{display:inline-block;height:1.08em;line-height:1.08em;overflow:hidden;padding:0 .02em;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 86%,transparent 100%)}
 .wl-roll__col{display:flex;flex-direction:column;will-change:transform}
-.wl-roll__col>span{display:block;height:.86em;line-height:.86em;text-align:center}
-.wl-unit{line-height:.86em}
+.wl-roll__col>span{display:block;height:1.08em;line-height:1.08em;text-align:center}
+.wl-unit{display:inline-block;height:1.08em;line-height:1.08em}
 .wl-lasik{display:block;margin:0;margin-top:clamp(10px,2vh,22px);font:700 clamp(40px,min(7.4vh,6.2vw),64px)/1 var(--wl-head);letter-spacing:.34em;padding-left:.34em}
 
 .wl-cta{display:inline-flex;align-items:center;gap:.45em;margin-top:clamp(22px,4.4vh,44px);padding:clamp(14px,1.9vh,18px) clamp(26px,2.6vw,36px);
@@ -73,7 +73,8 @@
   .wl-stage{padding-top:14px}
   .wl-brand img{width:130px}
   .wl-num{font-size:min(30vh,120px)}
-  .wl-lasik{font-size:24px;margin-top:6px}
+  .wl-num{margin-bottom:0}
+  .wl-lasik{font-size:24px;margin-top:16px}
   .wl-cta{margin-top:12px;padding:10px 22px;font-size:16px}
   .wl-discover{margin-top:8px;font-size:15px}
   .wl-per{margin-top:10px;font-size:13px}
