@@ -38,7 +38,15 @@
 .wl-hero{align-self:center;justify-self:center;display:flex;flex-direction:column;align-items:center;text-align:center;
   padding-top:calc(var(--n) * .12);text-shadow:0 2px 18px rgba(0,0,0,.45)}
 .wl-title{margin:0;display:flex;flex-direction:column;align-items:center;line-height:1}
-.wl-num{display:inline-flex;align-items:flex-start;margin:-.2em 0 -.12em;font:800 var(--n)/1 var(--wl-head);letter-spacing:-.045em;font-variant-numeric:tabular-nums}
+/* Timer ring around the number: white track, light-blue arc fills clockwise from the top as it counts, full blue at 8s */
+.wl-dial{position:relative;display:grid;place-items:center;width:calc(var(--n) * 1.23);height:calc(var(--n) * 1.23);margin-bottom:calc(var(--n) * .03)}
+.wl-ring{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);overflow:visible;pointer-events:none}
+.wl-ring circle{fill:none;stroke-width:2.3}
+.wl-ring__track{stroke:var(--wl-white)}
+.wl-ring__fill{stroke:var(--wl-cyan);stroke-dasharray:100 100;stroke-dashoffset:var(--wl-off,0)}
+.wl-dial.is-full .wl-ring__fill{animation:wl-glow 1.4s ease-out both}
+@keyframes wl-glow{0%{filter:drop-shadow(0 0 0 rgba(0,173,238,0))}35%{filter:drop-shadow(0 0 3px rgba(0,173,238,.95))}100%{filter:drop-shadow(0 0 1.2px rgba(0,173,238,.6))}}
+.wl-num{display:inline-flex;align-items:flex-start;margin:-.2em 0 -.12em;font:800 calc(var(--n) * .65)/1 var(--wl-head);transform:translate(-.028em,.047em);letter-spacing:-.045em;font-variant-numeric:tabular-nums}
 /* "8" and "s" sit in identical tall boxes so they always line up; the box is much taller than the glyphs so nothing is ever cropped */
 .wl-roll,.wl-unit{display:inline-block;height:1.32em;line-height:1.32em}
 .wl-roll{overflow:hidden;padding:0 .03em}
@@ -46,7 +54,7 @@
 .wl-roll__col>span{display:block;height:1.32em;line-height:1.32em;text-align:center}
 /* soft fade only while numbers are rolling; removed at rest so the final 8 is fully crisp */
 .wl-num.is-rolling .wl-roll{-webkit-mask-image:linear-gradient(180deg,transparent 9%,#000 21%,#000 79%,transparent 89%);mask-image:linear-gradient(180deg,transparent 9%,#000 21%,#000 79%,transparent 89%)}
-.wl-lasik{display:block;margin:0;margin-top:calc(var(--n) * .06);font:700 calc(var(--n) * .27)/1 var(--wl-head);letter-spacing:.34em;padding-left:.34em}
+.wl-lasik{display:block;margin:0;margin-top:calc(var(--n) * .07);font:700 calc(var(--n) * .27)/1 var(--wl-head);letter-spacing:.34em;padding-left:.34em}
 
 .wl-cta{display:inline-flex;align-items:center;gap:.45em;margin-top:calc(var(--n) * .19);min-height:48px;
   padding:max(14px,calc(var(--n) * .075)) max(26px,calc(var(--n) * .15));
@@ -74,7 +82,7 @@
 }
 /* Short landscape screens (phones turned sideways): compact, logo smaller, small print hidden */
 @media (max-height:500px) and (orientation:landscape){
-  .wl{--n:min(29vh,130px)}
+  .wl{--n:min(27vh,130px)}
   .wl-stage{padding-top:max(12px,env(safe-area-inset-top,0px));padding-bottom:max(10px,env(safe-area-inset-bottom,0px))}
   .wl-brand img{width:120px}
   .wl-hero{padding-top:0}
@@ -95,6 +103,6 @@
 
 @media (prefers-reduced-motion:reduce){
   .wl-js .wl-in{opacity:1}
-  .wl-js.wl-ready .wl-in,.wl-js.wl-ready .wl-bg img,.wl-js.wl-ready .wl-cta{animation:none}
+  .wl-js.wl-ready .wl-in,.wl-js.wl-ready .wl-bg img,.wl-js.wl-ready .wl-cta,.wl-dial.is-full .wl-ring__fill{animation:none}
   .wl-cta,.wl-cta__arrow{transition:none}
 }

@@ -12,7 +12,12 @@
   if (!col || reduce) return;
   const target = 8;
   col.innerHTML = Array.from({ length: target }, (_, i) => `<span>${i + 1}</span>`).join('');
-  const set = v => { col.style.transform = `translate3d(0, ${-v / target * 100}%, 0)`; };
+  const dial = col.closest('.wl-dial');
+  // v goes 0→7 (shows 1→8); the ring fills in step with it and is complete exactly when 8 lands
+  const set = v => {
+    col.style.transform = `translate3d(0, ${-v / target * 100}%, 0)`;
+    dial && dial.style.setProperty('--wl-off', String(100 - v / (target - 1) * 100));
+  };
   set(0);
   const ease = t => -(Math.cos(Math.PI * t) - 1) / 2;   // even glide so every number is readable
   const DUR = 2600;
@@ -25,7 +30,7 @@
       const k = Math.min(1, (t - t0) / DUR);
       set(ease(k) * (target - 1));
       if (k < 1) requestAnimationFrame(tick);
-      else { num && num.classList.remove('is-rolling'); col.style.transform = ''; col.innerHTML = '<span>8</span>'; }
+      else { num && num.classList.remove('is-rolling'); dial && dial.classList.add('is-full'); col.style.transform = ''; col.innerHTML = '<span>8</span>'; }
     };
     requestAnimationFrame(tick);
   }, 450);
