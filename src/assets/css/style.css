@@ -502,3 +502,11 @@ ul,ol{margin:0;padding:0;list-style:none}
   .nav__book{min-height:40px;padding:10px 16px;font-size:14.5px;gap:.3em}
 }
 @media (max-width:400px){.nav__book-more{display:none}.brand__logo{height:34px}}
+
+/* Floating WhatsApp button — matches the respond.io button on discover.optimaxeyespecialist.com */
+.wa-float{position:fixed;right:25px;bottom:25px;z-index:2147483646;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 0 10px -1px rgba(0,0,3,.5);text-decoration:none;-webkit-tap-highlight-color:transparent}
+.wa-float svg{display:block;width:54px;height:54px;flex:none}
+.wa-float:hover{opacity:.5}
+.wa-float__cap{display:none;position:absolute;left:-10px;top:50%;transform:translate(-100%,-50%);background:#464646;color:#fff;border-radius:5px;padding:5px;font:11px Arial,Helvetica,sans-serif;white-space:nowrap}
+.wa-float:hover .wa-float__cap{display:block}
+.menu-open .wa-float{display:none}

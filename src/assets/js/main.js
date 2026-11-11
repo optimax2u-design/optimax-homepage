@@ -66,6 +66,14 @@
     sc.scrollBy({ left: Number(b.dataset.scroll) * sc.clientWidth * 0.8, behavior: reduce ? 'auto' : 'smooth' });
   }));
 
+  // Floating WhatsApp: if the respond.io widget renders its own button, hide our copy so only one shows
+  const waFloat = $('.wa-float');
+  if (waFloat) {
+    let tries = 0;
+    const live = () => { const w = document.querySelector('respond-io-widget'); return !!(w && w.shadowRoot && w.shadowRoot.querySelector('.speed-dial')); };
+    const t = setInterval(() => { if (live()) { waFloat.hidden = true; clearInterval(t); } else if (++tries > 40) clearInterval(t); }, 250);
+  }
+
   // Carousels (phones): a small progress track under each swipeable row
   $$('[data-carousel]').forEach(el => {
     const track = document.createElement('div'); track.className = 'cprog'; track.setAttribute('aria-hidden', 'true');
