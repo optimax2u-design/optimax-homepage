@@ -26,14 +26,19 @@
     linear-gradient(180deg,rgba(5,14,40,.55) 0%,rgba(5,14,40,0) 22%,rgba(5,14,40,0) 78%,rgba(5,14,40,.5) 100%)}
 
 /* Logo */
+/* One scale drives every size: --n is the height of the big "8s".
+   It follows the screen's height and width together, so the whole composition grows and shrinks as one
+   from small phones up to 4K/ultrawide monitors, and never crowds or leaves the centre stack tiny. */
+.wl{--n:clamp(112px,min(26vh,34vw),440px)}
+
 .wl-brand{justify-self:center;text-align:center}
-.wl-brand img{display:block;width:clamp(170px,17vw,250px);height:auto;filter:drop-shadow(0 2px 10px rgba(0,0,0,.35))}
+.wl-brand img{display:block;width:clamp(150px,calc(var(--n) * 1.04),420px);height:auto;filter:drop-shadow(0 2px 10px rgba(0,0,0,.35))}
 
 /* Centre stack */
 .wl-hero{align-self:center;justify-self:center;display:flex;flex-direction:column;align-items:center;text-align:center;
-  padding-top:clamp(8px,4vh,48px);text-shadow:0 2px 18px rgba(0,0,0,.45)}
+  padding-top:calc(var(--n) * .12);text-shadow:0 2px 18px rgba(0,0,0,.45)}
 .wl-title{margin:0;display:flex;flex-direction:column;align-items:center;line-height:1}
-.wl-num{display:inline-flex;align-items:flex-start;margin:-.2em 0 -.12em;font:800 clamp(128px,min(26vh,21vw),250px)/1 var(--wl-head);letter-spacing:-.045em;font-variant-numeric:tabular-nums}
+.wl-num{display:inline-flex;align-items:flex-start;margin:-.2em 0 -.12em;font:800 var(--n)/1 var(--wl-head);letter-spacing:-.045em;font-variant-numeric:tabular-nums}
 /* "8" and "s" sit in identical tall boxes so they always line up; the box is much taller than the glyphs so nothing is ever cropped */
 .wl-roll,.wl-unit{display:inline-block;height:1.32em;line-height:1.32em}
 .wl-roll{overflow:hidden;padding:0 .03em}
@@ -41,45 +46,40 @@
 .wl-roll__col>span{display:block;height:1.32em;line-height:1.32em;text-align:center}
 /* soft fade only while numbers are rolling; removed at rest so the final 8 is fully crisp */
 .wl-num.is-rolling .wl-roll{-webkit-mask-image:linear-gradient(180deg,transparent 9%,#000 21%,#000 79%,transparent 89%);mask-image:linear-gradient(180deg,transparent 9%,#000 21%,#000 79%,transparent 89%)}
-.wl-lasik{display:block;margin:0;margin-top:clamp(10px,2vh,22px);font:700 clamp(40px,min(7.4vh,6.2vw),64px)/1 var(--wl-head);letter-spacing:.34em;padding-left:.34em}
+.wl-lasik{display:block;margin:0;margin-top:calc(var(--n) * .06);font:700 calc(var(--n) * .27)/1 var(--wl-head);letter-spacing:.34em;padding-left:.34em}
 
-.wl-cta{display:inline-flex;align-items:center;gap:.45em;margin-top:clamp(22px,4.4vh,44px);padding:clamp(14px,1.9vh,18px) clamp(26px,2.6vw,36px);
+.wl-cta{display:inline-flex;align-items:center;gap:.45em;margin-top:calc(var(--n) * .19);min-height:48px;
+  padding:max(14px,calc(var(--n) * .075)) max(26px,calc(var(--n) * .15));
   border-radius:999px;background:var(--wl-white);color:var(--wl-navy);text-decoration:none;text-shadow:none;
-  font:700 clamp(18px,min(2.8vh,2vw),24px)/1 var(--wl-body);letter-spacing:-.01em;
+  font:700 max(17px,calc(var(--n) * .102))/1 var(--wl-body);letter-spacing:-.01em;
   box-shadow:0 14px 34px -14px rgba(0,0,0,.6),0 0 0 0 rgba(255,255,255,.55);
-  transition:transform .35s var(--wl-ease),box-shadow .35s var(--wl-ease),background .25s}
+  transition:transform .35s var(--wl-ease),box-shadow .35s var(--wl-ease),background .25s;-webkit-tap-highlight-color:transparent}
 .wl-cta:hover{transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(0,0,0,.65),0 0 0 6px rgba(255,255,255,.18)}
 .wl-cta:active{transform:scale(.98)}
 .wl-cta:focus-visible{outline:3px solid var(--wl-cyan);outline-offset:4px}
 .wl-cta__arrow{display:inline-block;transition:transform .35s var(--wl-ease)}
 .wl-cta:hover .wl-cta__arrow{transform:translateX(4px)}
 
-.wl-discover{margin-top:clamp(12px,2vh,20px);font:700 clamp(18px,min(2.9vh,2.1vw),26px)/1.25 var(--wl-body);text-wrap:balance}
-.wl-per{margin-top:clamp(10px,1.8vh,18px);font:500 clamp(15px,min(2.4vh,1.6vw),20px)/1.3 var(--wl-body);opacity:.95}
+.wl-discover{margin-top:calc(var(--n) * .085);font:700 max(16px,calc(var(--n) * .11))/1.25 var(--wl-body);text-wrap:balance}
+.wl-per{margin-top:calc(var(--n) * .07);font:500 max(14px,calc(var(--n) * .085))/1.3 var(--wl-body);opacity:.95}
 
 /* Small print */
-.wl-fine{justify-self:center;max-width:62ch;text-align:center;font:500 12px/1.45 var(--wl-body);color:rgba(255,255,255,.78);text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.wl-fine{justify-self:center;max-width:62ch;text-align:center;font:500 max(11px,calc(var(--n) * .052))/1.45 var(--wl-body);color:rgba(255,255,255,.8);text-shadow:0 1px 8px rgba(0,0,0,.5)}
 
-/* Phones */
+/* Phones (portrait): let the number use more of the narrow width */
 @media (max-width:640px){
-  .wl-stage{padding-top:max(24px,env(safe-area-inset-top,0px))}
-  .wl-brand img{width:160px}
-  .wl-num{font-size:clamp(112px,38vw,160px)}
-  .wl-lasik{font-size:clamp(34px,11vw,44px)}
-  .wl-cta{font-size:18px;padding:15px 28px}
-  .wl-discover{font-size:18px}
-  .wl-per{font-size:15px;margin-top:10px}
-  .wl-fine{font-size:11px}
+  .wl{--n:clamp(112px,min(42vw,21vh),185px)}
+  .wl-stage{padding-top:max(22px,env(safe-area-inset-top,0px))}
+  .wl-brand img{width:clamp(140px,40vw,180px)}
 }
-/* Short landscape screens (phones turned sideways) */
-@media (max-height:480px) and (orientation:landscape){
-  .wl-stage{padding-top:14px}
-  .wl-brand img{width:130px}
-  .wl-num{font-size:min(30vh,120px)}
-  .wl-lasik{font-size:24px;margin-top:16px}
-  .wl-cta{margin-top:12px;padding:10px 22px;font-size:16px}
-  .wl-discover{margin-top:8px;font-size:15px}
-  .wl-per{margin-top:10px;font-size:13px}
+/* Short landscape screens (phones turned sideways): compact, logo smaller, small print hidden */
+@media (max-height:500px) and (orientation:landscape){
+  .wl{--n:min(29vh,130px)}
+  .wl-stage{padding-top:max(12px,env(safe-area-inset-top,0px));padding-bottom:max(10px,env(safe-area-inset-bottom,0px))}
+  .wl-brand img{width:120px}
+  .wl-hero{padding-top:0}
+  .wl-lasik{margin-top:14px}
+  .wl-cta{min-height:40px;margin-top:12px}
   .wl-fine{display:none}
 }
 
