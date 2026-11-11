@@ -34,7 +34,10 @@
   const placeSheet = () => { if (!sheet.hidden) sheet.style.top = Math.max(0, nav.getBoundingClientRect().bottom) + 'px'; };
   addEventListener('resize', placeSheet); addEventListener('scroll', placeSheet, { passive: true });
   sheet.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
-  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') { setMenu(false); toggle.focus(); } });
+  // Rotating a tablet / widening the window past the menu breakpoint closes the menu so the page never stays locked
+  const wide = matchMedia('(min-width: 961px)');
+  (wide.addEventListener ? wide.addEventListener('change', e => e.matches && setMenu(false)) : wide.addListener(e => e.matches && setMenu(false)));
 
   // Treatment finder
   const data = JSON.parse($('#finder-data').textContent);
@@ -48,8 +51,7 @@
     $('[data-f=recommended]', result).textContent = o.recommended;
     $('[data-f=summary]', result).textContent = o.summary;
     $('[data-f=alternatives]', result).innerHTML = o.alternatives.map(a => `<li>${a.replace(/</g, '&lt;')}</li>`).join('');
-    $('[data-f=book]', result).dataset.service = o.recommended;
-    if (!reduce) { result.classList.remove('swap'); void result.offsetWidth; result.classList.add('swap'); }
+        if (!reduce) { result.classList.remove('swap'); void result.offsetWidth; result.classList.add('swap'); }
   };
   chips.forEach((c, i) => {
     c.addEventListener('click', () => select(c));
@@ -58,77 +60,11 @@
       if (k) { e.preventDefault(); select(chips[(i + k + chips.length) % chips.length], true); }
     });
   });
-  // "Book" from the finder pre-selects the closest service in the form
-  $('[data-f=book]', result).addEventListener('click', e => {
-    const want = (e.currentTarget.dataset.service || $('[data-f=recommended]', result).textContent).toLowerCase();
-    const sel = $('#f-service'); if (!sel) return;
-    const match = [...sel.options].find(o => { const t = o.text.toLowerCase(); return t.includes(want) || want.includes(t.split(' (')[0]); });
-    if (match) sel.value = match.value;
-  });
-
   // Doctors scroller buttons
   const sc = $('#doctor-scroller');
   $$('[data-scroll]').forEach(b => b.addEventListener('click', () => {
     sc.scrollBy({ left: Number(b.dataset.scroll) * sc.clientWidth * 0.8, behavior: reduce ? 'auto' : 'smooth' });
   }));
-
-  // Booking form
-  const form = $('#booking-form'), ok = $('#booking-success');
-  if (form) {
-  const check = f => { const valid = f.querySelector('input,select').checkValidity(); f.classList.toggle('invalid', !valid); return valid; };
-  $$('.field', form).forEach(f => { const el = f.querySelector('input,select'); ['input','change'].forEach(t => el.addEventListener(t, () => f.classList.contains('invalid') && check(f))); });
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-    const fields = $$('.field', form);
-    const bad = fields.filter(f => !check(f));
-    if (bad.length) { bad[0].querySelector('input,select').focus(); return; }
-    const btn = $('button[type=submit]', form); btn.disabled = true; btn.textContent = 'Sending…';
-    try {
-      if (form.action && form.getAttribute('action')) {
-        await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
-      }
-    } catch (_) { /* still confirm; the team follows up by phone */ }
-    form.hidden = true; ok.hidden = false; ok.focus();
-  });
-  }
-
-  // Hero badge: smooth rolling counter from 1s to the final value (e.g. 8s).
-  // Digits glide upward like an odometer while the yellow ring sweeps round in sync.
-  const badge = $('.badge'), bnum = badge && $('.badge__num', badge), ring = badge && $('.badge__ring circle', badge);
-  if (badge && bnum && !reduce && 'IntersectionObserver' in window) {
-    const final = bnum.textContent.trim(), m = final.match(/^(\D*?)(\d+)(.*)$/s);
-    const target = m ? parseInt(m[2], 10) : 0;
-    if (target >= 2 && target <= 30) {
-      const C = 553, DUR = 650 * (target - 1) + 700;   // ~5.3s for 1→8: smooth, every number readable
-      const nums = Array.from({ length: target }, (_, i) => `<span>${i + 1}</span>`).join('');
-      bnum.innerHTML = `${m[1] ? `<span>${m[1]}</span>` : ''}<span class="roll" aria-hidden="true"><span class="roll__col">${nums}</span></span><span class="roll__suf" aria-hidden="true">${m[3]}</span>`;
-      const col = $('.roll__col', bnum);
-      badge.classList.add('is-counting');
-      if (ring) ring.style.strokeDashoffset = String(C * (1 - 1 / target));
-      // gentle ease-in-out: starts softly, glides, settles softly on the final number
-      const ease = t => -(Math.cos(Math.PI * t) - 1) / 2;   // even glide: no number rushes past
-      const frame = v => {                       // v: 0 → target-1 (continuous)
-        col.style.transform = `translate3d(0, ${-v / target * 100}%, 0)`;
-        if (ring) ring.style.strokeDashoffset = String(C * (1 - (1 + v) / target));
-      };
-      frame(0);
-      const bio = new IntersectionObserver(es => {
-        if (!es.some(e => e.isIntersecting)) return;
-        bio.disconnect();
-        setTimeout(() => {
-          let t0;
-          const tick = t => {
-            t0 ??= t; const k = Math.min(1, (t - t0) / DUR);
-            frame(ease(k) * (target - 1));
-            if (k < 1) requestAnimationFrame(tick);
-            else { bnum.classList.add('done'); }
-          };
-          requestAnimationFrame(tick);
-        }, 600);
-      }, { threshold: 0.6 });
-      bio.observe(badge);
-    }
-  }
 
   // Carousels (phones): a small progress track under each swipeable row
   $$('[data-carousel]').forEach(el => {

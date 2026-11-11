@@ -127,7 +127,7 @@ permalink: /index.html
         <p class="finder__alt-title">Other options to discuss</p>
         <ul class="finder__alts" data-f="alternatives">{% for a in f.alternatives %}<li>{{ a }}</li>{% endfor %}</ul>
         <div class="finder__actions">
-          <a href="#book" class="btn btn--dark" data-f="book">Book a free eye check</a>
+          <a href="{{ site.nav_cta.url }}" class="btn btn--dark" data-f="book">Book a free eye check</a>
         </div>
         <p class="finder__note">{{ h.finder.note }}</p>
       </div>

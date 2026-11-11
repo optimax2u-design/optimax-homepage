@@ -4,8 +4,8 @@
   "logo_footer": "/assets/uploads/logo/optimax-logo-white.svg",
   "favicon": "/assets/uploads/logo/favicon.svg",
   "apple_touch_icon": "/assets/uploads/logo/apple-touch-icon.png",
-  "seo_title": "Optimax Eye Specialist — ZEISS SMILE® PRO 8-second LASIK in Malaysia",
-  "seo_description": "Malaysia's first LASIK provider since 1995. ZEISS SMILE® PRO, PRESBYOND, FLACS cataract surgery and children's eye care across 25 centres. Check if you're suitable — free.",
+  "seo_title": "Optimax Eye Specialist — SMILE pro 3.0 8-second LASIK in Malaysia",
+  "seo_description": "Malaysia's first LASIK provider since 1995. SMILE pro 3.0, PRESBYOND® 2.0, FLACS cataract surgery and children's eye care across 25 centres. Check if you're suitable — free.",
   "topbar": {
     "hotline": "1800 88 1201",
     "whatsapp": "+6010-909 1201",
@@ -16,12 +16,12 @@
   "nav": [
     { "label": "Treatments", "url": "#treatments" },
     { "label": "Doctors", "url": "#doctors" },
-    { "label": "Branches", "url": "#book" },
+    { "label": "Branches", "url": "https://optimaxeyespecialist.com/branches/taman-tun-dr-ismail-kuala-lumpur-hq/" },
     { "label": "About", "url": "#why" },
     { "label": "Reviews", "url": "#reviews" },
     { "label": "Blog", "url": "https://optimaxeyespecialist.com/blog/" }
   ],
-  "nav_cta": { "label": "Book free eye check", "url": "#book" },
+  "nav_cta": { "label": "Book free eye check", "url": "https://optimaxeyespecialist.com/#book-appointment" },
   "form_endpoint": "",
   "footer": {
     "company": "Optimax Eye Specialist",
